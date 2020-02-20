@@ -5,12 +5,22 @@ export const authService = {
     login,
     logout,
     isAuthenticated,
-    renewToken
+    renewToken,
+    facebookLoginHandler
 }
+ const FB = window.FB;
+console.log("Facebook", FB);
 
 
-async function login(username, pass) {
-    // do login stuff here
+async function login() {
+    if (!FB) return;
+    FB.getLoginStatus(response => {
+        if (response.status === 'connected') {
+            facebookLoginHandler(response);
+        } else {
+            FB.login(facebookLoginHandler, {scope: 'public_profile'});
+        }
+    }, );
 }
 
 
@@ -21,9 +31,9 @@ async function logout() {
 // check if current user is authenticated
 async function isAuthenticated() {
     try {
-        // do check here
-        
-        return true;
+       const res = await FB.getLoginStatus(facebookLoginHandler);
+       console.log("Response",  res);
+       return true;
 
     } catch(e) {
         console.error(e);
@@ -31,7 +41,22 @@ async function isAuthenticated() {
     }
 
 }
-
+function facebookLoginHandler(response) {
+    if (response.status === 'connected') {
+        FB.api('/me', userData => {
+            let result = {
+                ...response,
+                user: userData
+            };
+            console.log("Result",result)
+            return true;
+           // this.props.onLogin(true, result);
+        });
+    } else {
+        return false
+        //this.props.onLogin(false);
+    }
+}
 
 async function renewToken() {
 
