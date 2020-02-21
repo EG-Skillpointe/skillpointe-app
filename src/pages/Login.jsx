@@ -16,7 +16,6 @@ class Login extends Component {
         
     }
 
-
     login() {
         console.log('login clicked 1')
         let res = authService.login();
@@ -36,7 +35,6 @@ class Login extends Component {
                 <Link to="/">Home</Link>
                 <button onClick={this.login}>Facebook</button>
                 <button onClick={this.logout}>logout</button>
-                
             </div>
         )
     }
