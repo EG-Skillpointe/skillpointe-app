@@ -14,7 +14,8 @@ class PrivateRoute extends Component {
     }
     
     checkAuth() {
-        authService.isAuthenticated().then((val) => {
+        authService.isAuthenticated((val) => {
+            console.log('val', val)
             this.setState({
                 isAuth: val
             });

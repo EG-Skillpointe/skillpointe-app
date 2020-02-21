@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 
 class HomePage extends Component {
@@ -12,8 +13,11 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>HOME PAGE!</h1>
+                <Link to="/training">Training  </Link>
+                <Link to="/jobsearch">Job Search  </Link>
+                <Link to="/login">Login</Link>
             </div>
         )
     }

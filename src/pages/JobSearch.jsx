@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 
 class JobSearch extends Component {
@@ -15,6 +17,7 @@ class JobSearch extends Component {
         return (
             <div>
                 <h1>JobSearch PAGE!</h1>
+                <Link to="/">Home</Link>
             </div>
         )
     }
