@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import { MobileFooter } from "../components";
 
 class HomePage extends Component {
 
@@ -13,11 +13,12 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <h1>HOME PAGE!</h1>
                 <Link to="/training">Training  </Link>
                 <Link to="/jobsearch">Job Search  </Link>
                 <Link to="/login">Login</Link>
+                <MobileFooter history={this.props.history}/>
             </div>
         )
     }
