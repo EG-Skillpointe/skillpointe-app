@@ -134,11 +134,11 @@
 }
 
 .login-form-btn {
-  margin: 20px 0;
+  margin: 20px 0 !important;
   height: 40px !important;
 }
 
-form {
+.sign-in-block {
   width: 90%;
   min-width: 230px;
   max-width: 260px;

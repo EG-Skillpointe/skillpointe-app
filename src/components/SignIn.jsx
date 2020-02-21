@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 export const SingIn = (props) => {
   return (
-      <form>
+      <div className="sign-in-block">
         <h3>Sign In</h3>
 
         <div className="form-group">
@@ -23,9 +22,9 @@ export const SingIn = (props) => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block login-form-btn">Sign In</button>
+        <button className="btn btn-primary btn-block login-form-btn" onClick={() => props.login(1)}>Sign In</button>
         <button className="btn signup-primary btn-block login-form-btn" onClick={props.toggle}>Sign Up</button>
-      </form>
+      </div>
   )
 }
 
