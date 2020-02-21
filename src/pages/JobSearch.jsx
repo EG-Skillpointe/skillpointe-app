@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-
+import { MobileFooter } from "../components";
 
 
 class JobSearch extends Component {
@@ -18,6 +18,7 @@ class JobSearch extends Component {
             <div>
                 <h1>JobSearch PAGE!</h1>
                 <Link to="/">Home</Link>
+                <MobileFooter history={this.props.history}/>
             </div>
         )
     }

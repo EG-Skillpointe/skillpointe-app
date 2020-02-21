@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { MobileFooter } from "../components";
 
 
 class Training extends Component {
@@ -17,6 +18,7 @@ class Training extends Component {
             <div>
                 <h1>Training PAGE!</h1>
                 <Link to="/">Home</Link>
+                <MobileFooter history={this.props.history}/>
             </div>
         )
     }
