@@ -18,13 +18,13 @@ export const SingIn = (props) => {
 
         <div className="form-group">
           <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="customCheck1" />
+            <input type="checkbox" className="custom-control-input remember-me-checkbox" id="customCheck1" />
             <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
           </div>
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block">Submit</button>
-        <label className="btn signup-primary btn-block" onClick={props.toggle}>Sign Up</label>
+        <button type="submit" className="btn btn-primary btn-block login-form-btn">Sign In</button>
+        <button className="btn signup-primary btn-block login-form-btn" onClick={props.toggle}>Sign Up</button>
       </form>
   )
 }

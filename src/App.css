@@ -104,10 +104,16 @@
   -webkit-font-smoothing: auto;
   width: 100%;
 }
+
 .signup-primary {
   color: #f5f5f5;
   background-color: #ff2300e0;
-  border-color: #2e6da4;
+  font-weight: 600;
+}
+
+.signup-primary:hover {
+  background-color: #c61c00e0;
+  color: white;
 }
 
 .signin-primary {
@@ -118,6 +124,20 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.btn-primary {
+  font-weight: 600;
+}
+
+.remember-me-checkbox {
+  margin-right: 10px !important;
+}
+
+.login-form-btn {
+  margin: 20px 0;
+  height: 40px !important;
+}
+
 form {
   width: 90%;
   min-width: 230px;
