@@ -40,30 +40,31 @@ async function logout() {
 // check if current user is authenticated
 async function isAuthenticated(callback) {
     try {
-        FB.getLoginStatus(response => {
-            console.log('response: ', response)
-            if (response.status === 'connected') {
-                console.log('isAuthenticated - if')
-                callback(true);
+        // FB.getLoginStatus(response => {
+        //     console.log('response: ', response)
+        //     if (response.status === 'connected') {
+        //         console.log('isAuthenticated - if')
+        //         callback(true);
                 
-                var uid = response.authResponse.userID;
-                var accessToken = response.authResponse.accessToken;
-            } else if (response.status === 'not_authorized') {
-                console.log('isAuthenticated -  else if')
-                callback(false);
-                login();
-              // The user hasn't authorized your application.  They
-              // must click the Login button, or you must call FB.login
-              // in response to a user gesture, to launch a login dialog.
-            } else {
-                console.log('isAuthenticated - else ')
-                callback(false);
-              // The user isn't logged in to Facebook. You can launch a
-              // login dialog with a user gesture, but the user may have
-              // to log in to Facebook before authorizing your application.
-            }
-        });
+        //         var uid = response.authResponse.userID;
+        //         var accessToken = response.authResponse.accessToken;
+        //     } else if (response.status === 'not_authorized') {
+        //         console.log('isAuthenticated -  else if')
+        //         callback(false);
+        //         login();
+        //       // The user hasn't authorized your application.  They
+        //       // must click the Login button, or you must call FB.login
+        //       // in response to a user gesture, to launch a login dialog.
+        //     } else {
+        //         console.log('isAuthenticated - else ')
+        //         callback(false);
+        //       // The user isn't logged in to Facebook. You can launch a
+        //       // login dialog with a user gesture, but the user may have
+        //       // to log in to Facebook before authorizing your application.
+        //     }
+        // });
 
+        callback(true)
     } catch(e) {
         console.error(e);
         callback(false);
