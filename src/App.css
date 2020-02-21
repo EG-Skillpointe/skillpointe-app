@@ -36,3 +36,71 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.goog {
+  background-color: rgb(239, 239, 239);
+}
+
+.goog-span {
+  color: rgb(51, 51, 51);
+}
+
+.fb {
+  background-color: rgb(31, 117, 239);
+}
+
+.fb-span {
+  color: white;
+}
+
+.tp-login-button {
+  border: 0px;
+  height: 40px;
+  width: 90%;
+  min-width: 230px;
+  max-width: 260px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 4px;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  text-align: left;
+  background-clip: padding-box;
+  transition: opacity 0.2s linear 0s;
+  position: relative;
+}
+
+.tp-login-contents {
+  border-radius: 2px;
+  background-color: transparent;
+  display: inline-block;
+  height: 24px;
+  margin-left: 12px;
+  text-align: center;
+  width: 24px;
+}
+
+.tp-login-contents div {
+  position: relative;
+  margin: 2px auto auto;
+}
+
+.tp-login-span {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  font-size: 16px;
+  transform: translateY(-50%) translateX(-20px);
+  vertical-align: top;
+  -webkit-font-smoothing: auto;
+  width: 100%;
+}
