@@ -104,3 +104,10 @@
   -webkit-font-smoothing: auto;
   width: 100%;
 }
+
+form {
+  width: 90%;
+  min-width: 230px;
+  max-width: 260px;
+  margin: 20px auto;
+}

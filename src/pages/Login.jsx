@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {SignUp} from "../components";
 import { Link } from "react-router-dom";
 
 import {authService} from "../services/auth.service";
@@ -51,17 +52,46 @@ class Login extends Component {
             </button>
 
 
+        const logInForm = <form>
+            <h3>Sign In</h3>
+
+            <div className="form-group">
+                <label>Email address</label>
+                <input type="email" className="form-control" placeholder="Enter email" />
+            </div>
+
+            <div className="form-group">
+                <label>Password</label>
+                <input type="password" className="form-control" placeholder="Enter password" />
+            </div>
+
+            <div className="form-group">
+                <div className="custom-control custom-checkbox">
+                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                    <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                </div>
+            </div>
+
+            <button type="submit" className="btn btn-primary btn-block">Submit</button>
+        
+            <Link to= "/signup">SignUp</Link>
+        </form>
+
         return (
             <div className="login-container container">
                 <h1>LOGIN PAGE!</h1>
                 <Link to="/">Home</Link>
                 <button onClick={this.login}>Facebook</button>
                 <button onClick={this.logout}>logout</button>
+
+                
+                { logInForm }
+                <label>OR</label>
                 { googleButton }
                 { facebookButton }
-
+                
             </div>
-        )
+        );
     }
 }
 
