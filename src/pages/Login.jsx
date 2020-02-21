@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {SignUp} from "../components";
+import {SignIn, SignUp} from "../components";
+
 import { Link } from "react-router-dom";
 
 import {authService} from "../services/auth.service";
@@ -10,13 +11,20 @@ class Login extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            signInToggle: true
+        };
     }
 
     componentDidMount() {
         
     }
 
+    toggleSignIn = () => {
+        this.setState({
+            signInToggle: !this.state.signInToggle
+        })
+    }
 
     login() {
         console.log('login clicked 1')
@@ -52,30 +60,7 @@ class Login extends Component {
             </button>
 
 
-        const logInForm = <form>
-            <h3>Sign In</h3>
 
-            <div className="form-group">
-                <label>Email address</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
-            </div>
-
-            <div className="form-group">
-                <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
-            </div>
-
-            <div className="form-group">
-                <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                    <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                </div>
-            </div>
-
-            <button type="submit" className="btn btn-primary btn-block">Submit</button>
-        
-            <Link to= "/signup">SignUp</Link>
-        </form>
 
         return (
             <div className="login-container container">
@@ -84,8 +69,9 @@ class Login extends Component {
                 <button onClick={this.login}>Facebook</button>
                 <button onClick={this.logout}>logout</button>
 
-                
-                { logInForm }
+                {this.state.signInToggle
+                    ? <SignIn toggle={this.toggleSignIn}/> : <SignUp toggle={this.toggleSignIn}/>}
+
                 <label>OR</label>
                 { googleButton }
                 { facebookButton }

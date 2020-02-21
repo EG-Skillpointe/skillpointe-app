@@ -38,7 +38,7 @@
 }
 
 
-
+/* Login */
 .goog {
   background-color: rgb(239, 239, 239);
 }
@@ -104,13 +104,27 @@
   -webkit-font-smoothing: auto;
   width: 100%;
 }
+.signup-primary {
+  color: #f5f5f5;
+  background-color: #ff2300e0;
+  border-color: #2e6da4;
+}
 
+.signin-primary {
+  color: blue;
+}
+
+.signin-primary:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 form {
   width: 90%;
   min-width: 230px;
   max-width: 260px;
   margin: 20px auto;
 }
+
 
 /* FOOTER START */
 
@@ -155,3 +169,4 @@ form {
 }
 
 /* FOOTER END */
+
