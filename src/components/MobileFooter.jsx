@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const MobileFooter = (props) => {
+class MobileFooter extends Component {
 
+    redirect = (path, state) => {
+        this.props.history.push({
+            pathname: path,
+            state: state
+        });
+    }
 
-    return (
-        <div className='mobile-footer'>
-            <label>This is mobile footer.</label>
-        </div>
-    )
+    render() {
+        return (
+            <div className='mobile-footer'>
+                <div className='footer-items'>
+                    <div onClick={() => this.redirect("/training")}>
+                        Explore Careers
+                    </div>
+                    <div onClick={() => this.redirect("/jobsearch", {})}>
+                        Find a Job
+                    </div>
+                    <div onClick={() => this.redirect("/login", {})}>
+                        Find Training
+                    </div>
+                </div>
+            </div>
+    )}
 }
 
 export default MobileFooter;
