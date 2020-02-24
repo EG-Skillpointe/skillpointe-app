@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {AmbassadorCard} from "../components";
+import {AmbassadorCard, JobsCard} from "../components";
+
 
 
 class JobSearch extends Component {
@@ -17,7 +18,8 @@ class JobSearch extends Component {
         return (
             <div>
                 <h1>JobSearch PAGE!</h1>
-                <AmbassadorCard>Hello</AmbassadorCard>
+                {/*<AmbassadorCard>Hello</AmbassadorCard>*/}
+                <JobsCard/>
                 <Link to="/">Home</Link>
             </div>
         )

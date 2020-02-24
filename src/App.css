@@ -183,6 +183,7 @@ form {
 .card-button {
   background: #FFB767;
   border-radius: 5px;
+  color: #2D426B;
 }
 
 .card-horizontal {
@@ -191,16 +192,75 @@ form {
 }
 
 .card-image {
-  position: absolute;
   width: 132px;
   height: 132px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   left: 52px;
   top: 566px;
 }
+
 /* Card Ended*/
 
 /*Images */
 .images-corners {
   width: 100%;
   border-radius: 5px 5px;
+}
+
+/*containers*/
+body {
+  padding: 50px;
+}
+.container {
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
+  min-width: 230px;
+  max-width: 340px;
+  display: flex;
+}
+.container__image {
+  margin: auto 15px auto 10px;
+  object-fit: contain;
+  align-self: flex-start;
+  width: 150px;
+}
+
+.container__text {
+  padding: 5px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+.card-image-container{
+  margin: auto 15px auto 10px;
+  object-fit: contain;
+  align-self: flex-start;
+}
+.card-image{
+  width: 150px;
+}
+.card-title{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4F4F4F
+}
+
+.card-text{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4F4F4F
+}
+
+.card-subtitle{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  color: #2D426B;
 }
