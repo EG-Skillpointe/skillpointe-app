@@ -89,7 +89,11 @@ class Login extends Component {
                     : <SignUp toggle={this.toggleSignIn} login={this.login}/>
                 }
 
-                <label>OR</label>
+                <div className="text-strikethru">
+                    <div className="line"></div>
+                    <div className="text">OR</div>
+                </div>
+                {/* <label>OR</label> */}
                 { googleButton }
                 { facebookButton }
                 

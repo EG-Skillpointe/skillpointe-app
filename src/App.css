@@ -37,6 +37,20 @@
   }
 }
 
+.text-left {
+  text-align: left !important;
+}
+
+input, button {
+  border-radius: 0px !important;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
 
 /* Login */
 .goog {
@@ -145,6 +159,35 @@
   margin: 20px auto;
 }
 
+.custom-control-label {
+  font-weight: 500;
+}
+
+.text-strikethru {
+  position: relative;
+  text-align: center;
+  width: 90%;
+  min-width: 230px;
+  max-width: 260px;
+  margin: 20px auto;
+}
+
+.text-strikethru .line {
+  height: 1px;
+  background-color: #F1EEEA;
+  width: 100%;
+  position: relative;
+  bottom: -16px;
+}
+
+.text-strikethru .text {
+  display: inline-block;
+  background-color: #FFFFFF;
+  padding: 5px 10px;
+  font-size: 14px;
+  position: relative;
+  color: #282828;
+}
 
 /* FOOTER START */
 

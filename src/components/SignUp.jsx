@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SingUp = (props) => {
+export const SignUp = (props) => {
   return (
       <div className="sign-in-block">
         <h3>Sign Up</h3>
@@ -33,5 +33,5 @@ export const SingUp = (props) => {
   );
 }
 
-export default SingUp;
+export default SignUp;
 
