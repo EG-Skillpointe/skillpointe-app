@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {SignIn, SignUp} from "../components";
-
-import { Link } from "react-router-dom";
-
 import {authService} from "../services/auth.service";
- 
+import logo from "../assets/images/logo.png";
+import loginImage from "../assets/images/login-image.jpeg";
+import wCareers from "../assets/images/white_explore.png";
+import wJobs from "../assets/images/white_jobs.png";
+import wTraining from "../assets/images/white_training.png";
+import wPeople from "../assets/images/white_people.png";
 
 class Login extends Component {
 
@@ -23,22 +25,34 @@ class Login extends Component {
     toggleSignIn = () => {
         this.setState({
             signInToggle: !this.state.signInToggle
-        })
+        });
     }
 
-    login(type) {
+    login = (type) => {
         console.log('login clicked with type:', type)
 
         switch(type) {
-            case 1: // do Regular login
+            case 1: { // do Regular login - careers
                 console.log(`doing type ${type} login...`);
-            break;
-            case 2: // do Google login
+                let res = authService.login(userType1);
+                if(res) {
+                    this.props.history.push("/careers")
+                }
+            } break;
+            case 2: { // do Google login - training
                 console.log(`doing type ${type} login...`);
-            break;
-            case 3: // do Facebook login
+                let res = authService.login(userType2);
+                if(res) {
+                    this.props.history.push("/training")
+                }
+            } break;
+            case 3: { // do Facebook login - jobs
                 console.log(`doing type ${type} login...`);
-            break;
+                let res = authService.login(userType3);
+                if(res) {
+                    this.props.history.push("/jobsearch")
+                }
+            } break;
             default: console.log('login type not found. Type:', type);
         }
         
@@ -68,38 +82,98 @@ class Login extends Component {
         const facebookButton = 
             <button className="tp-login-button fb" onClick={() => this.login(3)}>
                 <div className="tp-login-contents">
-                <img className="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/szGrb_tkxMW.png" alt="" width="24" height="24"></img>
+                    <img className="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/szGrb_tkxMW.png" alt="" width="24" height="24"></img>
                     <span className="tp-login-span fb-span">Continue with Facebook</span>
                 </div>
             </button>
 
 
+      
 
 
         return (
-            <div className="login-container container">
-                <h1>LOGIN PAGE!</h1>
-                <Link to="/">Home</Link>
-                <button onClick={this.login}>Facebook</button>
-                <button onClick={this.logout}>logout</button>
+            <div className="login-container">
+                <div className="login-block">
 
-                {
-                    this.state.signInToggle
-                    ? <SignIn toggle={this.toggleSignIn} login={this.login}/> 
-                    : <SignUp toggle={this.toggleSignIn} login={this.login}/>
-                }
+                    <div className="login-heading">
+                        <img className="logo" src={logo} alt="Logo" />
+                        <label className="heading">Welcome to the movement</label>
+                    </div>
+                    
+                    {
+                        this.state.signInToggle
+                        ? <SignIn toggle={this.toggleSignIn} login={this.login}/> 
+                        : <>
+                            <label className="sub-heading">Join Skillpointe today.</label>
+                            <SignUp toggle={this.toggleSignIn} login={this.login}/>
+                        </>
+                        
+                    }
 
-                <div className="text-strikethru">
-                    <div className="line"></div>
-                    <div className="text">OR</div>
+                    <div className="text-strikethru">
+                        <div className="line"></div>
+                        <div className="text">OR</div>
+                    </div>
+                    { googleButton }
+                    { facebookButton }
                 </div>
-                {/* <label>OR</label> */}
-                { googleButton }
-                { facebookButton }
-                
+
+                <div className="login-footer-image">
+                    <img className="img" src={loginImage} alt="LoginFooterImage" />
+                    <div className="overlay">
+                        <div className="overlay-text-block">
+                            <div className="overlay-text">
+                                <img src={wCareers} alt="" width="24" height="24"></img>
+                                Explore Careers
+                            </div>
+                            <div className="overlay-text">
+                                <img src={wJobs} alt="" width="24" height="24"></img>
+                                Get Hired
+                            </div>
+                            <div className="overlay-text">
+                                <img src={wTraining} alt="" width="24" height="24"></img>
+                                Find Training
+                            </div>
+                            <div className="overlay-text">
+                                <img src={wPeople} alt="" width="24" height="24"></img>
+                                Join the movement...
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
+}
+
+// Careers
+const userType1 = {
+    userID: 111,
+    userType: 1,
+    userName: "JSmith",
+    firstName: "John",
+    lastName: "Smith",
+    emailAddress: "jsmith111@gmail.com",
+}
+
+// Training
+const userType2 = {
+    userID: 222,
+    userType: 2,
+    userName: "HJohnson",
+    firstName: "Howard",
+    lastName: "Johnson",
+    emailAddress: "HJohnson222@gmail.com",
+}
+
+// Jobs
+const userType3 = {
+    userID: 333,
+    userType: 3,
+    userName: "ERobertson",
+    firstName: "Eric",
+    lastName: "Robertson",
+    emailAddress: "erobertson333@gmail.com",
 }
 
 export default Login;
