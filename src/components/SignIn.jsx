@@ -3,7 +3,7 @@ import React from 'react';
 export const SingIn = (props) => {
   return (
       <div className="sign-in-block text-left">
-        <label className="heading">Log In</label>
+        {/* <label className="heading">Log In</label> */}
 
         <div className="form-group">
           {/* <label>Email address</label> */}
@@ -22,7 +22,7 @@ export const SingIn = (props) => {
           </div>
         </div>
 
-        <button className="btn btn-primary btn-block login-form-btn" onClick={() => props.login(1)}>Sign In</button>
+        <button className="btn btn-primary btn-block login-form-btn" onClick={() => props.login(1)}>Log In</button>
         <button className="btn signup-primary btn-block login-form-btn" onClick={props.toggle}>Sign Up</button>
       </div>
   )
