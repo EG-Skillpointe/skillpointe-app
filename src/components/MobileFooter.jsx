@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import dCareers from "../assets/images/d_explore.png";
+import dJobs from "../assets/images/d_jobs.png";
+import dTraining from "../assets/images/d_training.png";
+import dPeople from "../assets/images/d_people.png";
 
 class MobileFooter extends Component {
 
@@ -13,15 +17,26 @@ class MobileFooter extends Component {
         return (
             <div className='mobile-footer'>
                 <div className='footer-items'>
-                    <div onClick={() => this.redirect("/training")}>
-                        Explore Careers
+                    <div className="item" onClick={() => this.redirect("/careers")}>
+                        <img src={dCareers} alt="" width="24" height="24"></img>
+                        <div>Explore Careers</div>
                     </div>
-                    <div onClick={() => this.redirect("/jobsearch", {})}>
-                        Find a Job
+
+                    <div className="item" onClick={() => this.redirect("/jobsearch")}>
+                        <img src={dJobs} alt="" width="24" height="24"></img>
+                        <div>Find Jobs</div>
                     </div>
-                    <div onClick={() => this.redirect("/login", {})}>
-                        Find Training
+
+                    <div className="item" onClick={() => this.redirect("/training")}>
+                        <img src={dTraining} alt="" width="24" height="24"></img>
+                        <div>Find Training</div>
                     </div>
+
+                    <div className="item" onClick={() => this.redirect("/login")}>
+                        <img src={dPeople} alt="" width="24" height="24"></img>
+                        <div>Find People</div>
+                    </div>
+                    
                 </div>
             </div>
     )}
