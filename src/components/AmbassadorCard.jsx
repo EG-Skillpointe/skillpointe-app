@@ -1,23 +1,21 @@
 import React from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import image from '../images/construction.jpg'
 
 export const AmbassadorCard = (props) => {
   return (
-     <div className="container">
-      <Card style={{ width: '18rem', margin: '5px auto' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+
+      <Card className = "card-container" >
+        <Card.Img variant="top" src={image} style={{width: '100%'}} />
         <Card.Body>
           <Card.Subtitle className="mb-2 text-muted">Construction</Card.Subtitle>
           <Card.Title>Wally</Card.Title>
           <Card.Text>Construction Service Worker</Card.Text>
-          <Card.Body>
-            <Button variant="primary">Jobs</Button>
-            <Button variant="secondary">Training</Button>
-          </Card.Body>
+          <Button className='card-button' varaint="primary">Learn More</Button>
         </Card.Body>
       </Card>
-     </div>
+
   )
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { TrainingCard} from "../components";
 
 
 class Training extends Component {
@@ -16,6 +17,7 @@ class Training extends Component {
         return (
             <div>
                 <h1>Training PAGE!</h1>
+                <TrainingCard/>
                 <Link to="/">Home</Link>
             </div>
         )
