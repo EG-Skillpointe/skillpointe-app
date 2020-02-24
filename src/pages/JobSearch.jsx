@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import {AmbassadorCard, JobsCard} from "../components";
-
+import { MobileFooter } from "../components";
 
 
 class JobSearch extends Component {
@@ -21,6 +21,7 @@ class JobSearch extends Component {
                 {/*<AmbassadorCard>Hello</AmbassadorCard>*/}
                 <JobsCard/>
                 <Link to="/">Home</Link>
+                <MobileFooter history={this.props.history}/>
             </div>
         )
     }

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
-export const SingUp = (props) => {
+export const SignUp = (props) => {
   return (
-      <form>
+      <div className="sign-in-block">
         <h3>Sign Up</h3>
 
         <div className="form-group">
@@ -28,11 +27,11 @@ export const SingUp = (props) => {
 
         <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
         <p className="forgot-password text-right">
-          Already registered <label className="signin-primary" onClick={props.toggle}>sign in?</label>
+          Already registered? <label className="signin-primary" onClick={props.toggle}>Sign in.</label>
         </p>
-      </form>
+      </div>
   );
 }
 
-export default SingUp;
+export default SignUp;
 
