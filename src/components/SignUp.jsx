@@ -2,32 +2,30 @@ import React from 'react';
 
 export const SignUp = (props) => {
   return (
-      <div className="sign-in-block">
-        <h3>Sign Up</h3>
+      <div className="sign-in-block text-left">
+        
 
         <div className="form-group">
-          <label>First name</label>
           <input type="text" className="form-control" placeholder="First name" />
         </div>
 
         <div className="form-group">
-          <label>Last name</label>
           <input type="text" className="form-control" placeholder="Last name" />
         </div>
 
         <div className="form-group">
-          <label>Email address</label>
-          <input type="email" className="form-control" placeholder="Enter email" />
+          <input type="email" className="form-control" placeholder="Email" />
         </div>
 
         <div className="form-group">
-          <label>Password</label>
-          <input type="password" className="form-control" placeholder="Enter password" />
+          <input type="password" className="form-control" placeholder="Password" />
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
-        <p className="forgot-password text-right">
-          Already registered? <label className="signin-primary" onClick={props.toggle}>Sign in.</label>
+        <button type="submit" className="btn btn-primary btn-block login-form-btn">Sign Up</button>
+
+        <hr></hr>
+        <p className="forgot-password text-center">
+          Already registered? <label className="signin-primary" onClick={props.toggle}>Log in.</label>
         </p>
       </div>
   );
