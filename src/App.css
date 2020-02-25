@@ -426,4 +426,10 @@ label, p {
   right: 50px;
 }
 
+.top-navbar .hamburger {
+  position: absolute;
+  right: 25px;
+  width: 8%;
+}
+
 
