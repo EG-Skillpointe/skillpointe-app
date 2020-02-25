@@ -1,22 +1,42 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {AmbassadorCard, JobsCard} from "../components";
+import {AmbassadorCard, JobsCard, TopNavbarBlue} from "../components";
 import { MobileFooter } from "../components";
+import HamburgerModal from "../components/HamburgerModal";
 
 
 class JobSearch extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {}
+        this.state = {
+            showModal: false
+        };
     }
 
+    openModal = () => {
+        console.log('opening modal');
+        this.setState({showModal: true},() => {
+            console.log(`showModal status: ${this.state.showModal}`)
+        });
+    };
 
+    closeModal = () => {
+        console.log('closing modal');
+        this.setState({showModal: false}, () => {
+            console.log(`showModal status: ${this.state.showModal}`)
+        });
+    };
 
     render() {
+        const modalOpened = this.state.showModal;
+
         return (
             <div>
+                {/*conditionally rendered modal*/}
+                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+
+                <TopNavbarBlue openModal={this.openModal} />
                 <h1>JobSearch PAGE!</h1>
                 <JobsCard/>
                 <Link to="/">Home</Link>

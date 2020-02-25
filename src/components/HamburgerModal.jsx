@@ -8,9 +8,14 @@ const HamburgerModal = (props) => {
             <ModalNavbar closeModal={props.closeModal}/>
 
             <div className="modal-body">
-                {/*<Link to="/training">Training</Link>*/}
-                {/*<Link to="/jobsearch">Job Search</Link>*/}
-                {/*<Link to="/login">Login</Link>*/}
+                <Link className="" to="/">Main</Link>
+                <Link className="" to="">Explore Careers</Link>
+                <Link className="" to="/jobsearch">Find Job</Link>
+                <Link className="" to="/training">Find Training</Link>
+                <Link className="" to="">Find People</Link>
+                <Link className="" to="">Additional Resrouces</Link>
+                <Link className="" to="">Contact</Link>
+                {/*<Link className="" to="/login">Login</Link>*/}
             </div>
 
             {/*<MobileFooter history={this.props.history}/>*/}

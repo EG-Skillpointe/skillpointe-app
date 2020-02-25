@@ -426,30 +426,6 @@ label, p {
   color: var(--dark-blue);
 }
 
-.top-navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  background-color: #2c476c;
-  opacity: .5;
-  z-index: 999;
-}
-
-.top-navbar .logo {
-  position: absolute;
-  left: 20px;
-  width: 25%;
-}
-
-.top-navbar .sign-in {
-  color: white;
-  position: absolute;
-  right: 50px;
-}
-
-
 .carousel-container {
   padding: 40px;
   background: #419be0;
@@ -493,10 +469,42 @@ label, p {
   cursor: pointer;
 }
 
+/* styling for homepage's top navbar */
+.top-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #2c476c;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.top-navbar .logo {
+  position: absolute;
+  left: 20px;
+  width: 25%;
+}
+
 .top-navbar .hamburger {
   position: absolute;
   right: 25px;
   width: 7%;
+}
+
+.top-navbar .sign-in {
+  color: white;
+  position: absolute;
+  right: 50px;
+}
+
+/* styling for hamburger modal */
+.hamburger-modal {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
 }
 
 .modal-navbar {
@@ -506,7 +514,7 @@ label, p {
   width: 100%;
   height: 60px;
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
   z-index: 999;
 }
 
@@ -522,16 +530,18 @@ label, p {
   width: 7%;
 }
 
-.hamburger-modal {
-  position: fixed;
-  z-index: 2;
-  width: 100vw;
-  height: 100vh;
-}
-
 .modal-body {
-  background-color: #FFB767;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  background-color: white;
   height: 100%;
   width: 100%;
+}
+
+.modal-body a {
+  padding: 20px;
+  color: #2D426B;
+  font-weight: 500;
 }
 
