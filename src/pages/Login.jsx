@@ -3,10 +3,10 @@ import {SignIn, SignUp} from "../components";
 import {authService} from "../services/auth.service";
 import logo from "../assets/images/logo.png";
 import loginImage from "../assets/images/login-image.jpeg";
-import wCareers from "../assets/images/w_explore.png";
-import wJobs from "../assets/images/w_jobs.png";
-import wTraining from "../assets/images/w_training.png";
-import wPeople from "../assets/images/w_people.png";
+import careersImg from "../assets/images/Explore_Careers.png";
+import jobsImg from "../assets/images/Find_Jobs.png";
+import trainingImg from "../assets/images/Find_Training.png";
+import peopleImg from "../assets/images/Find_People.png";
 
 class Login extends Component {
 
@@ -123,19 +123,19 @@ class Login extends Component {
                     <div className="overlay">
                         <div className="overlay-text-block">
                             <div className="overlay-text">
-                                <img src={wCareers} alt="" width="24" height="24"></img>
+                                <img src={careersImg} alt="" width="24" height="24"></img>
                                 Explore Careers
                             </div>
                             <div className="overlay-text">
-                                <img src={wJobs} alt="" width="24" height="24"></img>
+                                <img src={jobsImg} alt="" width="24" height="24"></img>
                                 Get Hired
                             </div>
                             <div className="overlay-text">
-                                <img src={wTraining} alt="" width="24" height="24"></img>
+                                <img src={trainingImg} alt="" width="24" height="24"></img>
                                 Find Training
                             </div>
                             <div className="overlay-text">
-                                <img src={wPeople} alt="" width="24" height="24"></img>
+                                <img src={peopleImg} alt="" width="24" height="24"></img>
                                 Join the movement...
                             </div>
                         </div>
