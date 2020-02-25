@@ -230,7 +230,7 @@ label, p {
   font-size: 24px;
 }
 
-.login-footer-image .overlay .overlay-text-block div {
+.overlay-text {
   display: block;
   color: white;
   font-weight: 700;
@@ -306,6 +306,15 @@ label, p {
   opacity: 50%;
 }
 
+@media (max-width: 330px) {
+  .footer-items .item img {
+    display: none;
+  }
+
+  .footer-items .item {
+    padding: 12px;
+  }
+}
 /* FOOTER END */
 
 /* Card */
