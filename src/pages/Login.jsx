@@ -3,10 +3,10 @@ import {SignIn, SignUp} from "../components";
 import {authService} from "../services/auth.service";
 import logo from "../assets/images/logo.png";
 import loginImage from "../assets/images/login-image.jpeg";
-import wCareers from "../assets/images/white_explore.png";
-import wJobs from "../assets/images/white_jobs.png";
-import wTraining from "../assets/images/white_training.png";
-import wPeople from "../assets/images/white_people.png";
+import wCareers from "../assets/images/w_explore.png";
+import wJobs from "../assets/images/w_jobs.png";
+import wTraining from "../assets/images/w_training.png";
+import wPeople from "../assets/images/w_people.png";
 
 class Login extends Component {
 
