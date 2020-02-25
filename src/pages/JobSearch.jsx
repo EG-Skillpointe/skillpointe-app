@@ -18,7 +18,6 @@ class JobSearch extends Component {
         return (
             <div>
                 <h1>JobSearch PAGE!</h1>
-                {/*<AmbassadorCard>Hello</AmbassadorCard>*/}
                 <JobsCard/>
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>

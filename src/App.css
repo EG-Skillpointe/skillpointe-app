@@ -301,7 +301,7 @@ label, p {
 
 /* Card */
 .card-container {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
@@ -392,4 +392,47 @@ body {
   font-size: 11px;
   line-height: 13px;
   color: #2D426B;
+}
+
+.carousel-container {
+  padding: 40px;
+  background: #419be0;
+}
+
+.carousel-slick-slide img {
+  margin: auto;
+}
+
+.carousel-arrow-right {
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-left: -2.45px;
+}
+
+.carousel-arrow-left {
+  transform: translate(-50%, -50%) rotate(-135deg);
+  margin-left: 2.45px;
+}
+.carousel-arrows {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-color: rgba(45, 66, 107, 0.5);;
+  border-width: 3px 3px 0 0;
+  padding: 5px;
+  transition: 0.3s;
+  font-size: 0;
+}
+
+.carousel-button{
+  position: relative;
+  padding: 21px;
+  border: none;
+  overflow: hidden;
+  outline: 0;
+  font-size: 0;
+  line-height: 0;
+  background-color: #f5f5f500;
+  cursor: pointer;
 }
