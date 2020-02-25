@@ -36,6 +36,7 @@ class JobSearch extends Component {
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
 
+                {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal} />
                 <h1>JobSearch PAGE!</h1>
                 <JobsCard/>

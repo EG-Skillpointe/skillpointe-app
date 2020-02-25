@@ -1,14 +1,23 @@
 import React from 'react';
 import whiteLogo from '../assets/images/skillpointlogo_white.png';
 import hamburger from '../assets/images/hamburger_menu.png'
+import {Link} from "react-router-dom";
+
+function getSignInState() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return user !== null;
+}
 
 export const TopNavbarBlue = (props) => {
     console.log(`props in TopNavbarBlue: ${JSON.stringify(props)}`);
+    const signedIn = getSignInState();
+    console.log(`signedIn state: ${signedIn}`);
 
     return (
-        <div className="top-navbar">
+        <div className="top-navbar blue">
             <img className="logo" src={whiteLogo} />
-            {/*<div className="sign-in">Sign In</div>*/}
+            {/*conditionally rendered modal*/}
+            {signedIn ? (null) : (<Link className="sign" to="/login">Login</Link>)}
             <img className="hamburger" src={hamburger} onClick={props.openModal}/>
         </div>
     )
