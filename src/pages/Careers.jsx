@@ -35,6 +35,7 @@ class Careers extends Component {
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
 
+                {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal} />
                 <h1>Careers PAGE!</h1>
                 <CardCarousel/>

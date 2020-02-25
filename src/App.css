@@ -476,9 +476,16 @@ label, p {
   align-items: center;
   width: 100%;
   height: 60px;
-  background-color: #2c476c;
   box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
   z-index: 999;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  background-color: #2c476c;
 }
 
 .top-navbar .logo {
@@ -494,9 +501,18 @@ label, p {
 }
 
 .top-navbar .sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   position: absolute;
-  right: 50px;
+  right: 70px;
+  width: 60px;
+  height: 30px;
+  border-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1.5px;
 }
 
 /* styling for hamburger modal */
