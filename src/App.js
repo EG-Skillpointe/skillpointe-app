@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage, Login, Training, JobSearch, Careers } from './pages';
-import { PrivateRoute } from './components';
+import { PrivateRoute, Footer } from './components';
 
 import './App.css';
 
@@ -29,6 +29,7 @@ class App extends React.Component {
 					<Route path='/login' component={Login} />
 				</Switch>
 			</Router>
+			<Footer />
 		</div>
 	  );
 	}
