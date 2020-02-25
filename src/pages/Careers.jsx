@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {AmbassadorCard, CardCarousel} from '../components'
+import {AmbassadorCard, CardCarousel, CardRow} from '../components'
+
 
 
 
@@ -18,7 +19,7 @@ class Careers extends Component {
         return (
             <div>
                 <h1>Careers PAGE!</h1>
-                <CardCarousel/>
+                <CardRow/>
                 <Link to="/">Home</Link>
             </div>
         )
