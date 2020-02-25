@@ -427,8 +427,8 @@ label, p {
 
 .top-navbar .logo {
   position: absolute;
-  left: 35px;
-  width: 20%;
+  left: 20px;
+  width: 25%;
 }
 
 .top-navbar .sign-in {
@@ -439,8 +439,8 @@ label, p {
 
 .top-navbar .hamburger {
   position: absolute;
-  right: 70px;
-  width: 6%;
+  right: 25px;
+  width: 7%;
 }
 
 
