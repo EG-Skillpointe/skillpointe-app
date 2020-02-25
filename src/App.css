@@ -1,3 +1,12 @@
+:root {
+  --dark-navy: #040E21;
+  --light-blue: #5578BB;
+  --dark-blue: #2D426B;
+  --accent-orange: #F8A141;
+  --light-gray: #ededed;
+  --dark-gray: #4F4F4F;
+}
+
 .App {
   text-align: center;
 }
@@ -48,15 +57,15 @@
 .heading {
   font-size: 30px;
   font-weight: 500;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .sub-heading {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 label, p {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 
@@ -139,14 +148,14 @@ label, p {
 }
 
 .signup-primary {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
   font-weight: 600;
 }
 
 .signup-primary:hover {
-  background-color: #2D426B !important;
+  background-color: var(--dark-blue) !important;
   color: white;
 }
 
@@ -160,14 +169,14 @@ label, p {
 }
 
 .btn-primary {
-  background-color: #2D426B;
+  background-color: var(--dark-blue);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
 }
 
 .remember-me-checkbox {
@@ -216,7 +225,7 @@ label, p {
 
 .login-footer-image {
   position: relative;
-  background-color: #2D426B;
+  background-color: var(--dark-blue);
 }
 
 .login-footer-image .img {
@@ -255,6 +264,7 @@ label, p {
   width: 24px;
   margin-bottom: 4px;
   margin-right: 10px;
+  filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(186deg) brightness(111%) contrast(100%); /*To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 /* FOOTER START */
@@ -320,7 +330,7 @@ label, p {
 
 /* Card */
 .card-container {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
@@ -332,7 +342,7 @@ label, p {
 .card-button {
   background: #FFB767;
   border-radius: 5px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .card-horizontal {
@@ -395,7 +405,7 @@ label, p {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-text{
@@ -404,7 +414,7 @@ label, p {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-subtitle{
@@ -413,7 +423,7 @@ label, p {
   font-weight: bold;
   font-size: 11px;
   line-height: 13px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .top-navbar {
@@ -437,6 +447,50 @@ label, p {
   color: white;
   position: absolute;
   right: 50px;
+}
+
+
+.carousel-container {
+  padding: 40px;
+  background: #419be0;
+}
+
+.carousel-slick-slide img {
+  margin: auto;
+}
+
+.carousel-arrow-right {
+  transform: translate(-50%, -50%) rotate(45deg);
+  margin-left: -2.45px;
+}
+
+.carousel-arrow-left {
+  transform: translate(-50%, -50%) rotate(-135deg);
+  margin-left: 2.45px;
+}
+.carousel-arrows {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-color: rgba(45, 66, 107, 0.5);;
+  border-width: 3px 3px 0 0;
+  padding: 5px;
+  transition: 0.3s;
+  font-size: 0;
+}
+
+.carousel-button{
+  position: relative;
+  padding: 21px;
+  border: none;
+  overflow: hidden;
+  outline: 0;
+  font-size: 0;
+  line-height: 0;
+  background-color: #f5f5f500;
+  cursor: pointer;
 }
 
 .top-navbar .hamburger {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import dCareers from "../assets/images/d_explore.png";
-import dJobs from "../assets/images/d_jobs.png";
-import dTraining from "../assets/images/d_training.png";
-import dPeople from "../assets/images/d_people.png";
+import careersImg from "../assets/images/Explore_Careers.png";
+import jobsImg from "../assets/images/Find_Jobs.png";
+import trainingImg from "../assets/images/Find_Training.png";
+import peopleImg from "../assets/images/Find_People.png";
 
 class MobileFooter extends Component {
 
@@ -18,22 +18,22 @@ class MobileFooter extends Component {
             <div className='mobile-footer'>
                 <div className='footer-items'>
                     <div className="item" onClick={() => this.redirect("/careers")}>
-                        <img src={dCareers} alt="" width="24" height="24"></img>
+                        <img src={careersImg} alt="" width="24" height="24"></img>
                         <div>Explore Careers</div>
                     </div>
 
                     <div className="item" onClick={() => this.redirect("/jobsearch")}>
-                        <img src={dJobs} alt="" width="24" height="24"></img>
+                        <img src={jobsImg} alt="" width="24" height="24"></img>
                         <div>Find Jobs</div>
                     </div>
 
                     <div className="item" onClick={() => this.redirect("/training")}>
-                        <img src={dTraining} alt="" width="24" height="24"></img>
+                        <img src={trainingImg} alt="" width="24" height="24"></img>
                         <div>Find Training</div>
                     </div>
 
                     <div className="item" onClick={() => this.redirect("/login")}>
-                        <img src={dPeople} alt="" width="24" height="24"></img>
+                        <img src={peopleImg} alt="" width="24" height="24"></img>
                         <div>Find People</div>
                     </div>
                     

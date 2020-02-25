@@ -8,3 +8,4 @@ export {default as JobsCard} from './JobsCard';
 export {default as TopNavbarBlue} from './TopNavbarBlue';
 export {default as TopNavbarWhite} from './TopNavbarWhite';
 export {default as ModalNavbar} from './ModalNavbar';
+export {default as CardCarousel} from './CardCarousel'
