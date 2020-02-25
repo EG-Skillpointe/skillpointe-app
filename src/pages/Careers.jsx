@@ -4,7 +4,6 @@ import {AmbassadorCard, CardCarousel, TopNavbarBlue} from '../components'
 import HamburgerModal from "../components/HamburgerModal";
 
 
-
 class Careers extends Component {
 
     constructor(props) {
