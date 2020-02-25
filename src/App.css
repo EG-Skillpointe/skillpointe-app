@@ -1,3 +1,12 @@
+:root {
+  --dark-navy: #040E21;
+  --light-blue: #5578BB;
+  --dark-blue: #2D426B;
+  --accent-orange: #F8A141;
+  --light-gray: #ededed;
+  --dark-gray: #4F4F4F;
+}
+
 .App {
   text-align: center;
 }
@@ -48,15 +57,15 @@
 .heading {
   font-size: 30px;
   font-weight: 500;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .sub-heading {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 label, p {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 
@@ -139,14 +148,14 @@ label, p {
 }
 
 .signup-primary {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
   font-weight: 600;
 }
 
 .signup-primary:hover {
-  background-color: #2D426B !important;
+  background-color: var(--dark-blue) !important;
   color: white;
 }
 
@@ -160,14 +169,14 @@ label, p {
 }
 
 .btn-primary {
-  background-color: #2D426B;
+  background-color: var(--dark-blue);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
 }
 
 .remember-me-checkbox {
@@ -216,7 +225,7 @@ label, p {
 
 .login-footer-image {
   position: relative;
-  background-color: #2D426B;
+  background-color: var(--dark-blue);
 }
 
 .login-footer-image .img {
@@ -332,7 +341,7 @@ label, p {
 .card-button {
   background: #FFB767;
   border-radius: 5px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .card-horizontal {
@@ -395,7 +404,7 @@ label, p {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-text{
@@ -404,7 +413,7 @@ label, p {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-subtitle{
@@ -413,7 +422,7 @@ label, p {
   font-weight: bold;
   font-size: 11px;
   line-height: 13px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .top-navbar {
