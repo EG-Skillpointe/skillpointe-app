@@ -1,3 +1,12 @@
+:root {
+  --dark-navy: #040E21;
+  --light-blue: #5578BB;
+  --dark-blue: #2D426B;
+  --accent-orange: #F8A141;
+  --light-gray: #ededed;
+  --dark-gray: #4F4F4F;
+}
+
 .App {
   text-align: center;
 }
@@ -48,15 +57,15 @@
 .heading {
   font-size: 30px;
   font-weight: 500;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .sub-heading {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 label, p {
-  color: #4F4F4F;
+  color: var(--dark-gray);
 }
 
 
@@ -139,14 +148,14 @@ label, p {
 }
 
 .signup-primary {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
   font-weight: 600;
 }
 
 .signup-primary:hover {
-  background-color: #2D426B !important;
+  background-color: var(--dark-blue) !important;
   color: white;
 }
 
@@ -160,14 +169,14 @@ label, p {
 }
 
 .btn-primary {
-  background-color: #2D426B;
+  background-color: var(--dark-blue);
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  color: #2D426B;
+  color: var(--dark-blue);
   background-color: white;
-  border: 2px solid #2D426B;
+  border: 2px solid var(--dark-blue);
 }
 
 .remember-me-checkbox {
@@ -216,12 +225,12 @@ label, p {
 
 .login-footer-image {
   position: relative;
-  background-color: black;
+  background-color: var(--dark-blue);
 }
 
 .login-footer-image .img {
   width: 100%;
-  opacity: 80%;
+  opacity: 20%;
 }
 
 .login-footer-image .overlay label {
@@ -230,11 +239,13 @@ label, p {
   font-size: 24px;
 }
 
-.login-footer-image .overlay div {
+.overlay-text {
   display: block;
   color: white;
   font-weight: 700;
+  padding-left: 35px;
   font-size: 24px;
+  text-align: left;
 }
 
 .login-footer-image .overlay {
@@ -253,6 +264,7 @@ label, p {
   width: 24px;
   margin-bottom: 4px;
   margin-right: 10px;
+  filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(186deg) brightness(111%) contrast(100%); /*To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 /* FOOTER START */
@@ -261,8 +273,9 @@ label, p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  background-color: #2c476c;
+  height: 64px;
+  background-color: white;
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.46);
 }
 
 .footer-items {
@@ -273,30 +286,45 @@ label, p {
   position: relative;
 }
 
-.footer-items div {
-  border-right: 1px solid white;
+.footer-items .item {
   cursor: pointer;
-  display: flex;
-  padding: 0 20px;
+  padding: 10px;
   height: 100%;
   align-items: center;
-  color: white;
-  font-weight: 500;
-  font-size: 1.2rem;
-  max-width: 95px;
+  color: black;
+  font-size: 12px;
+  max-width: 110px;
 }
 
-.footer-items div:last-child {
+.footer-items .item img {
+  margin-bottom: 8px;
+}
+
+.footer-items .item:first-child {
+  padding-left: 0 !important;
+}
+
+.footer-items .item:last-child {
   border-right: none !important;
+  padding-right: 0 !important;
 }
 
-.footer-items div:hover {
+.footer-items .item:hover, .footer-items .item:active, .footer-items .item:focus {
   text-decoration: none;
   transition: 0.15s all ease-in-out;
-  color: #faac57;
-  border-color: white;
+  /* filter: invert(64%) sepia(64%) saturate(394%) hue-rotate(349deg) brightness(101%) contrast(96%); To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
+  opacity: 50%;
 }
 
+@media (max-width: 330px) {
+  .footer-items .item img {
+    display: none;
+  }
+
+  .footer-items .item {
+    padding: 12px;
+  }
+}
 /* FOOTER END */
 
 /* Card */
@@ -309,10 +337,11 @@ label, p {
   max-width: 300px;
   box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
 }
+
 .card-button {
   background: #FFB767;
   border-radius: 5px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
 
 .card-horizontal {
@@ -338,15 +367,14 @@ label, p {
 }
 
 /*containers*/
-body {
-  padding: 50px;
-}
+
 .container {
   box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
   min-width: 230px;
   max-width: 340px;
   display: flex;
 }
+
 .container__image {
   margin: auto 15px auto 10px;
   object-fit: contain;
@@ -359,21 +387,24 @@ body {
   text-align: center;
   flex: 1 1 auto;
 }
+
 .card-image-container{
   margin: auto 15px auto 10px;
   object-fit: contain;
   align-self: flex-start;
 }
+
 .card-image{
   width: 150px;
 }
+
 .card-title{
   font-family: Roboto, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-text{
@@ -382,7 +413,7 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #4F4F4F
+  color: var(--dark-gray);
 }
 
 .card-subtitle{
@@ -391,8 +422,31 @@ body {
   font-weight: bold;
   font-size: 11px;
   line-height: 13px;
-  color: #2D426B;
+  color: var(--dark-blue);
 }
+
+.top-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #2c476c;
+  opacity: .5;
+}
+
+.top-navbar .logo {
+  position: absolute;
+  left: 20px;
+  width: 25%;
+}
+
+.top-navbar .sign-in {
+  color: white;
+  position: absolute;
+  right: 50px;
+}
+
 
 .carousel-container {
   padding: 40px;
@@ -436,3 +490,10 @@ body {
   background-color: #f5f5f500;
   cursor: pointer;
 }
+
+.top-navbar .hamburger {
+  position: absolute;
+  right: 25px;
+  width: 7%;
+}
+
