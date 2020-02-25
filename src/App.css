@@ -507,7 +507,6 @@ label, p {
 
 /* styling for homepage's top navbar */
 .top-navbar {
-  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -515,7 +514,15 @@ label, p {
   height: 60px;
   background-color: #2c476c1f;
   box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
-  z-index: 999;
+  z-index: 940;
+}
+
+.nav-absolute {
+  position: absolute;
+}
+
+.nav-fixed {
+  position: fixed;
 }
 
 .top-navbar .logo {
@@ -539,7 +546,7 @@ label, p {
 /* styling for hamburger modal */
 .hamburger-modal {
   position: fixed;
-  z-index: 2;
+  z-index: 950;
   width: 100vw;
   height: 100vh;
 }
