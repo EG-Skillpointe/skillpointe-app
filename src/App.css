@@ -416,5 +416,14 @@ label, p {
 }
 
 .top-navbar .logo{
-  height: 60%;
+  padding-left: 10px;
+  height: 55%;
 }
+
+.top-navbar .sign-in {
+  color: white;
+  position: absolute;
+  right: 50px;
+}
+
+

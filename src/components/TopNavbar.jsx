@@ -5,7 +5,7 @@ export const TopNavbar = (props) => {
     return (
         <div className="top-navbar">
             <img className="logo" src={whiteLogo} />
-            <div className="sign-in">Sign In</div>
+            {/*<div className="sign-in">Sign In</div>*/}
         </div>
     )
 };
