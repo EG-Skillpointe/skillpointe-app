@@ -6,11 +6,10 @@ import school from '../assets/mockData/school.json';
 import ambassador from '../assets/mockData/ambassadors';
 import job from '../assets/mockData/jobs';
 
-import {authService} from "../services/auth.service";
-
 export const CardCarousel= (props) => {
   const leftArrow = <button className="carousel-button "><span className="carousel-arrows carousel-arrow-left">prev</span></button>;
   const rightArrow = <button className="carousel-button"><span className="carousel-arrows carousel-arrow-right">next</span></button>;
+
     let cards = [];
 
     switch(props.cardType) {
@@ -30,15 +29,29 @@ export const CardCarousel= (props) => {
             console.log('card type not found. Type:', props.cardType);
     }
 
-    return (
-      <div className="App">
-        <Carousel arrowRight={rightArrow}
-                  arrowLeft={leftArrow}
-                  addArrowClickHandler infinite>
-          {cards}
-        </Carousel>
-      </div>
-  )
+    if (props.cardType === 'ambassador') {
+        return (
+            <div className="App">
+                <Carousel className="ambassador-carousel"
+                          arrowRight={rightArrow}
+                          arrowLeft={leftArrow}
+                          addArrowClickHandler infinite>
+                    {cards}
+                </Carousel>
+            </div>
+        )
+    }
+    else {
+        return (
+            <div className="App">
+                <Carousel arrowRight={rightArrow}
+                          arrowLeft={leftArrow}
+                          addArrowClickHandler infinite>
+                    {cards}
+                </Carousel>
+            </div>
+        )
+    }
 };
 
 export default CardCarousel;
