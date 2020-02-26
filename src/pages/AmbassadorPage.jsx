@@ -44,7 +44,7 @@ class AmbassadorPage extends Component {
             </p>
           </div>
           <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-            {ambassadors.ambassadors.map(ambassador => { return <div style={{padding:"10px", margin:"5px"}}> <AmbassadorCard ambassador={ambassador}/> </div>})}
+            {ambassadors.ambassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador}/> </div>})}
           </div>
 
           <MobileFooter history={this.props.history}/>

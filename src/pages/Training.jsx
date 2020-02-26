@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import {TopNavbarWhite, TrainingCard} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
-
-
+import school from "../assets/mockData/school";
 
 class Training extends Component {
 
@@ -30,6 +29,8 @@ class Training extends Component {
     };
 
     render() {
+        let cards = [];
+        {school.schools.map(school => { cards.push(<TrainingCard school={school}/>)}) }
         const modalOpened = this.state.showModal;
 
         return (
@@ -41,7 +42,7 @@ class Training extends Component {
                 <TopNavbarWhite openModal={this.openModal} />
                 <h1>Training PAGE!</h1>
                 {/* TODO: Pass in actual data to prevent error in training page */}
-                <TrainingCard school={{name:'boopity boppity', location: 'boopity boppity way'}}/>
+                {cards}
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
             </div>

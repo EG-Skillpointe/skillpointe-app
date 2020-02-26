@@ -364,6 +364,22 @@ label, p {
 }
 /* FOOTER END */
 
+.ambassador-carousel {
+  height: 360px !important;
+}
+
+.ambassador-carousel .BrainhubCarousel__trackContainer {
+  height: 100%;
+}
+
+.ambassador-carousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track {
+  height: 100%;
+}
+
+.ambassador-carousel li {
+  height: 100%;
+}
+
 /* Card */
 .ambassador-card-container {
   height: 95% !important;
@@ -405,20 +421,14 @@ label, p {
 }
 
 /*containers*/
-
 .container {
   height: 95% !important;
   width: 95% !important;
   margin: auto;
   padding: 0;
   height: 100%;
-  /*min-width: 230px;*/
-  /*max-width: 340px;*/
   display: flex;
   border-radius: 10px;
-  /*border-color: grey;*/
-  /*border-width: 2px;*/
-  /*border-style: solid;*/
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2) !important;
 }
 
@@ -755,3 +765,25 @@ label, p {
   margin-bottom: 0;
 }
 
+/* Video Component START */
+
+.video-comp {
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.video-comp video {
+  width: 100%;
+}
+
+.ambassador-card-div{
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+/* Video Component END */
