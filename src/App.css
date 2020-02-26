@@ -553,16 +553,20 @@ label, p {
   background-color: #2c476c;
 }
 
+.blue.nav-transparent {
+  background-color: #2c476c30;
+}
+
 .top-navbar .logo {
   position: absolute;
   left: 20px;
-  width: 25%;
+  height: 40px;
 }
 
 .top-navbar .hamburger {
   position: absolute;
   right: 25px;
-  width: 7%;
+  height: 20px;
 }
 
 .top-navbar .sign-in {

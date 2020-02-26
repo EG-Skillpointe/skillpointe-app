@@ -14,7 +14,7 @@ export const TopNavbarBlue = (props) => {
     console.log(`signedIn state: ${signedIn}`);
 
     return (
-        <div className="top-navbar blue">
+        <div className={`top-navbar blue ${props.absolute ? 'nav-absolute' : ''} ${props.transparent ? 'nav-transparent' : ''}`}>
             <img className="logo" src={whiteLogo} />
             {/*conditionally rendered modal*/}
             {signedIn ? (null) : (<Link className="sign" to="/login">Login</Link>)}

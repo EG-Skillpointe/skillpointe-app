@@ -36,7 +36,7 @@ class HomePage extends Component {
                 {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarBlue openModal={this.openModal} />
+                <TopNavbarBlue openModal={this.openModal} absolute transparent/>
                 
                 <div className='home-landing'>
                     <div className='landing-content'>
