@@ -40,7 +40,8 @@ class Training extends Component {
                 {/*main contents of page*/}
                 <TopNavbarWhite openModal={this.openModal} />
                 <h1>Training PAGE!</h1>
-                <TrainingCard/>
+                // TODO: Pass in actual data to prevent error in training page
+                <TrainingCard school={{name:'boopity boppity', location: 'boopity boppity way'}}/>
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
             </div>
