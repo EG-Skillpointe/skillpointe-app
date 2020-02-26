@@ -442,6 +442,7 @@ label, p {
 }
 
 .container_text {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
