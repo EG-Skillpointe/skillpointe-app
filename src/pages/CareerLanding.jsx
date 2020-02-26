@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue} from "../components";
+import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard} from "../components";
 import landingBackground from "../assets/images/landing-background1.png";
-import construction from "../assets/images/construction.jpg";
-import communication from "../assets/images/communications.jpg";
-import energy from "../assets/images/energy.jpg";
-import healthcare from "../assets/images/healthcare.jpg";
-import hospitality from "../assets/images/hospitality.jpg";
-import humanService from "../assets/images/human_services.jpg";
-import informationTechnology from "../assets/images/information_technology.jpg"
-import manufacturing from "../assets/images/manufacturing.jpg";
-import publicSafety from "../assets/images/public_safety.jpg";
-import transportation from "../assets/images/transportation.jpg";
+import industries from '../assets/mockData/industries';
 
 import HamburgerModal from "../components/HamburgerModal";
+import school from "../assets/mockData/school";
 
 class CareerLanding extends Component {
 
@@ -64,16 +56,7 @@ class CareerLanding extends Component {
                     </p>
                 </div>
               <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-                  <CareerCard name="Construction" image={construction}/>
-                  <CareerCard name="Communication" image={communication}/>
-                  <CareerCard name="Energy" image={energy}/>
-                  <CareerCard name="Healthcare" image={healthcare}/>
-                  <CareerCard name="Manufacturing" image={manufacturing}/>
-                  <CareerCard name="Hospitality" image={hospitality}/>
-                  <CareerCard name="Human Services" image={humanService}/>
-                  <CareerCard name="Information Technology" image={informationTechnology}/>
-                  <CareerCard name="Transportation" image={transportation}/>
-                  <CareerCard name="Public Safety" image={publicSafety}/>
+                  {industries.industries.map(industry => { return <CareerCard industry={industry}/>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
