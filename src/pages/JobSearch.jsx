@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {AmbassadorCard, JobsCard, TopNavbarBlue} from "../components";
+import { JobsCard, TopNavbarBlue} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
-
+import job from '../assets/mockData/jobs';
 
 class JobSearch extends Component {
 
@@ -29,6 +29,8 @@ class JobSearch extends Component {
     };
 
     render() {
+        let cards = [];
+        {job.jobs.map(job => { cards.push(<JobsCard job={job}/>)}) }
         const modalOpened = this.state.showModal;
 
         return (
@@ -39,7 +41,7 @@ class JobSearch extends Component {
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal}/>
                 <h1>JobSearch PAGE!</h1>
-                <JobsCard/>
+                {cards}
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
             </div>
