@@ -13,7 +13,7 @@ export const CardCarousel= (props) => {
   return (
       <div
           className="App"
-          style={{ width: "600px", margin: "auto", padding: "50px" }}
+          // style={{ width: "600px", margin: "auto", padding: "50px" }}
       >
         <Carousel arrowRight={rightArrow}
                   arrowLeft={leftArrow}

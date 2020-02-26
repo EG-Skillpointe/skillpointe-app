@@ -406,20 +406,34 @@ label, p {
 /*containers*/
 
 .container {
-  box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
-  min-width: 230px;
-  max-width: 340px;
+  height: 95% !important;
+  width: 95% !important;
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  /*min-width: 230px;*/
+  /*max-width: 340px;*/
   display: flex;
+  border-radius: 10px;
+  /*border-color: grey;*/
+  /*border-width: 2px;*/
+  /*border-style: solid;*/
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2) !important;
 }
 
-.container__image {
-  margin: auto 15px auto 10px;
-  object-fit: contain;
+.container_image {
+  border-radius: 10px 0 0 10px;
+  display: block;
+  object-fit: cover !important;
   align-self: flex-start;
-  width: 150px;
+  width: 50%;
+  height: 100%;
 }
 
-.container__text {
+.container_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
   text-align: center;
   flex: 1 1 auto;
@@ -462,6 +476,11 @@ label, p {
   color: var(--dark-blue);
 }
 
+/* brainhub's carousel card custom styling*/
+.BrainhubCarouselItem {
+  height: 225px;
+}
+
 .carousel-container {
   padding: 40px;
   background: #419be0;
@@ -495,7 +514,7 @@ label, p {
 
 .carousel-button{
   position: relative;
-  padding: 21px;
+  padding: 15px;
   border: none;
   overflow: hidden;
   outline: 0;
