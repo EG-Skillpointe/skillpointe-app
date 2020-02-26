@@ -755,3 +755,16 @@ label, p {
   margin-bottom: 0;
 }
 
+/* Video Component START */
+
+.video-comp {
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.video-comp video {
+  width: 100%;
+}
+
+/* Video Component END */
