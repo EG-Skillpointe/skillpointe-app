@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue} from "../components";
+import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import rightArrow from "../assets/images/right-arrow.svg";
 import HamburgerModal from "../components/HamburgerModal";
+import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
+
 
 class HomePage extends Component {
 
@@ -49,7 +51,7 @@ class HomePage extends Component {
 
                 <div className='home-about'>
                     <h1>About SkillPointe</h1>
-                    <img className='' src={landingBackground} alt='landingBackground' />
+                    <Video video={homepageVideo} type='video/mp4'/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
