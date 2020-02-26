@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import blueLogo from '../assets/images/skillpointelogo_blue.png';
 import hamburger from '../assets/images/hamburger_menu.png'
 

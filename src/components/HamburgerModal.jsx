@@ -9,7 +9,7 @@ const HamburgerModal = (props) => {
 
             <div className="modal-body">
                 <Link className="" to="/" onClick={props.closeModal}>Main</Link>
-                <Link className="" to="" onClick={props.closeModal}>Explore Careers</Link>
+                <Link className="" to="career-landing" onClick={props.closeModal}>Explore Careers</Link>
                 <Link className="" to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
                 <Link className="" to="/training" onClick={props.closeModal}>Find Training</Link>
                 <Link className="" to="" onClick={props.closeModal}>Find People</Link>
