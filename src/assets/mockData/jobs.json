@@ -1,0 +1,32 @@
+{
+    "jobs": [
+        {
+            "title": "Pediatric Respiratory Specialist",
+            "company": "Children's Healthcare of Atlanta",
+            "location": "Atlanta, GA",
+            "image": "choa.jpeg",
+            "datePosted": "2 days"
+        },
+        {
+            "title": "Fire Officer I",
+            "company": "City of Sandy Springs",
+            "location": "Sandy Springs, GA",
+            "image": "city_of_sandy_springs.png",
+            "datePosted": "5 days"
+        },
+        {
+            "title": "Lead Welder/Fabricator",
+            "company": "Helion Group Inc.",
+            "location": "Tucker, GA",
+            "image": "helion_group.png",
+            "datePosted": "1 week"
+        },
+        {
+            "title": "Information Technology Professional",
+            "company": "Experient Group",
+            "location": "Chamblee, GA",
+            "image": "experient_group.png",
+            "datePosted": "2 months"
+        }
+    ]
+}

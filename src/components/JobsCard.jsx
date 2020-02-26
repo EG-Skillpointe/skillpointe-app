@@ -2,16 +2,18 @@ import React from 'react';
 import Button from "react-bootstrap/Button";
 
 export const JobsCard = (props) => {
-  return (
+    const image = require(`../assets/images/${props.job.image}`);
+
+    return (
       <div className="container">
         <div className="card-image-container">
-          <img className="card-image" src="https://mtdata.ru/u7/photo53A0/20946911428-0/original.jpg#20946911428" alt="Cat"/>
-          <h6>2 days ago</h6>
+          <img className="card-image" src={image} alt="Cat"/>
+          <h6>{props.job.datePosted}</h6>
         </div>
         <div className="container__text">
-          <h5 className="card-title">Pediatric Respiratory Specialist</h5>
-          <h6 className="card-subtitle">Company</h6>
-          <h6 className="card-text">Atlanta, GA</h6>
+          <h5 className="card-title">{props.job.title}</h5>
+          <h6 className="card-subtitle">{props.job.company}</h6>
+          <h6 className="card-text">{props.job.location}</h6>
           <Button className="card-button">Learn More</Button>
         </div>
       </div>

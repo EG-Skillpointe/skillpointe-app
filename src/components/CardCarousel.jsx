@@ -4,6 +4,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import {AmbassadorCard, TrainingCard, JobsCard} from "./index";
 import school from '../assets/mockData/school.json';
 import ambassador from '../assets/mockData/ambassadors';
+import job from '../assets/mockData/jobs';
 
 import {authService} from "../services/auth.service";
 
@@ -18,7 +19,7 @@ export const CardCarousel= (props) => {
         break;
 
         case 'job':
-            {school.schools.map(job => { cards.push(<JobsCard job={job}/>)}) }
+            {job.jobs.map(job => { cards.push(<JobsCard job={job}/>)}) }
         break;
 
         case 'training':

@@ -6,9 +6,11 @@ const card_subtitle_style = {
 };
 
 export const TrainingCard = (props) => {
-  return (
+    const image = require(`../assets/images/${props.school.image}`);
+
+    return (
       <div className="container">
-          <img className="container_image" src="https://mtdata.ru/u7/photo53A0/20946911428-0/original.jpg#20946911428" alt="Cat"/>
+          <img className="container_image" src={image} alt="Cat"/>
           <div className="container_text">
               <div className="school_info_wrapper">
                   <h6 className="card-subtitle" style={card_subtitle_style}>School</h6>
