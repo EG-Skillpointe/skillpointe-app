@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "react-bootstrap/Button";
 
 const card_subtitle_style = {
     marginTop:"0"
@@ -13,7 +14,7 @@ export const TrainingCard = (props) => {
                   <h6 className="card-subtitle" style={card_subtitle_style}>School</h6>
                   <h5 className="card-title">{props.school.name}</h5>
                   <h6 className="card-text">{props.school.location}</h6>
-                  <button className="card-button">Learn More</button>
+                  <Button className="card-button">Learn More</Button>
               </div>
           </div>
       </div>

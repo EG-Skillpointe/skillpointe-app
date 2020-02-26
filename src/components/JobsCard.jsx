@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "react-bootstrap/Button";
 
 export const JobsCard = (props) => {
   return (
@@ -11,7 +12,7 @@ export const JobsCard = (props) => {
           <h5 className="card-title">Pediatric Respiratory Specialist</h5>
           <h6 className="card-subtitle">Company</h6>
           <h6 className="card-text">Atlanta, GA</h6>
-          <button className="card-button">Learn More</button>
+          <Button className="card-button">Learn More</Button>
         </div>
       </div>
   )

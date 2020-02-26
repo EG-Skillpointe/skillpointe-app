@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MobileFooter, TopNavbar, TopNavbarBlue } from "../components";
+import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import rightArrow from "../assets/images/right-arrow.svg";
 import HamburgerModal from "../components/HamburgerModal";
@@ -58,19 +58,28 @@ class HomePage extends Component {
                     </p>
                 </div>
 
-                <div className="home-arrow-header">
-                    Explore Careers
-                    <img src={rightArrow} alt="right-arrow"></img>
+                <div>
+                    <div className="home-arrow-header">
+                        Explore Careers
+                        <img src={rightArrow} alt="right-arrow"></img>
+                    </div>
+                    <CardCarousel cardType="ambassador"/>
                 </div>
 
-                <div className="home-arrow-header">
-                    Find Jobs
-                    <img src={rightArrow} alt="right-arrow"></img>
+                <div>
+                    <div className="home-arrow-header">
+                        Find Jobs
+                        <img src={rightArrow} alt="right-arrow"></img>
+                    </div>
+                    <CardCarousel cardType="job"/>
                 </div>
 
-                <div className="home-arrow-header">
-                    Find Training
-                    <img src={rightArrow} alt="right-arrow"></img>
+                <div>
+                    <div className="home-arrow-header">
+                        Find Training
+                        <img src={rightArrow} alt="right-arrow"></img>
+                    </div>
+                    <CardCarousel cardType="training"/>
                 </div>
                 
                 <MobileFooter history={this.props.history}/>

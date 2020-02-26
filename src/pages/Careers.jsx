@@ -38,7 +38,7 @@ class Careers extends Component {
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal} />
                 <h1>Careers PAGE!</h1>
-                <CardCarousel/>
+                <CardCarousel cardType="ambassador"/>
                 <Link to="/">Home</Link>
             </div>
         )

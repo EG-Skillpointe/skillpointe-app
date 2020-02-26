@@ -1,0 +1,53 @@
+{
+    "ambassadors": [
+        {
+            "id": 1,
+            "name": "Tim", 
+            "industry": "Construction", 
+            "title": "HVAC Technician",
+            "image": "hvac_tech.png"
+        },
+        {
+            "id": 2,
+            "name": "Sparky", 
+            "industry": "Construction", 
+            "title": "Electrician",
+            "image": "electrician.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Mike", 
+            "industry": "Construction", 
+            "title": "Plumber",
+            "image": "plumber.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Tammy Ronstadt", 
+            "industry": "Healthcare", 
+            "title": "Registerd Nurse",
+            "image": "tammy_r.png"
+        },
+        {
+            "id": 5,
+            "name": "Sam", 
+            "industry": "Healthcare", 
+            "title": "Diagnostic Medical Stenographer",
+            "image": "stenographer.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Shannon", 
+            "industry": "Healthcare", 
+            "title": "Occupational Therapist",
+            "image": "occupational_therapist.jpeg"
+        },
+        {
+            "id": 7,
+            "name": "Jake", 
+            "industry": "Healthcare", 
+            "title": "Physical Therapist",
+            "image": "physical_therapist.jpg"
+        }
+    ]
+}
