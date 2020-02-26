@@ -9,4 +9,5 @@ export {default as Footer} from './Footer';
 export {default as TopNavbarBlue} from './TopNavbarBlue';
 export {default as TopNavbarWhite} from './TopNavbarWhite';
 export {default as ModalNavbar} from './ModalNavbar';
-export {default as CardCarousel} from './CardCarousel'
+export {default as CardCarousel} from './CardCarousel';
+export {default as CareerCard} from './CareerCard'
