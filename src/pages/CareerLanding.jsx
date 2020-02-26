@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
-import { MobileFooter, TopNavbar, TopNavbarBlue } from "../components";
+import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue} from "../components";
 import landingBackground from "../assets/images/landing-background1.png";
-import rightArrow from "../assets/images/right-arrow.svg";
+import construction from "../assets/images/construction.jpg";
+import communication from "../assets/images/communications.jpg";
+import energy from "../assets/images/energy.jpg";
+import healthcare from "../assets/images/healthcare.jpg";
+import hospitality from "../assets/images/hospitality.jpg";
+import humanService from "../assets/images/human_services.jpg";
+import informationTechnology from "../assets/images/information_technology.jpg"
+import manufacturing from "../assets/images/manufacturing.jpg";
+import publicSafety from "../assets/images/public_safety.jpg";
+import transportation from "../assets/images/transportation.jpg";
+
 import HamburgerModal from "../components/HamburgerModal";
 
 class CareerLanding extends Component {
@@ -38,42 +48,35 @@ class CareerLanding extends Component {
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal} />
 
-                <div className='home-landing'>
-                    <div className='landing-content'>
-                        <h1>Finding the Right Path</h1>
-                        <p>Introducing Career Compas by Skillpointe. Unsure how to begin your job search? Let us help you navigate through the hundreds of careers.</p>
-                        <button className='orange-button'>Career Compass</button>
+                <div className='home-landing' >
+                    <div className='landing-content' style={{width:'85%'}}>
+                        <h1>Find Your Path</h1>
+                        <p style={{margin:"15px"}}>Choosing a career is challenging. Let us help you narrow your search with Skillpointe's Career Compass, a strength-based assessment designed to help you find jobs that fit your skills and needs</p>
+                        <button className='orange-button' style={{width:'65%'}}>Career Compass</button>
                     </div>
-                    <img className='landing-img' src={landingBackground} alt='landingBackground' />
+                    <img className='landing-img' src={landingBackground} alt='landingBackground'/>
                 </div>
 
-                <div className='home-about'>
-                    <h1>About SkillPointe</h1>
-                    <img className='' src={landingBackground} alt='landingBackground' />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum."
+                <div>
+                    <h1 className="career-title">Explore by Industry</h1>
+                    <p className="career-card-text">
+                      Beginning your search? Select one of the industries below to hear from an industry ambassador, explore training, and view jobs.
                     </p>
                 </div>
-
-                <div className="home-arrow-header">
-                    Explore Careers
-                    <img src={rightArrow} alt="right-arrow"></img>
+              <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
+                  <CareerCard name="Construction" image={construction}/>
+                  <CareerCard name="Communication" image={communication}/>
+                  <CareerCard name="Energy" image={energy}/>
+                  <CareerCard name="Healthcare" image={healthcare}/>
+                  <CareerCard name="Manufacturing" image={manufacturing}/>
+                  <CareerCard name="Hospitality" image={hospitality}/>
+                  <CareerCard name="Human Services" image={humanService}/>
+                  <CareerCard name="Information Technology" image={informationTechnology}/>
+                  <CareerCard name="Transportation" image={transportation}/>
+                  <CareerCard name="Public Safety" image={publicSafety}/>
                 </div>
 
-                <div className="home-arrow-header">
-                    Find Jobs
-                    <img src={rightArrow} alt="right-arrow"></img>
-                </div>
-
-                <div className="home-arrow-header">
-                    Find Training
-                    <img src={rightArrow} alt="right-arrow"></img>
-                </div>
-
-                <MobileFooter history={this.props.history}/>
+              <MobileFooter history={this.props.history}/>
             </div>
         )
     }

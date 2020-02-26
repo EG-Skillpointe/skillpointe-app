@@ -685,7 +685,7 @@ label, p {
   text-align: left;
   margin: 30px;
   margin-bottom: 20px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -696,3 +696,38 @@ label, p {
 .home-arrow-header img {
   padding-left: 10px;
 }
+
+.card-image-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.career-card-container {
+    display: flex;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.career-card-text {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.61);
+  padding: 20px;
+}
+
+.career-title{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #2D426B;
+  margin-bottom: 0;
+}
+
