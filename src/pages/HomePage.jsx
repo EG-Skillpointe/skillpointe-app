@@ -61,7 +61,7 @@ class HomePage extends Component {
                 <div>
                     <div className="home-arrow-header">
                         Explore Careers
-                        <img src={rightArrow} alt="right-arrow"></img>
+                        <img src={rightArrow} alt="right-arrow"/>
                     </div>
                     <CardCarousel cardType="ambassador"/>
                 </div>
@@ -69,7 +69,7 @@ class HomePage extends Component {
                 <div>
                     <div className="home-arrow-header">
                         Find Jobs
-                        <img src={rightArrow} alt="right-arrow"></img>
+                        <img src={rightArrow} alt="right-arrow"/>
                     </div>
                     <CardCarousel cardType="job"/>
                 </div>
@@ -77,7 +77,7 @@ class HomePage extends Component {
                 <div>
                     <div className="home-arrow-header">
                         Find Training
-                        <img src={rightArrow} alt="right-arrow"></img>
+                        <img src={rightArrow} alt="right-arrow"/>
                     </div>
                     <CardCarousel cardType="training"/>
                 </div>

@@ -7,7 +7,7 @@ export const AmbassadorCard = (props) => {
 
   return (
       <Card className="ambassador-card-container" >
-        <Card.Img variant="top" src={image} style={{width: '100%'}} />
+        <Card.Img variant="top" src={image} style={{width: '100%', borderRadius:'6px 6px 0px 0px'}} />
         <Card.Body>
           <Card.Subtitle className="mb-2 text-muted">{props.ambassador.industry}</Card.Subtitle>
           <Card.Title>{props.ambassador.name}</Card.Title>
