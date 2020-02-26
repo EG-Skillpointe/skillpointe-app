@@ -549,20 +549,23 @@ label, p {
 }
 
 .blue {
-  position: absolute;
+  background-color: #2c476c;
+}
+
+.blue.nav-transparent {
   background-color: #2c476c30;
 }
 
 .top-navbar .logo {
   position: absolute;
   left: 20px;
-  height: 58%;
+  height: 40px;
 }
 
 .top-navbar .hamburger {
   position: absolute;
   right: 25px;
-  height: 30%;
+  height: 20px;
 }
 
 .top-navbar .sign-in {
