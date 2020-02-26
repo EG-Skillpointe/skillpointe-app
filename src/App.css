@@ -92,7 +92,7 @@ h1 {
 
 .heading {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--dark-blue);
 }
 
@@ -108,10 +108,14 @@ label, p {
 /* Login */
 .login-container {
   width: 95%;
-  margin: 20px auto;
-  box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
+  margin: 0 auto;
+  /* box-shadow: 0 1px 6px 0 rgba(0,0,0,.16); */
   min-width: 230px;
   max-width: 340px;
+}
+
+.login-heading p {
+  font-weight: 500;
 }
 
 .login-block {

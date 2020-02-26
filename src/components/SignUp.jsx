@@ -21,7 +21,7 @@ export const SignUp = (props) => {
           <input type="password" className="form-control" placeholder="Password" />
         </div>
 
-        <button type="submit" className="btn btn-primary btn-block login-form-btn">Sign Up</button>
+        <button type="submit" className="btn btn-primary btn-block login-form-btn">Next</button>
 
         <hr></hr>
         <p className="forgot-password text-center">
