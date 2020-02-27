@@ -1,8 +1,8 @@
 {
     "jobs": [
         {
-            "title": "Pediatric Respiratory Specialist",
-            "company": "Children's Healthcare of Atlanta",
+            "title": "Respiratory Specialist",
+            "company": "Children's Healthcare",
             "location": "Atlanta, GA",
             "image": "choa.png",
             "datePosted": "2 days"
@@ -15,14 +15,14 @@
             "datePosted": "5 days"
         },
         {
-            "title": "Lead Welder/Fabricator",
+            "title": "Lead Welder",
             "company": "Helion Group Inc.",
             "location": "Tucker, GA",
             "image": "helion_group.png",
             "datePosted": "1 week"
         },
         {
-            "title": "Information Technology Professional",
+            "title": "IT Professional",
             "company": "Experient Group",
             "location": "Chamblee, GA",
             "image": "experient_group.png",
