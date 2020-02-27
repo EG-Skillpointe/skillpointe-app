@@ -16,7 +16,7 @@ export const TrainingCard = (props) => {
                   <h6 className="card-subtitle" style={card_subtitle_style}>School</h6>
                   <h5 className="card-title" style={{lineHeight:"18px"}}>{props.school.name}</h5>
                   <h6 className="card-text">{props.school.location}</h6>
-                  <Button className="card-button" style={{fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px"}}>Learn More</Button>
+                  <Button className="card-button" style={{margin:"9px 0", fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px"}}>Learn More</Button>
               </div>
           </div>
       </div>

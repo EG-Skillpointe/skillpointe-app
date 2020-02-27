@@ -50,7 +50,7 @@ class CareerLanding extends Component {
                 </div>
 
                 <div>
-                    <h1 className="career-title">Explore by Industry</h1>
+                    <h1 className="career-title" style={{marginTop:"30px"}}>Explore by Industry</h1>
                     <p className="career-card-text">
                       Beginning your search? Select one of the industries below to hear from an industry ambassador, explore training, and view jobs.
                     </p>

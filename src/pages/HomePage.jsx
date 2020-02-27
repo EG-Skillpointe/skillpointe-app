@@ -44,14 +44,14 @@ class HomePage extends Component {
                 <div className='home-landing'>
                     <div className='landing-content'>
                         <h1>Get Excited About Your Future</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        <p>SkillPointe is a movement  celebrating skills-based professionals and their contributions.</p>
                         <Link to='./login'><button className='orange-button'>Join the Movement</button></Link>
                     </div>
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
                 </div>
 
                 <div className='home-about'>
-                    <h1>About SkillPointe</h1>
+                    <h1 style={{fontSize:"28px", fontWeight:"700", margin:"30px 0"}}>About SkillPointe</h1>
                     <Video video={homepageVideo} type='video/mp4'/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
