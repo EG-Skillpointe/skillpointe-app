@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {SignIn, SignUp} from "../components";
+import {SignIn, SignUp, TopNavbarWhite} from "../components";
 import {authService} from "../services/auth.service";
 import logo from "../assets/images/logo.png";
 import loginImage from "../assets/images/login-image.jpeg";
@@ -36,7 +36,7 @@ class Login extends Component {
                 console.log(`doing type ${type} login...`);
                 let res = authService.login(userType1);
                 if(res) {
-                    this.props.history.push("/careers")
+                    this.props.history.push("/career-landing")
                 }
             } break;
             case 2: { // do Google login - training
@@ -92,12 +92,17 @@ class Login extends Component {
 
 
         return (
+            <>
+            <TopNavbarWhite/>
             <div className="login-container">
                 <div className="login-block">
 
                     <div className="login-heading">
-                        <img className="logo" src={logo} alt="Logo" />
-                        <label className="heading">Welcome to the movement</label>
+                        {/* <img className="logo" src={logo} alt="Logo" /> */}
+                        <label className="heading">Join The Movement</label>
+                        <p>Explore career paths.<br></br>
+                            Connect with schools and employers.</p>
+                        
                     </div>
                     
                     {
@@ -118,7 +123,7 @@ class Login extends Component {
                     { facebookButton }
                 </div>
 
-                <div className="login-footer-image">
+                {/* <div className="login-footer-image">
                     <img className="img" src={loginImage} alt="LoginFooterImage" />
                     <div className="overlay">
                         <div className="overlay-text-block">
@@ -140,8 +145,9 @@ class Login extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
+            </>
         );
     }
 }
