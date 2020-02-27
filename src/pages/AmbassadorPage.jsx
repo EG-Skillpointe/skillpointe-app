@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {AmbassadorCard, MobileFooter, TopNavbarBlue} from "../components";
 import ambassadors from '../assets/mockData/ambassadors';
+import industries from '../assets/mockData/industries';
 import HamburgerModal from "../components/HamburgerModal";
 
 
@@ -9,10 +10,15 @@ class AmbassadorPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      bgColor: ''
     };
   }
-
+  handleClick = () =>{
+    this.setState({
+      bgColor: '#f8a141'
+    })
+  };
   openModal = () => {
     console.log('opening modal');
     this.setState({showModal: true},() => {
@@ -37,13 +43,12 @@ class AmbassadorPage extends Component {
 
           {/*main contents of page*/}
           <TopNavbarBlue openModal={this.openModal} />
-          <div>
-            <h1 className="career-title">Explore by Industry</h1>
-            <p className="career-card-text">
-              Beginning your search? Select one of the industries below to hear from an industry ambassador, explore training, and view jobs.
-            </p>
+          <div className="flexbox-container">
+            {industries.industries.map(industry => { return <button className='nav-button'
+                                                                    style={{flex: '0 0 auto'}}>{industry.name}</button>})}
           </div>
-          <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
+
+          <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
             {ambassadors.ambassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador}/> </div>})}
           </div>
 

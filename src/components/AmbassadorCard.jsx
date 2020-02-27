@@ -9,7 +9,7 @@ export const AmbassadorCard = (props) => {
 
       <Card className="ambassador-card-container">
         <Card.Img variant="top" src={image} style={{height: '50%', width: '100%', borderRadius: "10px 10px 0 0"}} />
-        <Card.Body style={{height: '50%', overflow: 'auto'}}>
+        <Card.Body style={{height: '50%', overflow: 'auto', backgroundColor:'white'}}>
           <Card.Subtitle className="mb-2 text-muted">{props.ambassador.industry}</Card.Subtitle>
           <Card.Title>{props.ambassador.name}</Card.Title>
           <Card.Text>{props.ambassador.title}</Card.Text>

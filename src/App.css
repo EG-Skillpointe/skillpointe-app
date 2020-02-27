@@ -793,4 +793,27 @@ label, p {
   height: 100%;
 }
 
+.flexbox-container {
+  margin: 5px;
+  display: flex;
+  flex-wrap: nowrap; /* [1] */
+  overflow-x: auto; /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  box-shadow: 0 0 11px rgba(255, 183, 103, 0.2);
+}
+
+.flexbox-container::-webkit-scrollbar {
+  display: none; }
+
+.nav-button{
+  text-align: center;
+  background: #EDEDED;
+  border: 1.5px solid #EDEDED;
+  box-sizing: border-box;
+  box-shadow: 0 0 11px rgba(255, 183, 103, 0.2);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
 /* Video Component END */
