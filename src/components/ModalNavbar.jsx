@@ -8,7 +8,7 @@ export const ModalNavbar = (props) => {
     return (
         <div className="modal-navbar">
             <img className="logo" src={blueLogo}/>
-            <img className="close" src={closeIcon} onClick={props.closeModal}/>
+            <img style={{opacity:"1"}} className="close" src={closeIcon} onClick={props.closeModal}/>
         </div>
     )
 };
