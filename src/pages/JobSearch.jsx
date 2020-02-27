@@ -36,7 +36,7 @@ class JobSearch extends Component {
         return (
             <div>
                 {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
                 <TopNavbarWhite openModal={this.openModal}/>

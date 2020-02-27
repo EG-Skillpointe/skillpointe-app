@@ -36,7 +36,7 @@ class Training extends Component {
         return (
             <div>
                 {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
                 <TopNavbarWhite openModal={this.openModal} />

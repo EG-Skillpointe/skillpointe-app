@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { MobileFooter, ModalNavbar } from "../components";
+import { ModalNavbar } from "../components";
 
 const HamburgerModal = (props) => {
     return (
         <div className="hamburger-modal">
-            <ModalNavbar closeModal={props.closeModal}/>
+            <ModalNavbar pageType={props.pageType} history={props.history} closeModal={props.closeModal}/>
 
             <div className="modal-body">
                 <Link className="" to="/" onClick={props.closeModal}>Home</Link>

@@ -24,7 +24,7 @@ class MobileFooter extends Component {
             pathname: path,
             state: state
         });
-    }
+    };
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -69,9 +69,9 @@ class MobileFooter extends Component {
           scrollTouched: true,
           bottom: newBottom
         });
-    }
+    };
 
-    render() {        
+    render() {
         return (
             <div className='mobile-footer' id='mobile-footer' style={{bottom: this.state.bottom }}>
                 <div className='footer-items'>

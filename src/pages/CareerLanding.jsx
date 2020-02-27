@@ -35,7 +35,7 @@ class CareerLanding extends Component {
         return (
             <div className='home-page'>
                 {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="career-landing" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
               <TopNavbarBlue openModal={this.openModal} absolute transparent/>
