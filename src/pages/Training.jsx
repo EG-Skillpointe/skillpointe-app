@@ -40,7 +40,6 @@ class Training extends Component {
 
                 {/*main contents of page*/}
                 <TopNavbarWhite openModal={this.openModal} />
-                <h1>Training PAGE!</h1>
                 {/* TODO: Pass in actual data to prevent error in training page */}
                 {cards}
                 <Link to="/">Home</Link>

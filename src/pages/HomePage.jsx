@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video, Footer} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import rightArrow from "../assets/images/right-arrow.svg";
@@ -44,7 +45,7 @@ class HomePage extends Component {
                     <div className='landing-content'>
                         <h1>Get Excited About Your Future</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                        <button className='orange-button'>Join the Movement</button>
+                        <Link to='./login'><button className='orange-button'>Join the Movement</button></Link>
                     </div>
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
                 </div>
