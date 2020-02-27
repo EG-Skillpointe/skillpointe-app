@@ -325,6 +325,8 @@ label, p {
   align-items: center;
   justify-content: center;
   position: relative;
+  color: #2D426B !important;
+  font-family: 'Roboto';
 }
 
 .footer-items .item {
@@ -332,7 +334,6 @@ label, p {
   padding: 10px;
   height: 100%;
   align-items: center;
-  color: black;
   font-size: 12px;
   max-width: 110px;
 }
