@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video, Footer} from "../components";
+import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video, Footer, TopNavbarWhite} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import rightArrow from "../assets/images/right-arrow.svg";
 import HamburgerModal from "../components/HamburgerModal";
@@ -39,7 +39,7 @@ class HomePage extends Component {
                 {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarBlue openModal={this.openModal} absolute transparent/>
+                <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
                 
                 <div className='home-landing'>
                     <div className='landing-content'>

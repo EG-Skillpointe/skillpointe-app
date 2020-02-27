@@ -39,7 +39,7 @@ class Training extends Component {
                 {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarWhite openModal={this.openModal} />
+                <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 {/* TODO: Pass in actual data to prevent error in training page */}
                     <div style={{marginTop:"30px"}}>
                         {cards}

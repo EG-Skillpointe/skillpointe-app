@@ -39,7 +39,7 @@ class JobSearch extends Component {
                 {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarWhite openModal={this.openModal}/>
+                <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                     <div style={{marginTop:"30px"}}>
                         {cards}
                     </div>
