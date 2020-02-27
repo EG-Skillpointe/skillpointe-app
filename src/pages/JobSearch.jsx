@@ -30,7 +30,7 @@ class JobSearch extends Component {
 
     render() {
         let cards = [];
-        {job.jobs.map(job => { cards.push(<JobsCard job={job}/>)}) }
+        {job.jobs.map(job => { cards.push(<div style={{margin: "10px", height:"210px"}}><JobsCard job={job}/></div>)}) }
         const modalOpened = this.state.showModal;
 
         return (
@@ -40,8 +40,9 @@ class JobSearch extends Component {
 
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal}/>
-                {cards}
-                <Link to="/">Home</Link>
+                    <div style={{marginTop:"30px"}}>
+                        {cards}
+                    </div>
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
             </div>

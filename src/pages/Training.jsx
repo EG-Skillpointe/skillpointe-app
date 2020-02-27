@@ -30,7 +30,7 @@ class Training extends Component {
 
     render() {
         let cards = [];
-        {school.schools.map(school => { cards.push(<TrainingCard school={school}/>)}) }
+        {school.schools.map(school => { cards.push(<div style={{margin: "10px", height:"210px"}}><TrainingCard school={school}/></div>)}) }
         const modalOpened = this.state.showModal;
 
         return (
@@ -41,8 +41,9 @@ class Training extends Component {
                 {/*main contents of page*/}
                 <TopNavbarWhite openModal={this.openModal} />
                 {/* TODO: Pass in actual data to prevent error in training page */}
-                {cards}
-                <Link to="/">Home</Link>
+                    <div style={{marginTop:"30px"}}>
+                        {cards}
+                    </div>
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
             </div>
