@@ -40,7 +40,6 @@ class JobSearch extends Component {
 
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal}/>
-                <h1>JobSearch PAGE!</h1>
                 {cards}
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
