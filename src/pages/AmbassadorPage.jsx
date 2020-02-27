@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {AmbassadorCard, MobileFooter, TopNavbarBlue} from "../components";
+import {AmbassadorCard, MobileFooter, TopNavbarBlue, FilterTab} from "../components";
 import ambassadors from '../assets/mockData/ambassadors';
-import industries from '../assets/mockData/industries';
 import HamburgerModal from "../components/HamburgerModal";
 
 
@@ -43,11 +42,7 @@ class AmbassadorPage extends Component {
 
           {/*main contents of page*/}
           <TopNavbarBlue openModal={this.openModal} />
-          <div className="flexbox-container">
-            {industries.industries.map(industry => { return <button className='nav-button'
-                                                                    style={{flex: '0 0 auto'}}>{industry.name}</button>})}
-          </div>
-
+          <FilterTab/>
           <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
             {ambassadors.ambassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador}/> </div>})}
           </div>

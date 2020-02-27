@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { JobsCard, TopNavbarBlue} from "../components";
+import {FilterTab, JobsCard, TopNavbarBlue} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import job from '../assets/mockData/jobs';
@@ -40,6 +40,7 @@ class JobSearch extends Component {
 
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal}/>
+                <FilterTab/>
                 {cards}
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
