@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import {FilterTab, TopNavbarWhite, TrainingCard} from "../components";
+import {TopNavbarWhite, TrainingCard, Footer, FilterTab} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
@@ -30,7 +29,7 @@ class Training extends Component {
 
     render() {
         let cards = [];
-        {school.schools.map(school => { cards.push(<TrainingCard school={school}/>)}) }
+        {school.schools.map(school => { cards.push(<div style={{margin: "10px", height:"210px"}}><TrainingCard school={school}/></div>)}) }
         const modalOpened = this.state.showModal;
 
         return (
@@ -42,9 +41,11 @@ class Training extends Component {
                 <TopNavbarWhite openModal={this.openModal} />
                 {/* TODO: Pass in actual data to prevent error in training page */}
                 <FilterTab/>
-                {cards}
-                <Link to="/">Home</Link>
-                <MobileFooter history={this.props.history}/>
+                <div style={{marginTop:"30px"}}>
+                  {cards}
+                </div>
+              <MobileFooter history={this.props.history}/>
+                <Footer mobileFooterPresent/>
             </div>
         )
     }

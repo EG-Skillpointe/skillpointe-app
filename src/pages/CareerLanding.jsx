@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard} from "../components";
+import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard, Footer} from "../components";
 import landingBackground from "../assets/images/landing-background1.png";
 import industries from '../assets/mockData/industries';
+import {Link} from 'react-router-dom'
 
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
@@ -50,16 +51,17 @@ class CareerLanding extends Component {
                 </div>
 
                 <div>
-                    <h1 className="career-title">Explore by Industry</h1>
+                    <h1 className="career-title" style={{marginTop:"30px"}}>Explore by Industry</h1>
                     <p className="career-card-text">
                       Beginning your search? Select one of the industries below to hear from an industry ambassador, explore training, and view jobs.
                     </p>
                 </div>
               <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-                  {industries.industries.map(industry => { return <CareerCard industry={industry}/>})}
+                {industries.industries.map(industry => { return <Link to='./ambassador'><CareerCard industry={industry}/></Link>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
+              <Footer mobileFooterPresent/>
             </div>
         )
     }

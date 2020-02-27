@@ -39,7 +39,7 @@ class MobileFooter extends Component {
     handleScroll = () => {
         let maxScroll = (this.footerSticky.offsetTop - window.innerHeight);
         let newBottom = this.state.bottom;
-        let scrollDifference = window.pageYOffset - this.state.scrollPos
+        let scrollDifference = window.pageYOffset - this.state.scrollPos;
 
         if(this.state.scrollTouched) {
             if(window.pageYOffset > (maxScroll - this.mobileFooterHeight)) { // bottom of footer - stick
@@ -90,7 +90,7 @@ class MobileFooter extends Component {
                         <div>Find Training</div>
                     </div>
 
-                    <div className="item" onClick={() => this.redirect("/login")}>
+                    <div className="item">
                         <img src={peopleImg} alt="" width="24" height="24"></img>
                         <div>Find People</div>
                     </div>

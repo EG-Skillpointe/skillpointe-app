@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AmbassadorCard, MobileFooter, TopNavbarBlue, FilterTab} from "../components";
+import {AmbassadorCard, MobileFooter, TopNavbarBlue, FilterTab, TopNavbarWhite} from "../components";
 import ambassadors from '../assets/mockData/ambassadors';
 import HamburgerModal from "../components/HamburgerModal";
 
@@ -41,13 +41,12 @@ class AmbassadorPage extends Component {
           {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
 
           {/*main contents of page*/}
-          <TopNavbarBlue openModal={this.openModal} />
+          <TopNavbarWhite openModal={this.openModal} />
           <FilterTab/>
           <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
             {ambassadors.ambassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador}/> </div>})}
           </div>
-
-          <MobileFooter history={this.props.history}/>
+        {/* <MobileFooter history={this.props.history}/>*/}
         </div>
     )
   }
