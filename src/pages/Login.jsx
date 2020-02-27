@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {SignIn, SignUp, TopNavbarWhite} from "../components";
+import {SignIn, SignUp, TopNavbarWhite, Footer} from "../components";
 import {authService} from "../services/auth.service";
 import logo from "../assets/images/logo.png";
 import loginImage from "../assets/images/login-image.jpeg";
@@ -147,6 +147,7 @@ class Login extends Component {
                     </div>
                 </div> */}
             </div>
+            <Footer/>
             </>
         );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard} from "../components";
+import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard, Footer} from "../components";
 import landingBackground from "../assets/images/landing-background1.png";
 import industries from '../assets/mockData/industries';
 
@@ -60,6 +60,7 @@ class CareerLanding extends Component {
                 </div>
 
               <MobileFooter history={this.props.history}/>
+              <Footer mobileFooterPresent/>
             </div>
         )
     }

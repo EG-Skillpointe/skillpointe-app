@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage, Login, Training, JobSearch, Careers, CareerLanding } from './pages';
-import { PrivateRoute, Footer } from './components';
+import { PrivateRoute } from './components';
 
 import './App.css';
 
@@ -18,6 +18,7 @@ class App extends React.Component {
 	}
   
 	render() {
+		console.log(window.pageYOffset)
 	  return (
 		<div className="App">
 			<Router>
@@ -30,7 +31,6 @@ class App extends React.Component {
 					<Route path='/login' component={Login} />
 				</Switch>
 			</Router>
-			<Footer />
 		</div>
 	  );
 	}

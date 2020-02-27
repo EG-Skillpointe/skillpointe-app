@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video} from "../components";
+import {CardCarousel, MobileFooter, TopNavbar, TopNavbarBlue, Video, Footer} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import rightArrow from "../assets/images/right-arrow.svg";
 import HamburgerModal from "../components/HamburgerModal";
@@ -85,6 +85,7 @@ class HomePage extends Component {
                 </div>
                 
                 <MobileFooter history={this.props.history}/>
+                <Footer mobileFooterPresent/>
             </div>
         )
     }

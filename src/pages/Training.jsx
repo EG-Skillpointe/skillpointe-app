@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {TopNavbarWhite, TrainingCard} from "../components";
+import {TopNavbarWhite, TrainingCard, Footer} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
@@ -45,6 +45,7 @@ class Training extends Component {
                 {cards}
                 <Link to="/">Home</Link>
                 <MobileFooter history={this.props.history}/>
+                <Footer mobileFooterPresent/>
             </div>
         )
     }
