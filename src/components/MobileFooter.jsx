@@ -75,7 +75,7 @@ class MobileFooter extends Component {
         return (
             <div className='mobile-footer' id='mobile-footer' style={{bottom: this.state.bottom }}>
                 <div className='footer-items'>
-                    <div className="item" onClick={() => this.redirect("/careers")}>
+                    <div className="item" onClick={() => this.redirect("/career-landing")}>
                         <img src={careersImg} alt="" width="24" height="24"></img>
                         <div>Explore Careers</div>
                     </div>
