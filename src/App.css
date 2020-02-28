@@ -325,6 +325,8 @@ label, p {
   align-items: center;
   justify-content: center;
   position: relative;
+  color: #2D426B !important;
+  font-family: 'Roboto';
 }
 
 .footer-items .item {
@@ -332,7 +334,6 @@ label, p {
   padding: 10px;
   height: 100%;
   align-items: center;
-  color: black;
   font-size: 12px;
   max-width: 110px;
 }
@@ -803,7 +804,7 @@ label, p {
   overflow-x: auto; /* [2] */
   -webkit-overflow-scrolling: touch; /* [3] */
   -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
-  box-shadow: 0 0 11px rgba(255, 183, 103, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .flexbox-container::-webkit-scrollbar {
@@ -814,9 +815,20 @@ label, p {
   background: #EDEDED;
   border: 1.5px solid #EDEDED;
   box-sizing: border-box;
-  box-shadow: 0 0 11px rgba(255, 183, 103, 0.2);
+ box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
+  flex: 0 0 auto;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2D426B;
+}
+
+.selected{
+ background-color: #F8A141;
 }
 /* Video Component END */

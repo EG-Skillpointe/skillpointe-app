@@ -4,12 +4,31 @@ import Button from "react-bootstrap/Button";
 
 export const AmbassadorCard = (props) => {
    const image = require(`../assets/images/${props.ambassador.image}`);
+   const ambassadorPageStyle = {
+     display:'flex',
+     justifyContent:'center',
+     alignItems:'center',
+     height:'50%',
+     overflow:'auto',
+     backgroundColor: 'white',
+     padding: '10px'
+   };
+
+   const normalStyle = {
+     display:'flex',
+     justifyContent:'center',
+     alignItems:'center',
+     height:'50%',
+     overflow:'auto',
+   };
+
+   const style = props.isPage ? ambassadorPageStyle : normalStyle;
 
   return (
 
       <Card className="ambassador-card-container">
         <Card.Img variant="top" src={image} style={{height: '50%', width: '100%', borderRadius: "10px 10px 0 0"}} />
-        <Card.Body style={{display:'flex', justifyContent:'center', alignItems:'center', height:'50%', overflow:'auto'}}>
+        <Card.Body style={style}>
             <div>
                 <Card.Subtitle className="mb-2 text-muted" style={{marginTop:"0"}}>{props.ambassador.industry}</Card.Subtitle>
                 <Card.Title>{props.ambassador.name}</Card.Title>

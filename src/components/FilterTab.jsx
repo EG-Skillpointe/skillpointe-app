@@ -1,16 +1,31 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import industries from "../assets/mockData/industries";
 
-export const FilterTab = (props) => {
+class FilterTab extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-      <div className="flexbox-container">
-        <button className='nav-button'
-                style={{flex: '0 0 auto'}}>Popular</button>
-        {industries.industries.map(industry => { return <button className='nav-button'
-                                                                style={{flex: '0 0 auto'}}>{industry.name}</button>})}
-      </div>
-  )
+    this.state = {
+      selected: ''
+    }
+  }
+
+  onHandleFilterClick = (event) => {
+    console.log(event.target.name);
+    this.setState({
+      selected: event.target.name
+    });
+    this.props.filter(event.target.name);
+  };
+
+  render() {
+    return (
+        <div className="flexbox-container">
+          <button className={`nav-button ${this.state.selected == 'popular' ? 'selected' : '' }`} key={'popular'} name={'popular'} onClick={(event) => this.onHandleFilterClick(event)} >Popular</button>
+          {industries.industries.map(industry => { return <button className={`nav-button ${this.state.selected == industry.name ? 'selected' : '' }`} key={industry.name} name={industry.name} onClick={(event) => this.onHandleFilterClick(event)} >{industry.name}</button>})}
+        </div>
+    )
+  }
 };
 
 export default FilterTab;

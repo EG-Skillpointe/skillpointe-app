@@ -35,15 +35,14 @@ class JobSearch extends Component {
         return (
             <div>
                 {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarWhite openModal={this.openModal}/>
-                <FilterTab/>
-                <div style={{marginTop:"30px"}}>
-                  {cards}
-                </div>
 
+                <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
+                    <div style={{marginTop:"30px"}}>
+                        {cards}
+                    </div>
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
             </div>

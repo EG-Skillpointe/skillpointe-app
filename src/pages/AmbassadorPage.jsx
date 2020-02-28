@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {AmbassadorCard, MobileFooter, TopNavbarBlue, FilterTab, TopNavbarWhite} from "../components";
+import {AmbassadorCard, MobileFooter, TopNavbarBlue, FilterTab, TopNavbarWhite, Footer} from "../components";
 import ambassadors from '../assets/mockData/ambassadors';
 import HamburgerModal from "../components/HamburgerModal";
+import {object} from "prop-types";
 
 
 class AmbassadorPage extends Component {
@@ -10,14 +11,10 @@ class AmbassadorPage extends Component {
     super(props);
     this.state = {
       showModal: false,
-      bgColor: ''
+      filteredAmbassadors: ambassadors.ambassadors
     };
   }
-  handleClick = () =>{
-    this.setState({
-      bgColor: '#f8a141'
-    })
-  };
+
   openModal = () => {
     console.log('opening modal');
     this.setState({showModal: true},() => {
@@ -32,6 +29,17 @@ class AmbassadorPage extends Component {
     });
   };
 
+
+  doFilter = (cond) => {
+    let filtered = [];
+    if(cond === 'popular'){
+      filtered = ambassadors.ambassadors;
+    } else {
+      filtered = ambassadors.ambassadors.filter(obj => obj.industry === cond);
+    }
+    this.setState({filteredAmbassadors: filtered})
+ };
+
   render() {
     const modalOpened = this.state.showModal;
 
@@ -42,11 +50,12 @@ class AmbassadorPage extends Component {
 
           {/*main contents of page*/}
           <TopNavbarWhite openModal={this.openModal} />
-          <FilterTab/>
+          <FilterTab filter={this.doFilter}/>
           <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
-            {ambassadors.ambassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador}/> </div>})}
+            {this.state.filteredAmbassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador} isPage={true}/> </div>})}
           </div>
-        {/* <MobileFooter history={this.props.history}/>*/}
+       <MobileFooter history={this.props.history}/>
+       <Footer mobileFooterPresent/>
         </div>
     )
   }

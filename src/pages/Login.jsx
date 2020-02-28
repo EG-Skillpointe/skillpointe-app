@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {SignIn, SignUp, TopNavbarWhite, Footer} from "../components";
 import {authService} from "../services/auth.service";
-import logo from "../assets/images/logo.png";
-import loginImage from "../assets/images/login-image.jpeg";
-import careersImg from "../assets/images/Explore_Careers.png";
-import jobsImg from "../assets/images/Find_Jobs.png";
-import trainingImg from "../assets/images/Find_Training.png";
-import peopleImg from "../assets/images/Find_People.png";
+// import logo from "../assets/images/logo.png";
+// import loginImage from "../assets/images/login-image.jpeg";
+// import careersImg from "../assets/images/Explore_Careers.png";
+// import jobsImg from "../assets/images/Find_Jobs.png";
+// import trainingImg from "../assets/images/Find_Training.png";
+// import peopleImg from "../assets/images/Find_People.png";
+import HamburgerModal from "../components/HamburgerModal";
 
 class Login extends Component {
 
@@ -14,13 +15,28 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            signInToggle: true
+            signInToggle: true,
+            showModal: false
         };
     }
 
     componentDidMount() {
         
     }
+
+    openModal = () => {
+        console.log('opening modal');
+        this.setState({showModal: true},() => {
+            console.log(`showModal status: ${this.state.showModal}`)
+        });
+    };
+
+    closeModal = () => {
+        console.log('closing modal');
+        this.setState({showModal: false}, () => {
+            console.log(`showModal status: ${this.state.showModal}`)
+        });
+    };
 
     toggleSignIn = () => {
         this.setState({
@@ -29,7 +45,7 @@ class Login extends Component {
     }
 
     login = (type) => {
-        console.log('login clicked with type:', type)
+        console.log('login clicked with type:', type);
 
         switch(type) {
             case 1: { // do Regular login - careers
@@ -67,6 +83,8 @@ class Login extends Component {
 
 
     render() {
+        const modalOpened = this.state.showModal;
+
         const googleButton = 
             <button className="tp-login-button goog" onClick={() => this.login(2)}>
                 <div className="tp-login-contents">
@@ -88,12 +106,14 @@ class Login extends Component {
             </button>
 
 
-      
-
-
         return (
             <>
-            <TopNavbarWhite/>
+            {/*conditionally rendered modal*/}
+            {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+
+            {/*main contents of page*/}
+            <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal}/>
+
             <div className="login-container">
                 <div className="login-block">
 

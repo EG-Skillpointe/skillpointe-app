@@ -33,7 +33,7 @@ class Careers extends Component {
         return (
             <div>
                 {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="careers" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
                 <TopNavbarBlue openModal={this.openModal} />

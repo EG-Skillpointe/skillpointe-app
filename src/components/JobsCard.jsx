@@ -12,7 +12,9 @@ export const JobsCard = (props) => {
                     <h6 className="card-subtitle" style={{marginTop:"0"}}>{props.job.company}</h6>
                     <h5 className="card-title">{props.job.title}</h5>
                     <h6 className="card-text">{props.job.location}</h6>
-                    <Button className="card-button" style={{margin:"9px 0", fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px"}}>Learn More</Button>
+                    <a>
+                        <Button className="card-button" style={{margin:"9px 0", fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px"}}>Learn More</Button>
+                    </a>
                     <h6 style={{margin:"0"}}>{props.job.datePosted}</h6>
                 </div>
             </div>
