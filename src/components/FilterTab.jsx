@@ -6,12 +6,11 @@ class FilterTab extends Component {
     super(props);
 
     this.state = {
-      selected: ''
+      selected: this.props.industry ? this.props.industry : ''
     }
   }
 
   onHandleFilterClick = (event) => {
-    console.log(event.target.name);
     this.setState({
       selected: event.target.name
     });

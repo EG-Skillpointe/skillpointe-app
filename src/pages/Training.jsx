@@ -44,7 +44,7 @@ class Training extends Component {
                   {cards}
                 </div>
               <MobileFooter history={this.props.history}/>
-                <Footer mobileFooterPresent/>
+              <Footer mobileFooterPresent/>
             </div>
         )
     }

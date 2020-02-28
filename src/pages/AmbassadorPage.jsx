@@ -14,6 +14,11 @@ class AmbassadorPage extends Component {
       filteredAmbassadors: ambassadors.ambassadors
     };
   }
+componentDidMount() {
+    if(this.props.location && this.props.location.aboutProps && this.props.location.aboutProps.name){
+      this.doFilter(this.props.location.aboutProps.name);
+    }
+}
 
   openModal = () => {
     console.log('opening modal');
@@ -42,7 +47,7 @@ class AmbassadorPage extends Component {
 
   render() {
     const modalOpened = this.state.showModal;
-
+    const name = this.props.location && this.props.location.aboutProps && this.props.location.aboutProps.name ? this.props.location.aboutProps.name : '';
     return (
         <div className='home-page'>
           {/*conditionally rendered modal*/}
@@ -50,7 +55,7 @@ class AmbassadorPage extends Component {
 
           {/*main contents of page*/}
           <TopNavbarWhite openModal={this.openModal} />
-          <FilterTab filter={this.doFilter}/>
+          <FilterTab filter={this.doFilter} industry={name}/>
           <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
             {this.state.filteredAmbassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador} isPage={true}/> </div>})}
           </div>

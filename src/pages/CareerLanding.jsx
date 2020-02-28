@@ -57,7 +57,11 @@ class CareerLanding extends Component {
                     </p>
                 </div>
               <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-                {industries.industries.map(industry => { return <Link to='./ambassador'><CareerCard industry={industry}/></Link>})}
+                {industries.industries.map(industry => { return <Link to={{
+                                                    pathname:'./ambassador',
+                                                    aboutProps:{
+                                                      name: industry.name
+                                                    }}}><CareerCard industry={industry}/></Link>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
