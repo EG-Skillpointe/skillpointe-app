@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Form, Button, ButtonGroup } from 'react-bootstrap';
-import { MobileFooter, TopNavbar, TopNavbarBlue, Footer, TopNavbarWhite} from "../components";
+import { MobileFooter, Footer, TopNavbarWhite} from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 
 
@@ -12,7 +12,7 @@ class SignUp extends Component {
         this.state = {
             showModal: false,
             userType: null,
-            reasonForJoining: null,
+            reasonForJoining: [],
         };
     }
 
@@ -32,7 +32,36 @@ class SignUp extends Component {
 
     onFormChange = (event) => {
         console.log('\n');
-        console.log(`event in onFormChange: ${event}`);
+        console.log(`event in onFormChange: ${event.target}`);
+    };
+
+    onFormButtonClick = (event) => {
+        console.log('\n');
+        console.log(`event in onFormButtonClick: ${event.target.value}`);
+
+        let reasonForJoining = [...this.state.reasonForJoining];
+
+        // if reason for joining exists in state, remove it
+        if (reasonForJoining.includes(event.target.value)) {
+            let index = reasonForJoining.indexOf(event.target.value);
+            reasonForJoining.splice(index, 1);
+
+            this.setState({reasonForJoining:reasonForJoining}, () => {
+                console.log(this.state);
+            });
+        }
+        // if reason for joining doesn't exist in state, add it
+        else {
+            reasonForJoining.push(event.target.value);
+
+            this.setState({reasonForJoining:reasonForJoining}, () => {
+                console.log(this.state);
+            });
+        }
+    };
+
+    onSubmitForm = () => {
+        console.log('Form Submitted!');
     };
 
     render() {
@@ -89,28 +118,24 @@ class SignUp extends Component {
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
-                                    style={{}}
                                     type={type}
                                     label={'Student'}
                                     id={`disabled-default-${type}`}
                                 />
 
                                 <Form.Check
-                                    style={{}}
                                     type={type}
                                     label={'Employer'}
                                     id={`disabled-default-${type}`}
                                 />
 
                                 <Form.Check
-                                    style={{}}
                                     type={type}
                                     label={'Job Seeker'}
                                     id={`disabled-default-${type}`}
                                 />
 
                                 <Form.Check
-                                    style={{}}
                                     type={type}
                                     label={'School Representative'}
                                     id={`disabled-default-${type}`}
@@ -119,38 +144,42 @@ class SignUp extends Component {
                         ))}
                     </Form>
 
-                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                            <Button value='Healthcare' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Healthcare' className="form-button">
                                 Healthcare
                             </Button>
-                            <Button value='Energy' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Energy' className="form-button">
                                 Energy
                             </Button>
-                            <Button value='Communications' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Communications' className="form-button">
                                 Communications
                             </Button>
-                            <Button value='Public Services' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Public Services' className="form-button">
                                 Public Services
                             </Button>
-                            <Button value='Hospitality' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Hospitality' className="form-button">
                                 Hospitality
                             </Button>
-                            <Button value='Transportation' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Transportation' className="form-button">
                                 Transportation
                             </Button>
-                            <Button value='Information Technology' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Information Technology' className="form-button">
                                 Information Technology
                             </Button>
-                            <Button value='Manufacturing' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Manufacturing' className="form-button">
                                 Manufacturing
                             </Button>
-                            <Button value='Construction' className="form-button">
+                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Construction' className="form-button">
                                 Construction
                             </Button>
                         </ButtonGroup>
                     </Form>
+
+                    <Button onClick={this.onSubmitForm} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
+                         Create Account
+                    </Button>
                 </div>
             </div>
         )

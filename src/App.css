@@ -853,6 +853,9 @@ label, p {
 }
 
 .form-button {
+  color: black;
+  background: #EDEDED;
+  border: 1.5px solid #DADADA;
   margin: 5px !important;
   border-radius: 5px !important;
   height: 30px;
