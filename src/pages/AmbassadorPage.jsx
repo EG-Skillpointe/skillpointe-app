@@ -51,10 +51,10 @@ componentDidMount() {
     return (
         <div className='home-page'>
           {/*conditionally rendered modal*/}
-          {modalOpened ? (<HamburgerModal closeModal={this.closeModal} />) : (null)}
+          {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
           {/*main contents of page*/}
-          <TopNavbarWhite openModal={this.openModal} />
+          <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
           <FilterTab filter={this.doFilter} industry={name}/>
           <div className="row" style={{margin:'0', paddingBottom:'20px', backgroundColor:'#ededed'}}>
             {this.state.filteredAmbassadors.map(ambassador => { return <div className="ambassador-card-div"> <AmbassadorCard ambassador={ambassador} isPage={true}/> </div>})}
