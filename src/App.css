@@ -790,4 +790,10 @@ label, p {
   width: 100%;
 }
 
+.sign-up {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 /* Video Component END */
