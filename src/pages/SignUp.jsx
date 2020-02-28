@@ -53,7 +53,7 @@ class SignUp extends Component {
 
                     <Link to="/" style={{fontSize:"16px"}}>To skip select Create Account.</Link>
 
-                    <Form style={{display:"flex", flexDirection:"column"}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
@@ -84,7 +84,7 @@ class SignUp extends Component {
                         ))}
                     </Form>
 
-                    <Form style={{display:"flex", flexDirection:"column"}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
@@ -119,34 +119,34 @@ class SignUp extends Component {
                         ))}
                     </Form>
 
-                    <Form style={{display:"flex", flexDirection:"column"}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                            <Button value='Healthcare' style={{margin:"10px", borderRadius:"5px"}}>
+                            <Button value='Healthcare' className="form-button">
                                 Healthcare
                             </Button>
-                            <Button value='Energy' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Energy' className="form-button">
                                 Energy
                             </Button>
-                            <Button value='Communications' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Communications' className="form-button">
                                 Communications
                             </Button>
-                            <Button value='Public Services' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Public Services' className="form-button">
                                 Public Services
                             </Button>
-                            <Button value='Hospitality' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Hospitality' className="form-button">
                                 Hospitality
                             </Button>
-                            <Button value='Transportation' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Transportation' className="form-button">
                                 Transportation
                             </Button>
-                            <Button value='Information Technology' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Information Technology' className="form-button">
                                 Information Technology
                             </Button>
-                            <Button value='Manufacturing' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Manufacturing' className="form-button">
                                 Manufacturing
                             </Button>
-                            <Button value='Construction' style={{margin:"5px", borderRadius:"5px"}}>
+                            <Button value='Construction' className="form-button">
                                 Construction
                             </Button>
                         </ButtonGroup>

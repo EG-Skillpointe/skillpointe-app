@@ -841,3 +841,20 @@ label, p {
  background-color: #F8A141;
 }
 /* Video Component END */
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+.form-button {
+  margin: 5px !important;
+  border-radius: 5px !important;
+  height: 30px;
+  line-height: 16px;
+}
