@@ -51,7 +51,7 @@ componentDidMount() {
     return (
         <div className='home-page'>
           {/*conditionally rendered modal*/}
-          {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+          {modalOpened ? (<HamburgerModal pageType="career-landing" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
           {/*main contents of page*/}
           <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
