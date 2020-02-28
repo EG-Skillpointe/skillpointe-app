@@ -625,7 +625,7 @@ label, p {
 .modal-navbar .logo {
   position: absolute;
   left: 20px;
-  width: 25%;
+  height: 40px;
 }
 
 .modal-navbar .close {
