@@ -6,4 +6,5 @@ export {default as CareerLanding} from './CareerLanding';
 export {default as Careers} from './Careers';
 export {default as AmbassadorPage} from './AmbassadorPage'
 export {default as SignUp} from './SignUp';
+export {default as PersonalizedHomePage} from './PersonalizedHomePage';
 

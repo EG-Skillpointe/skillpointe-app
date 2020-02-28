@@ -52,7 +52,7 @@ class Login extends Component {
                 console.log(`doing type ${type} login...`);
                 let res = authService.login(userType1);
                 if(res) {
-                    this.props.history.push("/career-landing")
+                    this.props.history.push("/home-page")
                 }
             } break;
             case 2: { // do Google login - training
