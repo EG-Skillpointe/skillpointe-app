@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import {TopNavbarWhite, TrainingCard, Footer} from "../components";
+import {TopNavbarWhite, TrainingCard, Footer, FilterTab} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
@@ -41,11 +40,11 @@ class Training extends Component {
                 {/*main contents of page*/}
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 {/* TODO: Pass in actual data to prevent error in training page */}
-                    <div style={{marginTop:"30px"}}>
-                        {cards}
-                    </div>
-                <MobileFooter history={this.props.history}/>
-                <Footer mobileFooterPresent/>
+                <div style={{marginTop:"30px"}}>
+                  {cards}
+                </div>
+              <MobileFooter history={this.props.history}/>
+              <Footer mobileFooterPresent/>
             </div>
         )
     }

@@ -796,4 +796,48 @@ label, p {
   width: 100%;
 }
 
+.ambassador-card-div{
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.flexbox-container {
+  margin: 5px;
+  display: flex;
+  flex-wrap: nowrap; /* [1] */
+  overflow-x: auto; /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flexbox-container::-webkit-scrollbar {
+  display: none; }
+
+.nav-button{
+  text-align: center;
+  background: #EDEDED;
+  border: 1.5px solid #EDEDED;
+  box-sizing: border-box;
+ box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  flex: 0 0 auto;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2D426B;
+}
+
+.selected{
+ background-color: #F8A141;
+}
 /* Video Component END */

@@ -12,3 +12,4 @@ export {default as ModalNavbar} from './ModalNavbar';
 export {default as CardCarousel} from './CardCarousel';
 export {default as CareerCard} from './CareerCard';
 export {default as Video} from './Video';
+export {default as FilterTab} from './FilterTab';
