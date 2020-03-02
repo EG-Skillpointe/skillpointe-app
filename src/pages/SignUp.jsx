@@ -125,10 +125,17 @@ class SignUp extends Component {
         }
     };
 
-    login = () => {
-        const userForm = this.state.userForm;
-        const userType = userForm.userType;
+    login = (isDefaultUser) => {
+        let userForm = {...this.state.userForm};
+        let userType = userForm.userType;
         let res;
+
+        if (isDefaultUser) {
+            userType = 'default';
+            userForm.userType = 1;
+            userForm.userDescription = "Student";
+            userForm.industry = [];
+        }
 
         switch(userType) {
             case 1:
@@ -167,7 +174,15 @@ class SignUp extends Component {
                 }
                 break;
 
-            default: console.log('login type not found. Type:', userType);
+            default:
+                // default login
+                console.log('default login type: ', userType);
+                console.log(`default login userForm: ${JSON.stringify(userForm)}`);
+                res = authService.login(userForm);
+                if(res) {
+                    this.props.history.push("/career-landing")
+                }
+                break;
         }
 
         console.log('login finished.');
@@ -187,12 +202,12 @@ class SignUp extends Component {
                 <div className='sign-up' style={{margin: "30px auto", width:"85%"}}>
                     <h1 style={{margin:"0"}}>Personalize</h1>
                     <h1 style={{margin:"0"}}>Your Experience</h1>
-                    <p style={{margin:"10px 0", lineHeight: "16px"}}>These questions help us determine the most relevant content to show you. Helping you find what you want, faster.</p>
+                    <p style={{margin:"10px 0 20px", lineHeight: "16px"}}>These questions help us determine the most relevant content to show you. Helping you find what you want, faster.</p>
 
-                    <Link to="/" style={{fontSize:"16px"}}>To skip select Create Account.</Link>
+                    <h2 onClick={(True) => this.login(True)} style={{fontSize:"16px", color:"#F8A141"}}>To skip select Create Account.</h2>
 
                     <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserDescriptionFormChange(event)}}>
-                        <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
+                        <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
@@ -227,7 +242,7 @@ class SignUp extends Component {
                     </Form>
 
                     <Form className="sign-up-form" style={{}} onChange={(event) => {this.onReasonForJoiningFormChange(event)}}>
-                        <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
+                        <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
@@ -262,7 +277,7 @@ class SignUp extends Component {
                     </Form>
 
                     <Form className="sign-up-form" style={{}}>
-                        <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which industry are you interested in? Select one or more.</h1>
+                        <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>Which industry are you interested in? Select one or more.</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                             <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Healthcare' className="form-button" style={this.checkButtonSelection('Healthcare')}>
                                 Healthcare
@@ -294,7 +309,7 @@ class SignUp extends Component {
                         </ButtonGroup>
                     </Form>
 
-                    <Button onClick={this.login} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
+                    <Button onClick={(False) => this.login(False)} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
                          Create Account
                     </Button>
                 </div>
