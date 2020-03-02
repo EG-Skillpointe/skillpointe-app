@@ -11,7 +11,7 @@ const selectedButton = {
     border: "1.5px solid #2D426B"
 };
 
-class SignUp extends Component {
+class SignUpPage extends Component {
 
     constructor(props) {
         super(props);
@@ -125,12 +125,15 @@ class SignUp extends Component {
         }
     };
 
-    login = (isDefaultUser) => {
+    signUpFormLogin = (isDefaultUser) => {
         let userForm = {...this.state.userForm};
         let userType = userForm.userType;
         let res;
 
+        console.log(`userType in login: ${userType}`);
+
         if (isDefaultUser) {
+            console.log('defaultUser in login');
             userType = 'default';
             userForm.userType = 1;
             userForm.userDescription = "Student";
@@ -144,6 +147,7 @@ class SignUp extends Component {
                 res = authService.login(userForm);
                 if(res) {
                     this.props.history.push("/career-landing")
+                    // this.props.history.push("/training")
                 }
                 break;
 
@@ -153,6 +157,7 @@ class SignUp extends Component {
                 res = authService.login(userForm);
                 if(res) {
                     this.props.history.push("/training")
+                    // this.props.history.push("/training")
                 }
                 break;
 
@@ -162,6 +167,7 @@ class SignUp extends Component {
                 res = authService.login(userForm);
                 if(res) {
                     this.props.history.push("/jobsearch")
+                    // this.props.history.push("/training")
                 }
                 break;
 
@@ -171,6 +177,7 @@ class SignUp extends Component {
                 res = authService.login(userForm);
                 if(res) {
                     this.props.history.push("/")
+                    // this.props.history.push("/training")
                 }
                 break;
 
@@ -181,6 +188,7 @@ class SignUp extends Component {
                 res = authService.login(userForm);
                 if(res) {
                     this.props.history.push("/career-landing")
+                    // this.props.history.push("/training")
                 }
                 break;
         }
@@ -204,7 +212,7 @@ class SignUp extends Component {
                     <h1 style={{margin:"0"}}>Your Experience</h1>
                     <p style={{margin:"10px 0 20px", lineHeight: "16px"}}>These questions help us determine the most relevant content to show you. Helping you find what you want, faster.</p>
 
-                    <h2 onClick={(True) => this.login(True)} style={{fontSize:"16px", color:"#F8A141"}}>To skip select Create Account.</h2>
+                    <h2 onClick={() => this.signUpFormLogin(true)} style={{fontSize:"16px", color:"#F8A141"}}>To skip select Create Account.</h2>
 
                     <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserDescriptionFormChange(event)}}>
                         <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
@@ -309,7 +317,7 @@ class SignUp extends Component {
                         </ButtonGroup>
                     </Form>
 
-                    <Button onClick={(False) => this.login(False)} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
+                    <Button onClick={() => this.signUpFormLogin(false)} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
                          Create Account
                     </Button>
                 </div>
@@ -318,4 +326,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default SignUpPage;

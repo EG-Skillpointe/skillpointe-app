@@ -45,30 +45,33 @@ class Login extends Component {
     }
 
     login = (type) => {
-        console.log('login clicked with type:', type);
+        // console.log('login clicked with type:', type);
 
         switch(type) {
             case 1: { // do Regular login - careers
-                console.log(`doing type ${type} login...`);
+                // console.log(`doing type ${type} login...`);
                 let res = authService.login(userType1);
                 if(res) {
-                    this.props.history.push("/career-landing")
+                    this.props.history.push("/signup")
                 }
             } break;
+
             case 2: { // do Google login - training
-                console.log(`doing type ${type} login...`);
+                // console.log(`doing type ${type} login...`);
                 let res = authService.login(userType2);
                 if(res) {
                     this.props.history.push("/signup")
                 }
             } break;
+
             case 3: { // do Facebook login - jobs
-                console.log(`doing type ${type} login...`);
+                // console.log(`doing type ${type} login...`);
                 let res = authService.login(userType3);
                 if(res) {
                     this.props.history.push("/signup")
                 }
             } break;
+
             default: console.log('login type not found. Type:', type);
         }
         
@@ -77,7 +80,7 @@ class Login extends Component {
     }
 
     logout() {
-        console.log('logout clicked 1')
+        console.log('logout clicked 1');
         authService.logout();
     }
 
@@ -131,7 +134,7 @@ class Login extends Component {
                         <SignIn toggle={this.toggleSignIn} login={this.login}/>
                         :
                         <>
-                            <label className="sub-heading">Join Skillpointe today.</label>
+                            <label className="sub-heading">Join SkillPointe today.</label>
                             <SignUp toggle={this.toggleSignIn} login={this.login}/>
                         </>
                         
