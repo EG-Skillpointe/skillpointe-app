@@ -59,14 +59,14 @@ class Login extends Component {
                 console.log(`doing type ${type} login...`);
                 let res = authService.login(userType2);
                 if(res) {
-                    this.props.history.push("/training")
+                    this.props.history.push("/signup")
                 }
             } break;
             case 3: { // do Facebook login - jobs
                 console.log(`doing type ${type} login...`);
                 let res = authService.login(userType3);
                 if(res) {
-                    this.props.history.push("/jobsearch")
+                    this.props.history.push("/signup")
                 }
             } break;
             default: console.log('login type not found. Type:', type);

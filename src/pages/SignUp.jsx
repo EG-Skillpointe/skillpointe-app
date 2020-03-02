@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Form, Button, ButtonGroup } from 'react-bootstrap';
-import { MobileFooter, Footer, TopNavbarWhite} from "../components";
+import { TopNavbarWhite } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
+import {authService} from "../services/auth.service";
 
 const selectedButton = {
     backgroundColor:"#2D426B",
@@ -15,9 +16,16 @@ class SignUp extends Component {
         super(props);
         this.state = {
             showModal: false,
-            userType: null,
-            reasonForJoining: null,
-            industry: []
+            userForm: {
+                userId: 111,
+                userName: "JSmith",
+                firstName: "John",
+                lastName: "Smith",
+                emailAddress: "jsmith111@gmail.com",
+                userType: null,
+                userDescription: null,
+                industry: []
+            }
         };
     }
 
@@ -39,50 +47,74 @@ class SignUp extends Component {
         });
     };
 
-    onUserTypeFormChange = (event) => {
-        this.setState({userType:event.target.id}, () =>{
-            console.log(`userType status: ${this.state.userType}`)
+    onUserDescriptionFormChange = (event) => {
+        let userForm = {...this.state.userForm};
+        userForm.userDescription = event.target.id;
+
+        this.setState({userForm: userForm}, () =>{
+            console.log(`userDescription status: ${this.state.userForm.userDescription}`)
         });
     };
 
     onReasonForJoiningFormChange = (event) => {
-        this.setState({reasonForJoining:event.target.id}, () =>{
-            console.log(`reasonForJoining status: ${this.state.reasonForJoining}`)
+        let userType;
+
+        switch(event.target.id) {
+            case "Find a Job":
+                console.log(`doing type ${event.target.id} login...`);
+                userType = 3;
+                break;
+
+            case "Explore Careers":
+                console.log(`doing type ${event.target.id} login...`);
+                userType = 1;
+                break;
+
+            case "Find Training":
+                console.log(`doing type ${event.target.id} login...`);
+                userType = 2;
+                break;
+
+            case "Find People":
+                // do Facebook login - jobs
+                console.log(`doing type ${event.target.id} login...`);
+                userType = 4;
+                break;
+
+            default: console.log('userType not found. Type:', event.target.id);
+        }
+
+        let userForm = {...this.state.userForm};
+        userForm.userType = userType;
+
+        this.setState({userForm: userForm}, () =>{
+            console.log(`userType status: ${this.state.userForm.userType}`)
         });
     };
 
     onIndustryFormButtonClick = (event) => {
-        console.log('\n');
-        console.log(`event in onFormButtonClick: ${event.target.value}`);
+        let userForm = {...this.state.userForm};
+        let industry = [...userForm.industry];
 
-        let industry = [...this.state.industry];
-
-        // if reason for joining exists in state, remove it
+        // if reason for joining exists in industry state, remove it
         if (industry.includes(event.target.value)) {
             let index = industry.indexOf(event.target.value);
             industry.splice(index, 1);
-
-            this.setState({industry:industry}, () => {
-                console.log(this.state);
-            });
         }
-        // if reason for joining doesn't exist in state, add it
+        // if reason for joining doesn't exist in industry state, add it
         else {
             industry.push(event.target.value);
-
-            this.setState({industry:industry}, () => {
-                console.log(this.state);
-            });
         }
-    };
 
-    onSubmitForm = () => {
-        console.log('Form Submitted!');
+        // set state with changed industries
+        userForm.industry = industry;
+        this.setState({userForm: userForm}, () => {
+            console.log(this.state);
+        });
     };
 
     checkButtonSelection = (industryInput) => {
-        console.log('buttonSelection function');
-        let industry = [...this.state.industry];
+        let industry = [...this.state.userForm.industry];
 
         if (industry.includes(industryInput)) {
             return selectedButton;
@@ -90,6 +122,54 @@ class SignUp extends Component {
         else {
             return null;
         }
+    };
+
+    login = () => {
+        const userForm = this.state.userForm;
+        const userType = userForm.userType;
+        let res;
+
+        switch(userType) {
+            case 1:
+                // login career
+                console.log(`doing type ${userType} login...`);
+                res = authService.login(userForm);
+                if(res) {
+                    this.props.history.push("/career-landing")
+                }
+                break;
+
+            case 2:
+                // login training
+                console.log(`doing type ${userType} login...`);
+                res = authService.login(userForm);
+                if(res) {
+                    this.props.history.push("/training")
+                }
+                break;
+
+            case 3:
+                // login job
+                console.log(`doing type ${userType} login...`);
+                res = authService.login(userForm);
+                if(res) {
+                    this.props.history.push("/jobsearch")
+                }
+                break;
+
+            case 4:
+                // login people
+                console.log(`doing type ${userType} login...`);
+                res = authService.login(userForm);
+                if(res) {
+                    this.props.history.push("/")
+                }
+                break;
+
+            default: console.log('login type not found. Type:', userType);
+        }
+
+        console.log('login finished.');
     };
 
     render() {
@@ -110,7 +190,7 @@ class SignUp extends Component {
 
                     <Link to="/" style={{fontSize:"16px"}}>To skip select Create Account.</Link>
 
-                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserTypeFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserDescriptionFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
@@ -213,7 +293,7 @@ class SignUp extends Component {
                         </ButtonGroup>
                     </Form>
 
-                    <Button onClick={this.onSubmitForm} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
+                    <Button onClick={this.login} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
                          Create Account
                     </Button>
                 </div>
