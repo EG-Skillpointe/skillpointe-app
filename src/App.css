@@ -327,6 +327,7 @@ label, p {
   position: relative;
   color: #2D426B !important;
   font-family: 'Roboto';
+  font-weight: bold;
 }
 
 .footer-items .item {
