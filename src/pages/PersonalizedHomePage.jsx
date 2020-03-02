@@ -84,8 +84,9 @@ class PersonalizedHomePage extends Component {
             <div className="home-arrow-header">
               Find Jobs
             </div>
-            <div>
-              <VerticalJobCard job={job.jobs[0]}/>
+            <div className="flex-container">
+              <VerticalJobCard job={job.jobs[0]} />
+              <VerticalJobCard job={job.jobs[0]} />
             </div>
 
           </div>

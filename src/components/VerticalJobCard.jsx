@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 export const VerticalJobCard = (props) => {
-  const image = require(`../assets/images/${props.job.image}`);
+  const image = require(`../assets/images/vertial_choa.png`);
   const jobPageStyle = {
     display:'flex',
     justifyContent:'center',
@@ -26,7 +26,7 @@ export const VerticalJobCard = (props) => {
 
   return (
 
-      <Card className="ambassador-card-container">
+      <Card className="ambassador-card-container flex">
         <Card.Img variant="top" src={image} style={{height: '50%', width: '100%', borderRadius: "10px 10px 0 0"}} />
         <Card.Body style={style}>
           <div>

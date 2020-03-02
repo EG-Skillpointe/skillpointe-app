@@ -819,7 +819,7 @@ label, p {
   background: #EDEDED;
   border: 1.5px solid #EDEDED;
   box-sizing: border-box;
- box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
+  box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
@@ -836,3 +836,14 @@ label, p {
  background-color: #F8A141;
 }
 /* Video Component END */
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 360px;
+  overflow-x: auto;
+}
+
+.flex{
+  flex: 0 0 auto;
+}
