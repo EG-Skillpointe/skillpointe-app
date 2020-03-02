@@ -14,11 +14,14 @@ class AmbassadorPage extends Component {
       filteredAmbassadors: ambassadors.ambassadors
     };
   }
-componentDidMount() {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    
     if(this.props.location && this.props.location.aboutProps && this.props.location.aboutProps.name){
       this.doFilter(this.props.location.aboutProps.name);
     }
-}
+  }
 
   openModal = () => {
     console.log('opening modal');
