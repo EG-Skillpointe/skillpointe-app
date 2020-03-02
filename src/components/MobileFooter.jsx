@@ -39,7 +39,7 @@ class MobileFooter extends Component {
     handleScroll = () => {
         let maxScroll = (this.footerSticky.offsetTop - window.innerHeight);
         let newBottom = this.state.bottom;
-        let scrollDifference = window.pageYOffset - this.state.scrollPos
+        let scrollDifference = window.pageYOffset - this.state.scrollPos;
 
         if(this.state.scrollTouched && window.pageYOffset > 100) {
             if(window.pageYOffset > (maxScroll - this.mobileFooterHeight)) { // bottom of footer - stick

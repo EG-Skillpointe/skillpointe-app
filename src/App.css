@@ -580,6 +580,7 @@ label, p {
   position: absolute;
   left: 20px;
   height: 40px;
+  width: 104px;
 }
 
 .top-navbar .hamburger {
@@ -612,20 +613,22 @@ label, p {
 }
 
 .modal-navbar {
+  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   height: 60px;
   background-color: white;
-  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3) !important;
   z-index: 999;
 }
 
 .modal-navbar .logo {
   position: absolute;
   left: 20px;
-  width: 25%;
+  width: 104px;
+  height: 40px;
 }
 
 .modal-navbar .close {
@@ -639,6 +642,7 @@ label, p {
   flex-direction: column;
   font-size: 24px;
   background-color: white;
+  padding-top: 60px;
   height: 100%;
   width: 100%;
 }
@@ -786,4 +790,74 @@ label, p {
   width: 100%;
 }
 
+.sign-up {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.ambassador-card-div{
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.flexbox-container {
+  margin: 5px;
+  display: flex;
+  flex-wrap: nowrap; /* [1] */
+  overflow-x: auto; /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flexbox-container::-webkit-scrollbar {
+  display: none; }
+
+.nav-button{
+  text-align: center;
+  background: #EDEDED;
+  border: 1.5px solid #EDEDED;
+  box-sizing: border-box;
+ box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  flex: 0 0 auto;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2D426B;
+}
+
+.selected{
+ background-color: #F8A141;
+}
 /* Video Component END */
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+.form-button {
+  color: black;
+  background: #EDEDED;
+  border: 1.5px solid #DADADA;
+  margin: 5px !important;
+  border-radius: 5px !important;
+  height: 30px;
+  line-height: 16px;
+}

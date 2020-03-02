@@ -5,16 +5,16 @@
             "image": "construction.jpg"
         },
         {
+            "name": "Healthcare",
+            "image": "healthcare.jpg"
+        },
+        {
             "name": "Communications",
             "image": "communications.jpg"
         },
         {
             "name": "Energy",
             "image": "energy.jpg"
-        },
-        {
-            "name": "Healthcare",
-            "image": "healthcare.jpg"
         },
         {
             "name": "Manufacturing",

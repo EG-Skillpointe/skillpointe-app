@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {CareerCard, MobileFooter, TopNavbar, TopNavbarBlue, TrainingCard, Footer} from "../components";
 import landingBackground from "../assets/images/landing-background1.png";
 import industries from '../assets/mockData/industries';
+import {Link} from 'react-router-dom'
 
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
@@ -56,7 +57,11 @@ class CareerLanding extends Component {
                     </p>
                 </div>
               <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-                  {industries.industries.map(industry => { return <CareerCard industry={industry}/>})}
+                {industries.industries.map(industry => { return <Link to={{
+                                                    pathname:'./ambassador',
+                                                    aboutProps:{
+                                                      name: industry.name
+                                                    }}}><CareerCard industry={industry}/></Link>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
