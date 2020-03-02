@@ -861,3 +861,23 @@ label, p {
   height: 30px;
   line-height: 16px;
 }
+
+.form-button:focus {
+  outline: none !important;
+}
+
+.form-button:visited {
+  outline: none !important;
+}
+
+.form-button:active {
+  border: 1.5px solid #EDEDED !important;
+  outline: none !important;
+}
+
+.form-button:hover {
+  background: #EDEDED;
+  border: 1.5px solid #DADADA;
+}
+
+
