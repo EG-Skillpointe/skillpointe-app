@@ -27,13 +27,13 @@ class MobileFooter extends Component {
     };
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
+        // window.addEventListener('scroll', this.handleScroll);
         this.footerSticky = document.getElementById("mobile-footer-sticky");
         this.mobileFooterHeight = document.getElementById("mobile-footer").offsetHeight;
     }
     
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
+        // window.removeEventListener('scroll', this.handleScroll);
     }
     
     handleScroll = () => {
@@ -41,7 +41,7 @@ class MobileFooter extends Component {
         let newBottom = this.state.bottom;
         let scrollDifference = window.pageYOffset - this.state.scrollPos;
 
-        if(this.state.scrollTouched) {
+        if(this.state.scrollTouched && window.pageYOffset > 100) {
             if(window.pageYOffset > (maxScroll - this.mobileFooterHeight)) { // bottom of footer - stick
                 if(this.state.bottom < 0) {
                     newBottom = this.state.bottom + scrollDifference;

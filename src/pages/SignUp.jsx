@@ -21,6 +21,10 @@ class SignUp extends Component {
         };
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     openModal = () => {
         console.log('opening modal');
         this.setState({showModal: true},() => {
