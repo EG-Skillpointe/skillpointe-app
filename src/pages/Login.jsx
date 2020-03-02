@@ -95,7 +95,7 @@ class Login extends Component {
                     </div>
                     <span className="tp-login-span">Continue with Google</span>
                 </div>
-            </button>
+            </button>;
 
         const facebookButton = 
             <button className="tp-login-button fb" onClick={() => this.login(3)}>
@@ -103,7 +103,7 @@ class Login extends Component {
                     <img className="img" src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/szGrb_tkxMW.png" alt="" width="24" height="24"></img>
                     <span className="tp-login-span fb-span">Continue with Facebook</span>
                 </div>
-            </button>
+            </button>;
 
 
         return (
@@ -127,8 +127,10 @@ class Login extends Component {
                     
                     {
                         this.state.signInToggle
-                        ? <SignIn toggle={this.toggleSignIn} login={this.login}/> 
-                        : <>
+                        ?
+                        <SignIn toggle={this.toggleSignIn} login={this.login}/>
+                        :
+                        <>
                             <label className="sub-heading">Join Skillpointe today.</label>
                             <SignUp toggle={this.toggleSignIn} login={this.login}/>
                         </>
@@ -139,6 +141,7 @@ class Login extends Component {
                         <div className="line"></div>
                         <div className="text">OR</div>
                     </div>
+
                     { googleButton }
                     { facebookButton }
                 </div>
@@ -181,7 +184,7 @@ const userType1 = {
     firstName: "John",
     lastName: "Smith",
     emailAddress: "jsmith111@gmail.com",
-}
+};
 
 // Training
 const userType2 = {
@@ -191,7 +194,7 @@ const userType2 = {
     firstName: "Howard",
     lastName: "Johnson",
     emailAddress: "HJohnson222@gmail.com",
-}
+};
 
 // Jobs
 const userType3 = {
@@ -201,6 +204,6 @@ const userType3 = {
     firstName: "Eric",
     lastName: "Robertson",
     emailAddress: "erobertson333@gmail.com",
-}
+};
 
 export default Login;

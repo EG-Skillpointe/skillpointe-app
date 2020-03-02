@@ -4,6 +4,10 @@ import { Form, Button, ButtonGroup } from 'react-bootstrap';
 import { MobileFooter, Footer, TopNavbarWhite} from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 
+const selectedButton = {
+    backgroundColor:"#2D426B",
+    color:"#FFFFFF"
+};
 
 class SignUp extends Component {
 
@@ -47,22 +51,22 @@ class SignUp extends Component {
         console.log('\n');
         console.log(`event in onFormButtonClick: ${event.target.value}`);
 
-        let reasonForJoining = [...this.state.reasonForJoining];
+        let industry = [...this.state.industry];
 
         // if reason for joining exists in state, remove it
-        if (reasonForJoining.includes(event.target.value)) {
-            let index = reasonForJoining.indexOf(event.target.value);
-            reasonForJoining.splice(index, 1);
+        if (industry.includes(event.target.value)) {
+            let index = industry.indexOf(event.target.value);
+            industry.splice(index, 1);
 
-            this.setState({reasonForJoining:reasonForJoining}, () => {
+            this.setState({industry:industry}, () => {
                 console.log(this.state);
             });
         }
         // if reason for joining doesn't exist in state, add it
         else {
-            reasonForJoining.push(event.target.value);
+            industry.push(event.target.value);
 
-            this.setState({reasonForJoining:reasonForJoining}, () => {
+            this.setState({industry:industry}, () => {
                 console.log(this.state);
             });
         }
@@ -70,6 +74,18 @@ class SignUp extends Component {
 
     onSubmitForm = () => {
         console.log('Form Submitted!');
+    };
+
+    checkButtonSelection = (industryInput) => {
+        console.log('buttonSelection function');
+        let industry = [...this.state.industry];
+
+        if (industry.includes(industryInput)) {
+            return selectedButton;
+        }
+        else {
+            return null;
+        }
     };
 
     render() {
@@ -163,31 +179,31 @@ class SignUp extends Component {
                     <Form className="sign-up-form" style={{}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which industry are you interested in? Select one or more.</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Healthcare' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Healthcare' className="form-button" style={this.checkButtonSelection('Healthcare')}>
                                 Healthcare
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Energy' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Energy' className="form-button" style={this.checkButtonSelection('Energy')}>
                                 Energy
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Communications' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Communications' className="form-button" style={this.checkButtonSelection('Communications')}>
                                 Communications
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Public Services' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Public Services' className="form-button" style={this.checkButtonSelection('Public Services')}>
                                 Public Services
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Hospitality' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Hospitality' className="form-button" style={this.checkButtonSelection('Hospitality')}>
                                 Hospitality
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Transportation' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Transportation' className="form-button" style={this.checkButtonSelection('Transportation')}>
                                 Transportation
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Information Technology' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Information Technology' className="form-button" style={this.checkButtonSelection('Information Technology')}>
                                 Information Technology
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Manufacturing' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Manufacturing' className="form-button" style={this.checkButtonSelection('Manufacturing')}>
                                 Manufacturing
                             </Button>
-                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Construction' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Construction' className="form-button" style={this.checkButtonSelection('Construction')}>
                                 Construction
                             </Button>
                         </ButtonGroup>
