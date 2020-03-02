@@ -7,7 +7,8 @@ import {authService} from "../services/auth.service";
 
 const selectedButton = {
     backgroundColor:"#2D426B",
-    color:"#FFFFFF"
+    color:"#FFFFFF",
+    border: "1.5px solid #2D426B"
 };
 
 class SignUp extends Component {

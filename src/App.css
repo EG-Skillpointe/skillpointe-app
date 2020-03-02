@@ -863,15 +863,19 @@ label, p {
 }
 
 .form-button:focus {
+  background: #2D426B;
+  border: 1.5px solid #2D426B;
   outline: none !important;
 }
 
 .form-button:visited {
+  background: #2D426B;
   outline: none !important;
 }
 
 .form-button:active {
-  border: 1.5px solid #EDEDED !important;
+  background: #2D426B;
+  border: 1.5px solid #2D426B;
   outline: none !important;
 }
 
