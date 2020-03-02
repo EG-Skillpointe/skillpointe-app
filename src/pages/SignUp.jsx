@@ -12,7 +12,8 @@ class SignUp extends Component {
         this.state = {
             showModal: false,
             userType: null,
-            reasonForJoining: [],
+            reasonForJoining: null,
+            industry: []
         };
     }
 
@@ -30,12 +31,19 @@ class SignUp extends Component {
         });
     };
 
-    onFormChange = (event) => {
-        console.log('\n');
-        console.log(`event in onFormChange: ${event.target}`);
+    onUserTypeFormChange = (event) => {
+        this.setState({userType:event.target.id}, () =>{
+            console.log(`userType status: ${this.state.userType}`)
+        });
     };
 
-    onFormButtonClick = (event) => {
+    onReasonForJoiningFormChange = (event) => {
+        this.setState({reasonForJoining:event.target.id}, () =>{
+            console.log(`reasonForJoining status: ${this.state.reasonForJoining}`)
+        });
+    };
+
+    onIndustryFormButtonClick = (event) => {
         console.log('\n');
         console.log(`event in onFormButtonClick: ${event.target.value}`);
 
@@ -82,96 +90,104 @@ class SignUp extends Component {
 
                     <Link to="/" style={{fontSize:"16px"}}>To skip select Create Account.</Link>
 
-                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserTypeFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
                                     type={type}
                                     label={'Student'}
-                                    id={`disabled-default-${type}`}
+                                    id={'Student'}
+                                    name="groupOfUserTypeRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
                                     label={'Employer'}
-                                    id={`disabled-default-${type}`}
+                                    id={'Employer'}
+                                    name="groupOfUserTypeRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
                                     label={'Job Seeker'}
-                                    id={`disabled-default-${type}`}
+                                    id={'Job Seeker'}
+                                    name="groupOfUserTypeRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
                                     label={'School Representative'}
-                                    id={`disabled-default-${type}`}
+                                    id={'School Representative'}
+                                    name="groupOfUserTypeRadios"
                                 />
                             </div>
                         ))}
                     </Form>
 
-                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onFormChange(event)}}>
+                    <Form className="sign-up-form" style={{}} onChange={(event) => {this.onReasonForJoiningFormChange(event)}}>
                         <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
                         {['radio'].map(type => (
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
                                     type={type}
-                                    label={'Student'}
-                                    id={`disabled-default-${type}`}
+                                    label={'Find a Job'}
+                                    id='Find a Job'
+                                    name="groupOfReasonForJoiningRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
-                                    label={'Employer'}
-                                    id={`disabled-default-${type}`}
+                                    label={'Explore Careers'}
+                                    id='Explore Careers'
+                                    name="groupOfReasonForJoiningRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
-                                    label={'Job Seeker'}
-                                    id={`disabled-default-${type}`}
+                                    label={'Find Training'}
+                                    id='Find Training'
+                                    name="groupOfReasonForJoiningRadios"
                                 />
 
                                 <Form.Check
                                     type={type}
-                                    label={'School Representative'}
-                                    id={`disabled-default-${type}`}
+                                    label={'Find People'}
+                                    id='Find People'
+                                    name="groupOfReasonForJoiningRadios"
                                 />
                             </div>
                         ))}
                     </Form>
 
                     <Form className="sign-up-form" style={{}}>
-                        <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>My primary reason for joining SkillPointe is to:</h1>
+                        <h1 style={{marginTop:"10px", marginBottom:"10px", fontSize:"18px", textAlign:"left"}}>Which industry are you interested in? Select one or more.</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Healthcare' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Healthcare' className="form-button">
                                 Healthcare
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Energy' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Energy' className="form-button">
                                 Energy
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Communications' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Communications' className="form-button">
                                 Communications
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Public Services' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Public Services' className="form-button">
                                 Public Services
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Hospitality' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Hospitality' className="form-button">
                                 Hospitality
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Transportation' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Transportation' className="form-button">
                                 Transportation
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Information Technology' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Information Technology' className="form-button">
                                 Information Technology
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Manufacturing' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Manufacturing' className="form-button">
                                 Manufacturing
                             </Button>
-                            <Button onClick={(event) => this.onFormButtonClick(event)} value='Construction' className="form-button">
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Construction' className="form-button">
                                 Construction
                             </Button>
                         </ButtonGroup>
