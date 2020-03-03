@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 export const SignUp = (props) => {
   return (
       <div className="sign-in-block text-left">
-        
 
         <div className="form-group">
           <input type="text" className="form-control" placeholder="First name" />

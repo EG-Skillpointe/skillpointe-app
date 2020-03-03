@@ -210,9 +210,9 @@ class SignUpPage extends Component {
                 <div className='sign-up' style={{margin: "30px auto", width:"85%"}}>
                     <h1 style={{margin:"0"}}>Personalize</h1>
                     <h1 style={{margin:"0"}}>Your Experience</h1>
-                    <p style={{margin:"10px 0 20px", lineHeight: "16px"}}>These questions help us determine the most relevant content to show you. Helping you find what you want, faster.</p>
+                    <p style={{margin:"10px auto 20px", lineHeight: "16px", width: "85%"}}>These questions help us determine the most relevant content to show you. Helping you find what you want, faster.</p>
 
-                    <h2 onClick={() => this.signUpFormLogin(true)} style={{fontSize:"16px", color:"#F8A141"}}>To skip select Create Account.</h2>
+                    <h2 onClick={() => this.signUpFormLogin(true)} style={{fontSize:"14px", color:"#F8A141"}}>To skip select Create Account.</h2>
 
                     <Form className="sign-up-form" style={{}} onChange={(event) => {this.onUserDescriptionFormChange(event)}}>
                         <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>Which of the following best describes you?</h1>
@@ -313,6 +313,9 @@ class SignUpPage extends Component {
                             </Button>
                             <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Construction' className="form-button" style={this.checkButtonSelection('Construction')}>
                                 Construction
+                            </Button>
+                            <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Human Services' className="form-button" style={this.checkButtonSelection('Human Services')}>
+                                Human Services
                             </Button>
                         </ButtonGroup>
                     </Form>
