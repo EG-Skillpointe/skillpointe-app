@@ -13,3 +13,5 @@ export {default as CardCarousel} from './CardCarousel';
 export {default as CareerCard} from './CareerCard';
 export {default as Video} from './Video';
 export {default as FilterTab} from './FilterTab';
+export {default as SearchBar} from './SearchBar';
+export {default as Popup} from './Popup';

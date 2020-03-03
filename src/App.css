@@ -861,3 +861,15 @@ label, p {
   height: 30px;
   line-height: 16px;
 }
+
+.popup-button {
+  background-color: var(--accent-orange);
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+  width: 45%;
+  height: 40px !important;
+
+}

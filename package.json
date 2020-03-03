@@ -37,6 +37,8 @@
     ]
   },
   "devDependencies": {
-    "@brainhubeu/react-carousel": "^1.12.8"
+    "@brainhubeu/react-carousel": "^1.12.8",
+    "react-modal": "^3.11.2",
+    "reactjs-popup": "^1.5.0"
   }
 }
