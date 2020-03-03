@@ -5,6 +5,7 @@ import HamburgerModal from "../components/HamburgerModal";
 import job from '../assets/mockData/jobs';
 import Modal from 'react-modal';
 
+
 class JobSearch extends Component {
 
     constructor(props) {
@@ -12,7 +13,9 @@ class JobSearch extends Component {
         this.state = {
             showModal: false,
             filteredJobs: job.jobs,
-            showPopUp: false
+            searchResult: [],
+            location: '',
+            showPopUp: true
         };
     }
 
@@ -35,20 +38,38 @@ class JobSearch extends Component {
         if(cond === 'popular'){
             filtered = job.jobs;
         } else {
-            filtered = job.jobs.filter(obj => obj.industry === cond);
+            filtered = this.state.searchResult.filter(obj => obj.industry === cond);
         }
         this.setState({filteredJobs: filtered})
     };
 
     togglePopup = () => {
-
         this.setState({
             showPopUp: !this.state.showPopUp
         });
-
     };
+
+    doSearch = (searchText) => {
+
+        let result = job.jobs.filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
+        console.log('Result',result);
+        if(result){
+            this.setState({searchResult: result,
+                                 filteredJobs: result});
+        }
+    };
+
+    onAllow = () => {
+        localStorage.setItem('location', 'Atlanta, GA');
+        this.setState({showPopUp: !this.state.showPopUp})
+    };
+
     componentDidMount() {
-        if(!this.state.showPopUp){
+
+        if(localStorage.getItem('location')){
+
+            this.setState({location: localStorage.getItem('location')})
+        }else {
             this.togglePopup();
         }
     }
@@ -79,10 +100,10 @@ class JobSearch extends Component {
                 >
                     <h2 style={{padding:'10px'}}>SkillPointe would like to use your current location?</h2>
                     <button className="popup-button"  onClick={this.togglePopup}>Don't Allow</button>
-                    <button className="popup-button"  onClick={this.togglePopup}>Allow</button>
+                    <button className="popup-button"  onClick={this.onAllow}>Allow</button>
                 </Modal>
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                <SearchBar filter={this.doFilter}/>
+                <SearchBar filter={this.doFilter} location={this.state.location} search={this.doSearch}/>
                     <div style={{marginTop:"30px"}}>
                         {cards}
                     </div>

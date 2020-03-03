@@ -871,5 +871,37 @@ label, p {
   margin: 5px;
   width: 45%;
   height: 40px !important;
+}
 
+.location-input {
+  width:50%;
+  box-shadow:0 0 7px rgba(248, 161, 65, 0.3);
+  margin-right:5px;
+  line-height:2;
+  padding-left: 25px;
+}
+
+.location-image {
+  top: 18px;
+  position: absolute;
+  width: 20px;
+  left: 15px;
+}
+.location-input-div {
+  margin-left: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.search-button {
+  background-color: var(--accent-orange);
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+  height: 40px !important;
+  border-radius: 5px;
+  width: 40%;
+  box-shadow: rgba(255, 183, 103, 0.2) 0 0 11px;
 }
