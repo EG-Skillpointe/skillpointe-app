@@ -223,6 +223,7 @@ class SignUpPage extends Component {
                                     label={'Student'}
                                     id={'Student'}
                                     name="groupOfUserTypeRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -230,6 +231,7 @@ class SignUpPage extends Component {
                                     label={'Employer'}
                                     id={'Employer'}
                                     name="groupOfUserTypeRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -237,6 +239,7 @@ class SignUpPage extends Component {
                                     label={'Job Seeker'}
                                     id={'Job Seeker'}
                                     name="groupOfUserTypeRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -244,6 +247,7 @@ class SignUpPage extends Component {
                                     label={'School Representative'}
                                     id={'School Representative'}
                                     name="groupOfUserTypeRadios"
+                                    className="radio-button"
                                 />
                             </div>
                         ))}
@@ -258,6 +262,7 @@ class SignUpPage extends Component {
                                     label={'Find a Job'}
                                     id='Find a Job'
                                     name="groupOfReasonForJoiningRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -265,6 +270,7 @@ class SignUpPage extends Component {
                                     label={'Explore Careers'}
                                     id='Explore Careers'
                                     name="groupOfReasonForJoiningRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -272,6 +278,7 @@ class SignUpPage extends Component {
                                     label={'Find Training'}
                                     id='Find Training'
                                     name="groupOfReasonForJoiningRadios"
+                                    className="radio-button"
                                 />
 
                                 <Form.Check
@@ -279,6 +286,7 @@ class SignUpPage extends Component {
                                     label={'Find People'}
                                     id='Find People'
                                     name="groupOfReasonForJoiningRadios"
+                                    className="radio-button"
                                 />
                             </div>
                         ))}

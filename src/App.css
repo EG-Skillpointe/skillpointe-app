@@ -885,4 +885,6 @@ label, p {
   border: 1.5px solid #DADADA;
 }
 
-
+.radio-button label{
+  font-weight: 500 !important;
+}
