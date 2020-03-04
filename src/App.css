@@ -327,6 +327,7 @@ label, p {
   position: relative;
   color: #2D426B !important;
   font-family: 'Roboto';
+  font-weight: bold;
 }
 
 .footer-items .item {
@@ -391,6 +392,10 @@ label, p {
   width: 95% !important;
   border-radius: 10px;
   box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
+}
+
+.ambassador-card-container .card-body{
+  border-radius: 0px 0px 10px 10px;
 }
 
 .ambassador-card-button {
@@ -807,24 +812,24 @@ label, p {
 }
 
 .flexbox-container {
-  margin: 5px;
+  padding-top: 5px;
   display: flex;
   flex-wrap: nowrap; /* [1] */
   overflow-x: auto; /* [2] */
   -webkit-overflow-scrolling: touch; /* [3] */
   -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
 }
 
 .flexbox-container::-webkit-scrollbar {
-  display: none; }
+  display: none;
+}
 
 .nav-button{
   text-align: center;
   background: #EDEDED;
   border: 1.5px solid #EDEDED;
   box-sizing: border-box;
- box-shadow: 0 0 11.3636px rgba(255, 183, 103, 0.2);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
@@ -837,15 +842,21 @@ label, p {
   color: #2D426B;
 }
 
-.selected{
- background-color: #F8A141;
+.selected {
+  background-color: #F8A141;
+  border: 0 !important;
 }
+
+.nav-button:focus {
+  outline: 0 !important;
+}
+
 /* Video Component END */
 
 .sign-up-form {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .form-check-label {
@@ -861,6 +872,7 @@ label, p {
   height: 30px;
   line-height: 16px;
 }
+
 
 .popup-button {
   background-color: var(--accent-orange);
@@ -911,4 +923,30 @@ label, p {
   position: absolute;
   width: 20px;
   left: 20px;
+}
+.form-button:focus {
+  background: #2D426B;
+  border: 1.5px solid #2D426B;
+  outline: none !important;
+}
+
+.form-button:visited {
+  background: #2D426B;
+  outline: none !important;
+}
+
+.form-button:active {
+  background: #2D426B;
+  border: 1.5px solid #2D426B;
+  outline: none !important;
+}
+
+.form-button:hover {
+  background: #EDEDED;
+  border: 1.5px solid #DADADA;
+}
+
+.radio-button label{
+  font-weight: 500 !important;
+
 }

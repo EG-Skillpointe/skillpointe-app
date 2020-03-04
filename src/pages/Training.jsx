@@ -15,13 +15,18 @@ class Training extends Component {
         };
     }
     doSearch = (searchText) => {
-
         let result = school.schools.filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
         console.log('Result',result);
         if(result){
             this.setState({searchResults: result});
         }
     };
+
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+
     openModal = () => {
         console.log('opening modal');
         this.setState({showModal: true},() => {
