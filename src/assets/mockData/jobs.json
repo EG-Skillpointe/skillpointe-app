@@ -5,28 +5,32 @@
             "company": "Children's Healthcare",
             "location": "Atlanta, GA",
             "image": "choa.png",
-            "datePosted": "2 days"
+            "datePosted": "2 days",
+            "industry": "Healthcare"
         },
         {
             "title": "Fire Officer I",
             "company": "City of Sandy Springs",
             "location": "Sandy Springs, GA",
             "image": "city_of_sandy_springs.png",
-            "datePosted": "5 days"
+            "datePosted": "5 days",
+            "industry": "Public Safety"
         },
         {
             "title": "Lead Welder",
             "company": "Helion Group Inc.",
             "location": "Tucker, GA",
             "image": "helion_group.png",
-            "datePosted": "1 week"
+            "datePosted": "1 week",
+            "industry": "Manufacturing"
         },
         {
             "title": "IT Professional",
             "company": "Experient Group",
             "location": "Chamblee, GA",
             "image": "experient_group.png",
-            "datePosted": "2 months"
+            "datePosted": "2 months",
+            "industry": "Information Technology"
         }
     ]
 }
