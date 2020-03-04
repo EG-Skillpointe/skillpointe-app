@@ -3,13 +3,12 @@ import {
     MobileFooter,
     TopNavbarBlue,
     Footer,
-    Video,
-    WeldingAmbassadorCard
+    WeldingAmbassadorCard,
+    JobInfoCards,
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
 import landingBackground from "../assets/images/landing-background.jpeg";
-import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
 
 class CareerDetailPage extends Component {
 
@@ -49,7 +48,7 @@ class CareerDetailPage extends Component {
                 {/*main contents of page*/}
                 <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
 
-                <>
+                <div style={{margin:"60px auto 0px", display: "flex", flexDirection:"column", width: "90%"}}>
                     <div className='welding-landing-content'>
                         <h1 style={{color:"white"}}>Welding</h1>
                         <p style={{marginTop:"10px", color:"white"}}>
@@ -60,8 +59,10 @@ class CareerDetailPage extends Component {
 
                     <WeldingAmbassadorCard/>
 
+                    <JobInfoCards/>
+
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
-                </>
+                </div>
 
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
