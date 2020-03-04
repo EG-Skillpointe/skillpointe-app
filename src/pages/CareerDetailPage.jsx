@@ -3,7 +3,8 @@ import {
     MobileFooter,
     TopNavbarBlue,
     Footer,
-    WeldingAmbassadorCard,
+    Video,
+    WeldingAmbassadorCard, Certification,
     JobInfoCards,
     JobOpeningsCard
 } from "../components";
@@ -59,11 +60,12 @@ class CareerDetailPage extends Component {
                     </div>
 
                     <WeldingAmbassadorCard/>
-
+                    
                     <JobInfoCards/>
 
                     <JobOpeningsCard/>
 
+                    <Certification/>
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
                 </div>
 
