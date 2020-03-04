@@ -18,3 +18,4 @@ export {default as Popup} from './Popup';
 export {default as Search} from './Search'
 export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
+export {default as Notification} from './Notification';
