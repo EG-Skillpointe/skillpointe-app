@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import industries from "../assets/mockData/industries";
 import image from "../assets/images/location-icon.png";
+import search from "../assets/images/search.png"
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +31,9 @@ class SearchBar extends Component {
     return (
         <div>
         <div className="col-sm-6 search">
+          <img src={search} alt='' className="search-image"/>
           <input value={this.state.query}
-                 style={{width:"100%", boxShadow:"0px 0px 7px rgba(248, 161, 65, 0.3)", lineHeight:"2"}}
+                 style={{width:"100%", boxShadow:"0px 0px 7px rgba(248, 161, 65, 0.3)", lineHeight:"2", paddingLeft:"25px",marginTop:"12px"}}
                  onChange={this.searchChanged}
                  placeholder='Search for training opportunities'/>
         </div>

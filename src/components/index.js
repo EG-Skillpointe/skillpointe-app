@@ -15,3 +15,4 @@ export {default as Video} from './Video';
 export {default as FilterTab} from './FilterTab';
 export {default as SearchBar} from './SearchBar';
 export {default as Popup} from './Popup';
+export {default as Search} from './Search'
