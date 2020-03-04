@@ -1,11 +1,7 @@
 import React from 'react';
 import Card from "react-bootstrap/Card";
-import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
-import {
-    Video
-} from "../components";
 
-export const JobInfoCards = (props) => {
+export const JobInfoCards = () => {
     return (
         <div style={{display:"flex", justifyContent:"space-between", flexWrap:"wrap"}}>
             <Card style={{width:"30%", height:"110px", backgroundColor:"#FFFFFF", borderRadius:"5px"}}>
