@@ -953,8 +953,6 @@ label, p {
 
 /* career detail page */
 .welding-page {
-  display: flex;
-  flex-direction: column;
   width: 100vw;
   height: 1400px;
   overflow: hidden;
@@ -963,12 +961,8 @@ label, p {
 
 .welding-landing-content {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
-  top: 50px;
+  margin: 10px auto;
   padding: 20px;
-  z-index: 3;
-  box-sizing: border-box;
 }
 
 .welding-page .landing-img {
@@ -982,9 +976,9 @@ label, p {
 }
 
 .welding-ambassador-card {
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: #FFFFFF;
-  width: 90% !important;
+  height: auto;
   border-radius: 5px
 }
 
