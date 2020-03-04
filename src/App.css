@@ -1041,5 +1041,30 @@ label, p {
   top: 50%;
   transform: translateY(-50%);
   height: 25px;
-  left: 20px;
+  left: 15px;
+}
+
+.compare-container{
+  width: 100%;
+  padding: 0 55px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.compare-text{
+  text-align: left;
+  font-family: Roboto,serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+}
+
+.compare-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  right: 15px;
 }

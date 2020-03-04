@@ -21,3 +21,4 @@ export {default as PersonalizedHomepage} from './PersonalizedHomepage';
 export {default as WeldingAmbassadorCard} from './WeldingAmbassadorCard';
 export {default as Certification } from './Certification';
 export {default as JobInfoCards} from './JobInfoCards';
+export {default as Compare }  from './Compare';
