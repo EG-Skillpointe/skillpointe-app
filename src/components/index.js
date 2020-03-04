@@ -19,3 +19,4 @@ export {default as Search} from './Search'
 export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
 export {default as WeldingAmbassadorCard} from './WeldingAmbassadorCard';
+export {default as Certification } from './Certification';

@@ -995,3 +995,57 @@ label, p {
 .welding-ambassador-card .video-comp video{
   border-radius: 10px !important;
 }
+
+.certification-container{
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  border-radius: 5px;
+  margin: 15px auto;
+  height: 303px;
+  width: 90%;
+  background: white;
+  justify-content: left;
+}
+
+.certification-header {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+ margin-bottom: 16px;
+  color: #2D426B;
+
+}
+
+.certification-item{
+  position: relative;
+  height: 38px;
+  background: rgba(45, 66, 107, 0.15);
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 0 10px 0;
+
+}
+
+.certification-text{
+  text-align: left;
+  padding-left: 60px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.certification-image{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  left: 20px;
+}
