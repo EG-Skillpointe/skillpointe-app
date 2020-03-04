@@ -1,0 +1,19 @@
+import React from 'react';
+import Card from "react-bootstrap/Card";
+import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
+import {
+    Video
+} from "../components";
+
+export const WeldingAmbassadorCard = (props) => {
+    return (
+        <Card className="welding-ambassador-card">
+            <Card.Title style={{color:"#2D426B"}}>Welding Ambassador: Travis</Card.Title>
+            <Video video={homepageVideo} type='video/mp4'/>
+            <Card.Text>A defining trait for Travis Edmunds is curiosity. He likes to understand how things work and reach beyond his comfort zone.</Card.Text>
+        </Card>
+    )
+};
+
+export default WeldingAmbassadorCard;
+

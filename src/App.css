@@ -687,7 +687,6 @@ label, p {
   padding: 20px;
   transform: translateX(-50%) translateY(-50%);
   z-index: 3;
-  
 }
 
 .landing-content h1 {
@@ -897,4 +896,50 @@ label, p {
 
 .radio-button label{
   font-weight: 500 !important;
+}
+
+
+/* career detail page */
+.welding-page {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 1400px;
+  overflow: hidden;
+  background-color: var(--dark-navy);
+}
+
+.welding-landing-content {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  top: 50px;
+  padding: 20px;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.welding-page .landing-img {
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.welding-ambassador-card {
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  width: 90% !important;
+  border-radius: 5px
+}
+
+.welding-ambassador-card .video-comp {
+  width: 90%;
+}
+
+.welding-ambassador-card .video-comp video{
+  border-radius: 10px !important;
 }

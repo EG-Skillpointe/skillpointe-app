@@ -15,3 +15,4 @@ export {default as Video} from './Video';
 export {default as FilterTab} from './FilterTab';
 export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
+export {default as WeldingAmbassadorCard} from './WeldingAmbassadorCard';
