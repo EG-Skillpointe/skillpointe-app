@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
-    MobileFooter,
-    TopNavbarBlue,
-    Footer,
-    WeldingAmbassadorCard, Certification,
-    JobInfoCards, Compare,
-    JobOpeningsCard, CareerCompass, Calendar,
-   WeldingSchools
+  MobileFooter,
+  TopNavbarBlue,
+  Footer,
+  WeldingAmbassadorCard, Certification,
+  JobInfoCards, Compare,
+  JobOpeningsCard, CareerCompass, Calendar,
+  WeldingSchools, Skill
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -66,6 +66,7 @@ class CareerDetailPage extends Component {
                     <JobOpeningsCard/>
 
                     <WeldingSchools/>
+                    <Skill/>
                     <Calendar/>
                     <CareerCompass/>
                     <Certification/>
