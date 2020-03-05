@@ -469,14 +469,14 @@ label, p {
 
 .people-card-button-container {
   margin-top: 6px;
-  width: 60%;
+  width: 55%;
   height: 30px;
   display: flex;
   justify-content: space-between;
 }
 
-.people-card-button-view {
-  width: 45%;
+.people-card-button{
+  width: 40%;
   height: inherit;
   background-color: blue;
 }
