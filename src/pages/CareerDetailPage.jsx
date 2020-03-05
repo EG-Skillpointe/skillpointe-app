@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import {
   MobileFooter,
-  TopNavbarBlue,
-  Footer,
-  WeldingAmbassadorCard, Certification,
-  JobInfoCards, Compare,
-  JobOpeningsCard, CareerCompass, Calendar,
-  WeldingSchools, Skill
+    TopNavbarBlue,
+    Footer,
+    WeldingAmbassadorCard, Certification,
+    JobInfoCards, Compare,
+    JobOpeningsCard,
+    WeldingSchools,
+    FinancialSupport,
+    CareerCompass, Calendar,
+    PopularCareers,Skill
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -66,10 +69,19 @@ class CareerDetailPage extends Component {
                     <JobOpeningsCard/>
 
                     <WeldingSchools/>
-                    <Skill/>
+
+
+
+                    <FinancialSupport/>
+
+                    <PopularCareers/>
+                     <Skill/>
                     <Calendar/>
+
                     <CareerCompass/>
+
                     <Certification/>
+                    
                     <Compare/>
 
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />

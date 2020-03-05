@@ -954,7 +954,7 @@ label, p {
 /* career detail page */
 .welding-page {
   width: 100vw;
-  height: 2100px;
+  height: auto;
   overflow: hidden;
   background-color: var(--dark-navy);
 }
@@ -1265,6 +1265,7 @@ label, p {
 }
 
 .skill-row{
+  padding-left: 15px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -1272,6 +1273,7 @@ label, p {
 .skill-row >:first-child{
   width: 50%;
   background-color: white;
+  padding-right: 10px;
 }
 
 .skill-row >:last-child{
@@ -1280,6 +1282,7 @@ label, p {
 }
 
 .skill-text{
+  text-align: left;
   height: 16px;
   font-family: Roboto, serif;
   font-style: normal;
@@ -1291,5 +1294,23 @@ label, p {
 
 .skill-div{
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
+}
+
+.skill-image-left{
+  width: 39px;
+  height: 39px;
+  top: 50%;
+  left: -15px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.skill-image-right{
+  height: 34px;
+  left: -10px;
+  top: 50%;
+  width: 34px;
+  position: absolute;
+  transform: translateY(-50%);
 }

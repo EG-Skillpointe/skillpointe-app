@@ -28,4 +28,8 @@ export {default as Calendar} from './Calendar'
 export {default as VerticalJobCardV2} from './VerticalJobCardV2';
 export {default as WeldingSchools} from './WeldingSchools';
 export {default as Skill} from './Skill';
+export {default as FinancialSupport} from './FinancialSupport';
+export {default as PopularCareers} from './PopularCareers';
+
+
 
