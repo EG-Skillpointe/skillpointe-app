@@ -1,5 +1,4 @@
 import React from 'react';
-import check from '../assets/images/right-arrow.svg'
 
 export const FinancialSupport = (props) => {
     return (

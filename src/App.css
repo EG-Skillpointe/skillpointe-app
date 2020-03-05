@@ -954,7 +954,7 @@ label, p {
 /* career detail page */
 .welding-page {
   width: 100vw;
-  height: 2100px;
+  height: auto;
   overflow: hidden;
   background-color: var(--dark-navy);
 }
