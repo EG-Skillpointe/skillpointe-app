@@ -8,7 +8,8 @@ import {
     JobOpeningsCard,
     WeldingSchools,
     FinancialSupport,
-    CareerCompass, Calendar
+    CareerCompass, Calendar,
+    PopularCareers
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -70,6 +71,8 @@ class CareerDetailPage extends Component {
                     <WeldingSchools/>
 
                     <FinancialSupport/>
+
+                    <PopularCareers/>
 
                     <Calendar/>
 
