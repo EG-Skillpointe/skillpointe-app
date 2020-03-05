@@ -1012,7 +1012,7 @@ label, p {
   border-radius: 5px;
   margin: 15px auto;
   height: 303px;
-  width: 90%;
+  width: 100%;
   background: white;
   justify-content: left;
 }
@@ -1030,7 +1030,7 @@ label, p {
 
 .certification-item{
   position: relative;
-  height: 38px;
+  height: 40px;
   background: rgba(45, 66, 107, 0.15);
   border-radius: 6px;
   width: 100%;
@@ -1044,7 +1044,7 @@ label, p {
   font-family: Roboto, serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 16px;
   align-items: center;
   color: rgba(0, 0, 0, 0.7);
@@ -1081,4 +1081,164 @@ label, p {
   transform: translateY(-50%);
   height: 25px;
   right: 15px;
+}
+
+.compass-title{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+}
+
+.compass-text {
+  text-align: left;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-right: 70px;
+  margin-bottom: 12px;
+}
+
+.compass-container{
+  position: relative;
+  padding-left: 10px;
+  height: 145px;
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  background: white;
+  justify-content: left;
+}
+
+.compass-button{
+  margin-bottom: 15px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: #F8A141;
+  border-radius: 5px;
+  width: 125px;
+  justify-content: center;
+}
+
+.compass-image{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translateY(-50%);
+  right: -13px;
+  top: 73%;
+}
+
+.calendar-container{
+  height: 200px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  justify-content: left;
+  margin: 15px auto;
+}
+
+.calendar-title{
+  background: #DADADA;
+  border-radius: 6px;
+  height: 38px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2D426B;
+  margin-bottom: 10px;
+}
+.calendar-row{
+  width: 100%;
+  display: flex;
+}
+.calendar-row >:first-child{
+  width: 40%;
+}
+
+.calendar-row >:last-child{
+  width: 60%;
+  text-align: left;
+}
+
+.calendar-date{
+  height: 19px;
+  margin-bottom: 7px;
+  background: #5578BB;
+  border-radius: 6px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.calendar-range{
+  margin: 0;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.calendar-text{
+  height: 33px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 0;
+}
+
+.calendar-location {
+  height: 12px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.calendar-arrow{
+  width: 19px;
+  height: 19px;
+  top: 80%;
+  right: 90px;
+  position: absolute;
+  transform: translateY(-50%);
 }

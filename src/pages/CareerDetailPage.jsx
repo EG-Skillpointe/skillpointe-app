@@ -6,7 +6,7 @@ import {
     Video,
     WeldingAmbassadorCard, Certification,
     JobInfoCards, Compare,
-    JobOpeningsCard
+    JobOpeningsCard, CareerCompass, Calendar
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -64,7 +64,8 @@ class CareerDetailPage extends Component {
                     <JobInfoCards/>
 
                     <JobOpeningsCard/>
-
+                    <Calendar/>
+                    <CareerCompass/>
                     <Certification/>
                     <Compare/>
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />

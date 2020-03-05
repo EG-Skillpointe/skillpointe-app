@@ -24,4 +24,6 @@ export {default as Certification } from './Certification';
 export {default as JobInfoCards} from './JobInfoCards';
 export {default as Compare }  from './Compare';
 export {default as JobOpeningsCard} from './JobOpeningsCard';
+export {default as CareerCompass} from './CareerCompass';
+export {default as Calendar} from './Calendar'
 
