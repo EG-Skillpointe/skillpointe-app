@@ -20,3 +20,4 @@ export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
 export {default as Notification} from './Notification';
 export {default as AmbassadorHomepageCard} from './AmbassadorHomepageCard';
+export {default as ArticleCard} from './ArticleCard';

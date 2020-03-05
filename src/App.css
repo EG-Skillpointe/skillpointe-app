@@ -46,6 +46,10 @@
   }
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
 .footer {
   height: 125px;
   padding: 25px;
@@ -712,9 +716,9 @@ label, p {
 }
 
 .landing-content button {
-  background: #F8A141;
+  background: var(--accent-orange);
   color: white;
-  border: 2px solid #F8A141 !important;
+  border: 2px solid var(--accent-orange) !important;
   box-sizing: border-box;
   box-shadow: 0px 0px 7px rgba(248, 161, 65, 0.3);
   border-radius: 5px;
@@ -811,13 +815,13 @@ label, p {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 60px 20px 20px 20px;
+  padding: 60px 5px 5px 5px;
   transform: translateX(-50%) translateY(-50%);
   z-index: 3;
 }
 
-.pers-landing-content > div {
-  margin: 10px 0;
+.pers-landing-content > div, h1 {
+  margin: 10px 20px;
 }
 
 .pers-landing-content h1 {
@@ -867,7 +871,7 @@ label, p {
 
 .career-ambassador-card {
   height: 180px !important;
-  width: 100% !important;
+  width: auto !important;
   background-color: white;
 }
 
@@ -904,7 +908,7 @@ label, p {
 .career-ambassador-card h5 {
   font-size: 16px;
   line-height: 19px;
-  color: #F8A141
+  color: var(--accent-orange)
 }
 
 .career-ambassador-card p {
@@ -913,6 +917,68 @@ label, p {
 }
 
 /* Career Ambassador Card END */
+
+/* Aome Carousel START */
+
+.articles-carousel {
+  display: flex;
+  /* height: 200px !important; */
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.pers-home-landing .carousel-button {
+  padding: 10px !important
+}
+
+.pers-home-landing .carousel-arrows {
+  border-color: var(--accent-orange)
+}
+
+.pers-home-landing .BrainhubCarouselItem {
+  height: auto !important;
+}
+
+.articles-carousel > div {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 15px;
+}
+
+.articles-carousel > :first-child {
+  margin-right: 3px;
+}
+
+.articles-carousel > :last-child {
+  margin-left: 3px;
+}
+
+.articles-carousel h5 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: var(--dark-blue);
+}
+
+.articles-carousel .date-label {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.articles-carousel p {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.articles-carousel h6 {
+  color: var(--accent-orange);
+}
+
+/* Articles Carousel END */
+
 
 
 /* Video Component START */
@@ -975,7 +1041,7 @@ label, p {
 }
 
 .selected {
-  background-color: #F8A141;
+  background-color: var(--accent-orange);
   border: 0 !important;
 }
 
