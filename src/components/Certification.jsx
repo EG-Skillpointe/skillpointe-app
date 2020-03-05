@@ -1,5 +1,6 @@
 import React from 'react';
 import check from '../assets/images/check.png'
+
 export const Certification = (props) => {
   return (
       <div className="certification-container" style={{padding:'16px 20px 16px 20px'}}>
