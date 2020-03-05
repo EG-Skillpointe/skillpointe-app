@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    MobileFooter,
+  MobileFooter,
     TopNavbarBlue,
     Footer,
     WeldingAmbassadorCard, Certification,
@@ -10,7 +10,8 @@ import {
     FinancialSupport,
     CareerCompass, Calendar,
     PopularCareers,
-    CareerPathways
+    CareerPathways,
+    Skill
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -71,12 +72,16 @@ class CareerDetailPage extends Component {
 
                     <WeldingSchools/>
 
+
+
                     <FinancialSupport/>
 
                     <PopularCareers/>
 
                     <CareerPathways/>
 
+                    <Skill/>
+                    
                     <Calendar/>
 
                     <CareerCompass/>

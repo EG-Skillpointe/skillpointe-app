@@ -1242,3 +1242,75 @@ label, p {
   position: absolute;
   transform: translateY(-50%);
 }
+
+.skill-container{
+  flex-direction: column;
+  display: flex;
+  margin: 15px auto;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 16px 20px;
+  height: 222px;
+}
+
+.skill-header{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2D426B;
+  height: 23px;
+}
+
+.skill-row{
+  padding-left: 15px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+.skill-row >:first-child{
+  width: 50%;
+  background-color: white;
+  padding-right: 10px;
+}
+
+.skill-row >:last-child{
+  width: 50%;
+  background-color: white;
+}
+
+.skill-text{
+  text-align: left;
+  height: 16px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.skill-div{
+  position: relative;
+  padding-left: 30px;
+}
+
+.skill-image-left{
+  width: 39px;
+  height: 39px;
+  top: 50%;
+  left: -15px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.skill-image-right{
+  height: 34px;
+  left: -10px;
+  top: 50%;
+  width: 34px;
+  position: absolute;
+  transform: translateY(-50%);
+}
