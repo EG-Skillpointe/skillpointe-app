@@ -867,6 +867,37 @@ label, p {
 }
 /* Notification END */
 
+/* Career Ambassador Card V2 START */
+
+.career-ambassador-card-v2 {
+  height: auto !important;
+  min-height: 220px !important;
+  width: auto !important;
+  background-color: white;
+}
+
+.career-ambassador-card-v2 h4 {
+  color: var(--dark-blue);
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 5px;
+}
+
+.career-ambassador-card-v2 .content {
+  text-align: center;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+
+.career-ambassador-card-v2 p {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* Career Ambassador Card V2 END */
+
 /* Career Ambassador Card START */
 
 .career-ambassador-card {
