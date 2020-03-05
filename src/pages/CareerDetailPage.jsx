@@ -6,7 +6,8 @@ import {
     WeldingAmbassadorCard, Certification,
     JobInfoCards, Compare,
     JobOpeningsCard,
-    WeldingSchools
+    WeldingSchools,
+    FinancialSupport
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -66,6 +67,8 @@ class CareerDetailPage extends Component {
                     <JobOpeningsCard/>
 
                     <WeldingSchools/>
+
+                    <FinancialSupport/>
 
                     <Certification/>
 
