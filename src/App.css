@@ -46,6 +46,10 @@
   }
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
 .footer {
   height: 125px;
   padding: 25px;
@@ -711,9 +715,9 @@ label, p {
 }
 
 .landing-content button {
-  background: #F8A141;
+  background: var(--accent-orange);
   color: white;
-  border: 2px solid #F8A141 !important;
+  border: 2px solid var(--accent-orange) !important;
   box-sizing: border-box;
   box-shadow: 0px 0px 7px rgba(248, 161, 65, 0.3);
   border-radius: 5px;
@@ -782,6 +786,231 @@ label, p {
   margin-bottom: 0;
 }
 
+/* Personalized Home Page START */
+
+.pers-home-landing {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--dark-navy);
+  text-align: left;
+}
+
+.pers-home-landing .landing-img {
+  position:relative;
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.pers-landing-content {
+  width: 100%;
+  height: 100%;
+  max-width: 470px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 60px 5px 5px 5px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+}
+
+.pers-landing-content > div, h1 {
+  margin: 10px 20px;
+}
+
+.pers-landing-content h1 {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+/* Personalized homepage END */
+
+/* Notification START */
+
+.notification {
+  position: relative;
+  min-height: 60px;
+  max-height: 70px;
+  padding: 8px 8px 7px 60px;
+  background-color: #F9C287;
+  border-radius: 5px;
+}
+
+.notification img {
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%)
+}
+
+.notif-header {
+  font-weight: bold;
+  color: var(--dark-blue);
+  padding-bottom: 5px;
+}
+
+.notif-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Notification END */
+
+/* Career Ambassador Card V2 START */
+
+.career-ambassador-card-v2 {
+  height: auto !important;
+  min-height: 220px !important;
+  width: auto !important;
+  background-color: white;
+}
+
+.career-ambassador-card-v2 h4 {
+  color: var(--dark-blue);
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 5px;
+}
+
+.career-ambassador-card-v2 .content {
+  text-align: center;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+
+.career-ambassador-card-v2 p {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* Career Ambassador Card V2 END */
+
+/* Career Ambassador Card START */
+
+.career-ambassador-card {
+  height: 180px !important;
+  width: auto !important;
+  background-color: white;
+}
+
+.career-ambassador-card .card-media-block {
+  display: block;
+  overflow: hidden;
+  /* object-fit: cover !important;
+  align-self: flex-start; */
+  width: 45%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+.career-ambassador-card .card-media-block .custom-media {
+  width: 100%;
+  height: 100%;
+}
+
+.career-ambassador-card .content {
+  width: 55%;
+  text-align: left;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+
+.career-ambassador-card h6 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  color: var(--dark-blue);
+}
+
+.career-ambassador-card h5 {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--accent-orange)
+}
+
+.career-ambassador-card p {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/* Career Ambassador Card END */
+
+/* Aome Carousel START */
+
+.articles-carousel {
+  display: flex;
+  /* height: 200px !important; */
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.pers-home-landing .carousel-button {
+  padding: 10px !important
+}
+
+.pers-home-landing .carousel-arrows {
+  border-color: var(--accent-orange)
+}
+
+.pers-home-landing .BrainhubCarouselItem {
+  height: auto !important;
+}
+
+.articles-carousel > div {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 15px;
+}
+
+.articles-carousel > :first-child {
+  margin-right: 3px;
+}
+
+.articles-carousel > :last-child {
+  margin-left: 3px;
+}
+
+.articles-carousel h5 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: var(--dark-blue);
+}
+
+.articles-carousel .date-label {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.articles-carousel p {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.articles-carousel h6 {
+  color: var(--accent-orange);
+}
+
+/* Articles Carousel END */
+
+
+
 /* Video Component START */
 
 .video-comp {
@@ -842,7 +1071,7 @@ label, p {
 }
 
 .selected {
-  background-color: #F8A141;
+  background-color: var(--accent-orange);
   border: 0 !important;
 }
 
