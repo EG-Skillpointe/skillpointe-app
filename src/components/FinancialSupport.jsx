@@ -1,7 +1,7 @@
 import React from 'react';
 import check from '../assets/images/right-arrow.svg'
 
-export const WeldingSchools = (props) => {
+export const Certification = (props) => {
     return (
         <div className="certification-container" style={{padding:'16px 20px 16px 20px', margin:"0", width:"100%"}}>
             <h5 className="certification-header">Welding Schools in you area</h5>
@@ -31,4 +31,4 @@ export const WeldingSchools = (props) => {
     )
 };
 
-export default WeldingSchools;
+export default Certification;
