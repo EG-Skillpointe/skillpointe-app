@@ -3,10 +3,10 @@ import {
     MobileFooter,
     TopNavbarBlue,
     Footer,
-    Video,
     WeldingAmbassadorCard, Certification,
     JobInfoCards, Compare,
-    JobOpeningsCard
+    JobOpeningsCard,
+    WeldingSchools
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -65,8 +65,12 @@ class CareerDetailPage extends Component {
 
                     <JobOpeningsCard/>
 
+                    <WeldingSchools/>
+
                     <Certification/>
+
                     <Compare/>
+
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
                 </div>
 

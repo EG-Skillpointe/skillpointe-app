@@ -24,3 +24,5 @@ export {default as JobInfoCards} from './JobInfoCards';
 export {default as Compare }  from './Compare';
 export {default as JobOpeningsCard} from './JobOpeningsCard';
 export {default as VerticalJobCardV2} from './VerticalJobCardV2';
+export {default as WeldingSchools} from './WeldingSchools';
+
