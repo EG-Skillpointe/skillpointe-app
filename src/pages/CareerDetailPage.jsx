@@ -7,7 +7,8 @@ import {
     JobInfoCards, Compare,
     JobOpeningsCard,
     WeldingSchools,
-    FinancialSupport
+    FinancialSupport,
+    CareerCompass, Calendar
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -70,8 +71,12 @@ class CareerDetailPage extends Component {
 
                     <FinancialSupport/>
 
-                    <Certification/>
+                    <Calendar/>
 
+                    <CareerCompass/>
+
+                    <Certification/>
+                    
                     <Compare/>
 
                     <img className='landing-img' src={landingBackground} alt='landingBackground' />
