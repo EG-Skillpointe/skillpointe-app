@@ -5,5 +5,6 @@ export {default as JobSearch} from './JobSearch';
 export {default as CareerLanding} from './CareerLanding';
 export {default as Careers} from './Careers';
 export {default as AmbassadorPage} from './AmbassadorPage'
+export {default as PeopleSearch} from './PeopleSearch';
 export {default as SignUpPage} from './SignUpPage';
 

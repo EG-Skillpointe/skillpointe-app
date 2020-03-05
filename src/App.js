@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { HomePage, Login, Training, JobSearch, Careers, CareerLanding, AmbassadorPage, SignUpPage } from './pages';
+import { HomePage, Login, Training, JobSearch, Careers, CareerLanding, AmbassadorPage, SignUpPage, PeopleSearch } from './pages';
 import { PrivateRoute } from './components';
 
 
@@ -31,6 +31,7 @@ class App extends React.Component {
 					<PrivateRoute exact path='/careers' component={Careers} />
 					<PrivateRoute exact path='/ambassador' component={AmbassadorPage}/>
 					<PrivateRoute exact path='/signup' component={SignUpPage} />
+					<PrivateRoute exact path='/peoplesearch' component={PeopleSearch}/>
 					<Route path='/login' component={Login} />
 				</Switch>
 			</Router>

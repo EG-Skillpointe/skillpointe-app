@@ -90,7 +90,7 @@ class MobileFooter extends Component {
                         <div>Find Training</div>
                     </div>
 
-                    <div className="item">
+                    <div className="item" onClick={() => this.redirect("/peoplesearch")}>
                         <img src={peopleImg} alt="" width="24" height="24"></img>
                         <div>Find People</div>
                     </div>
