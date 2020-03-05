@@ -9,7 +9,8 @@ import {
     WeldingSchools,
     FinancialSupport,
     CareerCompass, Calendar,
-    PopularCareers
+    PopularCareers,
+    CareerPathways
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -73,6 +74,8 @@ class CareerDetailPage extends Component {
                     <FinancialSupport/>
 
                     <PopularCareers/>
+
+                    <CareerPathways/>
 
                     <Calendar/>
 

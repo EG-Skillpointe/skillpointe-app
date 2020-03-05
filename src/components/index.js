@@ -29,5 +29,6 @@ export {default as VerticalJobCardV2} from './VerticalJobCardV2';
 export {default as WeldingSchools} from './WeldingSchools';
 export {default as FinancialSupport} from './FinancialSupport';
 export {default as PopularCareers} from './PopularCareers';
-
-
+export {default as CareerPathways} from './CareerPathways';
+export {default as CareerPathwayCard} from './CareerPathwayCard';
+export {default as CareerPathwayCarousel} from './CareerPathwayCarousel';
