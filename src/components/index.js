@@ -24,4 +24,4 @@ export {default as Certification } from './Certification';
 export {default as JobInfoCards} from './JobInfoCards';
 export {default as Compare }  from './Compare';
 export {default as JobOpeningsCard} from './JobOpeningsCard';
-export {default as VerticalJobCard} from './VerticalJobCard';
+export {default as VerticalJobCardV2} from './VerticalJobCardV2';

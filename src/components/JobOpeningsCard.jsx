@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
-import {TrainingCardV2} from "./index";
-import school from "../assets/mockData/school";
+import { VerticalJobCardV2 } from "./index";
+import job from "../assets/mockData/jobs";
 
 export const CardCarousel= () => {
     const leftArrow = <button className="carousel-button "><span className="carousel-arrows carousel-arrow-left">prev</span></button>;
@@ -10,7 +10,7 @@ export const CardCarousel= () => {
 
     let cards = [];
 
-    {school.schools.map(school => { cards.push(<TrainingCardV2 school={school}/>)}) }
+    {job.jobs.map(job => { cards.push(<VerticalJobCardV2 job={job}/>)}) }
 
     return (
         <div className="job-opening" style={{width:"100%", height:"230px", margin:"20px 0", backgroundColor:"#FFFFFF", borderRadius:"5px"}}>
