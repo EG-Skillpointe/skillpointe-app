@@ -4,6 +4,9 @@ import peopleIcon from "../assets/images/people.svg";
 
 export const PeopleCard = (props) => {
     const image = require('../assets/images/illya.png');
+    const name = props.name ?? 'Illya Balakin';
+    const title = props.title ?? 'Physical Therapist';
+    const numberOfConnections = props.numberOfConnections ?? '4 mutual connections';
     
     return (
         <div className="people-card-containter">
@@ -11,11 +14,11 @@ export const PeopleCard = (props) => {
                 <img className="people-card-image" src={image} alt="Tammy"/>
             </div>
             <div className="people-card-text-container">
-                    <h4 className="people-card-text">Illya Balakin</h4>
-                    <h6 className="people-card-text-subtitle">Physical Therapist</h6>
+                    <h4 className="people-card-text">{name}</h4>
+                    <h6 className="people-card-text-subtitle">{title}</h6>
                     <div className="people-card-text-description-container">
                         <img className="people-icon" src={peopleIcon} alt=""/>
-                        <h6 className="people-card-text-description">4 mutual connections</h6>
+                        <h6 className="people-card-text-description">{numberOfConnections}</h6>
                     </div>
                     <div className="people-card-button-container">
                         <Button className="people-card-button" >Accept</Button>
