@@ -28,8 +28,11 @@ export {default as CareerCompass} from './CareerCompass';
 export {default as Calendar} from './Calendar'
 export {default as VerticalJobCardV2} from './VerticalJobCardV2';
 export {default as WeldingSchools} from './WeldingSchools';
+export {default as Skill} from './Skill';
 export {default as FinancialSupport} from './FinancialSupport';
 export {default as PopularCareers} from './PopularCareers';
+export {default as CareerPathways} from './CareerPathways';
+export {default as CareerPathwayCard} from './CareerPathwayCard';
 export {default as Notification} from './Notification';
 export {default as AmbassadorHomepageCard} from './AmbassadorHomepageCard';
 export {default as AmbassadorHomepageCardV2} from './AmbassadorHomepageCardV2';

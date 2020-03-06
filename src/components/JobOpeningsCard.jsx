@@ -13,7 +13,7 @@ export const CardCarousel= () => {
     {job.jobs.map(job => { cards.push(<VerticalJobCardV2 job={job}/>)}) }
 
     return (
-        <div className="job-opening" style={{width:"100%", height:"230px", margin:"20px 0", backgroundColor:"#FFFFFF", borderRadius:"5px"}}>
+        <div className="job-opening" style={{ height:"230px", backgroundColor:"#FFFFFF", borderRadius:"5px"}}>
             <h1 style={{color:"#2D426B", margin:"12px 0", fontSize:"20px"}}>Current Job Openings</h1>
             <Carousel className="job-opening-carousel"
                       slidesPerPage={2}
