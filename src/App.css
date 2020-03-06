@@ -798,10 +798,10 @@ label, p {
 }
 
 .pers-home-landing .landing-img {
-  position:relative;
-  height: calc(100vh - 30px);
-  max-height: 800px;
+  position: absolute;
+  height: 100%;
   display: inline-block;
+  top: 0;
   left: 50%;
   transform: translate(-50%);
   opacity: 0.2;
@@ -810,13 +810,10 @@ label, p {
 
 .pers-landing-content {
   width: 100%;
-  height: 100%;
+  margin: auto;
   max-width: 470px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   padding: 60px 5px 5px 5px;
-  transform: translateX(-50%) translateY(-50%);
   z-index: 3;
 }
 
@@ -1081,6 +1078,59 @@ label, p {
 }
 
 /* Video Component END */
+
+/* Build Profile START */
+
+.build-profile {
+  position: relative;
+  border-radius: 10px;
+  padding: 10px 15px 10px 100px;
+  min-height: 100px;
+  background-color: #DADADA;
+  border: 1px solid #ddd;
+}
+
+.build-profile .profile-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translateY(-50%);
+}
+
+.profile-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.build-profile h2 {
+  margin-top: 5px;
+  color: var(--dark-blue);
+}
+
+.build-profile p {
+  font-size: 13px;
+  line-height: 14px;
+}
+
+.pers-arrow-header {
+  display: flex;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.pers-arrow-header img {
+  margin-left: 15px;
+}
+
+/* Build Profile END */
+
 
 .sign-up-form {
   display: flex;

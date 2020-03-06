@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
-import { Notification, AmbassadorHomepageCardV2, CardCarousel } from "../components";
-import landingBackground from "../assets/images/landing-background.jpeg";
+import { Notification, AmbassadorHomepageCardV2, CardCarousel, BuildProfile } from "../components";
+import weldingBackground from "../assets/images/welding.jpeg";
 import ambassadorImage from "../assets/images/atlanta_technical.jpeg";
 
 
@@ -39,7 +39,6 @@ class PersonalizedHomepage extends Component {
 		return (
 			<>
 				<div className='pers-home-landing'>
-					<img className='landing-img' src={landingBackground} alt='landingBackground' />
 
 					<div className='pers-landing-content'>
 						<h1>Welcome back, Ricky</h1>
@@ -51,9 +50,11 @@ class PersonalizedHomepage extends Component {
 						<div class='no-margin'>
 							<CardCarousel cardType="article" articleCards={articleList}/>
 						</div>
-						
+
+						<BuildProfile/>
+
 					</div>
-					
+					<img className='landing-img' src={weldingBackground} alt='landingBackground' />
 				</div>
 			</>
 		);
