@@ -121,7 +121,7 @@ class CareerDetailPage extends Component {
                     
                     <Compare/>
 
-                    <img className='landing-img' src={landingBackground} alt='landingBackground' />
+                    {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
                 </div>
 
                 <MobileFooter history={this.props.history}/>
