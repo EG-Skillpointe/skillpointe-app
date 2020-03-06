@@ -1232,7 +1232,6 @@ label, p {
   height: 100% !important;
 }
 
-
 .certification-container{
   align-items: flex-start;
   flex-direction: column;
@@ -1372,7 +1371,7 @@ label, p {
 }
 
 .calendar-container{
-  height: 200px;
+  height: 215px;
   background: #FFFFFF;
   border-radius: 6px;
   align-items: flex-start;

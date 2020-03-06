@@ -32,7 +32,6 @@ export {default as FinancialSupport} from './FinancialSupport';
 export {default as PopularCareers} from './PopularCareers';
 export {default as CareerPathways} from './CareerPathways';
 export {default as CareerPathwayCard} from './CareerPathwayCard';
-export {default as CareerPathwayCarousel} from './CareerPathwayCarousel';
 export {default as Notification} from './Notification';
 export {default as AmbassadorHomepageCard} from './AmbassadorHomepageCard';
 export {default as AmbassadorHomepageCardV2} from './AmbassadorHomepageCardV2';
