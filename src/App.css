@@ -952,12 +952,12 @@ label, p {
 
 .articles-carousel {
   display: flex;
-  /* height: 200px !important; */
+  height: 100% !important;
   width: 100% !important;
   text-align: left !important;
 }
 
-.pers-home-landing .carousel-button {
+.pers-home-landing .carousel-button, .welding-page .carousel-button {
   padding: 10px !important
 }
 
@@ -1239,9 +1239,7 @@ label, p {
   float: left;
   display: flex;
   border-radius: 5px;
-  margin: 15px auto;
   height: 303px;
-  width: 100%;
   background: white;
   justify-content: left;
 }
@@ -1288,7 +1286,6 @@ label, p {
 }
 
 .compare-container{
-  width: 100%;
   padding: 0 55px;
   position: relative;
   background: #FFFFFF;
@@ -1344,7 +1341,6 @@ label, p {
   float: left;
   display: flex;
   border-radius: 5px;
-  width: 100%;
   background: white;
   justify-content: left;
 }
@@ -1379,13 +1375,11 @@ label, p {
   height: 200px;
   background: #FFFFFF;
   border-radius: 6px;
-  width: 100%;
   align-items: flex-start;
   flex-direction: column;
   float: left;
   display: flex;
   justify-content: left;
-  margin: 15px auto;
 }
 
 .calendar-title{
@@ -1475,7 +1469,6 @@ label, p {
 .skill-container{
   flex-direction: column;
   display: flex;
-  width: 100%;
   background: #FFFFFF;
   border-radius: 6px;
   padding: 16px 20px;
@@ -1541,4 +1534,19 @@ label, p {
   width: 34px;
   position: absolute;
   transform: translateY(-50%);
+}
+
+.welding-container{
+  /*margin: 60px auto 0px;*/
+  display: flex;
+  flex-direction: column;
+  /*width: 90%;*/
+}
+
+.welding-container > div {
+  margin: 10px 20px;
+}
+
+.orange-arrows .carousel-arrows {
+  border-color: var(--accent-orange)
 }

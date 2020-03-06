@@ -8,7 +8,7 @@ import weldingEngineer from "../assets/images/welding_engineer.svg";
 
 export const PopularCareers = (props) => {
     return (
-        <div className="certification-container" style={{padding:"0", margin:"0", marginBottom:"20px", width:"100%", height:"auto", background:"rgba(255,255,255,0)"}}>
+        <div className="certification-container" style={{ height:"auto", background:"rgba(255,255,255,0)"}}>
             <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between"}}>
                 <div className="certification-item" style={{marginBottom:"12px", width:"100%", height:"37px", display:"flex", justifyContent:"center", alignItems:"center", backgroundColor:"#FFFFFF"}}>
                     <h6 style={{padding:"0", margin:"0", fontSize:"20px", lineHeight:"16px", width:"85%", color:"#2D426B"}}><b>Popular Careers</b></h6>
