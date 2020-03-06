@@ -35,6 +35,9 @@ class PeopleSearch extends Component {
         let cards = [];
         cards.push(<PeopleCard/>)
         cards.push(<PeopleCard/>)
+        cards.push(<PeopleCard/>)
+        cards.push(<PeopleCard/>)
+        cards.push(<PeopleCard/>)
 
         const modalOpened = this.state.showModal;
 
