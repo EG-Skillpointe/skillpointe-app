@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 export const CareerPathwayCard = (props) => {
     const image = require(`../assets/images/${props.careerPathway.image}`);
