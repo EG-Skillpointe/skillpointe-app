@@ -19,6 +19,9 @@ class Search extends Component {
 
 
   render() {
+    
+    const placeholder = this.props.placeholder ?? 'Search for training opportunities...'
+
     return (
         <div>
           <div className="col-sm-6 search">
@@ -26,7 +29,7 @@ class Search extends Component {
             <input value={this.state.query}
                    style={{width:"100%", boxShadow:"0px 0px 7px rgba(248, 161, 65, 0.3)", lineHeight:"2", paddingLeft:"25px", marginTop:"12px"}}
                    onChange={this.searchChanged}
-                   placeholder='Search for training opportunities'/>
+                   placeholder={placeholder}/>
           </div>
           <div className="location-input-div">
             <img src={image} alt='' className="location-image"/>

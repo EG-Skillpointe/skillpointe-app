@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { JobsCard, TopNavbarWhite, Footer, FilterTab, PeopleCard} from "../components";
+import { JobsCard, TopNavbarWhite, Footer, Search, PeopleCard} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
-import job from '../assets/mockData/jobs';
 
 class PeopleSearch extends Component {
 
@@ -49,7 +48,8 @@ class PeopleSearch extends Component {
                 {/*main contents of page*/}
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                    <div style={{marginTop:"15px"}}>
+                <Search location={"Chamblee, GA"} placeholder={'Expand your network...'}/>
+                    <div style={{marginTop:"8px"}}>
                         {cards}
                     </div>
                 <MobileFooter history={this.props.history}/>
