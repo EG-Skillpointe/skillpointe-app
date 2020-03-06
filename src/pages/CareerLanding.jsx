@@ -60,12 +60,13 @@ class CareerLanding extends Component {
                       Beginning your search? Select one of the industries below to hear from an industry ambassador, explore training, and view jobs.
                     </p>
                 </div>
-              <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
-                {industries.industries.map(industry => { return <Link to={{
-                                                    pathname:'./career/welding',
-                                                    aboutProps:{
-                                                      name: industry.name
-                                                    }}}><CareerCard industry={industry}/></Link>})}
+                
+                <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
+                    {industries.industries.map(industry => { return <Link to={{
+                                                        pathname:'./career/welding',
+                                                        aboutProps:{
+                                                          name: industry.name
+                                                        }}}><CareerCard industry={industry}/></Link>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
