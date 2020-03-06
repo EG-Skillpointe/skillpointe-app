@@ -11,7 +11,7 @@ import {
     CareerCompass, Calendar,
     PopularCareers,
     CareerPathways,
-    Skill,CardCarousel
+    Skill,CardCarousel, DropdownMenu
 } from "../components";
 
 import HamburgerModal from "../components/HamburgerModal";
@@ -22,9 +22,69 @@ class CareerDetailPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            location: [
+              {
+                id: 0,
+                title: 'New York',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 1,
+                title: 'Dublin',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 2,
+                title: 'California',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 3,
+                title: 'Istanbul',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 4,
+                title: 'Izmir',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 5,
+                title: 'Oslo',
+                selected: false,
+                key: 'location'
+              },
+              {
+                id: 6,
+                title: 'Zurich',
+                selected: false,
+                key: 'location'
+              }
+          ]
         };
     }
+    toggleSelected = (id, key) => {
+      let temp = JSON.parse(JSON.stringify(this.state[key]))
+      temp[id].selected = !temp[id].selected;
+      this.setState({
+        [key]: temp
+      })
+    };
+
+    resetThenSet = (id, key) => {
+      let temp = JSON.parse(JSON.stringify(this.state[key]))
+      temp.forEach(item => item.selected = false);
+      temp[id].selected = true;
+      this.setState({
+        [key]: temp
+      })
+    };
 
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -45,7 +105,7 @@ class CareerDetailPage extends Component {
     };
 
     render() {
-        const modalOpened = this.state.showModal;
+      const modalOpened = this.state.showModal;
       const articleList = [
         {
           title: 'School District Receives Welding Equipment Donation',
@@ -71,7 +131,7 @@ class CareerDetailPage extends Component {
           description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
           link: 'asdf'
         }
-      ]
+      ];
 
         return (
             <div className='welding-page'>
@@ -120,7 +180,13 @@ class CareerDetailPage extends Component {
                     <Certification/>
                     
                     <Compare/>
-
+                  <div className="wrapper">
+                    <DropdownMenu
+                      title="Select Location"
+                      list={this.state.location}
+                      resetThenSet={this.resetThenSet}
+                     />
+                  </div>
                     {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
                 </div>
 
