@@ -134,7 +134,6 @@ class Login extends Component {
                         <SignIn toggle={this.toggleSignIn} login={this.login}/>
                         :
                         <>
-                            <label className="sub-heading">Join SkillPointe today.</label>
                             <SignUp toggle={this.toggleSignIn} login={this.login}/>
                         </>
                         

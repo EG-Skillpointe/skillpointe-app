@@ -429,7 +429,7 @@ label, p {
 .people-card-containter {
   margin: 0 2.5% 10px 2.5%;
   width: 95%;
-  height: 100px;
+  height: 110px;
   background-color: gray;
   border-radius: 6px;
   display: flex;
@@ -462,27 +462,69 @@ label, p {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 12px;
-  padding-left: 6px;
+  padding-left: 8px;
 }
 
 .people-card-text {
   margin: 0;
   font-family: Roboto, serif;
+  font-weight: bold;
+}
+
+.people-card-text-subtitle {
+  margin: 4px 0 0 0;
+  font-family: Roboto, serif;
   font-weight: normal;
+  font-size: 16px;
+}
+
+.people-card-text-description-container{
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.people-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.people-card-text-description {
+  margin: 0 0 0 4px;
+  font-family: Roboto, serif;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 .people-card-button-container {
-  margin-top: 6px;
+  margin-top: 4px;
   width: 55%;
-  height: 30px;
+  height: 28px;
   display: flex;
   justify-content: space-between;
 }
 
 .people-card-button{
-  width: 40%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 6px;
   height: inherit;
-  background-color: blue;
+  width: 50%;
+  color: var(--dark-blue);
+  background-color: white;
+  border: 1px solid var(--dark-blue);
+  font-weight: 600;
+}
+
+.people-card-ignore-button {
+  font-size: 14px;
+  text-align: center;
+  line-height: 6px;
+  height: inherit;
+  width: 45%;
+  color: white;
+  background-color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
 }
 
 /* Card Ended*/
