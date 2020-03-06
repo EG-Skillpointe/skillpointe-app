@@ -2,7 +2,7 @@ import React from 'react';
 
 export const FinancialSupport = (props) => {
     return (
-        <div className="certification-container" style={{padding:'16px 20px 16px 20px', margin:"0", marginBottom:"20px", width:"100%", height:"auto"}}>
+        <div className="certification-container" style={{padding:'16px 20px 16px 20px', height:"auto"}}>
             <h5 className="certification-header" style={{margin:"10px auto"}}>Financial Support Opportunities</h5>
             <p style={{lineHeight:"14px", marginBottom:"15px"}}>
                 Welding training ptorgrams can be expensive, however, several types of financial aid is available to help offset the cost of trade school, including:
