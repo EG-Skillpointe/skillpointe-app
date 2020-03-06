@@ -1246,7 +1246,6 @@ label, p {
 .skill-container{
   flex-direction: column;
   display: flex;
-  margin: 15px auto;
   width: 100%;
   background: #FFFFFF;
   border-radius: 6px;
