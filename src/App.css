@@ -46,6 +46,10 @@
   }
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
 .footer {
   height: 125px;
   padding: 25px;
@@ -746,7 +750,6 @@ label, p {
   padding: 20px;
   transform: translateX(-50%) translateY(-50%);
   z-index: 3;
-  
 }
 
 .landing-content h1 {
@@ -771,9 +774,9 @@ label, p {
 }
 
 .landing-content button {
-  background: #F8A141;
+  background: var(--accent-orange);
   color: white;
-  border: 2px solid #F8A141 !important;
+  border: 2px solid var(--accent-orange) !important;
   box-sizing: border-box;
   box-shadow: 0px 0px 7px rgba(248, 161, 65, 0.3);
   border-radius: 5px;
@@ -842,6 +845,231 @@ label, p {
   margin-bottom: 0;
 }
 
+/* Personalized Home Page START */
+
+.pers-home-landing {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--dark-navy);
+  text-align: left;
+}
+
+.pers-home-landing .landing-img {
+  position:relative;
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.pers-landing-content {
+  width: 100%;
+  height: 100%;
+  max-width: 470px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 60px 5px 5px 5px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+}
+
+.pers-landing-content > div, h1 {
+  margin: 10px 20px;
+}
+
+.pers-landing-content h1 {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+/* Personalized homepage END */
+
+/* Notification START */
+
+.notification {
+  position: relative;
+  min-height: 60px;
+  max-height: 70px;
+  padding: 8px 8px 7px 60px;
+  background-color: #F9C287;
+  border-radius: 5px;
+}
+
+.notification img {
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%)
+}
+
+.notif-header {
+  font-weight: bold;
+  color: var(--dark-blue);
+  padding-bottom: 5px;
+}
+
+.notif-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Notification END */
+
+/* Career Ambassador Card V2 START */
+
+.career-ambassador-card-v2 {
+  height: auto !important;
+  min-height: 220px !important;
+  width: auto !important;
+  background-color: white;
+}
+
+.career-ambassador-card-v2 h4 {
+  color: var(--dark-blue);
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: 5px;
+}
+
+.career-ambassador-card-v2 .content {
+  text-align: center;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+
+.career-ambassador-card-v2 p {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* Career Ambassador Card V2 END */
+
+/* Career Ambassador Card START */
+
+.career-ambassador-card {
+  height: 180px !important;
+  width: auto !important;
+  background-color: white;
+}
+
+.career-ambassador-card .card-media-block {
+  display: block;
+  overflow: hidden;
+  /* object-fit: cover !important;
+  align-self: flex-start; */
+  width: 45%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+.career-ambassador-card .card-media-block .custom-media {
+  width: 100%;
+  height: 100%;
+}
+
+.career-ambassador-card .content {
+  width: 55%;
+  text-align: left;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+
+.career-ambassador-card h6 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  color: var(--dark-blue);
+}
+
+.career-ambassador-card h5 {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--accent-orange)
+}
+
+.career-ambassador-card p {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+/* Career Ambassador Card END */
+
+/* Aome Carousel START */
+
+.articles-carousel {
+  display: flex;
+  /* height: 200px !important; */
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.pers-home-landing .carousel-button {
+  padding: 10px !important
+}
+
+.pers-home-landing .carousel-arrows {
+  border-color: var(--accent-orange)
+}
+
+.pers-home-landing .BrainhubCarouselItem {
+  height: auto !important;
+}
+
+.articles-carousel > div {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 15px;
+}
+
+.articles-carousel > :first-child {
+  margin-right: 3px;
+}
+
+.articles-carousel > :last-child {
+  margin-left: 3px;
+}
+
+.articles-carousel h5 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: var(--dark-blue);
+}
+
+.articles-carousel .date-label {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.articles-carousel p {
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.articles-carousel h6 {
+  color: var(--accent-orange);
+}
+
+/* Articles Carousel END */
+
+
+
 /* Video Component START */
 
 .video-comp {
@@ -902,7 +1130,7 @@ label, p {
 }
 
 .selected {
-  background-color: #F8A141;
+  background-color: var(--accent-orange);
   border: 0 !important;
 }
 
@@ -932,6 +1160,57 @@ label, p {
   line-height: 16px;
 }
 
+
+.popup-button {
+  background-color: var(--accent-orange);
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+  width: 45%;
+  height: 40px !important;
+}
+
+.location-input {
+  width:52%;
+  box-shadow:0 0 7px rgba(248, 161, 65, 0.3);
+  margin-right:5px;
+  line-height:2;
+  padding-left: 25px;
+}
+
+.location-image {
+  top: 18px;
+  position: absolute;
+  width: 20px;
+  left: 15px;
+}
+.location-input-div {
+  margin-left: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.search-button {
+  background-color: var(--accent-orange);
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+  height: 40px !important;
+  border-radius: 5px;
+  width: 38%;
+  box-shadow: rgba(255, 183, 103, 0.2) 0 0 11px;
+}
+
+.search-image {
+  top: 18px;
+  position: absolute;
+  width: 20px;
+  left: 20px;
+}
 .form-button:focus {
   background: #2D426B;
   border: 1.5px solid #2D426B;
@@ -956,4 +1235,298 @@ label, p {
 
 .radio-button label{
   font-weight: 500 !important;
+
+}
+
+
+/* career detail page */
+.welding-page {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  background-color: var(--dark-navy);
+}
+
+.welding-landing-content {
+  position: relative;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.welding-page .landing-img {
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.welding-ambassador-card {
+  margin: 20px auto;
+  background-color: #FFFFFF;
+  height: auto;
+  border-radius: 5px
+}
+
+.welding-ambassador-card .video-comp {
+  width: 90%;
+}
+
+.welding-ambassador-card .video-comp video {
+  border-radius: 10px !important;
+}
+
+.job-opening-carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.job-opening-carousel .BrainhubCarouselItem {
+  height: 170px;
+}
+
+.job-opening-carousel .BrainhubCarousel__track {
+  height: 100% !important;
+}
+
+
+.certification-container{
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  border-radius: 5px;
+  margin: 15px auto;
+  height: 303px;
+  width: 100%;
+  background: white;
+  justify-content: left;
+}
+
+.certification-header {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+ margin-bottom: 16px;
+  color: #2D426B;
+
+}
+
+.certification-item{
+  position: relative;
+  height: 40px;
+  background: rgba(45, 66, 107, 0.15);
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 0 10px 0;
+
+}
+
+.certification-text{
+  text-align: left;
+  padding-left: 60px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.certification-image{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  left: 15px;
+}
+
+.compare-container{
+  width: 100%;
+  padding: 0 55px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.compare-text{
+  text-align: left;
+  font-family: Roboto,serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+}
+
+.compare-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  right: 15px;
+}
+
+.compass-title{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+}
+
+.compass-text {
+  text-align: left;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-right: 70px;
+  margin-bottom: 12px;
+}
+
+.compass-container{
+  position: relative;
+  padding-left: 10px;
+  height: 145px;
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  background: white;
+  justify-content: left;
+}
+
+.compass-button{
+  margin-bottom: 15px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: #F8A141;
+  border-radius: 5px;
+  width: 125px;
+  justify-content: center;
+}
+
+.compass-image{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translateY(-50%);
+  right: -13px;
+  top: 73%;
+}
+
+.calendar-container{
+  height: 200px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+  float: left;
+  display: flex;
+  justify-content: left;
+  margin: 15px auto;
+}
+
+.calendar-title{
+  background: #DADADA;
+  border-radius: 6px;
+  height: 38px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2D426B;
+  margin-bottom: 10px;
+}
+.calendar-row{
+  width: 100%;
+  display: flex;
+}
+.calendar-row >:first-child{
+  width: 40%;
+}
+
+.calendar-row >:last-child{
+  width: 60%;
+  text-align: left;
+}
+
+.calendar-date{
+  height: 19px;
+  margin-bottom: 7px;
+  background: #5578BB;
+  border-radius: 6px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.calendar-range{
+  margin: 0;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+
+.calendar-text{
+  height: 33px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 0;
+}
+
+.calendar-location {
+  height: 12px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.calendar-arrow{
+  width: 19px;
+  height: 19px;
+  top: 80%;
+  right: 90px;
+  position: absolute;
+  transform: translateY(-50%);
 }

@@ -15,4 +15,7 @@ psd
 thumb
 sketch
 
+.idea
+src/assets/videos
+
 # End of https://www.gitignore.io/api/react

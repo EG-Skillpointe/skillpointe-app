@@ -13,6 +13,24 @@ export {default as CardCarousel} from './CardCarousel';
 export {default as CareerCard} from './CareerCard';
 export {default as Video} from './Video';
 export {default as FilterTab} from './FilterTab';
+export {default as SearchBar} from './SearchBar';
+export {default as Popup} from './Popup';
+export {default as Search} from './Search'
 export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
 export {default as PeopleCard} from './PeopleCard';
+export {default as WeldingAmbassadorCard} from './WeldingAmbassadorCard';
+export {default as Certification } from './Certification';
+export {default as JobInfoCards} from './JobInfoCards';
+export {default as Compare }  from './Compare';
+export {default as JobOpeningsCard} from './JobOpeningsCard';
+export {default as CareerCompass} from './CareerCompass';
+export {default as Calendar} from './Calendar'
+export {default as VerticalJobCardV2} from './VerticalJobCardV2';
+export {default as WeldingSchools} from './WeldingSchools';
+export {default as FinancialSupport} from './FinancialSupport';
+export {default as PopularCareers} from './PopularCareers';
+export {default as Notification} from './Notification';
+export {default as AmbassadorHomepageCard} from './AmbassadorHomepageCard';
+export {default as AmbassadorHomepageCardV2} from './AmbassadorHomepageCardV2';
+export {default as ArticleCard} from './ArticleCard';
