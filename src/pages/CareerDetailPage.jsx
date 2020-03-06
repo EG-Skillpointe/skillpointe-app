@@ -72,8 +72,6 @@ class CareerDetailPage extends Component {
 
                     <WeldingSchools/>
 
-
-
                     <FinancialSupport/>
 
                     <PopularCareers/>

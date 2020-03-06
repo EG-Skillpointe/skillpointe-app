@@ -1,16 +1,35 @@
 import React from 'react';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export const CareerPathwayCard = (props) => {
-    const image = require(`../assets/images/${props.job.image}`);
+    const image = require(`../assets/images/${props.careerPathway.image}`);
+    const style = {
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        height:"auto",
+        width:"90%",
+        overflow:'auto',
+        backgroundColor:'#DADADA',
+        borderRadius:"5px",
+        position:"absolute",
+        top:"70px",
+        zIndex:"-2"
+    };
+
     return (
-        <div className="career-card-container col-sm-6 col-xs-6 col-md-6" style={{padding:'10px'}}>
-            <div className="card bg-dark text-white" style={{position:'relative', display:'flex', backgroundColor:'#2d426b', borderRadius:'10px', height: "150px", maxHeight: "250px"}}>
-                <img style={{width:"100%", borderRadius:'5px', opacity:'.2'}} className="card-img" src={image} alt="Card image"/>
-                <div className="card-image-overlay">
-                    <h5 className="card-title" style={{color:'white'}} >{props.job.title}</h5>
+        <Card style={{height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+            <Card.Img variant="top" src={image} style={{position:"absolute", top:"0", height:'30%', borderRadius:"10px 10px 0 0"}} />
+            <Card.Body style={style}>
+                <div style={{paddingTop:"35px", width:"90%"}}>
+                    <Card.Title style={{color:"#2D426B"}}>{props.careerPathway.name}</Card.Title>
+                    <Card.Text style={{color:"#5578BB"}}>{props.careerPathway.title}</Card.Text>
+                    <Card.Subtitle className="mb-2 text-muted" style={{marginTop:"10px", color:"#000000"}}>{props.careerPathway.description}</Card.Subtitle>
+                    <Card.Title style={{color:"#F8A141", fontSize:"14px", marginTop:'10px', marginBottom:"15px"}}>{props.careerPathway.name}'s Story</Card.Title>
                 </div>
-            </div>
-        </div>
+            </Card.Body>
+        </Card>
     )
 };
 
