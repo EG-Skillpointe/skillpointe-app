@@ -39,3 +39,4 @@ export {default as ArticleCard} from './ArticleCard';
 export {default as BuildProfile} from './BuildProfile';
 export {default as SimpleCard} from './SimpleCard';
 export {default as CompareCareers} from './CompareCareers';
+export {default as HamburgerModal} from './HamburgerModal';
