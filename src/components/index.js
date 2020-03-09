@@ -37,3 +37,4 @@ export {default as AmbassadorHomepageCard} from './AmbassadorHomepageCard';
 export {default as AmbassadorHomepageCardV2} from './AmbassadorHomepageCardV2';
 export {default as ArticleCard} from './ArticleCard';
 export {default as BuildProfile} from './BuildProfile';
+export {default as DropdownMenu} from './DropdownMenu';
