@@ -70,7 +70,7 @@ class MobileFooter extends Component {
           bottom: newBottom
         });
     };
-
+e
     render() {
         return (
             <div className='mobile-footer' id='mobile-footer' style={{bottom: this.state.bottom }}>

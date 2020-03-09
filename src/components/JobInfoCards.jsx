@@ -10,7 +10,7 @@ export const JobInfoCards = () => {
             </Card>
 
             <Card style={{width:"30%", height:"110px", backgroundColor:"#FFFFFF", borderRadius:"5px"}}>
-                <Card.Title style={{color:"#2D426B", margin:"12px 0", fontSize:"14px"}}>Education Costs:</Card.Title>
+                <Card.Title style={{color:"#2D426B", margin:"12px 0", fontSize:"14px"}}>Education <br/>Costs:</Card.Title>
                 <Card.Text style={{width:"90%", margin:"12px auto", color:"#F8A141", fontSize:"16px"}}>$3,000 - $20,000</Card.Text>
             </Card>
 

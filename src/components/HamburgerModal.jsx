@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ModalNavbar } from "../components";
+import { authService } from '../services/auth.service';
 
 const HamburgerModal = (props) => {
     console.log(`props.pageType in hamburgerModal: ${props.pageType}`);
@@ -11,6 +12,7 @@ const HamburgerModal = (props) => {
     let peopleOrange;
     let additionalResourcesOrange;
     let contactOrange;
+    let logout;
 
     switch(props.pageType) {
         case 'home':
@@ -36,6 +38,12 @@ const HamburgerModal = (props) => {
                 color: "#F8A141"
             };
             break;
+
+        case 'logout':
+            logout = {
+                color: "#F8A141"
+            };
+            break;
     }
 
     return (
@@ -50,7 +58,7 @@ const HamburgerModal = (props) => {
                 <Link style={peopleOrange} to="" onClick={props.closeModal}>Find People</Link>
                 <Link style={additionalResourcesOrange} to="" onClick={props.closeModal}>Additional Resources</Link>
                 <Link style={contactOrange} to="" onClick={props.closeModal}>Contact</Link>
-                {/*<Link className="" to="/login">Login</Link>*/}
+                <Link style={logout} to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>
             </div>
 
             {/*<MobileFooter history={this.props.history}/>*/}

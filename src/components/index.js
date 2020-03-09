@@ -39,3 +39,7 @@ export {default as ArticleCard} from './ArticleCard';
 export {default as BuildProfile} from './BuildProfile';
 export {default as SchoolCard} from './SchoolCard';
 export {default as Filter} from './Filter';
+export {default as DropdownMenu} from './DropdownMenu';
+export {default as SimpleCard} from './SimpleCard';
+export {default as CompareCareers} from './CompareCareers';
+
