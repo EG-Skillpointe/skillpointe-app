@@ -15,9 +15,8 @@ console.log("Facebook", FB);
 function login(user) {
     console.log('inside auth.service - login, with user: ', user);
     localStorage.setItem('user', JSON.stringify(user));
-    return true;
+    return true
 }
-
 
 async function logout() {
     console.log('inside auth.service - logout ');
