@@ -667,14 +667,26 @@ label, p {
 .home-landing {
   position: relative;
   width: 100vw;
-  max-height: 55vh;
   overflow: hidden;
   background-color: var(--dark-navy);
 }
 
-.home-landing .landing-img {
+.career-landing {
+  height: 55vh !important;
+}
+
+.career-landing .landing-img {
   width: 100%;
   height: auto;
+}
+
+.home-landing .landing-img {
+  position: relative;
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
   opacity: 0.2;
   z-index: 2;
 }
