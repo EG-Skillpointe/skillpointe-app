@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {JobsCard, TopNavbarWhite, Footer, FilterTab, SearchBar, Popup} from "../components";
+import {JobsCard, TopNavbarWhite, Footer, FilterTab, SearchBar, Popup, Filter} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import job from '../assets/mockData/jobs';
@@ -108,6 +108,7 @@ class JobSearch extends Component {
                 </Modal>
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 <SearchBar filter={this.doFilter} location={this.state.location} search={this.doSearch}/>
+                <Filter/>
                     <div style={{marginTop:"30px"}}>
                         {cards}
                     </div>

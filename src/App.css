@@ -1904,12 +1904,13 @@ label, p {
 }
 
 .filter-image{
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
-  left: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 24px;
+    height: 24px;
+
 }
 
 .filter-button-container{
@@ -1919,4 +1920,17 @@ label, p {
   background: #DADADA;
   border-radius: 6px;
   margin-right: 9px;
+}
+
+.filter-arrow{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2px;
+}
+
+.filter{
+    padding: 3px auto 3px 40px;
 }
