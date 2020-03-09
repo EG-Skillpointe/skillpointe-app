@@ -23,49 +23,26 @@ class CareerDetailPage extends Component {
         super(props);
         this.state = {
             showModal: false,
-            location: [
+            career: [
               {
                 id: 0,
-                title: 'New York',
+                title: 'Healthcare',
                 selected: false,
-                key: 'location'
+                key: 'career'
               },
               {
                 id: 1,
-                title: 'Dublin',
+                title: 'Energy',
                 selected: false,
-                key: 'location'
+                key: 'career'
               },
               {
                 id: 2,
-                title: 'California',
+                title: 'Transportation',
                 selected: false,
-                key: 'location'
-              },
-              {
-                id: 3,
-                title: 'Istanbul',
-                selected: false,
-                key: 'location'
-              },
-              {
-                id: 4,
-                title: 'Izmir',
-                selected: false,
-                key: 'location'
-              },
-              {
-                id: 5,
-                title: 'Oslo',
-                selected: false,
-                key: 'location'
-              },
-              {
-                id: 6,
-                title: 'Zurich',
-                selected: false,
-                key: 'location'
+                key: 'career'
               }
+
           ]
         };
     }
@@ -180,18 +157,22 @@ class CareerDetailPage extends Component {
                     <Certification/>
                     
                     <Compare/>
-                  <div className="wrapper">
-                    <DropdownMenu
-                      title="Select Location"
-                      list={this.state.location}
-                      resetThenSet={this.resetThenSet}
-                     />
-                  </div>
+
+
                     {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
                 </div>
-
+              <div className="dd-container">
+                <h5 className="dd-title">Explore Other Careers:</h5>
+                <div className="wrapper" style={{width:"100%"}}>
+                  <DropdownMenu
+                      title="Select One"
+                      list={this.state.career}
+                      resetThenSet={this.resetThenSet}
+                  />
+                </div>
+              </div>
                 <MobileFooter history={this.props.history}/>
-                <Footer mobileFooterPresent/>
+                <Footer mobileFooterPresent />
             </div>
         )
     }

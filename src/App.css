@@ -1550,41 +1550,6 @@ label, p {
   border-color: var(--accent-orange)
 }
 
-.dropdown-header{
-  background: #FFFFFF;
-  border-radius: 6px;
-  height: 37px;
-  align-items: center;
-  display: flex;
-  justify-content: left;
-}
-
-.dropdown-title{
-  font-family: Roboto, serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-.dropdown-list {
-  background-color: white;
-  border: 1px solid #dfdfdf;
-  border-top: none;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  -webkit-box-shadow: 0 2px 5px -1px #e8e8e8;
-  box-shadow: 0 2px 5px -1px #e8e8e8;
-  font-weight: 700;
-  padding: 15px 0;
-  max-height: 215px;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
 
 .dd-wrapper {
   user-select: none;
@@ -1608,8 +1573,15 @@ label, p {
   margin-right: 20px;
 }
 .dd-header-title {
-  font-weight: 300;
   margin: 2px 30px 2px 20px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #000000;
 }
 .angle-down {
   color: #000;
@@ -1622,7 +1594,6 @@ label, p {
   border-bottom-left-radius: 6px;
   background-color: #fff;
   box-shadow: 0 2px 5px -1px #e8e8e8;
-  font-weight: 300;
   padding: 15px 0;
   max-height: 215px;
   overflow-y: scroll;
@@ -1630,13 +1601,18 @@ label, p {
 }
 .dd-list-item {
   width: 100%;
-  font-size: 1.5rem;
   padding: 8px 10px;
-  line-height: 1.6rem;
   cursor: default;
   display: inline-block;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  color: #000000;
 }
 .dd-list-item.selected {
   color: #fff;
@@ -1663,4 +1639,34 @@ label, p {
 .dd-wrapper-single .dd-list {
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.dd-container{
+  height: 137px;
+  background: #DADADA;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 33px 36px 35px;
+}
+
+.dd-title{
+  height: 34px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+}
+
+.dd-arrow{
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  top: 20px;
+  transform: translateY(-50%);
+  right: 10px;
 }

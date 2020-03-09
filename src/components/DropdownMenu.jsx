@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import FontAwesome from 'react-fontawesome'
-
+import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
 
 class DropdownMenu extends Component{
   constructor(props){
@@ -48,11 +48,13 @@ class DropdownMenu extends Component{
   }
 
   render(){
-    const{list} = this.props
-    const{listOpen, headerTitle} = this.state
+    const{list} = this.props;
+    const{listOpen, headerTitle} = this.state;
     return(
         <div className="dd-wrapper">
+
           <div className="dd-header" onClick={() => this.toggleList()}>
+            <img src={arrowDown} alt="" className="dd-arrow"/>
             <div className="dd-header-title">{headerTitle}</div>
             {listOpen
                 ? <FontAwesome name="angle-up" size="2x"/>
