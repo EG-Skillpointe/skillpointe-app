@@ -1536,7 +1536,7 @@ label, p {
 }
 
 .welding-container{
-  /*margin: 60px auto 0px;*/
+  margin: 60px auto 30px;
   display: flex;
   flex-direction: column;
   /*width: 90%;*/
