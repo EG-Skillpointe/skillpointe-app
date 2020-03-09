@@ -1599,3 +1599,23 @@ label, p {
 .orange-arrows .carousel-arrows {
   border-color: var(--accent-orange)
 }
+
+.home-page-header{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #2D426B;
+  height: 33px;
+}
+
+.home-page-arrow{
+  width: 29px;
+  height: 14px;
+  right: 14%;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+
+}
