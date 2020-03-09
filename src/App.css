@@ -667,17 +667,14 @@ label, p {
 .home-landing {
   position: relative;
   width: 100vw;
+  max-height: 55vh;
   overflow: hidden;
   background-color: var(--dark-navy);
 }
 
 .home-landing .landing-img {
-  position:relative;
-  height: calc(100vh - 30px);
-  max-height: 800px;
-  display: inline-block;
-  left: 50%;
-  transform: translate(-50%);
+  width: 100%;
+  height: auto;
   opacity: 0.2;
   z-index: 2;
 }
@@ -1700,7 +1697,7 @@ label, p {
 }
 
 .welding-container{
-  /*margin: 60px auto 0px;*/
+  margin: 60px auto 30px;
   display: flex;
   flex-direction: column;
   /*width: 90%;*/
@@ -1731,5 +1728,124 @@ label, p {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
+}
 
+.dd-wrapper {
+  user-select: none;
+  position: relative;
+
+}
+
+.dd-header {
+  background: #FFFFFF;
+  border-radius: 6px;
+  height: 37px;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  line-height: 38px;
+  border: 1px solid #dfdfdf;
+  cursor: default;
+
+}
+.dd-header span {
+  margin-right: 20px;
+}
+.dd-header-title {
+  margin: 2px 30px 2px 20px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.angle-down {
+  color: #000;
+  margin-right: 20px;
+}
+.dd-list {
+  border: 1px solid #dfdfdf;
+  border-top: none;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px -1px #e8e8e8;
+  padding: 15px 0;
+  max-height: 215px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.dd-list-item {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: default;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  align-items: center;
+  color: #000000;
+}
+.dd-list-item.selected {
+  color: #fff;
+  background-color: #ffcc01;
+}
+.dd-list-item:hover {
+  color: #fff;
+  background-color: #ffcc01;
+}
+.dd-wrapper-single {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  width: 265px;
+}
+.dd-wrapper-single .dd-header {
+  border: 1px solid #ccc;
+}
+.dd-wrapper-single .dd-header .dd-header-name {
+  font-weight: 400;
+}
+.dd-wrapper-single .dd-list {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dd-container{
+  height: 137px;
+  background: #DADADA;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 33px 36px 35px;
+}
+
+.dd-title{
+  height: 34px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+}
+
+.dd-arrow{
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  top: 20px;
+  transform: translateY(-50%);
+  right: 10px;
 }
