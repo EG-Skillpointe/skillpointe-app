@@ -2,6 +2,7 @@ import React from 'react';
 
 export const CareerCard = (props) => {
   const image = require(`../assets/images/${props.industry.image}`);
+
   return (
       <div className="career-card-container col-sm-6 col-xs-6 col-md-6" style={{padding:'10px'}}>
         <div className="card bg-dark text-white" style={{position:'relative', display:'flex', backgroundColor:'#2d426b', borderRadius:'10px', height: "150px", maxHeight: "250px"}}>

@@ -667,6 +667,7 @@ label, p {
 .home-landing {
   position: relative;
   width: 100vw;
+  height: 650px;
   overflow: hidden;
   background-color: var(--dark-navy);
 }
@@ -1617,5 +1618,22 @@ label, p {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
+}
 
+.home-page-input {
+  background-color: #EDEDED;
+  border: 0;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  height: 50px;
+  width: 85%;
+  margin-bottom: 15px;
+}
+
+.home-page-input::placeholder {
+  margin: 10px;
+}
+
+.home-page-input:focus {
+  outline-width: 0;
 }
