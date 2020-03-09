@@ -832,6 +832,120 @@ label, p {
 
 /* Personalized homepage END */
 
+/* SimpleCards START */
+
+.pers-simple-cards {
+  display: flex;
+}
+
+.simple-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+}
+
+.simple-card h6 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 16px;
+  width: 85%;
+  color: rgb(45, 66, 107);
+}
+
+.simple-card img {
+  margin-bottom: 10px;
+}
+
+.pers-simple-cards > :first-child {
+  margin-right: 3px;
+}
+
+.pers-simple-cards > :last-child {
+  margin-left: 3px;
+}
+
+/* SimpleCards END */
+
+/* CompareCareers START */
+.compare-careers {
+  height: auto;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.compare-careers h1 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--dark-blue);
+  font-size: 20px;
+  line-height: 16px;
+}
+
+.careers-box {
+  display: flex;
+}
+
+.careers-box > div {
+  background-color: #DADADA;
+  width: 50%;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.careers-box > :first-child {
+  margin-right: 3px;
+}
+
+.careers-box > :last-child {
+  margin-left: 3px;
+}
+
+.careers-box select {
+  width: 100%;
+  border: 0;
+  height: 26px;
+  font-weight: 600;
+}
+
+.careers-row {
+  position: relative;
+  padding-left: 30px;
+  margin: 5px 0;
+}
+
+.careers-row > img {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.careers-row label {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
+}
+
+.careers-row button {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: var(--dark-blue);
+  border-radius: 3px;
+}
+
+
+/* CompareCareers END */
+
 /* Notification START */
 
 .notification {
@@ -1388,7 +1502,7 @@ label, p {
   height: 145px;
   align-items: flex-start;
   flex-direction: column;
-  float: left;
+  /* float: left; */
   display: flex;
   border-radius: 5px;
   background: white;
