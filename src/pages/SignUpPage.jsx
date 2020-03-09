@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import Switch from "react-switch";
 import { Form, Button, ButtonGroup } from 'react-bootstrap';
 import { TopNavbarWhite } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
@@ -16,6 +17,7 @@ class SignUpPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            switchChecked: false,
             showModal: false,
             userForm: {
                 userId: 111,
@@ -33,6 +35,12 @@ class SignUpPage extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
     }
+
+    handleSwitchChange = (checked) => {
+        this.setState({ checked }, () => {
+            console.log(`switch status: ${this.state.switchChecked}`)
+        });
+    };
 
     openModal = () => {
         console.log('opening modal');
@@ -327,6 +335,11 @@ class SignUpPage extends Component {
                             </Button>
                         </ButtonGroup>
                     </Form>
+
+                    <label style={{display:"flex", justifyContent:"center", alignItem:"center", marginTop:"25px", textAlign:"center !important"}}>
+                        <p style={{margin:"auto 10px auto 0"}}>Make Profile Public</p>
+                        <Switch onChange={this.handleSwitchChange} checked={this.state.checked} onColor="#2D426B"/>
+                    </label>
 
                     <Button onClick={() => this.signUpFormLogin(false)} style={{background:"#F8A141", border:"none", marginTop:"40px", fontSize:"18px"}}>
                          Create Account
