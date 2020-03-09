@@ -55,7 +55,7 @@ class JobSearch extends Component {
 
     doSearch = (searchText) => {
 
-        let result = job.jobs.filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
+        let result = job.jobs.Filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
         console.log('Result',result);
         if(result){
             this.setState({searchResult: result,
