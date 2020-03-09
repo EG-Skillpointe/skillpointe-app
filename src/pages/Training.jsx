@@ -57,7 +57,7 @@ class Training extends Component {
 
         return (
             <div>
-                <div>
+
                 {/*conditionally rendered modal*/}
                     {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
@@ -69,8 +69,9 @@ class Training extends Component {
                     <div style={{marginTop: "10px"}} >
                         {cards}
                     </div>
-                </div>
+
               <MobileFooter history={this.props.history}/>
+              <Footer mobileFooterPresent/>
             </div>
         )
     }
