@@ -13,9 +13,8 @@ import {
     CareerPathways,
     Skill,CardCarousel
 } from "../components";
-
 import HamburgerModal from "../components/HamburgerModal";
-import landingBackground from "../assets/images/landing-background.jpeg";
+import articleList from "../assets/mockData/articles.json";
 
 class CareerDetailPage extends Component {
 
@@ -46,32 +45,6 @@ class CareerDetailPage extends Component {
 
     render() {
         const modalOpened = this.state.showModal;
-      const articleList = [
-        {
-          title: 'School District Receives Welding Equipment Donation',
-          date: 'Monday Jan 20, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
-          link: 'asdf'
-        },
-        {
-          title: 'Local Atlanta High School Offers Free Welding Classes to Students',
-          date: 'Wesnesday March 3, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
-          link: 'asdf'
-        },
-        {
-          title: 'How to Get Financial Aid for Welding Programs',
-          date: 'Monday Jan 20, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
-          link: 'asdf'
-        },
-        {
-          title: 'Requirements for Applying to Welding Trade School',
-          date: 'Wesnesday March 3, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
-          link: 'asdf'
-        }
-      ]
 
         return (
             <div className='welding-page'>
