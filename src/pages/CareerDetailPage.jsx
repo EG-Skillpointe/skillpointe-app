@@ -11,7 +11,7 @@ import {
     CareerCompass, Calendar,
     PopularCareers,
     CareerPathways,
-    Skill,CardCarousel
+    Skill,CardCarousel, DropdownMenu
 } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import articleList from "../assets/mockData/articles.json";
@@ -21,9 +21,46 @@ class CareerDetailPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            career: [
+              {
+                id: 0,
+                title: 'Healthcare',
+                selected: false,
+                key: 'career'
+              },
+              {
+                id: 1,
+                title: 'Energy',
+                selected: false,
+                key: 'career'
+              },
+              {
+                id: 2,
+                title: 'Transportation',
+                selected: false,
+                key: 'career'
+              }
+
+          ]
         };
     }
+    toggleSelected = (id, key) => {
+      let temp = JSON.parse(JSON.stringify(this.state[key]))
+      temp[id].selected = !temp[id].selected;
+      this.setState({
+        [key]: temp
+      })
+    };
+
+    resetThenSet = (id, key) => {
+      let temp = JSON.parse(JSON.stringify(this.state[key]))
+      temp.forEach(item => item.selected = false);
+      temp[id].selected = true;
+      this.setState({
+        [key]: temp
+      })
+    };
 
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -44,9 +81,35 @@ class CareerDetailPage extends Component {
     };
 
     render() {
-        const modalOpened = this.state.showModal;
-
-        return (
+      const modalOpened = this.state.showModal;
+      const articleList = [
+        {
+          title: 'School District Receives Welding Equipment Donation',
+          date: 'Monday Jan 20, 2020',
+          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          link: 'asdf'
+        },
+        {
+          title: 'Local Atlanta High School Offers Free Welding Classes to Students',
+          date: 'Wesnesday March 3, 2020',
+          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          link: 'asdf'
+        },
+        {
+          title: 'How to Get Financial Aid for Welding Programs',
+          date: 'Monday Jan 20, 2020',
+          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          link: 'asdf'
+        },
+        {
+          title: 'Requirements for Applying to Welding Trade School',
+          date: 'Wesnesday March 3, 2020',
+          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          link: 'asdf'
+        }
+      ];
+      
+      return (
             <div className='welding-page'>
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
@@ -94,11 +157,21 @@ class CareerDetailPage extends Component {
                     
                     <Compare/>
 
+
                     {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
                 </div>
-
+              <div className="dd-container">
+                <h5 className="dd-title">Explore Other Careers:</h5>
+                <div className="wrapper" style={{width:"100%"}}>
+                  <DropdownMenu
+                      title="Select One"
+                      list={this.state.career}
+                      resetThenSet={this.resetThenSet}
+                  />
+                </div>
+              </div>
                 <MobileFooter history={this.props.history}/>
-                <Footer mobileFooterPresent/>
+                <Footer mobileFooterPresent />
             </div>
         )
     }
