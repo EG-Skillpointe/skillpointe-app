@@ -13,9 +13,8 @@ import {
     CareerPathways,
     Skill,CardCarousel, DropdownMenu
 } from "../components";
-
 import HamburgerModal from "../components/HamburgerModal";
-import landingBackground from "../assets/images/landing-background.jpeg";
+import articleList from "../assets/mockData/articles.json";
 
 class CareerDetailPage extends Component {
 
@@ -109,8 +108,8 @@ class CareerDetailPage extends Component {
           link: 'asdf'
         }
       ];
-
-        return (
+      
+      return (
             <div className='welding-page'>
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
