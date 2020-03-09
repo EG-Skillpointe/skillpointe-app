@@ -17,7 +17,7 @@ export const TopNavbarBlue = (props) => {
         <div className={`top-navbar blue ${props.absolute ? 'nav-absolute' : ''} ${props.transparent ? 'nav-transparent' : ''}`}>
             <img className="logo" src={whiteLogo} />
             {/*conditionally rendered modal*/}
-            {signedIn ? (null) : (<Link className="sign" to="/login">Login</Link>)}
+            {signedIn ? (null) : (<Link className="sign-in" to="/login">Sign In</Link>)}
             <img className="hamburger" src={hamburger} onClick={props.openModal}/>
         </div>
     )
