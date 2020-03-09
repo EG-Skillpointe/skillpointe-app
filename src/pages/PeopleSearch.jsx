@@ -34,9 +34,7 @@ class PeopleSearch extends Component {
         let cards = [];
         cards.push(<PeopleCard/>)
         cards.push(<PeopleCard/>)
-        cards.push(<PeopleCard/>)
-        cards.push(<PeopleCard/>)
-        cards.push(<PeopleCard/>)
+        
 
         const modalOpened = this.state.showModal;
 
@@ -49,7 +47,17 @@ class PeopleSearch extends Component {
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 <Search location={"Chamblee, GA"} placeholder={'Expand your network...'}/>
-                    <div style={{marginTop:"8px"}}>
+                    <div style={{marginTop:"8px", backgroundColor: "#DADADA", paddingBottom:"30px"}}>
+                        <div style={{display:"flex", margin:"0 10% 0 10%", justifyContent: "space-between", height: "52px"}}>
+                            <div className="people-container-invitation-label">Invitations</div>
+                            <div className="people-container-see-all-label">See All 3</div>
+                        </div>
+                        {cards}
+                    </div>
+                    <div style={{marginTop:"15px", backgroundColor: "#DADADA", paddingBottom:"30px"}}>
+                        <div style={{display:"flex", margin:"0 10% 0 10%", justifyContent: "space-between", height: "52px"}}>
+                            <div className="people-container-invitation-label">People you may know</div>
+                        </div>
                         {cards}
                     </div>
                 <MobileFooter history={this.props.history}/>

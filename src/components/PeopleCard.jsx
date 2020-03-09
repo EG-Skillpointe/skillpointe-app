@@ -9,7 +9,7 @@ export const PeopleCard = (props) => {
     const numberOfConnections = props.numberOfConnections ?? '4 mutual connections';
     
     return (
-        <div className="people-card-containter">
+        <div className="people-card-container">
             <div className="people-card-image-container">
                 <img className="people-card-image" src={image} alt="Tammy"/>
             </div>
@@ -21,8 +21,8 @@ export const PeopleCard = (props) => {
                         <h6 className="people-card-text-description">{numberOfConnections}</h6>
                     </div>
                     <div className="people-card-button-container">
-                        <Button className="people-card-button" >Accept</Button>
-                        <Button className="people-card-ignore-button">Ignore</Button> 
+                        <button className="people-card-button" >Accept</button>
+                        <button className="people-card-ignore-button">Ignore</button> 
                     </div>
             </div>
         </div>

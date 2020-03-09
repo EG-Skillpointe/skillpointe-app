@@ -426,13 +426,53 @@ label, p {
   top: 566px;
 }
 
-.people-card-containter {
-  margin: 0 2.5% 10px 2.5%;
-  width: 95%;
+.search-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 14px 0;
+}
+
+.people-card-container {
+  margin: 0 10% 10px 10%;
+  width: 80%;
   height: 110px;
-  background-color: gray;
+  background-color: #DADADA;
   border-radius: 6px;
   display: flex;
+  justify-content: center;
+}
+
+.people-container-label-container {
+
+}
+
+.people-container-invitation-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.people-container-see-all-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  color: #5578BB;
 }
 
 .people-card-image-container {
@@ -442,11 +482,10 @@ label, p {
   border-radius: 6px 0 0 6px;
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
 }
 
 .people-card-image {
-  margin-top: 12px;
   border-radius: 50%;
   height: 48px;
   width: 48px;
@@ -469,6 +508,7 @@ label, p {
   margin: 0;
   font-family: Roboto, serif;
   font-weight: bold;
+  color: var(--dark-blue);
 }
 
 .people-card-text-subtitle {
@@ -498,13 +538,14 @@ label, p {
 
 .people-card-button-container {
   margin-top: 4px;
-  width: 55%;
-  height: 28px;
+  width: 80%;
+  height: 24px;
   display: flex;
   justify-content: space-between;
 }
 
 .people-card-button{
+  font-family: Roboto;
   font-size: 14px;
   text-align: center;
   line-height: 6px;
@@ -513,18 +554,33 @@ label, p {
   color: var(--dark-blue);
   background-color: white;
   border: 1px solid var(--dark-blue);
-  font-weight: 600;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+
+.people-card-button:focus {
+  outline-width: 0;
 }
 
 .people-card-ignore-button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
   font-size: 14px;
-  text-align: center;
-  line-height: 6px;
+  line-height: 16px;
+  align-items: center;
+  
   height: inherit;
   width: 45%;
   color: white;
   background-color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
+  border-radius: 6px;
+}
+
+.people-card-ignore-button:focus {
+  outline-width: 0;
 }
 
 /* Card Ended*/
@@ -1229,7 +1285,7 @@ label, p {
   left: 15px;
 }
 .location-input-div {
-  margin-left: 5px;
+  margin-left: 12px;
   position: relative;
   width: 100%;
 }
@@ -1240,15 +1296,18 @@ label, p {
   color: white;
   font-size: 16px;
   font-weight: 700;
-  margin: 5px;
-  height: 40px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 12px;
+  height: 34px !important;
   border-radius: 5px;
-  width: 38%;
+  width: 30%;
   box-shadow: rgba(255, 183, 103, 0.2) 0 0 11px;
 }
 
 .search-image {
-  top: 18px;
+  top: 6px;
   position: absolute;
   width: 20px;
   left: 20px;
