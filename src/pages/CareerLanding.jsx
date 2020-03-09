@@ -42,7 +42,7 @@ class CareerLanding extends Component {
                 {/*main contents of page*/}
               <TopNavbarBlue openModal={this.openModal} absolute transparent/>
 
-                <div className='home-landing' >
+                <div className='home-landing career-landing' >
                     <div className='landing-content' style={{width:'85%'}}>
                         <h1>Find Your Path</h1>
                         <p style={{margin:"15px"}}>Choosing a career is challenging. Let us help you narrow your search with Skillpointe's Career Compass, a strength-based assessment designed to help you find jobs that fit your skills and needs</p>
