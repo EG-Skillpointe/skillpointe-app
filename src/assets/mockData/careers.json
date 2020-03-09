@@ -1,0 +1,41 @@
+{
+    "plumbing": [
+        {
+            "image": "physical_labor.svg",
+            "label": "Physical Labor"
+        },
+        {
+            "image": "independent_working.svg",
+            "label": "Independent Working"
+        },
+        {
+            "label": "2 Year Training"
+        },
+        {
+            "image": "monetization.svg",
+            "label": "Average Salary: $42K - $84K"
+        },
+        {
+            "label": "Apprenticeship or School Program"
+        }
+    ],
+    "carpentry": [
+        {
+            "image": "physical_labor.svg",
+            "label": "Physical Labor"
+        },
+        {
+            "label": "Collaborative Work"
+        },
+        {
+            "label": "2 Year Training"
+        },
+        {
+            "image": "monetization.svg",
+            "label": "Average Salary: $41K - $72K"
+        },
+        {
+            "label": "Apprenticeship or School Program"
+        }
+    ]
+}
