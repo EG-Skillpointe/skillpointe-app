@@ -6,7 +6,7 @@ export const authService = {
     logout,
     isAuthenticated,
     renewToken
-}
+};
 
 const FB = window.FB;
 console.log("Facebook", FB);
