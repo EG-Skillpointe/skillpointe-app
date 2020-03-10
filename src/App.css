@@ -2059,13 +2059,15 @@ label, p {
   align-items: center;
 }
 .filter-header{
-  height: 19px;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  background: #DADADA;
   font-family: Roboto, serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  display: flex;
+  font-size: 12px;
+  line-height: 16px;
   align-items: center;
   text-align: center;
   color: #2D426B;
@@ -2083,12 +2085,11 @@ label, p {
 }
 
 .filter-button-container{
-  width: 30%;
+  width: 33%;
   position: relative;
-  height: 26px;
+  height: auto;
   background: #DADADA;
   border-radius: 6px;
-  margin-right: 9px;
 }
 
 .filter-arrow{

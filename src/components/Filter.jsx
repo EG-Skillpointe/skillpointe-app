@@ -5,16 +5,16 @@ import filter from '../assets/images/tune_24px_outlined.svg';
 export const Filter = (props) => {
   return (
       <div className="filter-container">
-        <div className="filter-button-container">
+        <div className="filter-button-container" style={{marginRight: '8px'}}>
           <img src={filter} alt="" className="filter-image" />
-          <button className="filter-header" style={{padding: '3px 0px 3px 40px'}}>Filters</button>
+          <button className="filter-header" style={{paddingLeft: '20px', paddingTop:"5px", paddingBottom:"5px"}}>Filters</button>
         </div>
         <div className="filter-button-container">
-          <button className="filter-header" style={{padding:"2px 21px 3px 21px"}}>Sort By</button>
+          <button className="filter-header" style={{paddingRight: '20px', paddingTop:"5px", paddingBottom:"5px"}}>Sort By</button>
           <img src={downArrow} alt="" className="filter-arrow"/>
         </div>
-        <div className="filter-button-container">
-          <button className="filter-header" style={{padding:"3px 13px 3px 13px", fontSize:'13px'}}>Save Search</button>
+        <div className="filter-button-container" style={{marginLeft: '8px'}}>
+          <button className="filter-header" style={{padding:"5px 0"}}>Save Search</button>
         </div>
       </div>
   )
