@@ -7,10 +7,13 @@ import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 
-const options = [
-	'one', 'two', 'three'
+const options1 = [
+	'A Career Path', 'Training', 'Financial Aide', 'People', 'Jobs'
 ];
-const defaultOption = options[0];
+
+const options2 = [
+	'Welding', 'Nursing', 'Carpentry', 'Plumbing', 'Human Services'
+];
 
 export const RegularHomepage = (props) => {
 	return (
@@ -20,8 +23,9 @@ export const RegularHomepage = (props) => {
 					<h1>Get Excited About Your Future</h1>
 					<p>SkillPointe is a movement celebrating skills-based professionals and their contributions.</p>
 					<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-						<Dropdown placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options} />
-						<Dropdown placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options} />
+						<Dropdown placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} />
+						<Dropdown placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} />
+						<Link to=''><button className='orange-button' style={{borderRadius:"5px", width:"170px", height:"20px"}}>Search</button></Link>
 					</div>
 				</div>
 				<img className='landing-img' src={landingBackground} alt='landingBackground' />
