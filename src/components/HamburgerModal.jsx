@@ -55,7 +55,7 @@ const HamburgerModal = (props) => {
                 <Link style={careerLandingOrange} to="/career-landing" onClick={props.closeModal}>Explore Careers</Link>
                 <Link style={jobOrange} to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
                 <Link style={trainingOrange} to="/training" onClick={props.closeModal}>Find Training</Link>
-                <Link style={peopleOrange} to="" onClick={props.closeModal}>Find People</Link>
+                <Link style={peopleOrange} to="/peoplesearch" onClick={props.closeModal}>Find People</Link>
                 <Link style={logout} to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>
             </div>
 

@@ -7,6 +7,10 @@
   --dark-gray: #4F4F4F;
 }
 
+* {
+  touch-action: manipulation;
+}
+
 .App {
   text-align: center;
 }
