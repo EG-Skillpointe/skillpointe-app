@@ -2000,7 +2000,8 @@ label, p {
 
 .dd-wrapper {
   user-select: none;
-  position: relative;
+  position: absolute;
+  width: 80%;
 
 }
 
