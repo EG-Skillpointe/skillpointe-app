@@ -458,6 +458,7 @@ label, p {
   line-height: 14px;
   color:var(--dark-blue);
   background-color: #F5F5F5;
+  pointer-events:none
 }
 
 .search-location-input::placeholder{
@@ -2152,6 +2153,10 @@ label, p {
   text-align: center;
   color: #2D426B;
 
+}
+
+.filter-header:focus{
+  outline-width: 0;
 }
 
 .filter-image{
