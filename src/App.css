@@ -1366,10 +1366,12 @@ label, p {
 }
 .training-page .articles-carousel > :first-child {
   background: #DADADA;
+  margin-left: 3px;
 }
 
 .training-page .articles-carousel > :last-child {
   background: #DADADA;
+  margin-right: 3px;
 }
 
 .training-page .articles-carousel > div {
