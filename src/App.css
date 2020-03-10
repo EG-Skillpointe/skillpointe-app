@@ -2454,3 +2454,13 @@ label, p {
 
 
 /** Featured Job Card END */
+
+.school-card {
+  height: auto !important;
+}
+.school-card img {
+  height: 100%;
+}
+.school-card >:last-child {
+  padding-bottom: 5px !important;
+}
