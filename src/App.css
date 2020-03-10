@@ -1686,14 +1686,13 @@ label, p {
 
 }
 
-.certification-item{
+.certification-item {
   position: relative;
   height: 40px;
   background: rgba(45, 66, 107, 0.15);
   border-radius: 6px;
   width: 100%;
   margin: 0 0 10px 0;
-
 }
 
 .certification-text{
@@ -2208,6 +2207,7 @@ label, p {
     padding: 3px auto 3px 40px;
 }
 
+<<<<<<< Updated upstream
 .training-button {
 
   width: 45%;
@@ -2463,4 +2463,41 @@ label, p {
 }
 .school-card >:last-child {
   padding-bottom: 5px !important;
+}
+
+.finance-container {
+  position: relative;
+  height: 40px;
+  background: rgba(45, 66, 107, 0.15);
+  border-radius: 6px;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.finance-text{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+  height: 18px;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 9px;
+}
+
+.finance-location {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 15px;
+
 }
