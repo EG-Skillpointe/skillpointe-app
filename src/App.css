@@ -1861,3 +1861,85 @@ label, p {
   transform: translateY(-50%);
   right: 10px;
 }
+
+.school-text{
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #2D426B;
+  height: 18px;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 9px;
+}
+
+.school-location {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 15px;
+
+}
+.filter-container{
+  padding: 5px 20px;
+  position: relative;
+  height: 58px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 10px;
+  display: flex;
+  align-items: center;
+}
+.filter-header{
+  height: 19px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #2D426B;
+
+}
+
+.filter-image{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.filter-button-container{
+  width: 30%;
+  position: relative;
+  height: 26px;
+  background: #DADADA;
+  border-radius: 6px;
+  margin-right: 9px;
+}
+
+.filter-arrow{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2px;
+}
+
+.filter{
+    padding: 3px auto 3px 40px;
+}
