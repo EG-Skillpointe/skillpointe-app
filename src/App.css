@@ -1759,6 +1759,8 @@ label, p {
 
 .home-page-input:focus {
   outline-width: 0;
+}
+
 .dd-wrapper {
   user-select: none;
   position: relative;
