@@ -30,6 +30,14 @@ class PeopleSearch extends Component {
         });
     };
 
+    doSearch = (searchText) => {
+        // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
+        console.log('searchText', searchText);
+        // if(result){
+        //     this.setState({searchResults: result});
+        // }
+    };
+
     render() {
         let cards = [];
         cards.push(<PeopleCard/>)
@@ -47,9 +55,9 @@ class PeopleSearch extends Component {
                 {/*main contents of page*/}
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                <Search location={"Chamblee, GA"} placeholder={'Expand your network...'}/>
+                <Search search={this.doSearch} headerTitle={"Find People"} location={"Atlanta, GA"} placeholder={'Expand your network...'}/>
                     <div style={{marginTop:"8px", backgroundColor: "#DADADA", paddingBottom:"30px"}}>
-                        <div style={{display:"flex", margin:"0 10% 0 10%", justifyContent: "space-between", height: "52px"}}>
+                        <div style={{display:"flex", margin:"0 5%", justifyContent: "space-between", height: "52px"}}>
                             <div className="people-container-invitation-label">Invitations</div>
                             <div className="people-container-see-all-label">See All 3</div>
                         </div>

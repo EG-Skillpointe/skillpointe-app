@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
-import image from "../assets/images/location-icon.png";
-import search from "../assets/images/search.png"
+import locationIcon from "../assets/images/location-icon.png";
+import searchIcon from "../assets/images/search.png"
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -16,28 +16,22 @@ class Search extends Component {
     })
   };
 
-
-
   render() {
     const headerTitle = this.props.headerTitle ?? 'Find People'
     const placeholder = this.props.placeholder ?? 'Search for training opportunities...'
+    const location = this.props.location ?? 'Atlanta, GA'
 
     return (
-        <div>
+        <div style={{backgroundColor:"white"}}>
           <h1 className="search-header">{headerTitle}</h1>
-          <div className="col-sm-6 search" style={{marginLeft: "12px", marginRight: "12px"}}>
-            <img src={search} alt='' className="search-image"/>
-            <input value={this.state.query}
-                   style={{width:"100%", boxShadow:"0px 0px 7px rgba(248, 161, 65, 0.3)", lineHeight:"2", paddingLeft:"25px", marginTop:"0px", borderRadius: "6px", fontFamily: "Roboto"}}
-                   onChange={this.searchChanged}
-                   placeholder={placeholder}/>
+          <div className="search-container">
+            <img src={searchIcon} alt='' className='search-icon'></img>
+            <input value={this.state.query} onChange={this.searchChanged} placeholder={placeholder} className="search-input"></input>
           </div>
-          <div className="location-input-div">
-            <img src={image} alt='' className="location-image"/>
-            <input className="location-input"
-                   value={this.props.location}
-            />
-            <button className="search-button" onClick={() => this.props.search(this.state.query)} >Search</button>
+          <div className="search-container">
+            <img src={locationIcon} alt='' className='location-icon'></img>
+            <input placeholder={location} className="search-location-input"></input>
+            <button className="search-button" onClick={()=> console.log('searching') }>Search</button>
           </div>
         </div>
     )

@@ -64,7 +64,7 @@ class Training extends Component {
                     {/*main contents of page*/}
                     <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                     {/* TODO: Pass in actual data to prevent error in training page */}
-                    <Search search={this.doSearch} location={"Atlanta, GA"}/>
+                    <Search search={this.doSearch} headerTitle={"Find Training"} location={"Atlanta, GA"} placeholder={'Search for training opportunities...'}/>
                     <Filter/>
                     <div style={{marginTop: "10px"}} >
                         {cards}
