@@ -1,6 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { HomePage, Login, Training, JobSearch, Careers, CareerLanding, AmbassadorPage, SignUpPage, PeopleSearch, CareerDetailPage } from './pages';
+import {
+	HomePage,
+	Login,
+	Training,
+	JobSearch,
+	Careers,
+	CareerLanding,
+	AmbassadorPage,
+	SignUpPage,
+	PeopleSearch,
+	CareerDetailPage,
+	FinanceSearch
+} from './pages';
 import { PrivateRoute } from './components';
 
 
@@ -25,14 +37,15 @@ class App extends React.Component {
 			<Router>
 				<Switch>
 					<Route exact path='/' component={HomePage} />
-					<PrivateRoute exact path='/training' component={Training} />
-					<PrivateRoute exact path='/jobsearch' component={JobSearch} />
-					<PrivateRoute exact path='/career-landing' component={CareerLanding} />
-					<PrivateRoute exact path='/careers' component={Careers} />
-					<PrivateRoute exact path='/ambassador' component={AmbassadorPage}/>
-					<PrivateRoute exact path='/signup' component={SignUpPage} />
-					<PrivateRoute exact path='/peoplesearch' component={PeopleSearch}/>
-					<PrivateRoute exact path='/career/welding' component={CareerDetailPage} />
+					<Route exact path='/training' component={Training} />
+					<Route exact path='/jobsearch' component={JobSearch} />
+					<Route exact path='/peoplesearch' component={PeopleSearch}/>
+					<Route exact path='/career-landing' component={CareerLanding} />
+					<Route exact path='/careers' component={Careers} />
+					<Route exact path='/ambassador' component={AmbassadorPage}/>
+					<Route exact path='/signup' component={SignUpPage} />
+					<Route exact path='/career/welding' component={CareerDetailPage} />
+					<Route exact path='/training/finance' component={FinanceSearch} />
 					<Route path='/login' component={Login} />
 				</Switch>
 			</Router>

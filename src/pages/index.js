@@ -8,5 +8,6 @@ export {default as CareerDetailPage} from './CareerDetailPage';
 export {default as AmbassadorPage} from './AmbassadorPage'
 export {default as PeopleSearch} from './PeopleSearch';
 export {default as SignUpPage} from './SignUpPage';
+export {default as FinanceSearch} from './FinanceSearch'
 
 
