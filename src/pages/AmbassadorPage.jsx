@@ -43,7 +43,7 @@ class AmbassadorPage extends Component {
     if(cond === 'popular'){
       filtered = ambassadors.ambassadors;
     } else {
-      filtered = ambassadors.ambassadors.filter(obj => obj.industry === cond);
+      filtered = ambassadors.ambassadors.Filter(obj => obj.industry === cond);
     }
     this.setState({filteredAmbassadors: filtered})
  };

@@ -16,7 +16,7 @@ class SearchBar extends Component {
     this.setState({
       selected: event.target.name
     });
-    this.props.filter(event.target.name);
+    this.props.Filter(event.target.name);
   };
 
   searchChanged = (e) => {
@@ -44,14 +44,6 @@ class SearchBar extends Component {
             />
             <button className="search-button" onClick={() => this.props.search(this.state.query)} >Search</button>
           </div>
-
-
-          <div>
-          <div className="flexbox-container">
-            <button className={`nav-button ${this.state.selected == 'popular' ? 'selected' : '' }`} key={'popular'} name={'popular'} onClick={(event) => this.onHandleFilterClick(event)} >Popular</button>
-            {industries.industries.map(industry => { return <button className={`nav-button ${this.state.selected == industry.name ? 'selected' : '' }`} key={industry.name} name={industry.name} onClick={(event) => this.onHandleFilterClick(event)} >{industry.name}</button>})}
-          </div>
-        </div>
         </div>
     )
   }
