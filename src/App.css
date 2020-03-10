@@ -671,8 +671,17 @@ label, p {
   background-color: var(--dark-navy);
 }
 
+.career-landing {
+  height: 55vh !important;
+}
+
+.career-landing .landing-img {
+  width: 100%;
+  height: auto;
+}
+
 .home-landing .landing-img {
-  position:relative;
+  position: relative;
   height: calc(100vh - 30px);
   max-height: 800px;
   display: inline-block;
