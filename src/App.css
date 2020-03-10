@@ -1963,3 +1963,46 @@ label, p {
 .filter{
     padding: 3px auto 3px 40px;
 }
+
+.Dropdown-root {
+  height: 15%;
+  width: 100%;
+  margin: 10px 0;
+  color: #2D426B !important;
+}
+
+.Dropdown-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+  height: 35px;
+  padding: 0px 30px 0px 0px;
+  color:#2D426B !important;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.Dropdown-menu {
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.Dropdown-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  padding: 0px 30px 0px 0px;
+  color: #2D426B !important;
+}
+
+.custom-dropdown-arrow {
+  border-top-color: #F8A141 !important;
+  border-bottom-color: #F8A141 !important;
+}
+
+.Dropdown-placeholder {
+  /*text-align: center;*/
+}
+

@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import {CardCarousel, CareerCard, Video, WeldingSchools, FindJobs} from "../components";
+import { Video } from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
-import rightArrow from "../assets/images/right-arrow.svg";
 import downArrow from "../assets/images/arrow_down.svg";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
-import industries from "../assets/mockData/industries";
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+
+const options = [
+	'one', 'two', 'three'
+];
+const defaultOption = options[0];
 
 export const RegularHomepage = (props) => {
 	return (
@@ -14,7 +19,10 @@ export const RegularHomepage = (props) => {
 				<div className='landing-content'>
 					<h1>Get Excited About Your Future</h1>
 					<p>SkillPointe is a movement celebrating skills-based professionals and their contributions.</p>
-					<img src={downArrow} style={{position:"relative", top:"10px"}}/>
+					<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+						<Dropdown placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options} />
+						<Dropdown placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options} />
+					</div>
 				</div>
 				<img className='landing-img' src={landingBackground} alt='landingBackground' />
 			</div>
@@ -28,26 +36,26 @@ export const RegularHomepage = (props) => {
 				<Link to='./login'><button className='orange-button' style={{borderRadius:"5px"}}>Join the Movement</button></Link>
 			</div>
 
-			<div style={{display:"inline-block", backgroundColor:"#DADADA", height:"auto"}}>
-				<div className="home-arrow-header">
-					Explore Careers
-					<Link to="/career-landing">
-						<img src={rightArrow} alt="right-arrow"/>
-					</Link>
-				</div>
+			{/*<div style={{display:"inline-block", backgroundColor:"#DADADA", height:"auto"}}>*/}
+			{/*	<div className="home-arrow-header">*/}
+			{/*		Explore Careers*/}
+			{/*		<Link to="/career-landing">*/}
+			{/*			<img src={rightArrow} alt="right-arrow"/>*/}
+			{/*		</Link>*/}
+			{/*	</div>*/}
 
-				<div className="row" style={{margin:'0', padding:"0 20px 20px"}}>
-					{industries.industries.map(industry => { return <Link to={{
-						pathname:'./career/welding',
-						aboutProps:{
-							name: industry.name
-						}}}><CareerCard industry={industry}/></Link>})}
-				</div>
+			{/*	<div className="row" style={{margin:'0', padding:"0 20px 20px"}}>*/}
+			{/*		{industries.industries.map(industry => { return <Link to={{*/}
+			{/*			pathname:'./career/welding',*/}
+			{/*			aboutProps:{*/}
+			{/*				name: industry.name*/}
+			{/*			}}}><CareerCard industry={industry}/></Link>})}*/}
+			{/*	</div>*/}
 
-				<FindJobs/>
+			{/*	<FindJobs/>*/}
 
-				<WeldingSchools smallVersion={true}/>
-			</div>
+			{/*	<WeldingSchools smallVersion={true}/>*/}
+			{/*</div>*/}
 
 			{/*<div>*/}
 			{/*	<div className="home-arrow-header">*/}
@@ -82,7 +90,7 @@ export const RegularHomepage = (props) => {
 
 		</>
 	);
-}
+};
 
 export default RegularHomepage;
 
