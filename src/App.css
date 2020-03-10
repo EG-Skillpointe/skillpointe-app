@@ -1944,3 +1944,66 @@ label, p {
 .filter{
     padding: 3px auto 3px 40px;
 }
+
+
+/** Job Card START */
+
+.job-card {
+  display: flex;
+  height: 150px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.job-card >:first-child {
+  padding-left: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.job-card >:last-child {
+  width: 70%;
+  padding: 15px;
+}
+
+.job-card img {
+  max-height: 100px;
+  height: 80%;
+  width: auto;
+}
+
+.job-card .job-title {
+  position: relative;
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 0;
+  line-height: 16px;
+  max-height: calc(16px * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.job-subtitle {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 13px;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
+.job-text {
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--dark-gray);
+}

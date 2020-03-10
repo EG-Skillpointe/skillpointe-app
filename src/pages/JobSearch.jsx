@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {JobsCard, TopNavbarWhite, Footer, FilterTab, SearchBar, Popup, Filter} from "../components";
-import { MobileFooter } from "../components";
-import HamburgerModal from "../components/HamburgerModal";
+import {JobsCard, TopNavbarWhite, Footer, SearchBar, Filter, MobileFooter, HamburgerModal} from "../components";
 import job from '../assets/mockData/jobs';
 import Modal from 'react-modal';
 
@@ -21,6 +19,12 @@ class JobSearch extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+
+        if(localStorage.getItem('location')) {
+            this.setState({location: localStorage.getItem('location')})
+        } else {
+            this.togglePopup();
+        }
     }
 
     openModal = () => {
@@ -29,6 +33,7 @@ class JobSearch extends Component {
             console.log(`showModal status: ${this.state.showModal}`)
         });
     };
+
 
     closeModal = () => {
         console.log('closing modal');
@@ -68,15 +73,6 @@ class JobSearch extends Component {
         this.setState({showPopUp: !this.state.showPopUp})
     };
 
-    componentDidMount() {
-
-        if(localStorage.getItem('location')){
-
-            this.setState({location: localStorage.getItem('location')})
-        }else {
-            this.togglePopup();
-        }
-    }
 
     render() {
         const defaultStyles = {
@@ -89,14 +85,16 @@ class JobSearch extends Component {
                 transform             : 'translate(-50%, -50%)',
             }
         };
-        let cards = [];
-        {this.state.filteredJobs.map(job => { cards.push(<div style={{margin: "10px", height:"210px"}}><JobsCard job={job}/></div>)}) }
+
+        const cards = this.state.filteredJobs.map(job => <JobsCard job={job} />)
+
         const modalOpened = this.state.showModal;
 
         return (
             <div>
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+
                 {/*main contents of page*/}
                 <Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup}
                        contentLabel="Delete Check"
@@ -106,12 +104,17 @@ class JobSearch extends Component {
                     <button className="popup-button"  onClick={this.togglePopup}>Don't Allow</button>
                     <button className="popup-button"  onClick={this.onAllow}>Allow</button>
                 </Modal>
+
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
+
                 <SearchBar filter={this.doFilter} location={this.state.location} search={this.doSearch}/>
+
                 <Filter/>
-                    <div style={{marginTop:"30px"}}>
-                        {cards}
-                    </div>
+
+                <div style={{marginTop:"30px"}}>
+                    { cards }
+                </div>
+
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
             </div>
