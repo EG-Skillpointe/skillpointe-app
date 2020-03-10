@@ -68,9 +68,7 @@ class JobSearch extends Component {
     };
 
     componentDidMount() {
-        if(localStorage.getItem('location')){
-            this.setState({location: localStorage.getItem('location')})
-        }
+        localStorage.setItem('location', 'Atlanta, GA');
     }
 
     render() {
@@ -102,7 +100,7 @@ class JobSearch extends Component {
                     <button className="popup-button"  onClick={this.onAllow}>Allow</button>
                 </Modal>
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={this.state.location} placeholder={'Search for employment opportunities...'}/>
+                <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={"Atlanta, GA"} placeholder={'Search for employment opportunities...'}/>
                     <div style={{marginTop:"30px"}}>
                         {cards}
                     </div>
