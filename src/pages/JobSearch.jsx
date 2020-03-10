@@ -29,6 +29,8 @@ class JobSearch extends Component {
         } else {
             this.togglePopup();
         }
+
+        localStorage.setItem('location', 'Atlanta, GA');
     }
 
     openModal = () => {
@@ -126,6 +128,7 @@ class JobSearch extends Component {
                         <label>Multiple Locations</label>
 
                         <Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
+
                     </div>
 
                     <div>
