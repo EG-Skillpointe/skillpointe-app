@@ -31,7 +31,7 @@ class Search extends Component {
           <div className="search-container">
             <img src={locationIcon} alt='' className='location-icon'></img>
             <input placeholder={location} className="search-location-input"></input>
-            <button className="search-button" onClick={()=> console.log('searching') }>Search</button>
+            <button className="search-button" onClick={()=> this.props.search(this.state.query) }>Search</button>
           </div>
         </div>
     )

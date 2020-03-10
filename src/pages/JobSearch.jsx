@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {JobsCard, TopNavbarWhite, Footer, FilterTab, Search, Popup, Filter} from "../components";
+import {JobsCard, TopNavbarWhite, Footer, FilterTab, SearchBar, Popup, Filter} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import job from '../assets/mockData/jobs';
@@ -15,7 +15,7 @@ class JobSearch extends Component {
             filteredJobs: job.jobs,
             searchResult: [],
             location: '',
-            showPopUp: true
+            showPopUp: false
         };
     }
 
@@ -54,13 +54,12 @@ class JobSearch extends Component {
     };
 
     doSearch = (searchText) => {
-
-        let result = job.jobs.Filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
-        console.log('Result',result);
-        if(result){
-            this.setState({searchResult: result,
-                                 filteredJobs: result});
-        }
+        // let result = job.jobs.Filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
+        console.log('Result', searchText);
+        // if(result){
+        //     this.setState({searchResult: result,
+        //                          filteredJobs: result});
+        // }
     };
 
     onAllow = () => {
@@ -69,12 +68,8 @@ class JobSearch extends Component {
     };
 
     componentDidMount() {
-
         if(localStorage.getItem('location')){
-
             this.setState({location: localStorage.getItem('location')})
-        }else {
-            this.togglePopup();
         }
     }
 
@@ -107,8 +102,7 @@ class JobSearch extends Component {
                     <button className="popup-button"  onClick={this.onAllow}>Allow</button>
                 </Modal>
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                <Search headerTitle={"Find Jobs"} location={this.state.location} placeholder={'Search for employment opportunities...'}/>
-                <Filter/>
+                <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={this.state.location} placeholder={'Search for employment opportunities...'}/>
                     <div style={{marginTop:"30px"}}>
                         {cards}
                     </div>
