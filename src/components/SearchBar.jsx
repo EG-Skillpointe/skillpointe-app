@@ -27,14 +27,10 @@ class SearchBar extends Component {
   };
 
   render() {
-    const headerTitle = this.props.headerTitle ?? 'Find People'
-    const placeholder = this.props.placeholder ?? 'Search for training opportunities...'
-    const location = this.props.location ?? 'Atlanta, GA'
-
     return (
       <>
       <div style={{boxShadow: "rgba(0, 0, 0, 0.2) 0 4px 5px"}}>
-        <Search search={this.props.search} headerTitle={headerTitle} location={location} placeholder={this.placeholder}/>
+        <Search search={this.props.search} headerTitle={this.props.headerTitle} location={this.props.location} placeholder={this.props.placeholder}/>
         <Filter/>
       </div>
       </>
