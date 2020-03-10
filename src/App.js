@@ -10,7 +10,7 @@ import {
 	AmbassadorPage,
 	SignUpPage,
 	CareerDetailPage,
-	FinanceSearch
+	FinanceSearch, TrainingLanding
 } from './pages';
 import { PrivateRoute } from './components';
 
@@ -36,7 +36,7 @@ class App extends React.Component {
 			<Router>
 				<Switch>
 					<Route exact path='/' component={HomePage} />
-					<Route exact path='/training' component={Training} />
+					<Route exact path='/training/search' component={Training} />
 					<Route exact path='/jobsearch' component={JobSearch} />
 					<Route exact path='/career-landing' component={CareerLanding} />
 					<Route exact path='/careers' component={Careers} />
@@ -44,6 +44,7 @@ class App extends React.Component {
 					<Route exact path='/signup' component={SignUpPage} />
 					<Route exact path='/career/welding' component={CareerDetailPage} />
 					<Route exact path='/training/finance' component={FinanceSearch} />
+					<Route exact path='/training' component={TrainingLanding} />
 					<Route path='/login' component={Login} />
 				</Switch>
 			</Router>

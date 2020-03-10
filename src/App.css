@@ -1100,7 +1100,17 @@ label, p {
 .articles-carousel > :first-child {
   margin-right: 3px;
 }
+.training-page .articles-carousel > :first-child {
+  background: #DADADA;
+}
 
+.training-page .articles-carousel > :last-child {
+  background: #DADADA;
+}
+
+.training-page .articles-carousel > div {
+  border: 0;
+}
 .articles-carousel > :last-child {
   margin-left: 3px;
 }
@@ -1943,4 +1953,120 @@ label, p {
 
 .filter{
     padding: 3px auto 3px 40px;
+}
+
+.training-button {
+
+  width: 45%;
+  height: 42px;
+
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  align-items: center;
+  text-align: center;
+
+
+}
+.button-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-header{
+
+  margin: 29px 29px 9px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2D426B;
+  border-radius: 6px;
+}
+
+.carousel-title{
+  height: 31px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.discussion-container{
+  display: flex;
+  flex-direction: column;
+  margin: 28px 33px 35px 24px;
+  height: 145px;
+  background: #DADADA;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.discussion-header{
+  padding: 25px 25px 0px 25px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 23px;
+  color: #2D426B;
+  justify-content: center;
+}
+
+.discussion-text{
+  padding: 11px 38px 0 38px;
+  height: 30px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.discussion-button{
+  margin-top: 15px;
+  width: 124px;
+  height: 20px;
+  background: #F8A141;
+  border-radius: 5px;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.training-landing-img{
+  position: relative;
+  height: calc(100vh - 30px);
+  max-height: 800px;
+  display: inline-block;
+  left: 50%;
+  transform: translate(-50%);
+  /* opacity: 0.2; */
+  z-index: 2;
 }
