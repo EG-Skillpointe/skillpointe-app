@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import {JobsCard, TopNavbarWhite, Footer, FilterTab, SearchBar, Popup, Filter} from "../components";
-import { MobileFooter } from "../components";
-import HamburgerModal from "../components/HamburgerModal";
+import {JobsCard, TopNavbarWhite, Footer, SearchBar, Filter, MobileFooter, HamburgerModal} from "../components";
 import job from '../assets/mockData/jobs';
 import Modal from 'react-modal';
+import comp1 from '../assets/images/delta.png';
+import comp2 from '../assets/images/company2.png';
+import Button from "react-bootstrap/Button";
+
 
 
 class JobSearch extends Component {
@@ -21,6 +23,12 @@ class JobSearch extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+
+        if(localStorage.getItem('location')) {
+            this.setState({location: localStorage.getItem('location')})
+        } else {
+            this.togglePopup();
+        }
     }
 
     openModal = () => {
@@ -29,6 +37,7 @@ class JobSearch extends Component {
             console.log(`showModal status: ${this.state.showModal}`)
         });
     };
+
 
     closeModal = () => {
         console.log('closing modal');
@@ -67,11 +76,6 @@ class JobSearch extends Component {
         this.setState({showPopUp: !this.state.showPopUp})
     };
 
-    componentDidMount() {
-        if(localStorage.getItem('location')){
-            this.setState({location: localStorage.getItem('location')})
-        }
-    }
 
     render() {
         const defaultStyles = {
@@ -84,14 +88,16 @@ class JobSearch extends Component {
                 transform             : 'translate(-50%, -50%)',
             }
         };
-        let cards = [];
-        {this.state.filteredJobs.map(job => { cards.push(<div style={{margin: "10px", height:"210px"}}><JobsCard job={job}/></div>)}) }
+
+        const cards = this.state.filteredJobs.map(job => <JobsCard job={job} />)
+
         const modalOpened = this.state.showModal;
 
         return (
             <div>
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+
                 {/*main contents of page*/}
                 <Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup}
                        contentLabel="Delete Check"
@@ -101,11 +107,46 @@ class JobSearch extends Component {
                     <button className="popup-button"  onClick={this.togglePopup}>Don't Allow</button>
                     <button className="popup-button"  onClick={this.onAllow}>Allow</button>
                 </Modal>
+
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
+                
                 <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={this.state.location} placeholder={'Search for employment opportunities...'}/>
-                    <div style={{marginTop:"30px"}}>
-                        {cards}
+
+                <h2>Featured Jobs</h2>
+                <div className='featured-jobs'>
+                    <div>
+                        <div className='img-container'>
+                            <img src={comp1} alt=''/>
+                        </div>
+
+                        <label>2 Days Ago</label>
+
+                        <h6>Welder</h6>
+
+                        <label>Multiple Locations</label>
+
+                        <Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
                     </div>
+
+                    <div>
+                        <div className='img-container'>
+                            <img src={comp2} alt=''/>
+                        </div>
+
+                        <label>2 Days Ago</label>
+
+                        <h6>Production Welder</h6>
+
+                        <label>Multiple Locations</label>
+
+                        <Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
+                    </div>
+                </div>
+
+                <div style={{marginTop:"30px"}}>
+                    { cards }
+                </div>
+
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
             </div>
