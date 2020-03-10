@@ -4,7 +4,7 @@ import {
     TrainingCard,
     Footer,
     FilterTab,
-    Search,
+    SearchBar,
     WeldingSchools,
     SchoolCard,
     Filter
@@ -24,11 +24,11 @@ class Training extends Component {
         };
     }
     doSearch = (searchText) => {
-        let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
-        console.log('Result',result);
-        if(result){
-            this.setState({searchResults: result});
-        }
+        // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
+        console.log('Result', searchText);
+        // if(result){
+        //     this.setState({searchResults: result});
+        // }
     };
 
     componentDidMount() {
@@ -64,8 +64,7 @@ class Training extends Component {
                     {/*main contents of page*/}
                     <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                     {/* TODO: Pass in actual data to prevent error in training page */}
-                    <Search search={this.doSearch} location={"Atlanta, GA"}/>
-                    <Filter/>
+                    <SearchBar search={this.doSearch} headerTitle={"Find Training"} location={"Atlanta, GA"} placeholder={'Search for training opportunities...'}/>
                     <div style={{marginTop: "10px"}} >
                         {cards}
                     </div>

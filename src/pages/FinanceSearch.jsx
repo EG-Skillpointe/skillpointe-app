@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import {
   TopNavbarWhite,
-  TrainingCard,
   Footer,
-  FilterTab,
-  Search,
-  WeldingSchools,
+  SearchBar,
   SchoolCard,
-  Filter
 } from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
@@ -24,11 +20,11 @@ class FinanceSearch extends Component {
     };
   }
   doSearch = (searchText) => {
-    let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
-    console.log('Result',result);
-    if(result){
-      this.setState({searchResults: result});
-    }
+    // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
+    console.log('Result', searchText);
+    // if(result){
+    //   this.setState({searchResults: result});
+    // }
   };
 
   componentDidMount() {
@@ -64,8 +60,7 @@ class FinanceSearch extends Component {
           {/*main contents of page*/}
           <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
           {/* TODO: Pass in actual data to prevent error in training page */}
-          <Search search={this.doSearch} location={"Atlanta, GA"}/>
-          <Filter/>
+          <SearchBar search={this.doSearch} headerTitle={"Find Financial Aid"} location={this.state.location} placeholder={'Search for finanicial aid opportunities...'}/>
           <div style={{marginTop: "10px"}} >
             {cards}
           </div>

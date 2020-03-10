@@ -9,6 +9,7 @@ import {
 	CareerLanding,
 	AmbassadorPage,
 	SignUpPage,
+	PeopleSearch,
 	CareerDetailPage,
 	FinanceSearch, TrainingLanding
 } from './pages';
@@ -38,6 +39,7 @@ class App extends React.Component {
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/training/search' component={Training} />
 					<Route exact path='/jobsearch' component={JobSearch} />
+					<Route exact path='/peoplesearch' component={PeopleSearch}/>
 					<Route exact path='/career-landing' component={CareerLanding} />
 					<Route exact path='/careers' component={Careers} />
 					<Route exact path='/ambassador' component={AmbassadorPage}/>
