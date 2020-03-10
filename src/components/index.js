@@ -44,3 +44,4 @@ export {default as DropdownMenu} from './DropdownMenu';
 export {default as SimpleCard} from './SimpleCard';
 export {default as CompareCareers} from './CompareCareers';
 export {default as HamburgerModal} from './HamburgerModal';
+export {default as PeopleConnectCard} from './PeopleConnectCard';

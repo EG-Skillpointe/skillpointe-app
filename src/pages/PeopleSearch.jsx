@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { JobsCard, TopNavbarWhite, Footer, Search, PeopleCard} from "../components";
+import { TopNavbarWhite, Footer, Search, PeopleCard, PeopleConnectCard} from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 
@@ -35,6 +35,7 @@ class PeopleSearch extends Component {
         cards.push(<PeopleCard/>)
         cards.push(<PeopleCard/>)
         
+        let connectCards = [<PeopleConnectCard/>, <PeopleConnectCard/>]
 
         const modalOpened = this.state.showModal;
 
@@ -58,7 +59,7 @@ class PeopleSearch extends Component {
                         <div style={{display:"flex", margin:"0 10% 0 10%", justifyContent: "space-between", height: "52px"}}>
                             <div className="people-container-invitation-label">People you may know</div>
                         </div>
-                        {cards}
+                        {connectCards}
                     </div>
                 <MobileFooter history={this.props.history}/>
                 <Footer mobileFooterPresent/>
