@@ -4,14 +4,17 @@ import {
     TrainingCard,
     Footer,
     FilterTab,
-    Search,
+    SearchBar,
     WeldingSchools,
     SchoolCard,
-    Filter
+    Filter,
+    FeaturedJobs
 } from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
+import comp1 from '../assets/images/delta.png';
+import comp2 from '../assets/images/company2.png';
 
 
 class Training extends Component {
@@ -24,11 +27,11 @@ class Training extends Component {
         };
     }
     doSearch = (searchText) => {
-        let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
-        console.log('Result',result);
-        if(result){
-            this.setState({searchResults: result});
-        }
+        // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
+        console.log('Result', searchText);
+        // if(result){
+        //     this.setState({searchResults: result});
+        // }
     };
 
     componentDidMount() {
@@ -51,27 +54,31 @@ class Training extends Component {
     };
 
     render() {
-        let cards = [];
-        {this.state.searchResults.map(school => { cards.push(<SchoolCard school={school}/>)}) }
+        let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> )
         const modalOpened = this.state.showModal;
 
         return (
             <div>
 
                 {/*conditionally rendered modal*/}
-                    {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+                {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
-                    {/*main contents of page*/}
-                    <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
-                    {/* TODO: Pass in actual data to prevent error in training page */}
-                    <Search search={this.doSearch} location={"Atlanta, GA"}/>
-                    <Filter/>
-                    <div style={{marginTop: "10px"}} >
-                        {cards}
-                    </div>
+                {/*main contents of page*/}
+                <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
 
-              <MobileFooter history={this.props.history}/>
-              <Footer mobileFooterPresent/>
+                {/* TODO: Pass in actual data to prevent error in training page */}
+                <SearchBar search={this.doSearch} headerTitle={"Find Training"} location={"Atlanta, GA"} placeholder={'Search for training opportunities...'}/>
+
+                
+                <h4 className='featured-jobs-heading'>Featured Training</h4>
+                <FeaturedJobs comp1={comp1} comp2={comp2} />
+                
+                <div style={{marginTop:"30px"}}>
+                    { cards }
+                </div>
+
+                <MobileFooter history={this.props.history}/>
+                <Footer mobileFooterPresent/>
             </div>
         )
     }
