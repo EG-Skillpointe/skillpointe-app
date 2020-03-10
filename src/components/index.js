@@ -47,3 +47,4 @@ export {default as CompareCareers} from './CompareCareers';
 export {default as HamburgerModal} from './HamburgerModal';
 export {default as PeopleConnectCard} from './PeopleConnectCard';
 export {default as FeaturedJobs} from './FeaturedJobs';
+export {default as FinanceCard} from './FinanceCard';

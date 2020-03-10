@@ -4,6 +4,7 @@ import {
   Footer,
   SearchBar,
   SchoolCard,
+  FinanceCard
 } from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
@@ -48,7 +49,7 @@ class FinanceSearch extends Component {
 
   render() {
     let cards = [];
-    {this.state.searchResults.map(school => { cards.push(<SchoolCard school={school}/>)}) }
+    {this.state.searchResults.map(school => { cards.push(<FinanceCard school={school}/>)}) }
     const modalOpened = this.state.showModal;
 
     return (
