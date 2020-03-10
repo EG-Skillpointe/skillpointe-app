@@ -2020,7 +2020,7 @@ label, p {
 .featured-jobs > div {
   height: 100%;
   width: 50%;
-  margin: 15px;
+  margin: 5px 15px;
   background-color: #DADADA;
   border-radius: 6px;
 }
@@ -2031,6 +2031,11 @@ label, p {
 
 .featured-jobs > :last-child {
   margin-left: 10px !important;
+}
+
+.featured-jobs-heading {
+  font-size: 14px;
+  color: var(--dark-gray)
 }
 
 .featured-jobs .img-container {

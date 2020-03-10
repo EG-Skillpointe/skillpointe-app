@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {JobsCard, TopNavbarWhite, Footer, SearchBar, Filter, MobileFooter, HamburgerModal} from "../components";
+import { JobsCard, TopNavbarWhite, Footer, SearchBar, Filter, MobileFooter, HamburgerModal, FeaturedJobs } from "../components";
 import job from '../assets/mockData/jobs';
 import Modal from 'react-modal';
 import comp1 from '../assets/images/delta.png';
@@ -116,36 +116,9 @@ class JobSearch extends Component {
                 <Filter/>
 
 
-                <h2>Featured Jobs</h2>
-                <div className='featured-jobs'>
-                    <div>
-                        <div className='img-container'>
-                            <img src={comp1} alt=''/>
-                        </div>
+                <h4 className='featured-jobs-heading'>Featured Jobs</h4>
 
-                        <label>2 Days Ago</label>
-
-                        <h6>Welder</h6>
-
-                        <label>Multiple Locations</label>
-
-                        <Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
-                    </div>
-
-                    <div>
-                        <div className='img-container'>
-                            <img src={comp2} alt=''/>
-                        </div>
-
-                        <label>2 Days Ago</label>
-
-                        <h6>Production Welder</h6>
-
-                        <label>Multiple Locations</label>
-
-                        <Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
-                    </div>
-                </div>
+                <FeaturedJobs comp1={comp1} comp2={comp2} />
 
                 <div style={{marginTop:"30px"}}>
                     { cards }
