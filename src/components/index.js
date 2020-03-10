@@ -18,6 +18,7 @@ export {default as Popup} from './Popup';
 export {default as Search} from './Search'
 export {default as RegularHomepage} from './RegularHomepage';
 export {default as PersonalizedHomepage} from './PersonalizedHomepage';
+export {default as PeopleCard} from './PeopleCard';
 export {default as WeldingAmbassadorCard} from './WeldingAmbassadorCard';
 export {default as Certification } from './Certification';
 export {default as JobInfoCards} from './JobInfoCards';
@@ -43,4 +44,5 @@ export {default as DropdownMenu} from './DropdownMenu';
 export {default as SimpleCard} from './SimpleCard';
 export {default as CompareCareers} from './CompareCareers';
 export {default as HamburgerModal} from './HamburgerModal';
-
+export {default as PeopleConnectCard} from './PeopleConnectCard';
+export {default as FeaturedJobs} from './FeaturedJobs';
