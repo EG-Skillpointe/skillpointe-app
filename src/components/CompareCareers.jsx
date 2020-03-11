@@ -9,13 +9,20 @@ export const CompareCareers = (props) => {
 					<div>
                         <select>
                             <option>Plumbing</option>
+							<option>Carpentry</option>
+							<option>Nursing</option>
+							<option>Electrician</option>
+							<option>Welding</option>
+							<option>Human Services</option>
+							<option>Hospitality</option>
+							<option>Construction</option>
                         </select>
 
 						{
 							props.career1.map(row => 
 								<div className='careers-row'>
 									{row.image
-										? <img src={require(`../assets/images/${row.image}`)}  alt='' />
+										? <div className='icon'><img src={require(`../assets/images/${row.image}`)}  alt='' /></div>
 										: null
 									}
 									<label>{row.label}</label>
@@ -23,7 +30,7 @@ export const CompareCareers = (props) => {
 							)
 						}
 					
-						<div className='careers-row'>
+						<div className='careers-row careers-row-btn'>
 							<button>Learn More</button>
 						</div>
 					</div>
@@ -31,12 +38,19 @@ export const CompareCareers = (props) => {
 					<div>
                         <select>
                             <option>Carpentry</option>
+							<option>Plumbing</option>
+							<option>Nursing</option>
+							<option>Electrician</option>
+							<option>Welding</option>
+							<option>Human Services</option>
+							<option>Hospitality</option>
+							<option>Construction</option>
                         </select>
 						{
 							props.career2.map(row => 
 								<div className='careers-row'>
 									{row.image
-										? <img src={require(`../assets/images/${row.image}`)}  alt='' />
+										? <div className='icon'><img src={require(`../assets/images/${row.image}`)}  alt='' /></div>
 										: null
 									}
 									<label>{row.label}</label>
@@ -44,7 +58,7 @@ export const CompareCareers = (props) => {
 							)
 						}
 					
-						<div className='careers-row'>
+						<div className='careers-row careers-row-btn'>
 							<button>Learn More</button>
 						</div>
 					</div>

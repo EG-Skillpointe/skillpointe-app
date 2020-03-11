@@ -58,7 +58,7 @@ class CareerLanding extends Component {
                     </p>
                 </div>
                 
-                <div className="row" style={{margin:'0', paddingBottom:'20px'}}>
+                <div className="row" style={{margin:'0', paddingBottom:'40px'}}>
                     {industries.industries.map(industry => { return <Link to={{
                                                         pathname:'./career/welding',
                                                         aboutProps:{

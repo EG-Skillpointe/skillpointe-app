@@ -912,7 +912,7 @@ label, p {
 .modal-navbar .close {
   position: absolute;
   right: 25px;
-  width: 7%;
+  height: 35%;
 }
 
 .modal-body {
@@ -920,7 +920,7 @@ label, p {
   flex-direction: column;
   font-size: 24px;
   background-color: white;
-  padding-top: 60px;
+  padding-top: 80px;
   height: 100%;
   width: 100%;
 }
@@ -928,7 +928,7 @@ label, p {
 .modal-body a {
   padding: 20px;
   color: #2D426B;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Home Page */
@@ -942,12 +942,16 @@ label, p {
 }
 
 .career-landing {
-  height: 55vh !important;
+  height: 75vh !important;
 }
 
 .career-landing .landing-img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 75vh;
+  left: auto !important;
+  transform: none !important;
 }
 
 .home-landing .landing-img {
@@ -1209,18 +1213,31 @@ label, p {
   margin: 5px 0;
 }
 
-.careers-row > img {
+.careers-row > .icon {
   position: absolute;
   left: 0;
   top: 1px;
   height: 20px;
+  width: 28px;
   margin-right: 10px;
+}
+
+.careers-row .icon img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
 }
 
 .careers-row label {
   font-size: 12px;
   font-weight: normal;
   line-height: 14px;
+}
+
+.careers-row-btn {
+  padding-left: 0;
+  text-align: center;
 }
 
 .careers-row button {
@@ -2292,7 +2309,7 @@ label, p {
 
   font-family: Roboto, serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 14px;
   line-height: 19px;
   /* identical to box height */
@@ -2373,7 +2390,8 @@ label, p {
 .discussion-button{
   margin-top: 15px;
   width: 124px;
-  height: 20px;
+  height: 25px;
+  border: 0;
   background: #F8A141;
   border-radius: 5px;
   font-family: Roboto, serif;
