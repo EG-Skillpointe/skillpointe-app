@@ -44,8 +44,8 @@ class PeopleSearch extends Component {
         cards.push(<PeopleCard/>)
         
         let connectCards = [
-            <PeopleConnectCard name="Jeffery Hart" title="Electrician" image='jeffrey.jpeg'/>,
-            <PeopleConnectCard name="Ashley Rossdale" title="Nurse" image="Ashely.jpeg"/>
+            <PeopleConnectCard name="Jeffery Hart" title="Electrician" image='Viraj.jpg'/>,
+            <PeopleConnectCard name="Ashely Rossdale" title="Nurse" image="Ashely.jpg"/>
         ]
 
         const modalOpened = this.state.showModal;
