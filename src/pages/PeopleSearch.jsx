@@ -40,8 +40,8 @@ class PeopleSearch extends Component {
 
     render() {
         let cards = [];
-        cards.push(<PeopleCard/>)
-        cards.push(<PeopleCard/>)
+        cards.push(<PeopleCard name="Jane Willis" title="Health Administrator" image="jane.jpeg"/>)
+        cards.push(<PeopleCard name="Kelly Shaw" title="Physical Therapist" image="kelly.jpg"/>)
         
         let connectCards = [
             <PeopleConnectCard name="Jeffery Hart" title="Electrician" image='Viraj.jpg'/>,
