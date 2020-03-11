@@ -2404,13 +2404,13 @@ label, p {
 
 .job-card {
   display: flex;
-  height: 150px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
 .job-card >:first-child {
   padding-left: 10px;
+  padding-top: 15px;
   width: 30%;
   text-align: center;
 }
@@ -2421,7 +2421,7 @@ label, p {
 }
 
 .job-card img {
-  max-height: 100px;
+  max-height: 50px;
   height: 80%;
   width: auto;
 }
