@@ -19,7 +19,7 @@ class PersonalizedHomepage extends Component {
 					<div className='pers-landing-content'>
 						<h1>Welcome Back, Ricky</h1>
 
-						<Notification title='Notification' message='Notice on your application to Lawernceville asdf asdf asdf asdf' />
+						<Notification title='Notification' message='Notice on your application to Lawrenceville..' />
 
 						<CareerCompass/>
 

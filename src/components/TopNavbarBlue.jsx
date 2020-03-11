@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import hamburger from '../assets/images/hamburger_menu.png'
 import {Link} from "react-router-dom";
-import blueLogo from "../assets/images/skillpointelogo_blue.png";
+import whiteLogo from "../assets/images/skillpointlogo_white.png";
 
 
 class TopNavbarBlue extends Component {
@@ -30,7 +30,7 @@ class TopNavbarBlue extends Component {
 
         return (
             <div className={`top-navbar blue ${this.props.absolute ? 'nav-absolute' : ''} ${this.props.transparent ? 'nav-transparent' : ''}`}>
-                <img className="logo" src={blueLogo} onClick={() => {
+                <img className="logo" src={whiteLogo} onClick={() => {
                     if (pageType === "home") {
                         this.redirect('/');
                     }

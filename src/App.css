@@ -956,7 +956,7 @@ label, p {
 }
 
 .modal-body a {
-  padding: 14px;
+  padding: 16px;
   color: #2D426B;
   font-weight: bold;
 }
@@ -1865,6 +1865,7 @@ label, p {
   background: #F8A141;
   border-radius: 5px;
   justify-content: center;
+  height: 30px;
 }
 
 .compass-button:focus {
@@ -2355,7 +2356,7 @@ label, p {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 14px;
   /* identical to box height */
   align-items: center;
   text-align: center;
