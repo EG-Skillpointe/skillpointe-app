@@ -2308,7 +2308,7 @@ label, p {
 
   font-family: Roboto, serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 14px;
   line-height: 19px;
   /* identical to box height */
@@ -2389,7 +2389,8 @@ label, p {
 .discussion-button{
   margin-top: 15px;
   width: 124px;
-  height: 20px;
+  height: 25px;
+  border: 0;
   background: #F8A141;
   border-radius: 5px;
   font-family: Roboto, serif;
