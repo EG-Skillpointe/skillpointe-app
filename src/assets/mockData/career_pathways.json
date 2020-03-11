@@ -3,21 +3,21 @@
         {
             "name": "Travis Edmonds",
             "title": "Welding Specialist",
-            "description": "A defining trait for Travis Edmunds is curiosity. He likes to understand how things work and reach beyond his comfort zone.",
+            "description": "A defining trait for Travis Edmunds is curiosity. He likes to understand how things work and reach beyond his comfort zone",
             "callToAction": "Travis's Story",
             "image": "travis.png"
         },
         {
             "name": "Tammy Rondalst",
             "title": "Certified Registed Nurse",
-            "description": "A defining trait for Tammy Rondalst is attitude. She likes to understand how people communicate and reach beyond her comfort zone.",
+            "description": "A defining trait for Tammy Rondalst is attitude. She likes to understand how people communicate and reach beyond her comfort zone",
             "callToAction": "Tammy's Story",
             "image": "tammy.png"
         },
         {
             "name": "Illya Balakin",
             "title": "Physical Trainer",
-            "description": "A defining trait for Illya is his attitude. He likes to help people recover so that they can live their lives to the fullest.",
+            "description": "A defining trait for Illya is his attitude. He likes to help people recover so that they can live their lives to the fullest",
             "callToAction": "Illya's Story",
             "image": "illya.png"
         }

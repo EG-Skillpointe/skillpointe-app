@@ -154,7 +154,7 @@ class SignUpPage extends Component {
                 console.log(`doing type ${userType} login...`);
                 res = authService.login(userForm);
                 if(res) {
-                    this.props.history.push("/career-landing")
+                    this.props.history.push("/")
                     // this.props.history.push("/training")
                 }
                 break;
@@ -164,7 +164,7 @@ class SignUpPage extends Component {
                 console.log(`doing type ${userType} login...`);
                 res = authService.login(userForm);
                 if(res) {
-                    this.props.history.push("/training")
+                    this.props.history.push("/")
                     // this.props.history.push("/training")
                 }
                 break;
@@ -174,7 +174,7 @@ class SignUpPage extends Component {
                 console.log(`doing type ${userType} login...`);
                 res = authService.login(userForm);
                 if(res) {
-                    this.props.history.push("/jobsearch")
+                    this.props.history.push("/")
                     // this.props.history.push("/training")
                 }
                 break;
@@ -195,7 +195,7 @@ class SignUpPage extends Component {
                 console.log(`default login userForm: ${JSON.stringify(userForm)}`);
                 res = authService.login(userForm);
                 if(res) {
-                    this.props.history.push("/career-landing")
+                    this.props.history.push("/")
                     // this.props.history.push("/training")
                 }
                 break;

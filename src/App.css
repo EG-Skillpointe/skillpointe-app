@@ -2348,21 +2348,29 @@ label, p {
 }
 
 .training-button {
-
   width: 45%;
   height: 42px;
 
   font-family: Roboto, serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   /* identical to box height */
   align-items: center;
   text-align: center;
-
-
 }
+
+.training-button-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0 12px;
+}
+
+
 .button-container{
   display: flex;
   align-items: center;
