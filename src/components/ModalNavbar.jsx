@@ -47,9 +47,6 @@ class ModalNavbar extends Component {
                     else if (pageType === "job") {
                         this.redirect('/jobsearch');
                     }
-                    else {
-                        this.redirect('/');
-                    }
 
                     this.props.closeModal();
                 }}/>
