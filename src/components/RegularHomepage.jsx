@@ -1,31 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Video, Popup } from "../components";
+import { Video } from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
-import downArrow from "../assets/images/arrow_down.svg";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import {Button} from "react-bootstrap";
-import {authService} from "../services/auth.service";
 import Modal from "react-modal";
 
 const options1 = [
-	'A Career Path', 'Training', 'Financial Aide', 'People', 'Jobs'
+	'A Career Path', 'Training', 'Financial Aid', 'People', 'Jobs'
 ];
 
 const options2 = [
 	'Welding', 'Nursing', 'Carpentry', 'Plumbing', 'Human Services'
 ];
 
-const defaultStyles = {
+const modalStyle = {
 	content : {
-		top                   : '50%',
-		left                  : '50%',
-		right                 : 'auto',
-		bottom                : 'auto',
-		marginRight           : '-40%',
-		transform             : 'translate(-50%, -50%)',
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		textAlign: "center",
+		zIndex: "900 !important",
+		top: '50%',
+		left: '50%',
+		right: 'auto',
+		bottom: 'auto',
+		opacity: "1",
+		marginRight: '-40%',
+		transform: 'translate(-50%, -50%)'
 	}
 };
 
@@ -45,46 +50,77 @@ class RegularHomepage extends Component {
 		window.scrollTo(0, 0);
 	}
 
-	onReasonForJoiningFormChange = (event) => {
-		console.log(event);
+	onUserSearchDropdownChange = (event) => {
 
 		switch(event.value) {
 			case "A Career Path":
-				console.log(`doing type ${event.value} login...`);
 				this.setState({userSearch: 'Career'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
 
 			case "Training":
-				console.log(`doing type ${event.value} login...`);
 				this.setState({userSearch: 'Training'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
 
-			case "Financial Aide":
-				console.log(`doing type ${event.value} login...`);
-				this.setState({userSearch: 'Financial Aide'}, () =>{
+			case "Financial Aid":
+				this.setState({userSearch: 'Financial Aid'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
 
 			case "People":
-				console.log(`doing type ${event.value} login...`);
 				this.setState({userSearch: 'People'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
 
 			case "Jobs":
-				console.log(`doing type ${event.value} login...`);
 				this.setState({userSearch: 'Jobs'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
 
-			default: console.log('userType not found. Type:', event.value);
+			default: console.log('userSearch not found. Type:', event.value);
+		}
+	};
+
+	onJobTypeDropdownChange = (event) => {
+
+		switch(event.value) {
+			case "Welding":
+				this.setState({jobType: 'Welding'}, () =>{
+					console.log(`userSearch: ${this.state.jobType}`)
+				});
+				break;
+
+			case "Nursing":
+				this.setState({jobType: 'Nursing'}, () =>{
+					console.log(`userSearch: ${this.state.jobType}`)
+				});
+				break;
+
+			case "Carpentry":
+				this.setState({jobType: 'Carpentry'}, () =>{
+					console.log(`userSearch: ${this.state.jobType}`)
+				});
+				break;
+
+			case "Plumbing":
+				this.setState({jobType: 'Plumbing'}, () =>{
+					console.log(`userSearch: ${this.state.jobType}`)
+				});
+				break;
+
+			case "Human Services":
+				this.setState({jobType: 'Human Services'}, () =>{
+					console.log(`userSearch: ${this.state.jobType}`)
+				});
+				break;
+
+			default: console.log('jobType not found. Type:', event.value);
 		}
 	};
 
@@ -92,52 +128,42 @@ class RegularHomepage extends Component {
 		let userSearch = this.state.userSearch;
 		let jobType = this.state.jobType;
 
+		// if userSearch or jobType dropdown is not selected, show pop up
 		if (!userSearch || !jobType) {
-			console.log('neither userSearch or jobType selected');
 			this.setState({
 				showPopUp: !this.state.showPopUp
 			});
+			return;
 		}
 
 		switch(userSearch) {
 			case 'Career':
 				// career
-				console.log(`searching ${userSearch}`);
 				this.props.history.push("/career-landing");
 				break;
 
 			case 'Training':
 				// training
-				console.log(`searching ${userSearch}`);
 				this.props.history.push("/training");
 				break;
 
-			case 'Financial Aide':
+			case 'Financial Aid':
 				// job
-				console.log(`searching ${userSearch}`);
 				this.props.history.push("/");
 				break;
 
 			case 'People':
 				// people
-				console.log(`searching ${userSearch}`);
 				this.props.history.push("/");
 				break;
 
 			case 'Jobs':
 				// jobs
-				console.log(`searching ${userSearch}`);
 				this.props.history.push("/");
-				break;
-
-			case null:
-				// nothing
-				console.log(`userSearch is empty`);
 				break;
 
 			default:
 				// default
-				console.log(`${userSearch} not found`);
 				break;
 		}
 
@@ -150,38 +176,30 @@ class RegularHomepage extends Component {
 		});
 	};
 
-	onAllow = () => {
-		localStorage.setItem('location', 'Atlanta, GA');
-		this.setState({showPopUp: !this.state.showPopUp})
-	};
-
 	render() {
 		return (
 			<div>
-				<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup}
-					   contentLabel="Delete Check"
-					   style={defaultStyles}>
-					<h2 style={{padding:'10px'}}>SkillPointe would like to use your current location?</h2>
-					<button className="popup-button"  onClick={this.togglePopup}>Don't Allow</button>
-					<button className="popup-button"  onClick={this.onAllow}>Allow</button>
+				<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
+					<h2 style={{padding:'10px'}}>You must make selections in both dropdowns</h2>
+					<button className="popup-button"  onClick={this.togglePopup}>Confirm</button>
 				</Modal>
 
-				<div className='home-landing'>
+				<div className='home-landing' style={{zIndex:"0"}}>
 					<div className='landing-content'>
 						<h1>Get Excited About Your Future</h1>
 						<p>SkillPointe is a movement celebrating skills-based professionals and their contributions.</p>
 						<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-							<Dropdown onChange={(event) => this.onReasonForJoiningFormChange(event)} placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} value={this.state.userSearch}/>
-							<Dropdown placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} />
+							<Dropdown onChange={(event) => this.onUserSearchDropdownChange(event)} placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} value={this.state.userSearch}/>
+							<Dropdown onChange={(event) => this.onJobTypeDropdownChange(event)} placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} value={this.state.jobType}/>
 							<Button onClick={this.homepageSearch} style={{background:"#F8A141", border:"none", marginTop:"20px", fontSize:"18px", width:"50%"}}>
 								Search
 							</Button>
 						</div>
 					</div>
-					<img className='landing-img' src={landingBackground} alt='landingBackground' />
+					<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
 				</div>
 
-				<div className='home-about'>
+				<div className='home-about' style={{zIndex:"0"}}>
 					<h1 style={{fontSize:"28px", fontWeight:"700", margin:"30px 0"}}>About SkillPointe</h1>
 					<Video video={homepageVideo} type='video/mp4'/>
 					<p align="left">
