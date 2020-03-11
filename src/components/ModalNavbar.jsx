@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import blueLogo from '../assets/images/skillpointelogo_blue.png';
 import closeIcon from '../assets/images/close.png';
+import {Link} from "react-router-dom";
 
 class ModalNavbar extends Component {
 
@@ -16,13 +17,20 @@ class ModalNavbar extends Component {
         });
     };
 
+    getSignInState() {
+        console.log('getting signed in state');
+        const user = JSON.parse(localStorage.getItem('user'));
+        return user !== null;
+    }
+
     render() {
+        const signedIn = this.getSignInState();
+        console.log(`signedIn: ${signedIn}`);
         const pageType = this.props.pageType;
         console.log(`pageType in modalNavbar: ${pageType}`);
 
         return (
             <div className="modal-navbar">
-                {/*<Link to="/" onClick={props.closeModal}>*/}
                 <img className="logo" src={blueLogo} onClick={() => {
                     if (pageType === "home") {
                         this.redirect('/');
@@ -39,9 +47,14 @@ class ModalNavbar extends Component {
                     else if (pageType === "job") {
                         this.redirect('/jobsearch');
                     }
+                    else {
+                        this.redirect('/');
+                    }
+
                     this.props.closeModal();
                 }}/>
-                {/*</Link>*/}
+
+                {signedIn ? (null) : (<Link className="sign-in" to="/login" style={{color:"#2D426B"}}>Sign In/Up</Link>)}
                 <img style={{opacity:"1"}} className="close" src={closeIcon} onClick={this.props.closeModal}/>
             </div>
         )

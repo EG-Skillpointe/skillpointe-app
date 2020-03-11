@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import blueLogo from '../assets/images/skillpointelogo_blue.png';
 import hamburger from '../assets/images/dark_hamburger_menu.png'
 import closeIcon from "../assets/images/close.png";
+import {Link} from "react-router-dom";
 
 
 class TopNavbarWhite extends Component {
@@ -18,7 +19,15 @@ class TopNavbarWhite extends Component {
         });
     };
 
+    getSignInState() {
+        console.log('getting signed in state');
+        const user = JSON.parse(localStorage.getItem('user'));
+        return user !== null;
+    }
+
     render() {
+        const signedIn = this.getSignInState();
+        console.log(`signedIn: ${signedIn}`);
         const pageType = this.props.pageType;
         console.log(`pageType in modalNavbar: ${pageType}`);
 
@@ -46,6 +55,8 @@ class TopNavbarWhite extends Component {
 
                     this.props.closeModal();
                 }}/>
+
+                {signedIn ? (null) : (<Link className="sign-in" to="/login" style={{color:"#2D426B"}}>Sign In/Up</Link>)}
                 <img className="hamburger" src={hamburger} onClick={this.props.openModal}/>
             </div>
         )
