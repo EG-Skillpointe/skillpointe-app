@@ -40,7 +40,7 @@ class Careers extends Component {
                 {modalOpened ? (<HamburgerModal pageType="careers" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarBlue openModal={this.openModal} />
+                <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal()}/>
                 <h1>Careers PAGE!</h1>
                 <CardCarousel cardType="ambassador"/>
                 <Link to="/">Home</Link>

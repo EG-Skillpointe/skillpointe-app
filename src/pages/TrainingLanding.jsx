@@ -41,7 +41,7 @@ class TrainingLanding extends Component {
           {modalOpened ? (<HamburgerModal pageType="career-landing" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
           {/*main contents of page*/}
-          <TopNavbarBlue openModal={this.openModal} absolute transparent/>
+          <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
 
           <div className='home-landing' >
             <div className='landing-content' style={{width:'90%', padding:'10px'}}>

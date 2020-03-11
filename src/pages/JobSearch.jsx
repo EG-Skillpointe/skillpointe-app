@@ -118,7 +118,7 @@ class JobSearch extends Component {
 
                 <FeaturedJobs comp1={comp1} comp2={comp2} />
 
-                <div style={{marginTop:"30px"}}>
+                <div style={{marginTop:"30px", marginBottom:"30px"}}>
                     { cards }
                 </div>
 
