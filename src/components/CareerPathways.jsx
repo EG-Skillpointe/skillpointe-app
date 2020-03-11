@@ -11,7 +11,7 @@ export const CareerPathways = (props) => {
     )
 
     return (
-        <div style={{margin:"10px 20px !important", padding:'0', height:"340px", width:"90%", backgroundColor:"#FFFFFF", borderRadius:"5px", textAlign:"center"}}>
+        <div style={{margin:"10px 20px !important", padding:'0', height:"340px", backgroundColor:"#FFFFFF", borderRadius:"5px", textAlign:"center"}}>
             <h5 className="certification-header" style={{marginTop:"0", paddingTop:"10px"}}>Career Pathways</h5>
 
             <Carousel className="ambassador-carousel"
