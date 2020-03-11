@@ -34,7 +34,7 @@ class HomePage extends Component {
         const modalOpened = this.state.showModal;
         var user = JSON.parse(localStorage.getItem('user'));
 
-        const homepage = (user && user != null) ? <PersonalizedHomepage/> : <RegularHomepage/>;
+        const homepage = (user && user != null) ? <PersonalizedHomepage/> : <RegularHomepage history={this.props.history}/>;
 
         return (
             <div className='home-page'>
