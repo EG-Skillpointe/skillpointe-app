@@ -2575,5 +2575,8 @@ label, p {
   align-items: center;
   color: rgba(0, 0, 0, 0.7);
   padding-left: 15px;
+}
 
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.5) !important;
 }
