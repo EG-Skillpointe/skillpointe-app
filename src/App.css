@@ -1831,6 +1831,7 @@ label, p {
 }
 
 .compass-button{
+  border: 0;
   margin-bottom: 15px;
   font-family: Roboto, serif;
   font-style: normal;
