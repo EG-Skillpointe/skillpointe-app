@@ -59,15 +59,15 @@ class PeopleSearch extends Component {
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 <Search search={this.doSearch} headerTitle={"Find People"} location={"Atlanta, GA"} placeholder={'Expand your network...'}/>
-                    <div style={{marginTop:"8px", backgroundColor: "#DADADA", paddingBottom:"30px"}}>
+                    <div style={{marginTop:"8px", backgroundColor: "#DADADA", paddingBottom:"5px", borderBottom:"1px solid #c1c1c1" }}>
                         <div style={{display:"flex", margin:"0 5%", justifyContent: "space-between", height: "52px"}}>
                             <div className="people-container-invitation-label">Invitations</div>
                             <div className="people-container-see-all-label">See All 3</div>
                         </div>
                         {cards}
                     </div>
-                    <div style={{marginTop:"15px", backgroundColor: "#DADADA", paddingBottom:"30px"}}>
-                        <div style={{display:"flex", margin:"0 10% 0 10%", justifyContent: "space-between", height: "52px"}}>
+                    <div style={{backgroundColor: "#DADADA", paddingBottom:"30px"}}>
+                        <div style={{display:"flex", margin:"0 5%", justifyContent: "space-between", padding: "10px 0"}}>
                             <div className="people-container-invitation-label">People you may know</div>
                         </div>
                         {connectCards}
