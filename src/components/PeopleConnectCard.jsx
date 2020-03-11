@@ -2,7 +2,7 @@ import React from 'react';
 import peopleIcon from "../assets/images/people.svg";
 
 export const PeopleConnectCard = (props) => {
-    const image = require('../assets/images/illya.png');
+    const image = props.image ? require(`../assets/images/${props.image}`) :require('../assets/images/illya.png');
     const name = props.name ?? 'Illya Balakin';
     const title = props.title ?? 'Physical Therapist';
     const numberOfConnections = props.numberOfConnections ?? '4 mutual connections';
