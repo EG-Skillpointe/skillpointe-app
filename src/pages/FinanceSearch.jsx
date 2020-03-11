@@ -62,7 +62,7 @@ class FinanceSearch extends Component {
           <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
           {/* TODO: Pass in actual data to prevent error in training page */}
           <SearchBar search={this.doSearch} headerTitle={"Find Financial Aid"} location={this.state.location} placeholder={'Search for finanicial aid opportunities...'}/>
-          <div style={{marginTop: "10px"}} >
+          <div style={{marginTop: "10px", marginBottom: "30px"}} >
             {cards}
           </div>
 
