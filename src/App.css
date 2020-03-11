@@ -408,7 +408,15 @@ label, p {
   line-height: 33px;
   display: flex;
   justify-content: center;
-  padding: 20px 0 14px 0;
+  padding: 10px 0 14px 0;
+}
+
+.search-component {
+  margin-bottom: 15px;
+}
+
+.find-people .search-component {
+  margin-bottom: 30px;
 }
 
 .search-container {
@@ -445,6 +453,7 @@ label, p {
   line-height: 30px;
   color: black;
   background-color: #F5F5F5;
+  border: 1px solid #ddd;
 }
 
 .search-input::placeholder{
@@ -467,7 +476,8 @@ label, p {
   line-height: 30px;
   color:var(--dark-blue);
   background-color: #F5F5F5;
-  pointer-events:none
+  pointer-events: none;
+  border: 1px solid #ddd;
 }
 
 .search-location-input::placeholder{

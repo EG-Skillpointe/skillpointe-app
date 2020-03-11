@@ -48,7 +48,7 @@ class PeopleSearch extends Component {
         const modalOpened = this.state.showModal;
 
         return (
-            <div>
+            <div className="find-people">
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 

@@ -22,7 +22,7 @@ class Search extends Component {
     const location = this.props.location ?? 'Atlanta, GA'
 
     return (
-        <div style={{backgroundColor:"white"}}>
+        <div className='search-component' style={{backgroundColor:"white"}}>
           <h1 className="search-header">{headerTitle}</h1>
           <div className="search-container">
             <img src={searchIcon} alt='' className='search-icon'></img>
