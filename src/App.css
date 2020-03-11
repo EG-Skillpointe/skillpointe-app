@@ -1579,6 +1579,7 @@ label, p {
   margin: 5px;
   width: 45%;
   height: 40px !important;
+  border-radius: 5px;
 }
 
 .location-input {

@@ -180,7 +180,7 @@ class RegularHomepage extends Component {
 		return (
 			<div>
 				<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
-					<h2 style={{padding:'10px'}}>You must make selections in both dropdowns</h2>
+					<h2 style={{padding:'10px', fontSize:"22px"}}>You must make selections in both dropdowns</h2>
 					<button className="popup-button"  onClick={this.togglePopup}>Confirm</button>
 				</Modal>
 
