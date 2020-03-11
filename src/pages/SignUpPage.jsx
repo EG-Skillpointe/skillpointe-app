@@ -234,13 +234,13 @@ class SignUpPage extends Component {
                                     className="radio-button"
                                 />
 
-                                <Form.Check
-                                    type={type}
-                                    label={'Employer'}
-                                    id={'Employer'}
-                                    name="groupOfUserTypeRadios"
-                                    className="radio-button"
-                                />
+                                {/*<Form.Check*/}
+                                {/*    type={type}*/}
+                                {/*    label={'Employer'}*/}
+                                {/*    id={'Employer'}*/}
+                                {/*    name="groupOfUserTypeRadios"*/}
+                                {/*    className="radio-button"*/}
+                                {/*/>*/}
 
                                 <Form.Check
                                     type={type}
@@ -252,8 +252,8 @@ class SignUpPage extends Component {
 
                                 <Form.Check
                                     type={type}
-                                    label={'School Representative'}
-                                    id={'School Representative'}
+                                    label={'Professional'}
+                                    id={'Professional'}
                                     name="groupOfUserTypeRadios"
                                     className="radio-button"
                                 />
@@ -267,16 +267,16 @@ class SignUpPage extends Component {
                             <div key={`default-${type}`} className="mb-3" style={{textAlign:"left"}}>
                                 <Form.Check
                                     type={type}
-                                    label={'Find a Job'}
-                                    id='Find a Job'
+                                    label={'Explore Careers'}
+                                    id='Explore Careers'
                                     name="groupOfReasonForJoiningRadios"
                                     className="radio-button"
                                 />
 
                                 <Form.Check
                                     type={type}
-                                    label={'Explore Careers'}
-                                    id='Explore Careers'
+                                    label={'Find a Job'}
+                                    id='Find a Job'
                                     name="groupOfReasonForJoiningRadios"
                                     className="radio-button"
                                 />

@@ -2486,7 +2486,8 @@ label, p {
 .job-card img {
   max-height: 50px;
   height: 80%;
-  width: auto;
+  width: 80%;
+  object-fit: contain;
 }
 
 .job-card .job-title {
