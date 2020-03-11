@@ -912,7 +912,7 @@ label, p {
 .modal-navbar .close {
   position: absolute;
   right: 25px;
-  width: 7%;
+  height: 35%;
 }
 
 .modal-body {
@@ -920,7 +920,7 @@ label, p {
   flex-direction: column;
   font-size: 24px;
   background-color: white;
-  padding-top: 60px;
+  padding-top: 80px;
   height: 100%;
   width: 100%;
 }
@@ -928,7 +928,7 @@ label, p {
 .modal-body a {
   padding: 20px;
   color: #2D426B;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Home Page */

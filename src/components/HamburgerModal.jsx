@@ -44,6 +44,7 @@ const HamburgerModal = (props) => {
                 color: "#F8A141"
             };
             break;
+        default: break;
     }
 
     return (
@@ -56,6 +57,8 @@ const HamburgerModal = (props) => {
                 <Link style={jobOrange} to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
                 <Link style={trainingOrange} to="/training" onClick={props.closeModal}>Find Training</Link>
                 <Link style={peopleOrange} to="/peoplesearch" onClick={props.closeModal}>Find People</Link>
+                <Link to="/" onClick={props.closeModal}>For Employers</Link>
+                <Link to="/" onClick={props.closeModal}>Contact</Link>
                 <Link style={logout} to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>
             </div>
 
