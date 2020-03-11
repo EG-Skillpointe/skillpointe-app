@@ -1260,6 +1260,7 @@ label, p {
   font-weight: bold;
   background-color: var(--dark-blue);
   border-radius: 3px;
+  outline-width: 0;
 }
 
 
@@ -1745,6 +1746,10 @@ label, p {
   margin: 0 0 10px 0;
 }
 
+.certification-container button:focus {
+  outline-width: 0 !important;
+}
+
 .certification-text{
   text-align: left;
   padding-left: 60px;
@@ -1839,6 +1844,10 @@ label, p {
   background: #F8A141;
   border-radius: 5px;
   justify-content: center;
+}
+
+.compass-button:focus {
+  outline-width: 0;
 }
 
 .compass-image{
