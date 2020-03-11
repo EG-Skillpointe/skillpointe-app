@@ -363,8 +363,12 @@ label, p {
 .footer-items .item:hover, .footer-items .item:active, .footer-items .item:focus {
   text-decoration: none;
   transition: 0.15s all ease-in-out;
-  /* filter: invert(64%) sepia(64%) saturate(394%) hue-rotate(349deg) brightness(101%) contrast(96%); To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
-  opacity: 50%;
+  opacity: 0.5;
+}
+
+.footer-items .selected-item {
+  filter: invert(64%) sepia(64%) saturate(394%) hue-rotate(349deg) brightness(101%) contrast(96%); /* To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
+  opacity: 1 !important;
 }
 
 @media (max-width: 330px) {
