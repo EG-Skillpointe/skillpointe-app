@@ -73,10 +73,10 @@ class TopNavbarBlue extends Component {
                         this.redirect('/');
                     }
 
-                    // this.props.closeModal();
+                    this.props.closeModal();
                 }}/>
 
-                {signedIn ? (null) : (<Link className="sign-in" to="/login">Sign In</Link>)}
+                {signedIn ? (null) : (<Link className="sign-in" to="/login">Sign In/Up</Link>)}
                 <img className="hamburger" src={hamburger} onClick={this.props.openModal}/>
             </div>
         )
