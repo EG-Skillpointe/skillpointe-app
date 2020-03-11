@@ -7,9 +7,8 @@ import careers from '../assets/mockData/careers.json';
 import articleList from '../assets/mockData/articles.json';
 
 
-
-
 class PersonalizedHomepage extends Component {
+
 
 	render() {
 
@@ -18,13 +17,13 @@ class PersonalizedHomepage extends Component {
 				<div className='pers-home-landing'>
 
 					<div className='pers-landing-content'>
-						<h1>Welcome back, Ricky</h1>
+						<h1>Welcome Back, Ricky</h1>
 
-						<Notification title='Notif Title' message='Notice on your application to Larenceville asdf asdf asdf asdf' />
+						<Notification title='Notification' message='Notice on your application to Lawernceville asdf asdf asdf asdf' />
 
 						<CareerCompass/>
 
-						<CompareCareers career1={careers['plumbing']} career2={careers['carpentry']}/>
+						<CompareCareers career1={careers['plumbing']} career2={careers['carpentry']} />
 
 						<div className='pers-simple-cards'>
 							<SimpleCard image={wrenchIcon} message='Training Opportunities in Your Area'/>
