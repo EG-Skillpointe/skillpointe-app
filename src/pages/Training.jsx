@@ -67,13 +67,13 @@ class Training extends Component {
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
 
                 {/* TODO: Pass in actual data to prevent error in training page */}
-                <SearchBar search={this.doSearch} headerTitle={"Find Training"} location={"Atlanta, GA"} placeholder={'Search for training opportunities...'}/>
+                <SearchBar search={this.doSearch} headerTitle={"Find Schools"} location={"Atlanta, GA"} placeholder={'Search for training opportunities...'}/>
 
                 
                 <h4 className='featured-jobs-heading'>Featured Training</h4>
                 <FeaturedJobs comp1={comp1} comp2={comp2} />
                 
-                <div style={{marginTop:"30px"}}>
+                <div style={{marginTop:"30px", marginBottom: "30px"}}>
                     { cards }
                 </div>
 
