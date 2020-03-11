@@ -137,7 +137,7 @@ class RegularHomepage extends Component {
 		}
 
 		switch(userSearch) {
-			case 'Career':
+			case 'A Career Path':
 				// career
 				this.props.history.push("/career-landing");
 				break;
