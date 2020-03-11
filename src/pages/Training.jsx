@@ -26,6 +26,7 @@ class Training extends Component {
             searchResults: school.schools
         };
     }
+
     doSearch = (searchText) => {
         // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
         console.log('Result', searchText);
@@ -54,12 +55,11 @@ class Training extends Component {
     };
 
     render() {
-        let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> )
+        let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> );
         const modalOpened = this.state.showModal;
 
         return (
             <div>
-
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="training" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 

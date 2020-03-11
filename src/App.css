@@ -1009,11 +1009,15 @@ label, p {
 
 .landing-content button {
   background: var(--accent-orange);
-  color: white;
+  color: white !important;
   border: 2px solid var(--accent-orange) !important;
   box-sizing: border-box;
   box-shadow: 0px 0px 7px rgba(248, 161, 65, 0.3);
   border-radius: 5px;
+}
+
+.landing-content button:focus {
+  outline-width: 0;
 }
 
 .home-about h1 {
@@ -1606,6 +1610,7 @@ label, p {
   margin: 5px;
   width: 45%;
   height: 40px !important;
+  border-radius: 5px;
 }
 
 .location-input {
@@ -2603,5 +2608,8 @@ label, p {
   align-items: center;
   color: rgba(0, 0, 0, 0.7);
   padding-left: 15px;
+}
 
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
 }
