@@ -1213,18 +1213,31 @@ label, p {
   margin: 5px 0;
 }
 
-.careers-row > img {
+.careers-row > .icon {
   position: absolute;
   left: 0;
   top: 1px;
   height: 20px;
+  width: 28px;
   margin-right: 10px;
+}
+
+.careers-row .icon img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
 }
 
 .careers-row label {
   font-size: 12px;
   font-weight: normal;
   line-height: 14px;
+}
+
+.careers-row-btn {
+  padding-left: 0;
+  text-align: center;
 }
 
 .careers-row button {

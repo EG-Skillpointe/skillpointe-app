@@ -9,6 +9,7 @@
             "label": "Independent Working"
         },
         {
+            "image": "restore_24px.svg",
             "label": "2 Year Training"
         },
         {
@@ -16,6 +17,7 @@
             "label": "Average Salary: $42K - $84K"
         },
         {
+            "image": "desktop_mac_24px.svg",
             "label": "Apprenticeship or School Program"
         }
     ],
@@ -25,9 +27,11 @@
             "label": "Physical Labor"
         },
         {
+            "image": "sueprvised_user_circle.svg",
             "label": "Collaborative Work"
         },
         {
+            "image": "restore_24px.svg",
             "label": "2 Year Training"
         },
         {
@@ -35,6 +39,7 @@
             "label": "Average Salary: $41K - $72K"
         },
         {
+            "image": "desktop_mac_24px.svg",
             "label": "Apprenticeship or School Program"
         }
     ]
