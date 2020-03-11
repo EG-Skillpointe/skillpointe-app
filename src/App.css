@@ -942,12 +942,16 @@ label, p {
 }
 
 .career-landing {
-  height: 55vh !important;
+  height: 75vh !important;
 }
 
 .career-landing .landing-img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 75vh;
+  left: auto !important;
+  transform: none !important;
 }
 
 .home-landing .landing-img {
