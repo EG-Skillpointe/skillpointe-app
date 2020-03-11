@@ -776,7 +776,7 @@ label, p {
 
 /* brainhub's carousel card custom styling*/
 .BrainhubCarouselItem {
-  height: 225px;
+  /* height: 225px; */
 }
 
 .carousel-container {
