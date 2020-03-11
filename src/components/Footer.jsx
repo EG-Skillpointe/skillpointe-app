@@ -13,14 +13,15 @@ export const Footer = (props) => {
 			<div className="footer" id='footer' style={{height: height, display:"flex", flexDirection:"column"}}>
 				<p>&copy; 2020 Skillpointe</p>
 				<span>
-					<label style={{fontSize:"14px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/contact')} }>Contact</label>
-					<label style={{padding:"0", margin:"4px 8px"}}> | </label>
-					<label style={{fontSize:"14px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Privacy Policy</label>
-					<label style={{padding:"0", margin:"4px 8px"}}> | </label>
-					<label style={{fontSize:"14px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Advertise with Us</label>
-					<label style={{fontSize:"14px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Terms of Use</label>
-					<label style={{padding:"0", margin:"4px 8px"}}> | </label>
-					<label style={{fontSize:"14px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/about')} }>Site Map</label>
+					<label style={{fontSize:"10px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/contact')} }>Contact</label>
+					<label style={{padding:"0", margin:"2px 4px"}}> | </label>
+					<label style={{fontSize:"10px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Privacy Policy</label>
+					<label style={{padding:"0", margin:"2px 4px"}}> | </label>
+					<label style={{fontSize:"10px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Advertise with Us</label>
+					<label style={{padding:"0", margin:"2px 4px"}}> | </label>
+					<label style={{fontSize:"10px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/faq')} }>Terms of Use</label>
+					<label style={{padding:"0", margin:"2px 4px"}}> | </label>
+					<label style={{fontSize:"10px", padding:"0", margin:"0"}} onClick={() => {window.location.replace('/about')} }>Site Map</label>
 				</span>
 
 				<span style={{marginTop:"10px"}}>

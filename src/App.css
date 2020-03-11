@@ -67,7 +67,7 @@
 
 .footer label {
   padding: 5px;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 400;
 }
 
@@ -1851,6 +1851,7 @@ label, p {
 }
 
 .compass-button{
+  border: 0;
   margin-bottom: 15px;
   font-family: Roboto, serif;
   font-style: normal;
