@@ -1184,9 +1184,19 @@ label, p {
 
 .careers-box select {
   width: 100%;
+  height: 30px;
   border: 0;
-  height: 26px;
   font-weight: 600;
+  padding: 0 15px;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(assets/images/keyboard_arrow_down_24px_outlined.svg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-size: 30px;
 }
 
 .careers-row {
@@ -2267,9 +2277,6 @@ label, p {
   /*text-align: center;*/
 }
 
-=======
-<<<<<<< Updated upstream
->>>>>>> 972536559a15f3bf035cd20f6d10f3bee08f17a7
 .training-button {
 
   width: 45%;
