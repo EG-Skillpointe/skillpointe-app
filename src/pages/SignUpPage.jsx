@@ -301,7 +301,7 @@ class SignUpPage extends Component {
                     </Form>
 
                     <Form className="sign-up-form" style={{}}>
-                        <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>Which industry are you interested in? Select one or more.</h1>
+                        <h1 style={{marginTop:"0", marginBottom:"15px", fontSize:"18px", textAlign:"left"}}>What career am I interested in? Select one or more.</h1>
                         <ButtonGroup style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                             <Button onClick={(event) => this.onIndustryFormButtonClick(event)} value='Healthcare' className="form-button" style={this.checkButtonSelection('Healthcare')}>
                                 Healthcare
