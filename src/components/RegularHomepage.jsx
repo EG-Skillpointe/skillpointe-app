@@ -54,7 +54,7 @@ class RegularHomepage extends Component {
 
 		switch(event.value) {
 			case "A Career Path":
-				this.setState({userSearch: 'Career'}, () =>{
+				this.setState({userSearch: 'A Career Path'}, () =>{
 					console.log(`userSearch: ${this.state.userSearch}`)
 				});
 				break;
@@ -144,22 +144,22 @@ class RegularHomepage extends Component {
 
 			case 'Training':
 				// training
-				this.props.history.push("/training");
+				this.props.history.push("/training/search");
 				break;
 
 			case 'Financial Aid':
 				// job
-				this.props.history.push("/");
+				this.props.history.push("/training/finance");
 				break;
 
 			case 'People':
 				// people
-				this.props.history.push("/");
+				this.props.history.push("/peoplesearch");
 				break;
 
 			case 'Jobs':
 				// jobs
-				this.props.history.push("/");
+				this.props.history.push("/jobsearch");
 				break;
 
 			default:
