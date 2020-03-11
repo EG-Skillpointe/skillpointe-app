@@ -27,7 +27,7 @@ class PersonalizedHomepage extends Component {
 
 						<div className='pers-simple-cards'>
 							<SimpleCard image={wrenchIcon} message='Training Opportunities in Your Area'/>
-							<SimpleCard image={supervisorIcon} message='Join Relevant Discussion Groups'/>
+							<SimpleCard image={supervisorIcon} message='Join Relevant Discussion Groups Near You'/>
 						</div>
 						
 						<div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", textAlign:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
