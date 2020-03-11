@@ -70,27 +70,27 @@ class MobileFooter extends Component {
           bottom: newBottom
         });
     };
-e
+
     render() {
         return (
             <div className='mobile-footer' id='mobile-footer' style={{bottom: this.state.bottom }}>
                 <div className='footer-items'>
-                    <div className="item" onClick={() => this.redirect("/career-landing")}>
+                    <div className={`item ${window.location.pathname == "/career-landing" ? 'selected-item' : ''}`} onClick={() => this.redirect("/career-landing")}>
                         <img src={careersImg} alt="" width="24" height="24"></img>
                         <div>Explore Careers</div>
                     </div>
 
-                    <div className="item" onClick={() => this.redirect("/jobsearch")}>
+                    <div className={`item ${window.location.pathname == "/jobsearch" ? 'selected-item' : ''}`} onClick={() => this.redirect("/jobsearch")}>
                         <img src={jobsImg} alt="" width="24" height="24"></img>
                         <div>Find Jobs</div>
                     </div>
 
-                    <div className="item" onClick={() => this.redirect("/training")}>
+                    <div className={`item ${window.location.pathname == "/training" ? 'selected-item' : ''}`} onClick={() => this.redirect("/training")}>
                         <img src={trainingImg} alt="" width="24" height="24"></img>
                         <div>Find Training</div>
                     </div>
 
-                    <div className="item" onClick={() => this.redirect("/peoplesearch")}>
+                    <div className={`item ${window.location.pathname == "/peoplesearch" ? 'selected-item' : ''}`} onClick={() => this.redirect("/peoplesearch")}>
                         <img src={peopleImg} alt="" width="24" height="24"></img>
                         <div>Find People</div>
                     </div>

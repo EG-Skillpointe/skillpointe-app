@@ -363,8 +363,12 @@ label, p {
 .footer-items .item:hover, .footer-items .item:active, .footer-items .item:focus {
   text-decoration: none;
   transition: 0.15s all ease-in-out;
-  /* filter: invert(64%) sepia(64%) saturate(394%) hue-rotate(349deg) brightness(101%) contrast(96%); To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
-  opacity: 50%;
+  opacity: 0.5;
+}
+
+.footer-items .selected-item {
+  filter: invert(64%) sepia(64%) saturate(394%) hue-rotate(349deg) brightness(101%) contrast(96%); /* To get perfect filter: https://codepen.io/sosuke/pen/Pjoqqp */
+  opacity: 1 !important;
 }
 
 @media (max-width: 330px) {
@@ -772,7 +776,7 @@ label, p {
 
 /* brainhub's carousel card custom styling*/
 .BrainhubCarouselItem {
-  height: 225px;
+  /* height: 225px; */
 }
 
 .carousel-container {
@@ -1184,9 +1188,19 @@ label, p {
 
 .careers-box select {
   width: 100%;
+  height: 30px;
   border: 0;
-  height: 26px;
   font-weight: 600;
+  padding: 0 15px;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(assets/images/keyboard_arrow_down_24px_outlined.svg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-size: 30px;
 }
 
 .careers-row {
@@ -2390,13 +2404,13 @@ label, p {
 
 .job-card {
   display: flex;
-  height: 150px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
 .job-card >:first-child {
   padding-left: 10px;
+  padding-top: 15px;
   width: 30%;
   text-align: center;
 }
@@ -2407,7 +2421,7 @@ label, p {
 }
 
 .job-card img {
-  max-height: 100px;
+  max-height: 50px;
   height: 80%;
   width: auto;
 }
