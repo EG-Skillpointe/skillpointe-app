@@ -7,7 +7,7 @@ export const CompareCareers = (props) => {
 
 				<div className='careers-box'>
 					<div>
-                        <select>
+                        <select style={{backgroundColor: "white" }}>
                             <option>Plumbing</option>
 							<option>Carpentry</option>
 							<option>Nursing</option>
@@ -36,7 +36,7 @@ export const CompareCareers = (props) => {
 					</div>
 
 					<div>
-                        <select>
+                        <select style={{backgroundColor: "white" }}>
                             <option>Carpentry</option>
 							<option>Plumbing</option>
 							<option>Nursing</option>
