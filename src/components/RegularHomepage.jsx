@@ -210,7 +210,7 @@ class RegularHomepage extends Component {
 					<p align="left">
 						SkillPointe is championing a movement for skills-based workers.<br></br> <br></br>Skills-based professionals build things for us, care for us, and make our lives better. Despite their importance, these workers have been undervalued, and the shortage of skills-based labor continues to grow. Given the critical roles these professionals play in construction, healthcare, energy, manufacturing, and other fields, we created an online destination built explicitly for them.<br></br> <br></br>More than a simple job board, Skillpointe is a platform working to change the perception surrounding skills-based work. Within SkillPointe, job seekers can explore training opportunities, professionals can connect with potential employers, trainers can promote their programs, and students can explore career paths.<br></br> <br></br>We welcome you to join the SkillPointe movement.
 					</p>
-					<Link to='./login'><button className='orange-button' style={{borderRadius:"5px"}}>Join the Movement</button></Link>
+					<Link to='./login'><button className='orange-button' style={{borderRadius:"5px", marginBottom:"30px"}}>Join the Movement</button></Link>
 				</div>
 			</div>
 		);
