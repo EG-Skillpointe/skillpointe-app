@@ -52,14 +52,22 @@ const HamburgerModal = (props) => {
             <ModalNavbar pageType={props.pageType} history={props.history} closeModal={props.closeModal}/>
 
             <div className="modal-body">
-                <Link style={home} to="/" onClick={props.closeModal}>Home</Link>
-                <Link style={careerLandingOrange} to="/career-landing" onClick={props.closeModal}>Explore Careers</Link>
-                <Link style={jobOrange} to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
-                <Link style={trainingOrange} to="/training" onClick={props.closeModal}>Find Training</Link>
-                <Link style={peopleOrange} to="/peoplesearch" onClick={props.closeModal}>Find People</Link>
-                <Link to="/" onClick={props.closeModal}>For Employers</Link>
-                <Link to="/" onClick={props.closeModal}>Contact</Link>
-                <Link style={logout} to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>
+                <Link to="/" onClick={props.closeModal}>Home</Link>
+                <Link to="/career-landing" onClick={props.closeModal}>Explore Careers</Link>
+                <Link to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
+                <Link to="/training" onClick={props.closeModal}>Find Training</Link>
+                <Link to="/peoplesearch" onClick={props.closeModal}>Find People</Link>
+                <Link>For Employers</Link>
+                <Link>Contact</Link>
+                <Link to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>
+                {/*<Link style={home} to="/" onClick={props.closeModal}>Home</Link>*/}
+                {/*<Link style={careerLandingOrange} to="/career-landing" onClick={props.closeModal}>Explore Careers</Link>*/}
+                {/*<Link style={jobOrange} to="/jobsearch" onClick={props.closeModal}>Find Job</Link>*/}
+                {/*<Link style={trainingOrange} to="/training" onClick={props.closeModal}>Find Training</Link>*/}
+                {/*<Link style={peopleOrange} to="/peoplesearch" onClick={props.closeModal}>Find People</Link>*/}
+                {/*<Link to="/" onClick={props.closeModal}>For Employers</Link>*/}
+                {/*<Link to="/" onClick={props.closeModal}>Contact</Link>*/}
+                {/*<Link style={logout} to="/" onClick={() => {authService.logout(); props.closeModal();}}>Log Out</Link>*/}
             </div>
 
             {/*<MobileFooter history={this.props.history}/>*/}

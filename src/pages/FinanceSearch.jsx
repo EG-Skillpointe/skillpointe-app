@@ -8,7 +8,7 @@ import {
 } from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
-import school from "../assets/mockData/school";
+import scholarship from "../assets/mockData/scholarships"
 
 
 class FinanceSearch extends Component {
@@ -17,7 +17,7 @@ class FinanceSearch extends Component {
     super(props);
     this.state = {
       showModal: false,
-      searchResults: school.schools
+      searchResults: scholarship.scholarships
     };
   }
   doSearch = (searchText) => {
@@ -49,7 +49,7 @@ class FinanceSearch extends Component {
 
   render() {
     let cards = [];
-    {this.state.searchResults.map(school => { cards.push(<FinanceCard school={school}/>)}) }
+    {this.state.searchResults.map(scholarship => { cards.push(<FinanceCard school={scholarship}/>)}) }
     const modalOpened = this.state.showModal;
 
     return (

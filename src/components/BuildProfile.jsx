@@ -14,7 +14,7 @@ export const BuildProfile = (props) => {
 					Build Your Profile
 					<img src={rightArrowShort} alt="right-arrow"/>
 				</div>
-				<p>Complete your SkillPointe Profile to apply for jobs, receive relevent content on your homepage, and improve recommended jobs and training!</p>
+				<p>Complete your SkillPointe Profile to apply for jobs, receive relevant content on your homepage, and improve recommended jobs and training!</p>
 			</div>
 	)
 };

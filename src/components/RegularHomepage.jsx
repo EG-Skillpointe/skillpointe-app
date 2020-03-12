@@ -187,7 +187,7 @@ class RegularHomepage extends Component {
 				<div className='home-landing' style={{zIndex:"0"}}>
 					<div className='landing-content'>
 						<h1>Get Excited About Your Future</h1>
-						<p>SkillPointe is a movement celebrating skills-based professionals and their contributions.</p>
+						<p>Explore skills-based career paths. Connect with schools and employers.</p>
 						<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
 							<Dropdown onChange={(event) => this.onUserSearchDropdownChange(event)} placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} value={this.state.userSearch}/>
 							<Dropdown onChange={(event) => this.onJobTypeDropdownChange(event)} placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} value={this.state.jobType}/>

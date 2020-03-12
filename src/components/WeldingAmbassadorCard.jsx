@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from "react-bootstrap/Card";
-import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
+import homepageVideo from "../assets/videos/Travis_Edmonds_Ambassador Video.mp4";
 import {
     Video
 } from "../components";

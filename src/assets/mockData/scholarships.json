@@ -1,0 +1,49 @@
+{
+  "scholarships": [
+    {
+      "name": "Pell Grant",
+      "location": "Atlanta, GA",
+      "address": "System Main Office, 1800 Century Pl NE #400, Atlanta, GA 30345",
+      "phoneNumber": "(404) 679-1600",
+      "description": "The Technical College System of Georgia, formerly known as the Department of Technical and Adult Education, is the State of Georgia Government Agency which supervises the U.S. state of Georgia's 22 technical colleges, while also surveying the adult literacy program and economic and workforce development programs.",
+      "wesbite": "https://tcsg.edu/",
+      "image": "tcsg.png"
+    },
+    {
+      "name": "HOPE Scholarship",
+      "location": "DeKalb County, GA",
+      "address": "495 N Indian Creek Dr, Clarkston, GA 30021",
+      "phoneNumber": "(404) 297-9522",
+      "description": "Georgia Piedmont Technical College is a technical college in Atlanta, Georgia. It is part of the Technical College System of Georgia and provides education for a four-county service area, mostly in the metro Atlanta area. The school's service area includes Dekalb, Rockdale, Newton, and Morgan counties.",
+      "wesbite": "https://www.gptc.edu/",
+      "image": "gptc.png"
+    },
+    {
+      "name": "ARRL Memorial Scholarship",
+      "location": "Lawrenceville, GA",
+      "address": "5150 Sugarloaf Pkwy, Lawrenceville, GA 30043",
+      "phoneNumber": "(770) 962-7580",
+      "description": "Gwinnett Technical College is a public technical school in the U.S. state of Georgia with campuses in Lawrenceville and Alpharetta. It is a unit of the Technical College System of Georgia and is accredited by the Southern Association of Colleges and Schools.",
+      "wesbite": "https://www.gwinnetttech.edu/",
+      "image": "gwinnett_tech.png"
+    },
+    {
+      "name": "COAG Scholarship",
+      "location": "Atlanta, GA",
+      "address": "1560 Metropolitan Pkwy SW, Atlanta, GA 30310",
+      "phoneNumber": "(404) 225-4461",
+      "description": "Atlanta Technical College is a technical college in Atlanta, Georgia. It is part of the Technical College System of Georgia and provides education services for Fulton and Clayton counties.",
+      "wesbite": "https://atlantatech.edu/",
+      "image": "atlanta_technical.jpg"
+    },
+    {
+      "name": "Greenhouse Scholars Program",
+      "location": "Douglasville, GA",
+      "address": "4600 Timber Ridge Dr, Douglasville, GA 30135",
+      "phoneNumber": "(770) 947-7300",
+      "description": "West Georgia Technical College (WGTC) is a unit of the Technical College System of Georgia (TCSG) providing education for a seven-county service area that includes Carroll, Coweta, Douglas, Haralson, Heard, Meriwether, and Troup. WGTC is accredited by the Commission on Colleges of the Southern Association of Colleges and Schools (SACS) to award technical certificates of credit, diplomas, with associate degrees being the highest level of award for which the College has been accredited.",
+      "wesbite": "https://www.westgatech.edu/",
+      "image": "west_ga_tech.png"
+    }
+  ]
+}
