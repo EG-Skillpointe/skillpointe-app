@@ -54,7 +54,7 @@ const HamburgerModal = (props) => {
             <div className="modal-body">
                 <Link to="/" onClick={props.closeModal}>Home</Link>
                 <Link to="/career-landing" onClick={props.closeModal}>Explore Careers</Link>
-                <Link to="/jobsearch" onClick={props.closeModal}>Find Job</Link>
+                <Link to="/jobsearch" onClick={props.closeModal}>Find Jobs</Link>
                 <Link to="/training" onClick={props.closeModal}>Find Training</Link>
                 <Link to="/peoplesearch" onClick={props.closeModal}>Find People</Link>
                 <Link>For Employers</Link>
