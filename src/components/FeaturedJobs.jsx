@@ -24,11 +24,11 @@ export const FeaturedJobs = (props) => {
 					<img src={props.comp2} alt=''/>
 				</div>
 
-				<label>2 Days Ago</label>
+				<label>4 Days Ago</label>
 
-				<h6>Production Welder</h6>
+				<h6>Repair Tool Tech</h6>
 
-				<label>Multiple Locations</label>
+				<label>Atlanta, GA</label>
 
 				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
 			</div>

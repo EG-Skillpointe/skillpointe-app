@@ -3,7 +3,7 @@ import { JobsCard, TopNavbarWhite, Footer, SearchBar, Filter, MobileFooter, Hamb
 import job from '../assets/mockData/jobs';
 import Modal from 'react-modal';
 import comp1 from '../assets/images/delta.png';
-import comp2 from '../assets/images/company2.png';
+import comp2 from '../assets/images/company3.png';
 import Button from "react-bootstrap/Button";
 
 
@@ -114,7 +114,7 @@ class JobSearch extends Component {
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 
-                <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={this.state.location} placeholder={'Search for employment opportunities...'}/>
+                <SearchBar search={this.doSearch} headerTitle={"Find Jobs"} location={"Atlanta, GA"} placeholder={'Search for employment opportunities...'}/>
 
                 <h4 className='featured-jobs-heading'>Featured Jobs</h4>
 
