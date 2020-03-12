@@ -8,14 +8,20 @@ import {
     WeldingSchools,
     SchoolCard,
     Filter,
-    FeaturedJobs
+    FeaturedJobs,
+    FeaturedTraining
 } from "../components";
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
-import comp1 from '../assets/images/delta.png';
-import comp2 from '../assets/images/company2.png';
+import comp1 from '../assets/images/sponsor_gptc.png';
+import comp2 from '../assets/images/sponsor_tcsg.png';
 
+
+const sponsor1 = {
+    name: 'Atlanta, GA',
+    location: 'Atlanta, GA'
+}
 
 class Training extends Component {
 
@@ -71,7 +77,7 @@ class Training extends Component {
 
                 
                 <h4 className='featured-jobs-heading'>Featured Training</h4>
-                <FeaturedJobs comp1={comp1} comp2={comp2} />
+                <FeaturedTraining comp1={comp1} comp2={comp2} />
                 
                 <div style={{marginTop:"30px", marginBottom: "30px"}}>
                     { cards }

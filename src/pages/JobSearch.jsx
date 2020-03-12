@@ -101,14 +101,14 @@ class JobSearch extends Component {
                 {modalOpened ? (<HamburgerModal pageType="job" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup}
+                {/* <Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup}
                        contentLabel="Delete Check"
                        style={defaultStyles}
                 >
                     <h2 style={{padding:'10px'}}>SkillPointe would like to use your current location?</h2>
                     <button className="popup-button"  onClick={this.togglePopup}>Don't Allow</button>
                     <button className="popup-button"  onClick={this.onAllow}>Allow</button>
-                </Modal>
+                </Modal> */}
 
                 <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} />
                 
