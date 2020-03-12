@@ -2655,3 +2655,22 @@ label, p {
 .ReactModal__Overlay {
   background: rgba(0, 0, 0, 0.6) !important;
 }
+
+.construction-page {
+  background: white;
+  margin: 20vw;
+}
+
+.construction-image {
+  object-fit: contain;
+  width: 120px;
+  height: 60px;
+}
+
+.construction-header {
+  font-size: 32px;
+}
+
+.construction-subtitle {
+  font-size: 20px;
+}

@@ -11,7 +11,9 @@ import {
 	SignUpPage,
 	PeopleSearch,
 	CareerDetailPage,
-	FinanceSearch, TrainingLanding
+	FinanceSearch,
+	TrainingLanding,
+	ConstructionPage
 } from './pages';
 import { PrivateRoute } from './components';
 
@@ -27,8 +29,21 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-	  
 	}
+
+	componentWillMount() {
+		window.addEventListener('resize', this.handleWindowSizeChange);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.handleWindowSizeChange);
+	}
+	
+	handleWindowSizeChange = () => {
+		if(window.innerWidth > 500) {
+			window.location.replace('/construction')
+		}
+	};
   
 	render() {
 		console.log(window.pageYOffset)
@@ -48,6 +63,7 @@ class App extends React.Component {
 					<Route exact path='/training/finance' component={FinanceSearch} />
 					<Route exact path='/training' component={TrainingLanding} />
 					<Route path='/login' component={Login} />
+					<Route path='/construction' component={ConstructionPage}/>
 				</Switch>
 			</Router>
 		</div>
