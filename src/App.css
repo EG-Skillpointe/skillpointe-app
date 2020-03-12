@@ -2333,6 +2333,8 @@ label, p {
   display: flex;
   justify-content: left;
   align-items: center;
+  font-family: Roboto, serif;
+  font-size: 14px;
   height: 35px;
   padding: 0px 30px 0px 15px;
   color: #2D426B !important;
@@ -2344,6 +2346,8 @@ label, p {
 }
 
 .Dropdown-placeholder {
+  font-family: Roboto, serif;
+  font-size: 16px;
   /*text-align: center;*/
 }
 
