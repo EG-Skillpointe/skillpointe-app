@@ -139,8 +139,13 @@ class RegularHomepage extends Component {
 		switch(userSearch) {
 			case 'A Career Path':
 				// career
-				this.props.history.push("/career-landing");
-				break;
+				if (jobType === 'Welding'){
+					this.props.history.push("/career/welding");
+					break;
+				}else {
+					this.props.history.push("/career-landing");
+					break;
+				}
 
 			case 'Training':
 				// training
