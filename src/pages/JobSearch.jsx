@@ -65,12 +65,14 @@ class JobSearch extends Component {
     };
 
     doSearch = (searchText) => {
-        // let result = job.jobs.Filter(job => (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase())));
-        console.log('Result', searchText);
-        // if(result){
-        //     this.setState({searchResult: result,
-        //                          filteredJobs: result});
-        // }
+
+        let result = job.jobs.filter( job => {
+            return (job.title.toLowerCase().includes(searchText.toLowerCase()) || job.company.toLowerCase().includes(searchText.toLowerCase()))
+        });
+        if(result){
+            this.setState({searchResult: result,
+                                 filteredJobs: result});
+        }
     };
 
     onAllow = () => {

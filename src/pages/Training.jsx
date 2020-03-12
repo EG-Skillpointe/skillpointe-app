@@ -34,11 +34,12 @@ class Training extends Component {
     }
 
     doSearch = (searchText) => {
-        // let result = school.schools.Filter(school => (school.name.toLowerCase().includes(searchText.toLowerCase())));
-        console.log('Result', searchText);
-        // if(result){
-        //     this.setState({searchResults: result});
-        // }
+        let result = school.schools.filter( school => {
+            return (school.name.toLowerCase().includes(searchText.toLowerCase()) || school.description.toLowerCase().includes(searchText.toLowerCase()) )
+        });
+        if(result){
+            this.setState({searchResults: result});
+        }
     };
 
     componentDidMount() {
