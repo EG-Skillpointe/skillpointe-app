@@ -16,8 +16,6 @@ import {
 	ConstructionPage
 } from './pages';
 import { PrivateRoute } from './components';
-
-
 import './App.css';
 
 class App extends React.Component {
@@ -29,8 +27,9 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
+		this.redirectNonMobile();
 	}
-
+	
 	componentWillMount() {
 		window.addEventListener('resize', this.handleWindowSizeChange);
 	}
@@ -38,12 +37,26 @@ class App extends React.Component {
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.handleWindowSizeChange);
 	}
-	
+
 	handleWindowSizeChange = () => {
-		if(window.innerWidth > 500) {
+		this.redirectNonMobile();
+	};
+
+	isMobile = () => {
+		if (window.innerWidth > 500){
+			return false
+		}
+		return true
+	}
+	
+	redirectNonMobile = () => {
+		if (!this.isMobile()) {
+			if (window.location.href.includes('construction')){
+				return
+			}
 			window.location.replace('/construction')
 		}
-	};
+	}
   
 	render() {
 		console.log(window.pageYOffset)
