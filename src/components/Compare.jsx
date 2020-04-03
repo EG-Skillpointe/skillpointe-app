@@ -1,6 +1,7 @@
 import React from 'react';
 import thumbs from '../assets/images/thumbs.png';
 import rightArrow from '../assets/images/small-right-arrow.svg'
+
 export const Compare = (props) => {
   return (
       <div className="compare-container" >
