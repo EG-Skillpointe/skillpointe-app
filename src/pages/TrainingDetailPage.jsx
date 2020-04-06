@@ -14,6 +14,7 @@ import {
     FeaturedTraining,
     AddressBox
 } from "../components";
+import {VideoCarousel} from "../components/VideoCarousel";
 
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
@@ -88,6 +89,10 @@ class Training extends Component {
             case "About Us":
                 tab = 
                     <>
+                        <div style={{marginBottom:"20px"}}>
+                            <VideoCarousel/>
+                        </div>
+
                         <AddressBox />
                         <p style={{padding:"20px", textAlign:"left"}}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -109,6 +114,8 @@ class Training extends Component {
             default: 
                 tab = 
                     <>
+                        <VideoCarousel/>
+                        <div style={{marginBottom:"20px"}}/>
                         <AddressBox />
                         <p style={{padding:"20px", textAlign:"left"}}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
