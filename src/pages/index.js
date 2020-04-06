@@ -10,6 +10,7 @@ export {default as PeopleSearch} from './PeopleSearch';
 export {default as SignUpPage} from './SignUpPage';
 export {default as FinanceSearch} from './FinanceSearch';
 export {default as TrainingLanding} from './TrainingLanding';
+export {default as TrainingDetailPage} from './TrainingDetailPage';
 export {default as ConstructionPage} from './ConstructionPage';
 
 

@@ -110,6 +110,23 @@ class CareerDetailPage extends Component {
       ];
       
       return (
+<<<<<<< HEAD
+        <div className='welding-page'>
+            {/*conditionally rendered modal*/}
+            {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
+
+            {/*main contents of page*/}
+            <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
+
+            <div className="welding-container">
+                <div className='welding-landing-content'>
+                    <h1 style={{color:"white"}}>Welding</h1>
+                    <p style={{marginTop:"10px", color:"white"}}>
+                        Welders join things together with metals. Detail-oriented and skilled in manual dexterity, welders perform an number
+                        of roles within various industries.
+                    </p>
+                </div>
+=======
             <div className='welding-page'>
                 {/*conditionally rendered modal*/}
                 {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
@@ -121,55 +138,74 @@ class CareerDetailPage extends Component {
                     <div className='welding-landing-content'>
                         <h1 style={{color:"white"}}>Welding</h1>
                     </div>
+>>>>>>> development
 
-                    <WeldingAmbassadorCard/>
-                    
-                    <JobInfoCards/>
+                <WeldingAmbassadorCard/>
+                
+                <JobInfoCards/>
 
+<<<<<<< HEAD
+                <JobOpeningsCard/>
+
+                <WeldingSchools/>
+=======
                     <WeldingSchools/>
+>>>>>>> development
 
-                    <FinancialSupport/>
+                <FinancialSupport/>
 
+<<<<<<< HEAD
+                <PopularCareers/>
+
+                <CareerPathways/>
+=======
                     <JobOpeningsCard/>
 
                    {/* <PopularCareers/>*/}
 
                    {/* <CareerPathways/>*/}
+>>>>>>> development
 
-                    <Skill/>
-                   <div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
-                    <h6 style={{padding:"0", margin:"0", fontSize:"20px", lineHeight:"16px", width:"85%", color:"#2D426B"}}><b>Articles</b></h6>
-                    </div>
-                  <div className="no-margin orange-arrows">
-                    <CardCarousel cardType="article" articleCards={articleList}/>
-                  </div>
+                <Skill/>
+                <div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
+                <h6 style={{padding:"0", margin:"0", fontSize:"20px", lineHeight:"16px", width:"85%", color:"#2D426B"}}><b>Articles</b></h6>
+                </div>
+              <div className="no-margin orange-arrows">
+                <CardCarousel cardType="article" articleCards={articleList}/>
+              </div>
 
 
-                    <Calendar/>
+                <Calendar/>
 
-                    <CareerCompass/>
+                <CareerCompass/>
 
+<<<<<<< HEAD
+                <Certification/>
+                
+                <Compare/>
+=======
                    {/* <Certification/>*/}
                     
                     <Compare/>
+>>>>>>> development
 
 
-                    {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
-                </div>
-              <div className="dd-container">
-                <h5 className="dd-title">Explore Other Careers:</h5>
-                <div className="wrapper" style={{width:"100%"}}>
-                  <DropdownMenu
-                      title="Select One"
-                      list={this.state.career}
-                      resetThenSet={this.resetThenSet}
-                  />
-                </div>
-              </div>
-                <MobileFooter history={this.props.history}/>
-                <Footer mobileFooterPresent />
+                {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
             </div>
-        )
+            <div className="dd-container">
+              <h5 className="dd-title">Explore Other Careers:</h5>
+              <div className="wrapper" style={{width:"100%"}}>
+                <DropdownMenu
+                    title="Select One"
+                    list={this.state.career}
+                    resetThenSet={this.resetThenSet}
+                />
+              </div>
+            </div>
+            <MobileFooter history={this.props.history}/>
+            <Footer mobileFooterPresent />
+        </div>
+      )
     }
 }
 
