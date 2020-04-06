@@ -16,7 +16,9 @@ export const FeaturedTraining = (props) => {
 
 				<label>Dekalb, GA</label>
 
-				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
+				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}
+						onClick={ () =>{window.location.replace('/training/detail')}}
+				>Learn More</Button>
 			</div>
 
 			<div>
@@ -30,7 +32,9 @@ export const FeaturedTraining = (props) => {
 
 				<label>Atlanta, GA</label>
 
-				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}>Learn More</Button>
+				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}
+						onClick={ () =>{window.location.replace('/training/detail')}}
+				>Learn More</Button>
 			</div>
         </div>
   	)

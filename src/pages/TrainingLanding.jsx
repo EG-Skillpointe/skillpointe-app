@@ -48,7 +48,7 @@ class TrainingLanding extends Component {
               <h1 style={{marginBottom:'20px', fontSize:"36px"}}>Find Training</h1>
               <p style={{margin:"30px 0px", fontSize:'18px'}}>Search trade schools, vocational, and technical colleges or explore financial aid options.</p>
               <div className="training-button-container">
-                <button className='training-button' style={{marginRight:"4px"}} onClick={ () =>{window.location.replace('/training/search')}}>Find Schools</button>
+                <button className='training-button' style={{marginRight:"4px"}} onClick={ () =>{window.location.replace('/training/search')}}>Find Training</button>
                 <button className='training-button' style={{marginLeft:"4px"}} onClick={() => {window.location.replace('/training/finance')}}> Find Financial Aid</button>
               </div>
             </div>

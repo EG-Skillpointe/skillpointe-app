@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Video } from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
+import travisVideo from '../assets/videos/Travis_Edmonds_Ambassador Video.mp4';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import {Button} from "react-bootstrap";
@@ -189,7 +190,7 @@ class RegularHomepage extends Component {
 					<button className="popup-button"  onClick={this.togglePopup}>Confirm</button>
 				</Modal>
 
-				<div className='home-landing' style={{zIndex:"0"}}>
+			{/*	<div className='home-landing' style={{zIndex:"0"}}>
 					<div className='landing-content'>
 						<h1>Get Excited About Your Future</h1>
 						<p style={{margin: "30px 0px"}}>Explore skills-based career paths. Connect with schools and employers.</p>
@@ -203,10 +204,13 @@ class RegularHomepage extends Component {
 					</div>
 					<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
 				</div>
-
+*/}
 				<div className='home-about' style={{zIndex:"0"}}>
 					<h1 style={{fontSize:"28px", fontWeight:"700", margin:"30px 0"}}>About SkillPointe</h1>
 					<Video video={homepageVideo} type='video/mp4'/>
+					<Video video={travisVideo} type='video/mp4'/>
+					<Video video={homepageVideo} type='video/mp4'/>
+					<Video video={travisVideo} type='video/mp4'/>
 					<p align="left">
 						SkillPointe is championing a movement for skills-based workers.<br></br> <br></br>Skills-based professionals build things for us, care for us, and make our lives better. Despite their importance, these workers have been undervalued, and the shortage of skills-based labor continues to grow. Given the critical roles these professionals play in construction, healthcare, energy, manufacturing, and other fields, we created an online destination built explicitly for them.<br></br> <br></br>More than a simple job board, Skillpointe is a platform working to change the perception surrounding skills-based work. Within SkillPointe, job seekers can explore training opportunities, professionals can connect with potential employers, trainers can promote their programs, and students can explore career paths.<br></br> <br></br>We welcome you to join the SkillPointe movement.
 					</p>

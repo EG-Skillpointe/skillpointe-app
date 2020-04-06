@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MobileFooter, TopNavbarBlue, Footer, RegularHomepage, PersonalizedHomepage } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
+import TopNavbarWhite from "../components/TopNavbarWhite";
 
 
 class HomePage extends Component {
@@ -35,6 +36,7 @@ class HomePage extends Component {
         var user = JSON.parse(localStorage.getItem('user'));
 
         const homepage = (user && user != null) ? <PersonalizedHomepage/> : <RegularHomepage history={this.props.history}/>;
+        const topNavbar = (user && user != null) ? <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/> : <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>;
 
         return (
             <div className='home-page'>
@@ -42,7 +44,8 @@ class HomePage extends Component {
                 {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
 
                 {/*main contents of page*/}
-                <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
+
+                {topNavbar}
                 
                 { homepage }
                 
