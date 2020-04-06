@@ -33,7 +33,8 @@ class Training extends Component {
         this.state = {
             switchChecked: false,
             showModal: false,
-            searchResults: school.schools
+            searchResults: school.schools,
+            currentTab: ""
         };
     }
 
@@ -49,7 +50,6 @@ class Training extends Component {
     componentDidMount() {
         window.scrollTo(0, 0);
     }
-
 
     openModal = () => {
         console.log('opening modal');
@@ -71,9 +71,47 @@ class Training extends Component {
         });
     };
 
+    handleTabSwitch = (event) => {
+        this.setState({ currentTab: event.target.innerText }, () => {
+            console.log(`currentTab: ${this.state.currentTab}`);
+        });
+    };
+
     render() {
         let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> );
         const modalOpened = this.state.showModal;
+
+        let tab;
+
+        switch(this.state.currentTab) {
+            case "About Us":
+                tab = 
+                    <p style={{padding:"20px", textAlign:"left"}}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            break;
+
+            case "Training":
+                tab = 
+                    <p style={{padding:"20px", textAlign:"left"}}>
+                        Duo mazim nemore et, ad suas scripserit sed. Pro ne ludus fuisset ocurreret, iriure salutandi eloquentiam qui id. Ea has decore periculis maluisset, ubique viderer te pro.
+                            Pro veniam possim impetus ut, nonumes ocurreret an duo. At ipsum definitiones qui, qui ex erat nulla, ut vel modus fastidii platonem. Pro id alia postulant. Per ea velit iriure.
+                    </p>
+            break;
+
+            default: 
+                tab = 
+                    <p style={{padding:"20px", textAlign:"left"}}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+            break;
+        }
 
         return (
             <div>
@@ -94,7 +132,7 @@ class Training extends Component {
 
                 <img src={welding} style={{width:"100%", height:"90px"}} />
 
-                <div style={{borderTop:"4px solid #F8A141", width:"100%", height:"500px"}}>
+                <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
                     <div style={{borderBottom:"1.5px solid #EDEDED", width:"100%", height:"50px", display:"flex", alignItems:"center", justifyContent:"center"}}>
                         <p style={{fontSize:"12px", lineHeight:"12px", margin:"0", position:"relative", left:"30px", marginRight:"120px"}}>Get alerts from this company</p>
                         <Switch onChange={this.handleSwitchChange} checked={this.state.checked} onColor="#2D426B" />
@@ -111,7 +149,19 @@ class Training extends Component {
                             <h6 className="job-text" style={{fontSize:"12px"}}>Atlanta, GA</h6>
                         </div>
                     </div>
-                    
+                </div>
+
+                <div>
+                    <div style={{borderBottom:"2px solid #EDEDED", width:"100%", display:"flex", alignItems: "left", fontSize:"16px"}}>
+                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}} onClick={(event) => this.handleTabSwitch(event)}>About Us</div>
+                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}} onClick={(event) => this.handleTabSwitch(event)}>Training</div>
+                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}}>Locations</div>
+                    </div>
+
+                    <div style={{}}>
+                        {tab}
+                    </div>
+
                 </div>
 
                 <MobileFooter history={this.props.history}/>
