@@ -4,7 +4,7 @@ export const SchoolCard = (props) => {
     const image = require(`../assets/images/${props.school.image}`);
 
     return (
-        <div className="job-card school-card">
+        <div className="job-card school-card" onClick={ () =>{window.location.replace('/training/detail')}}>
             <div>
                 <img src={image} alt="Cat"/>
             </div>

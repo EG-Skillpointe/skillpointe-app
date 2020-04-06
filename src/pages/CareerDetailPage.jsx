@@ -110,7 +110,6 @@ class CareerDetailPage extends Component {
       ];
       
       return (
-<<<<<<< HEAD
         <div className='welding-page'>
             {/*conditionally rendered modal*/}
             {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
@@ -126,45 +125,20 @@ class CareerDetailPage extends Component {
                         of roles within various industries.
                     </p>
                 </div>
-=======
-            <div className='welding-page'>
-                {/*conditionally rendered modal*/}
-                {modalOpened ? (<HamburgerModal pageType="home" history={this.props.history} closeModal={this.closeModal} />) : (null)}
-
-                {/*main contents of page*/}
-                <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>
-
-                <div className="welding-container">
-                    <div className='welding-landing-content'>
-                        <h1 style={{color:"white"}}>Welding</h1>
-                    </div>
->>>>>>> development
 
                 <WeldingAmbassadorCard/>
                 
                 <JobInfoCards/>
 
-<<<<<<< HEAD
                 <JobOpeningsCard/>
 
                 <WeldingSchools/>
-=======
-                    <WeldingSchools/>
->>>>>>> development
 
                 <FinancialSupport/>
 
-<<<<<<< HEAD
                 <PopularCareers/>
 
                 <CareerPathways/>
-=======
-                    <JobOpeningsCard/>
-
-                   {/* <PopularCareers/>*/}
-
-                   {/* <CareerPathways/>*/}
->>>>>>> development
 
                 <Skill/>
                 <div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
@@ -179,15 +153,9 @@ class CareerDetailPage extends Component {
 
                 <CareerCompass/>
 
-<<<<<<< HEAD
                 <Certification/>
                 
                 <Compare/>
-=======
-                   {/* <Certification/>*/}
-                    
-                    <Compare/>
->>>>>>> development
 
 
                 {/*<img className='landing-img' src={landingBackground} alt='landingBackground' />*/}
