@@ -11,7 +11,8 @@ import {
     SchoolCard,
     Filter,
     FeaturedJobs,
-    FeaturedTraining
+    FeaturedTraining,
+    AddressBox
 } from "../components";
 
 import { MobileFooter } from "../components";
@@ -86,12 +87,15 @@ class Training extends Component {
         switch(this.state.currentTab) {
             case "About Us":
                 tab = 
-                    <p style={{padding:"20px", textAlign:"left"}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <>
+                        <AddressBox />
+                        <p style={{padding:"20px", textAlign:"left"}}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </>
             break;
 
             case "Training":
@@ -104,12 +108,15 @@ class Training extends Component {
 
             default: 
                 tab = 
-                    <p style={{padding:"20px", textAlign:"left"}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <>
+                        <AddressBox />
+                        <p style={{padding:"20px", textAlign:"left"}}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </>
             break;
         }
 
@@ -158,7 +165,7 @@ class Training extends Component {
                         <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}}>Locations</div>
                     </div>
 
-                    <div style={{}}>
+                    <div style={{paddingTop:"20px"}}>
                         {tab}
                     </div>
 
