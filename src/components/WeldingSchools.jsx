@@ -33,7 +33,7 @@ export const WeldingSchools = (props) => {
     } else {
         return (
             <div className="certification-container" style={{padding:'0px 14px 0px 14px', marginBottom:"10px"}}>
-                <h5 className="certification-header" style={{margin:"14px auto"}}>Welding Schools in Your Area</h5>
+                <h5 className="certification-header" style={{margin:"14px auto"}}>Welding Training in Your Area</h5>
                 <div className="certification-item" style={{height:"58px", alignItems:"center"}}>
                     <div style={{display:"flex", flexDirection:"column", justifyContent:"center", width:"auto", height:"100%"}}>
                         <h6 className="certification-text" style={{paddingLeft:"15px", margin:"5px 0",  lineHeight:"100%", width:"85%", color:"#2D426B"}}><b>Northern Georgia Community College</b></h6>
