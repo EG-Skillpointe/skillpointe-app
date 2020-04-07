@@ -142,7 +142,7 @@ class Training extends Component {
                     </Link>
                 </div>
 
-                <img className='landing-img' src={landingBackground} alt='landingBackground' style={{height:"10vh"}}/>
+                <img className='landing-img' src={landingBackground} alt='landingBackground' style={{height:"70px", width:"100%", objectFit:"cover"}}/>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
                     <div style={{margin: '10px auto', width: "90%"}}>
