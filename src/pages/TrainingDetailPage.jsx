@@ -158,7 +158,10 @@ class Training extends Component {
                 </div>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
-                    <VideoCarousel/>
+                    <div style={{margin: '10px 0'}}>
+                        <VideoCarousel />
+                    </div>
+
 
                     <div className="address-box">
                         <AddressBox />
