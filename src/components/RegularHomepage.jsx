@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Video } from "../components";
+import {AmbassadorCard, CareerCard, Filter, FilterTab, SchoolCard, Video} from "../components";
 import landingBackground from "../assets/images/landing-background.jpeg";
+import scrollDownButton from "../assets/images/icons8-scroll-down-100.png";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
 import travisVideo from '../assets/videos/Travis_Edmonds_Ambassador Video.mp4';
-import Dropdown from 'react-dropdown'
+import Dropdown from 'react-dropdown';
+import ambassadors from "../assets/mockData/ambassadors";
+import school from "../assets/mockData/school";
 import 'react-dropdown/style.css'
 import {Button} from "react-bootstrap";
 import Modal from "react-modal";
@@ -185,40 +188,52 @@ class RegularHomepage extends Component {
 	};
 
 	render() {
+		console.log(ambassadors.ambassadors[0]);
 		return (
-			<div>
-				<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
-					<h2 style={{padding:'10px', fontSize:"22px"}}>You must make selections in both dropdowns</h2>
-					<button className="popup-button"  onClick={this.togglePopup}>Confirm</button>
-				</Modal>
+				<div>
+					<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
+						<h2 style={{padding:'10px', fontSize:"22px"}}>You must make selections in both dropdowns</h2>
+						<button className="popup-button"  onClick={this.togglePopup}>Confirm</button>
+					</Modal>
 
-			{/*	<div className='home-landing' style={{zIndex:"0"}}>
-					<div className='landing-content'>
-						<h1>Get Excited About Your Future</h1>
-						<p style={{margin: "30px 0px"}}>Explore skills-based career paths. Connect with schools and employers.</p>
-						<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+					<div className='home-landing' style={{zIndex:"0"}}>
+						<div className='landing-content' style={{width: '85%'}}>
+							<h1 style={{margin: '0'}}>Welcome to Skillpointe</h1>
+							<p style={{margin: "30px 0px"}}>Explore skills-based career paths. Connect with schools and employers.</p>
+							{/*<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
 							<Dropdown onChange={(event) => this.onUserSearchDropdownChange(event)} placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} value={this.state.userSearch}/>
 							<Dropdown onChange={(event) => this.onJobTypeDropdownChange(event)} placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} value={this.state.jobType}/>
 							<Button onClick={this.homepageSearch} style={{background:"#F8A141", border:"none", marginTop:"20px", fontSize:"18px", width:"50%"}}>
 								Search
 							</Button>
+						</div>*/}
+							<img className='scroll-down' src={scrollDownButton} alt='scrollDown'/>
 						</div>
+						<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
 					</div>
-					<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
+					<FilterTab/>
+					<div>
+						<AmbassadorCard ambassador={ambassadors.ambassadors[0]}/>
+					</div>
+					<div>
+						<SchoolCard school={school.schools[0]}/>
+					</div>
+					<div className="mission-div">
+						<h3 className="mission-title">Our Mission</h3>
+						<p className="mission-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Ut vel nulla sed eros placerat aliquam mattis vitae lectus.
+							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+						</p>
+					</div>
+					<div className="contact-div">
+						<h3 className="contact-title">Contact Us</h3>
+						<p className="contact-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Ut vel nulla sed eros placerat aliquam mattis vitae lectus.
+							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+						</p>
+						<Button className="contact-button">CONTACT</Button>
+					</div>
 				</div>
-*/}
-				<div className='home-about' style={{zIndex:"0"}}>
-					<h1 style={{fontSize:"28px", fontWeight:"700", margin:"30px 0"}}>About SkillPointe</h1>
-
-					<VideoCarousel/>
-
-
-					<p align="left">
-						SkillPointe is championing a movement for skills-based workers.<br></br> <br></br>Skills-based professionals build things for us, care for us, and make our lives better. Despite their importance, these workers have been undervalued, and the shortage of skills-based labor continues to grow. Given the critical roles these professionals play in construction, healthcare, energy, manufacturing, and other fields, we created an online destination built explicitly for them.<br></br> <br></br>More than a simple job board, Skillpointe is a platform working to change the perception surrounding skills-based work. Within SkillPointe, job seekers can explore training opportunities, professionals can connect with potential employers, trainers can promote their programs, and students can explore career paths.<br></br> <br></br>We welcome you to join the SkillPointe movement.
-					</p>
-					<Link to='./login'><button className='orange-button' style={{borderRadius:"5px", marginBottom:"30px"}}>Join the Movement</button></Link>
-				</div>
-			</div>
 		);
 	}
 };
