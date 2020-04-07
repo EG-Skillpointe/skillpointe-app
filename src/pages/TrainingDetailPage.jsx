@@ -21,8 +21,7 @@ import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
 import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
-import welding from '../assets/images/welding.jpeg'
-import image from '../assets/images/sponsor_tcsg.png'
+import landingBackground from '../assets/images/landing-background1.png'
 
 const sponsor1 = {
     name: 'Atlanta, GA',
@@ -38,7 +37,10 @@ class Training extends Component {
             showModal: false,
             searchResults: school.schools,
             currentTab: "",
-            collapseStatus: false
+            program1Collapse: false,
+            program2Collapse: false,
+            program3Collapse: false,
+            program4Collapse: false
         };
     }
 
@@ -75,70 +77,47 @@ class Training extends Component {
         });
     };
 
-    // handleTabSwitch = (event) => {
-    //     this.setState({ currentTab: event.target.innerText }, () => {
-    //         console.log(`currentTab: ${this.state.currentTab}`);
-    //     });
-    // };
-
     handleCollapseClick = (event) => {
-        const collapseStatus = this.state.collapseStatus;
+        console.log(event.target.value);
 
-        this.setState({ collapseOpen: !collapseStatus }, () => {
-            console.log(`collapseOpen: ${this.state.collapseOpen}`);
-        });
+        switch(event.target.value) {
+            case 'Program1':
+                const program1Collapse = this.state.program1Collapse;
+                this.setState({ program1Collapse: !program1Collapse}, () => {
+                    console.log(`program1Collapse: ${this.state.program1Collapse}`)
+                });
+                break;
+
+            case 'Program2':
+                const program2Collapse = this.state.program2Collapse;
+                this.setState({ program2Collapse: !program2Collapse}, () => {
+                    console.log(`program2Collapse: ${this.state.program2Collapse}`)
+                });
+                break;
+
+            case 'Program3':
+                const program3Collapse = this.state.program3Collapse;
+                this.setState({ program3Collapse: !program3Collapse}, () => {
+                    console.log(`program3Collapse: ${this.state.program3Collapse}`)
+                });
+                break;
+
+            case 'Program4':
+                const program4Collapse = this.state.program4Collapse;
+                this.setState({ program4Collapse: !program4Collapse}, () => {
+                    console.log(`program4Collapse: ${this.state.program4Collapse}`)
+                });
+                break;
+
+            default:
+                console.log('Program not found');
+                break;
+        }
     };
 
     render() {
         let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> );
         const modalOpened = this.state.showModal;
-
-        // let tab;
-
-        // switch(this.state.currentTab) {
-        //     case "About Us":
-        //         tab = 
-        //             <>
-        //                 <div style={{marginBottom:"20px"}}>
-        //                     <VideoCarousel/>
-        //                 </div>
-
-        //                 <AddressBox />
-        //                 <p style={{padding:"20px", textAlign:"left"}}>
-        //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        //                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        //                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        //                     sunt in culpa qui officia deserunt mollit anim id est laborum.
-        //                 </p>
-        //             </>
-        //     break;
-
-        //     case "Training":
-        //         tab = 
-        //             <p style={{padding:"20px", textAlign:"left"}}>
-        //                 Duo mazim nemore et, ad suas scripserit sed. Pro ne ludus fuisset ocurreret, iriure salutandi eloquentiam qui id. Ea has decore periculis maluisset, ubique viderer te pro.
-        //                     Pro veniam possim impetus ut, nonumes ocurreret an duo. At ipsum definitiones qui, qui ex erat nulla, ut vel modus fastidii platonem. Pro id alia postulant. Per ea velit iriure.
-        //             </p>
-        //     break;
-
-        //     default: 
-        //         tab = 
-        //             <>
-        //                 <div style={{marginBottom:"20px"}}>
-        //                     <VideoCarousel/>
-        //                 </div>
-
-        //                 <AddressBox />
-
-        //                 <p style={{padding:"20px", textAlign:"left"}}>
-        //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        //                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        //                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        //                     sunt in culpa qui officia deserunt mollit anim id est laborum.
-        //                 </p>
-        //             </>
-        //     break;
-        // }
 
         return (
             <div>
@@ -156,6 +135,8 @@ class Training extends Component {
                         </button>
                     </Link>
                 </div>
+
+                <img className='landing-img' src={landingBackground} alt='landingBackground' style={{height:"10vh"}}/>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
                     <div style={{margin: '10px 0'}}>
@@ -180,12 +161,12 @@ class Training extends Component {
                         </div>
                     </div>
 
-                    <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", padding:"20px 0 20px 20px", marginLeft:"20px", marginRight:"20px", marginBottom: "20px"}}>
-                        <div className="collapsed-articles">
-                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
-                            <Collapse isOpen={this.state.collapseOpen}>
+                    <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", margin:"auto", marginBottom:"20px", width:"90%", borderRadius:"5px"}}>
+                        <div className="collapsed-articles" style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+                            <Button onClick={this.handleCollapseClick} value="Program1" style={{ marginBottom: '1rem', width:"100%" }}>Program 1</Button>
+                            <Collapse isOpen={this.state.program1Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    <CardBody style={{ paddingBottom: "10px"}}>
                                     Anim pariatur cliche reprehenderit,
                                     enim eiusmod high life accusamus terry richardson ad squid. Nihil
                                     anim keffiyeh helvetica, craft beer labore wes anderson cred
@@ -194,10 +175,10 @@ class Training extends Component {
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
-                            <Collapse isOpen={this.state.collapseOpen}>
+                            <Button onClick={this.handleCollapseClick} value="Program2" style={{ marginBottom: '1rem', width:"100%" }}>Program 2</Button>
+                            <Collapse isOpen={this.state.program2Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    <CardBody style={{ paddingBottom: "10px"}}>
                                     Anim pariatur cliche reprehenderit,
                                     enim eiusmod high life accusamus terry richardson ad squid. Nihil
                                     anim keffiyeh helvetica, craft beer labore wes anderson cred
@@ -206,10 +187,10 @@ class Training extends Component {
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
-                            <Collapse isOpen={this.state.collapseOpen}>
+                            <Button onClick={this.handleCollapseClick} value="Program3" style={{ marginBottom: '1rem', width:"100%" }}>Program 3</Button>
+                            <Collapse isOpen={this.state.program3Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    <CardBody style={{ paddingBottom: "10px"}}>
                                     Anim pariatur cliche reprehenderit,
                                     enim eiusmod high life accusamus terry richardson ad squid. Nihil
                                     anim keffiyeh helvetica, craft beer labore wes anderson cred
@@ -218,10 +199,10 @@ class Training extends Component {
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
-                            <Collapse isOpen={this.state.collapseOpen}>
+                            <Button onClick={this.handleCollapseClick} value="Program4" style={{ width:"100%" }}>Program 4</Button>
+                            <Collapse isOpen={this.state.program4Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    <CardBody style={{ paddingBottom: "10px"}}>
                                     Anim pariatur cliche reprehenderit,
                                     enim eiusmod high life accusamus terry richardson ad squid. Nihil
                                     anim keffiyeh helvetica, craft beer labore wes anderson cred
