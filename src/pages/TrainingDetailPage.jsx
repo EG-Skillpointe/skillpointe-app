@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import Switch from "react-switch";
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import {
     TopNavbarWhite,
     TrainingCard,
@@ -36,7 +37,8 @@ class Training extends Component {
             switchChecked: false,
             showModal: false,
             searchResults: school.schools,
-            currentTab: ""
+            currentTab: "",
+            collapseStatus: false
         };
     }
 
@@ -73,9 +75,17 @@ class Training extends Component {
         });
     };
 
-    handleTabSwitch = (event) => {
-        this.setState({ currentTab: event.target.innerText }, () => {
-            console.log(`currentTab: ${this.state.currentTab}`);
+    // handleTabSwitch = (event) => {
+    //     this.setState({ currentTab: event.target.innerText }, () => {
+    //         console.log(`currentTab: ${this.state.currentTab}`);
+    //     });
+    // };
+
+    handleCollapseClick = (event) => {
+        const collapseStatus = this.state.collapseStatus;
+
+        this.setState({ collapseOpen: !collapseStatus }, () => {
+            console.log(`collapseOpen: ${this.state.collapseOpen}`);
         });
     };
 
@@ -83,49 +93,52 @@ class Training extends Component {
         let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> );
         const modalOpened = this.state.showModal;
 
-        let tab;
+        // let tab;
 
-        switch(this.state.currentTab) {
-            case "About Us":
-                tab = 
-                    <>
-                        <div style={{marginBottom:"20px"}}>
-                            <VideoCarousel/>
-                        </div>
+        // switch(this.state.currentTab) {
+        //     case "About Us":
+        //         tab = 
+        //             <>
+        //                 <div style={{marginBottom:"20px"}}>
+        //                     <VideoCarousel/>
+        //                 </div>
 
-                        <AddressBox />
-                        <p style={{padding:"20px", textAlign:"left"}}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </>
-            break;
+        //                 <AddressBox />
+        //                 <p style={{padding:"20px", textAlign:"left"}}>
+        //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        //                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        //                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        //                     sunt in culpa qui officia deserunt mollit anim id est laborum.
+        //                 </p>
+        //             </>
+        //     break;
 
-            case "Training":
-                tab = 
-                    <p style={{padding:"20px", textAlign:"left"}}>
-                        Duo mazim nemore et, ad suas scripserit sed. Pro ne ludus fuisset ocurreret, iriure salutandi eloquentiam qui id. Ea has decore periculis maluisset, ubique viderer te pro.
-                            Pro veniam possim impetus ut, nonumes ocurreret an duo. At ipsum definitiones qui, qui ex erat nulla, ut vel modus fastidii platonem. Pro id alia postulant. Per ea velit iriure.
-                    </p>
-            break;
+        //     case "Training":
+        //         tab = 
+        //             <p style={{padding:"20px", textAlign:"left"}}>
+        //                 Duo mazim nemore et, ad suas scripserit sed. Pro ne ludus fuisset ocurreret, iriure salutandi eloquentiam qui id. Ea has decore periculis maluisset, ubique viderer te pro.
+        //                     Pro veniam possim impetus ut, nonumes ocurreret an duo. At ipsum definitiones qui, qui ex erat nulla, ut vel modus fastidii platonem. Pro id alia postulant. Per ea velit iriure.
+        //             </p>
+        //     break;
 
-            default: 
-                tab = 
-                    <>
-                        <VideoCarousel/>
-                        <div style={{marginBottom:"20px"}}/>
-                        <AddressBox />
-                        <p style={{padding:"20px", textAlign:"left"}}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </>
-            break;
-        }
+        //     default: 
+        //         tab = 
+        //             <>
+        //                 <div style={{marginBottom:"20px"}}>
+        //                     <VideoCarousel/>
+        //                 </div>
+
+        //                 <AddressBox />
+
+        //                 <p style={{padding:"20px", textAlign:"left"}}>
+        //                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        //                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        //                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        //                     sunt in culpa qui officia deserunt mollit anim id est laborum.
+        //                 </p>
+        //             </>
+        //     break;
+        // }
 
         return (
             <div>
@@ -144,38 +157,62 @@ class Training extends Component {
                     </Link>
                 </div>
 
-                <img src={welding} style={{width:"100%", height:"90px"}} />
-
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
-                    <div style={{borderBottom:"1.5px solid #EDEDED", width:"100%", height:"50px", display:"flex", alignItems:"center", justifyContent:"center"}}>
-                        <p style={{fontSize:"12px", lineHeight:"12px", margin:"0", position:"relative", left:"30px", marginRight:"120px"}}>Get alerts from this company</p>
-                        <Switch onChange={this.handleSwitchChange} checked={this.state.checked} onColor="#2D426B" />
+                    <VideoCarousel/>
+
+                    <div className="address-box">
+                        <AddressBox />
                     </div>
 
-                    <div style={{border:"none", height:"120px", display:"flex", alignItems:"center"}}>
-                        <div style={{width:"75px", height:"75px", marginLeft:"20px"}}>
-                            <img src={image} alt="Cat"  style={{width:"100%", height:"100%", borderRadius:"5px"}}/>
-                        </div>
-                        
-                        <div style={{marginLeft:"15px", textAlign:"left"}}>
-                            <h5 className="job-title" style={{fontSize:"17px", marginTop:"0"}}>Employer</h5>
-                            <h5 className="job-title" style={{fontSize:"17px"}}><b>FSCJ</b></h5>
-                            <h6 className="job-text" style={{fontSize:"12px"}}>Atlanta, GA</h6>
-                        </div>
-                    </div>
-                </div>
+                    <div className="collapsed-articles">
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Collapse isOpen={this.state.collapseOpen}>
+                            <Card>
+                                <CardBody>
+                                Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                nesciunt sapiente ea proident.
+                                </CardBody>
+                            </Card>
+                        </Collapse>
 
-                <div>
-                    <div style={{borderBottom:"2px solid #EDEDED", width:"100%", display:"flex", alignItems: "left", fontSize:"16px"}}>
-                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}} onClick={(event) => this.handleTabSwitch(event)}>About Us</div>
-                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}} onClick={(event) => this.handleTabSwitch(event)}>Training</div>
-                        <div style={{marginLeft:"20px", paddingBottom:"6px", fontWeight:"500", color:"#2D426B"}}>Locations</div>
-                    </div>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Collapse isOpen={this.state.collapseOpen}>
+                            <Card>
+                                <CardBody>
+                                Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                nesciunt sapiente ea proident.
+                                </CardBody>
+                            </Card>
+                        </Collapse>
 
-                    <div style={{paddingTop:"20px"}}>
-                        {tab}
-                    </div>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Collapse isOpen={this.state.collapseOpen}>
+                            <Card>
+                                <CardBody>
+                                Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                nesciunt sapiente ea proident.
+                                </CardBody>
+                            </Card>
+                        </Collapse>
 
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Collapse isOpen={this.state.collapseOpen}>
+                            <Card>
+                                <CardBody>
+                                Anim pariatur cliche reprehenderit,
+                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                nesciunt sapiente ea proident.
+                                </CardBody>
+                            </Card>
+                        </Collapse>
+                    </div>
                 </div>
 
                 <MobileFooter history={this.props.history}/>
