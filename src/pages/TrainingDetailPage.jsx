@@ -83,28 +83,48 @@ class Training extends Component {
         switch(event.target.value) {
             case 'Program1':
                 const program1Collapse = this.state.program1Collapse;
-                this.setState({ program1Collapse: !program1Collapse}, () => {
+                this.setState({
+                        program1Collapse: !program1Collapse,
+                        program2Collapse: false,
+                        program3Collapse: false,
+                        program4Collapse: false
+                    }, () => {
                     console.log(`program1Collapse: ${this.state.program1Collapse}`)
                 });
                 break;
 
             case 'Program2':
                 const program2Collapse = this.state.program2Collapse;
-                this.setState({ program2Collapse: !program2Collapse}, () => {
+                this.setState({
+                        program1Collapse: false,
+                        program2Collapse: !program2Collapse,
+                        program3Collapse: false,
+                        program4Collapse: false
+                    }, () => {
                     console.log(`program2Collapse: ${this.state.program2Collapse}`)
                 });
                 break;
 
             case 'Program3':
                 const program3Collapse = this.state.program3Collapse;
-                this.setState({ program3Collapse: !program3Collapse}, () => {
+                this.setState({
+                    program1Collapse: false,
+                    program2Collapse: false,
+                    program3Collapse: !program3Collapse,
+                    program4Collapse: false
+                    }, () => {
                     console.log(`program3Collapse: ${this.state.program3Collapse}`)
                 });
                 break;
 
             case 'Program4':
                 const program4Collapse = this.state.program4Collapse;
-                this.setState({ program4Collapse: !program4Collapse}, () => {
+                this.setState({
+                    program1Collapse: false,
+                    program2Collapse: false,
+                    program3Collapse: false,
+                    program4Collapse: !program4Collapse
+                    }, () => {
                     console.log(`program4Collapse: ${this.state.program4Collapse}`)
                 });
                 break;
@@ -142,7 +162,6 @@ class Training extends Component {
                     <div style={{margin: '10px 0'}}>
                         <VideoCarousel />
                     </div>
-
 
                     <div className="address-box">
                         <AddressBox />
