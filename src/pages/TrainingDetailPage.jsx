@@ -164,8 +164,8 @@ class Training extends Component {
                         <AddressBox />
                     </div>
 
-                    <div className="collapsed-articles">
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                    <div className="collapsed-articles" style={{width:"90%"}}>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
                         <Collapse isOpen={this.state.collapseOpen}>
                             <Card>
                                 <CardBody>
@@ -177,9 +177,9 @@ class Training extends Component {
                             </Card>
                         </Collapse>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
                         <Collapse isOpen={this.state.collapseOpen}>
-                            <Card>
+                            <Card style={{ width:"90%" }}>
                                 <CardBody>
                                 Anim pariatur cliche reprehenderit,
                                 enim eiusmod high life accusamus terry richardson ad squid. Nihil
@@ -189,9 +189,9 @@ class Training extends Component {
                             </Card>
                         </Collapse>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
                         <Collapse isOpen={this.state.collapseOpen}>
-                            <Card>
+                            <Card style={{ width:"90%" }}>
                                 <CardBody>
                                 Anim pariatur cliche reprehenderit,
                                 enim eiusmod high life accusamus terry richardson ad squid. Nihil
@@ -201,9 +201,9 @@ class Training extends Component {
                             </Card>
                         </Collapse>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
                         <Collapse isOpen={this.state.collapseOpen}>
-                            <Card>
+                            <Card style={{ width:"90%" }}>
                                 <CardBody>
                                 Anim pariatur cliche reprehenderit,
                                 enim eiusmod high life accusamus terry richardson ad squid. Nihil
