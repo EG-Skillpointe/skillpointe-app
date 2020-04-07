@@ -2683,3 +2683,7 @@ label, p {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.carousel-button {
+  padding: 10px;
+}
