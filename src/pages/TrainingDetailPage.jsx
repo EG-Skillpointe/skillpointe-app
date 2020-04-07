@@ -12,7 +12,7 @@ import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
 import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
-import landingBackground from '../assets/images/atlanta_technical.png'
+import schoolImage from '../assets/images/atlanta_technical.png'
 
 class Training extends Component {
 
@@ -142,7 +142,10 @@ class Training extends Component {
                     </Link>
                 </div>
 
-                <img className='landing-img' src={landingBackground} alt='landingBackground' style={{height:"70px", width:"100%", objectFit:"cover"}}/>
+                <div style={{width:"100%", height:"80px", borderBottom:"4px solid #F8A141", display:"flex", alignItems:"center"}}>
+                    <img src={schoolImage} style={{width:"70px", height:"70px", marginLeft:"20px"}}/>
+                    <h3 style={{margin:"0", height:"auto", fontSize:"20px", marginLeft:"20px"}}>FSCJ Jacksonville</h3>
+                </div>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
                     <div style={{margin: '10px auto', width: "90%"}}>
@@ -167,6 +170,7 @@ class Training extends Component {
                     </div>
 
                     <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", margin:"auto", marginBottom:"20px", width:"90%", borderRadius:"5px"}}>
+                        <h1 style={{fontSize:"24px"}}>Programs</h1>
                         <div className="collapsed-articles" style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                             <Button onClick={this.handleCollapseClick} value="Program1" style={{ marginBottom: '1rem', width:"100%" }}>Program 1</Button>
                             <Collapse isOpen={this.state.program1Collapse} style={{ width:"100%" }}>
