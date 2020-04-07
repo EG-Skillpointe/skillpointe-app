@@ -1,32 +1,18 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import Switch from "react-switch";
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import {
     TopNavbarWhite,
-    TrainingCard,
     Footer,
-    FilterTab,
-    SearchBar,
-    WeldingSchools,
     SchoolCard,
-    Filter,
-    FeaturedJobs,
-    FeaturedTraining,
     AddressBox
 } from "../components";
 import {VideoCarousel} from "../components/VideoCarousel";
-
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
 import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
 import landingBackground from '../assets/images/landing-background1.png'
-
-const sponsor1 = {
-    name: 'Atlanta, GA',
-    location: 'Atlanta, GA'
-}
 
 class Training extends Component {
 
