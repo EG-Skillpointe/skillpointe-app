@@ -145,7 +145,7 @@ class Training extends Component {
                 <img className='landing-img' src={landingBackground} alt='landingBackground' style={{height:"10vh"}}/>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
-                    <div style={{margin: '10px 0'}}>
+                    <div style={{margin: '10px auto', width: "90%"}}>
                         <VideoCarousel />
                     </div>
 
