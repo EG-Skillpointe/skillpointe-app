@@ -12,7 +12,7 @@ import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
 import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
-import landingBackground from '../assets/images/landing-background1.png'
+import landingBackground from '../assets/images/atlanta_technical.png'
 
 class Training extends Component {
 
