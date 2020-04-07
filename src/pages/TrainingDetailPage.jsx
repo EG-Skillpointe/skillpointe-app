@@ -158,60 +158,78 @@ class Training extends Component {
                 </div>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
-                    <VideoCarousel/>
+                    <div style={{margin: '10px 0'}}>
+                        <VideoCarousel />
+                    </div>
+
 
                     <div className="address-box">
                         <AddressBox />
                     </div>
 
-                    <div className="collapsed-articles" style={{width:"90%"}}>
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
-                        <Collapse isOpen={this.state.collapseOpen}>
-                            <Card>
-                                <CardBody>
-                                Anim pariatur cliche reprehenderit,
+                    <div style={{marginBottom: '15px'}}>
+                        <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", padding:"20px 0 20px 20px", marginLeft:"20px", marginRight:"20px"}}>
+                            <p style={{width: "90%"}}>
+                                Description. Anim pariatur cliche reprehenderit,
                                 enim eiusmod high life accusamus terry richardson ad squid. Nihil
                                 anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                nesciunt sapiente ea proident.
-                                </CardBody>
-                            </Card>
-                        </Collapse>
+                                nesciunt sapiente ea proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
-                        <Collapse isOpen={this.state.collapseOpen}>
-                            <Card style={{ width:"90%" }}>
-                                <CardBody>
-                                Anim pariatur cliche reprehenderit,
-                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                nesciunt sapiente ea proident.
-                                </CardBody>
-                            </Card>
-                        </Collapse>
+                    <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", padding:"20px 0 20px 20px", marginLeft:"20px", marginRight:"20px", marginBottom: "20px"}}>
+                        <div className="collapsed-articles">
+                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                            <Collapse isOpen={this.state.collapseOpen}>
+                                <Card>
+                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    Anim pariatur cliche reprehenderit,
+                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.
+                                    </CardBody>
+                                </Card>
+                            </Collapse>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
-                        <Collapse isOpen={this.state.collapseOpen}>
-                            <Card style={{ width:"90%" }}>
-                                <CardBody>
-                                Anim pariatur cliche reprehenderit,
-                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                nesciunt sapiente ea proident.
-                                </CardBody>
-                            </Card>
-                        </Collapse>
+                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                            <Collapse isOpen={this.state.collapseOpen}>
+                                <Card>
+                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    Anim pariatur cliche reprehenderit,
+                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.
+                                    </CardBody>
+                                </Card>
+                            </Collapse>
 
-                        <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%", backgroundColor:"transparent", margin:"0" }}>Toggle</Button>
-                        <Collapse isOpen={this.state.collapseOpen}>
-                            <Card style={{ width:"90%" }}>
-                                <CardBody>
-                                Anim pariatur cliche reprehenderit,
-                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                nesciunt sapiente ea proident.
-                                </CardBody>
-                            </Card>
-                        </Collapse>
+                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                            <Collapse isOpen={this.state.collapseOpen}>
+                                <Card>
+                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    Anim pariatur cliche reprehenderit,
+                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.
+                                    </CardBody>
+                                </Card>
+                            </Collapse>
+
+                            <Button onClick={this.handleCollapseClick} style={{ marginBottom: '1rem', width:"90%" }}>Toggle</Button>
+                            <Collapse isOpen={this.state.collapseOpen}>
+                                <Card>
+                                    <CardBody style={{width: "90%", paddingBottom: "10px"}}>
+                                    Anim pariatur cliche reprehenderit,
+                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
+                                    nesciunt sapiente ea proident.
+                                    </CardBody>
+                                </Card>
+                            </Collapse>
+                        </div>
                     </div>
                 </div>
 

@@ -2678,3 +2678,8 @@ label, p {
 .address-icon {
   padding-right: 20px;
 }
+
+.address-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
