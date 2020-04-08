@@ -172,14 +172,26 @@ class Training extends Component {
                     <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", margin:"auto", marginBottom:"20px", width:"90%", borderRadius:"5px"}}>
                         <h1 style={{fontSize:"24px"}}>Programs</h1>
                         <div className="collapsed-articles" style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-                            <Button onClick={this.handleCollapseClick} value="Program1" style={{ marginBottom: '1rem', width:"100%" }}>Program 1</Button>
+
+                            <Button onClick={this.handleCollapseClick} value="Program1" style={{ marginBottom: '1rem', width:"100%" }}>Construction</Button>
                             <Collapse isOpen={this.state.program1Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{ paddingBottom: "10px"}}>
-                                    Anim pariatur cliche reprehenderit,
-                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                    nesciunt sapiente ea proident.
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>HVAC Mechanic & Installer</h4>
+                                        <h5>Heating, Ventilation, Air-Conditioning/Refrigeration, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>HVAC Mechanic & Installer</h4>
+                                        <h5>Heating, Ventilation, Air-Conditioning/Refrigeration I, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>HVAC Mechanic & Installer</h4>
+                                        <h5>Heating, Ventilation, Air-Conditioning/Refrigeration II, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
@@ -219,6 +231,7 @@ class Training extends Component {
                                     </CardBody>
                                 </Card>
                             </Collapse>
+
                         </div>
                     </div>
                 </div>
