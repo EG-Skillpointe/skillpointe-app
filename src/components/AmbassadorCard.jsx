@@ -6,9 +6,10 @@ export const AmbassadorCard = (props) => {
    const image = require(`../assets/images/${props.ambassador.image}`);
    const ambassadorPageStyle = {
      display:'flex',
-     justifyContent:'center',
-     alignItems:'center',
-     height:'50%',
+     justifyContent:'flex-start',
+     flexDirection:'column',
+     alignItems:'flex-start',
+     height:'100%',
      overflow:'auto',
      backgroundColor: 'white',
      padding: '10px'
@@ -21,19 +22,26 @@ export const AmbassadorCard = (props) => {
      height:'50%',
      overflow:'auto',
    };
+   const buttonStyle = {
+     margin: ' 10px 5px',
+     width: '35%',
+     borderRadius: '15px',
+   };
 
    const style = props.isPage ? ambassadorPageStyle : normalStyle;
 
   return (
 
       <Card className="ambassador-card-container">
-        <Card.Img variant="top" src={image} style={{height: '50%', width: '100%', borderRadius: "10px 10px 0 0"}} />
-        <Card.Body style={style}>
-            <div>
-                <Card.Subtitle className="mb-2 text-muted" style={{marginTop:"0"}}>{props.ambassador.industry}</Card.Subtitle>
-                <Card.Title>{props.ambassador.name}</Card.Title>
-                <Card.Text>{props.ambassador.title}</Card.Text>
-                <Button className='card-button' style={{marginTop: '10px'}}>Learn More</Button>
+        <Card.Body >
+            <div style={ambassadorPageStyle}>
+                <Card.Header style={{paddingLeft: '5px'}}>{props.ambassador.industry}</Card.Header>
+                <Card.Title style={{paddingLeft: '5px', marginBottom: '0'}}>HEADLINE</Card.Title>
+                <Card.Text style={{paddingLeft: '5px', textAlign:'left'}}>Some Description about the industry and different career paths</Card.Text>
+                <div style={{width:'100%', display:'flex'}}>
+                  <Button className='card-button' style={buttonStyle}>JOBS</Button>
+                  <Button className='card-button' style={buttonStyle}>Training</Button>
+                </div>
             </div>
         </Card.Body>
       </Card>

@@ -13,6 +13,7 @@ import {Button} from "react-bootstrap";
 import Modal from "react-modal";
 import Carousel from "react-bootstrap/Carousel";
 import {VideoCarousel} from "./VideoCarousel";
+import IndustryCard from "./IndustryCard";
 
 const options1 = [
 	'A Career Path', 'Training', 'Financial Aid', 'People', 'Jobs'
@@ -216,7 +217,7 @@ class RegularHomepage extends Component {
 						<AmbassadorCard ambassador={ambassadors.ambassadors[0]}/>
 					</div>
 					<div>
-						<SchoolCard school={school.schools[0]}/>
+						<IndustryCard school={school.schools[0]}/>
 					</div>
 					<div className="mission-div">
 						<h3 className="mission-title">Our Mission</h3>

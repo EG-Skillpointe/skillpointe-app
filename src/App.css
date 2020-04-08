@@ -509,10 +509,11 @@ label, p {
 
 /* Card */
 .ambassador-card-container {
-  height: 95% !important;
-  width: 95% !important;
+  height: 100% !important;
+  width: 100% !important;
   border-radius: 10px;
   box-shadow: 0 1px 6px 0 rgba(0,0,0,.16);
+  margin-bottom: 10px;
 }
 
 .ambassador-card-container .card-body{
