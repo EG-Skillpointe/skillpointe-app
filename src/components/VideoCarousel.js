@@ -16,7 +16,12 @@ export  const VideoCarousel = props => {
                   // arrowLeft={leftArrow}
                   slidesPerPage={1}
                   // addArrowClickHandler
-                  infinite>
+                  autoPlay={5000}
+                  stopAutoPlayOnHover={true}
+                  animationSpeed={1000}
+                  infinite
+                  dots
+                  >
           <Video video={homepageVideo} type='video/mp4'/>
           <Video video={travisVideo} type='video/mp4'/>
           <Video video={homepageVideo} type='video/mp4'/>
