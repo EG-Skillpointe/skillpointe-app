@@ -12,9 +12,9 @@ export const FeaturedTraining = (props) => {
 
 				{/* <label>2 Days Ago</label> */}
 
-				<h6>Georgia Piedmont</h6>
+				<h6>FSC Jacksonville</h6>
 
-				<label>Dekalb, GA</label>
+				<label>Jacksonville, GA</label>
 
 				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}
 						onClick={ () =>{window.location.replace('/training/detail')}}
@@ -28,9 +28,9 @@ export const FeaturedTraining = (props) => {
 
 				{/* <label></label> */}
 
-				<h6>TCSG Atlanta</h6>
+				<h6>Tulsa Welding</h6>
 
-				<label>Atlanta, GA</label>
+				<label>Tulsa, OK</label>
 
 				<Button className="card-button" style={{ fontSize:"12px", height:"20px", textAlign:"center", lineHeight:"6px" }}
 						onClick={ () =>{window.location.replace('/training/detail')}}
