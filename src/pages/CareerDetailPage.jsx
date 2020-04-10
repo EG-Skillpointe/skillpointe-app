@@ -120,25 +120,21 @@ class CareerDetailPage extends Component {
             <div className="welding-container">
                 <div className='welding-landing-content'>
                     <h1 style={{color:"white"}}>Welding</h1>
-                    <p style={{marginTop:"10px", color:"white"}}>
-                        Welders join things together with metals. Detail-oriented and skilled in manual dexterity, welders perform an number
-                        of roles within various industries.
-                    </p>
                 </div>
 
                 <WeldingAmbassadorCard/>
                 
                 <JobInfoCards/>
 
-                <JobOpeningsCard/>
-
                 <WeldingSchools/>
 
                 <FinancialSupport/>
 
-                <PopularCareers/>
+                <JobOpeningsCard/>
 
-                <CareerPathways/>
+                {/* <PopularCareers/> */}
+
+                {/* <CareerPathways/> */}
 
                 <Skill/>
                 <div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
@@ -153,7 +149,7 @@ class CareerDetailPage extends Component {
 
                 <CareerCompass/>
 
-                <Certification/>
+                {/* <Certification/> */}
                 
                 <Compare/>
 
