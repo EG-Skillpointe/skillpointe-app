@@ -12,7 +12,9 @@ import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
 import arrowDown from '../assets/images/keyboard_arrow_down_24px_outlined.svg';
-import schoolImage from '../assets/images/atlanta_technical.png'
+import schoolImage from '../assets/images/fscj_transparent.png'
+import programs from "../assets/mockData/programs";
+
 
 class Training extends Component {
 
@@ -29,15 +31,6 @@ class Training extends Component {
             program4Collapse: false
         };
     }
-
-    doSearch = (searchText) => {
-        let result = school.schools.filter( school => {
-            return (school.name.toLowerCase().includes(searchText.toLowerCase()) || school.description.toLowerCase().includes(searchText.toLowerCase()) )
-        });
-        if(result){
-            this.setState({searchResults: result});
-        }
-    };
 
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -122,7 +115,18 @@ class Training extends Component {
     };
 
     render() {
-        let cards = this.state.searchResults.map(school => <SchoolCard school={school}/> );
+        let healthcareCards = programs.Healthcare.map((program) => {
+            return <Card>
+                <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                    <h4>{program.jobType}</h4>
+                    <h5>{program.program}</h5>
+                    <a href={program.link}>More info</a>
+                </CardBody>
+            </Card>
+        });
+
+        console.log(healthcareCards);
+
         const modalOpened = this.state.showModal;
 
         return (
@@ -143,8 +147,8 @@ class Training extends Component {
                 </div>
 
                 <div style={{width:"100%", height:"80px", borderBottom:"4px solid #F8A141", display:"flex", alignItems:"center"}}>
-                    <img src={schoolImage} style={{width:"70px", height:"70px", marginLeft:"20px"}}/>
-                    <h3 style={{margin:"0", height:"auto", fontSize:"20px", marginLeft:"20px"}}>FSCJ Jacksonville</h3>
+                    <img src={schoolImage} style={{width:"100px", height:"60px", marginLeft:"20px"}}/>
+                    <h3 style={{margin:"0", height:"auto", fontSize:"20px", marginLeft:"0px", fontFamily: "Roboto"}}>FSCJ at Jacksonville</h3>
                 </div>
 
                 <div style={{borderTop:"4px solid #F8A141", width:"100%"}}>
@@ -159,12 +163,11 @@ class Training extends Component {
                     <div style={{marginBottom: '15px'}}>
                         <div style={{border:"solid 1px #E5E5E5", background:"#F5F5F5", textAlign:"left", padding:"20px 0 20px 20px", marginLeft:"20px", marginRight:"20px"}}>
                             <p style={{width: "90%"}}>
-                                Description. Anim pariatur cliche reprehenderit,
-                                enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                nesciunt sapiente ea proident. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            FSCJ is growing its reputation as the largest, most dynamic and most influential college in Florida. Offering 13 bachelor’s degrees, 45 associate degrees and more than 100 technical certificates and workforce certifications, FSCJ has degree options for everyone.
+                            <br/><br/>
+                            We offer flexible class schedules to include online classes, hybrid courses and traditional college classes to meet the individual needs of our students.
+                            <br/><br/>
+                            With one of the lowest tuition rates for in-state residents, FSCJ is one of the most affordable community colleges in the United States. Our students can also benefit from financial aid options and scholarship opportunities to help with the cost of tuition, books and fees.
                             </p>
                         </div>
                     </div>
@@ -196,38 +199,83 @@ class Training extends Component {
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} value="Program2" style={{ marginBottom: '1rem', width:"100%" }}>Program 2</Button>
+                            <Button onClick={this.handleCollapseClick} value="Program2" style={{ marginBottom: '1rem', width:"100%" }}>Healthcare</Button>
                             <Collapse isOpen={this.state.program2Collapse} style={{ width:"100%" }}>
                                 <Card>
-                                    <CardBody style={{ paddingBottom: "10px"}}>
-                                    Anim pariatur cliche reprehenderit,
-                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                    nesciunt sapiente ea proident.
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Respiratory therapist</h4>
+                                        <h5>Respiratory Care, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/respiratory-care-as">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Dental hygienist</h4>
+                                        <h5>Dental Hygiene, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Dental-Hygiene">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Dental hygienist</h4>
+                                        <h5>Dental Hygiene, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/dental-assisting-wc">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Occupational therapy assistant</h4>
+                                        <h5>Occupational Therapy Assistant, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Occupational-Therapy-Assistant">More info</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} value="Program3" style={{ marginBottom: '1rem', width:"100%" }}>Program 3</Button>
+                            <Button onClick={this.handleCollapseClick} value="Program3" style={{ marginBottom: '1rem', width:"100%" }}>Manufacturing</Button>
                             <Collapse isOpen={this.state.program3Collapse} style={{ width:"100%" }}>
-                                <Card>
-                                    <CardBody style={{ paddingBottom: "10px"}}>
-                                    Anim pariatur cliche reprehenderit,
-                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                    nesciunt sapiente ea proident.
+                            <Card>
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Electrical & electronics engineering tech</h4>
+                                        <h5>Engineering Technology (Advanced Manufacturing), A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/engineering-technology-as">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Industrial machinery mechanic</h4>
+                                        <h5>Pneumatics, Hydraulics and Motors for Manufacturing, T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Pneumatics-Hydraulics-and-Motors-for-Manufacturing">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>CNC Machinist</h4>
+                                        <h5>CNC Machinist/Fabricator, T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/cnc-machinist-tc">More info</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
 
-                            <Button onClick={this.handleCollapseClick} value="Program4" style={{ width:"100%" }}>Program 4</Button>
+                            <Button onClick={this.handleCollapseClick} value="Program4" style={{ width:"100%" }}>Public Service</Button>
                             <Collapse isOpen={this.state.program4Collapse} style={{ width:"100%" }}>
-                                <Card>
-                                    <CardBody style={{ paddingBottom: "10px"}}>
-                                    Anim pariatur cliche reprehenderit,
-                                    enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                                    anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                    nesciunt sapiente ea proident.
+                            <Card>
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Fire inspector & investigator</h4>
+                                        <h5>Fire Science Technology A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-science-technology-as">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Fire inspector & investigator</h4>
+                                        <h5>Fire Officer Supervisor T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-officer-supervisor-tc">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Police & sheriff patrol office</h4>
+                                        <h5>Florida Law Enforcement Academy W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/florida-law-enforcement-academy-wc">More info</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4>Police & sheriff patrol office</h4>
+                                        <h5>Crossover from Correctional Officer to Law Enforcement Officer W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/crossover-from-correctional-officer-to-law-enforcement-officer-wc">More info</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>

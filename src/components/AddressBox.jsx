@@ -10,19 +10,19 @@ const AddressBox = (props) => {
                 </div>
                 <div style={{display:"inline-block", width:"65%"}}>
                     <p>
-                        8333 Little River Tpke Annandale, VA 22003
+                        101 W State St, Jacksonville, FL 32202
                         <br/>
-                        <a href="">Get Directions</a>
+                        <a href="https://www.google.com/maps/dir//fscj/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x88e5b73c915da969:0xee6ffd25872a9819?sa=X&ved=2ahUKEwjY77-S-93oAhXCTN8KHXgLDvIQ9RcwHHoECBEQEA">Get Directions</a>
                     </p>
                 </div>
             </div>
             <div>
                 <div style={{display:"inline-block", verticalAlign:"top"}}><i className="glyphicon glyphicon-earphone address-icon" style={{fontSize:"16px"}}/> </div>
-                <div style={{display:"inline-block"}}><p>(703) 323-3000</p></div>
+                <div style={{display:"inline-block"}}><p>(904) 633-8100</p></div>
             </div>
             <div>
                 <div style={{display:"inline-block", verticalAlign:"top"}}><img className="address-icon" src={worldwideweb} style={{height:"18px"}} ></img> </div>
-                <div style={{display:"inline-block"}}><p><a href="">websitenvcc.edu</a></p></div>
+                <div style={{display:"inline-block"}}><p><a href="https://www.fscj.edu/">www.fscj.edu</a></p></div>
             </div>
 
         </div>
