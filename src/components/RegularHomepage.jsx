@@ -213,8 +213,7 @@ class RegularHomepage extends Component {
 
 	render() {
 		const card = this.state.filteredArticles.map((article, index) => {
-			console.log(article);
-			return index % 2 ? (<div><IndustryCard article={article}/></div>) :  (<div><HomePageArticleCard article={article}/></div>)
+			return index % 2 ? (<div><IndustryCard key ={index} article={article}/></div>) :  (<div><HomePageArticleCard key={index} article={article}/></div>)
 		});
 		return (
 				<div>
