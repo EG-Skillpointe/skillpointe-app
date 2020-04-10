@@ -1,0 +1,166 @@
+{
+    "Construction": [
+        {
+            "jobType": "HVAC Mechanic & Installer",
+            "program": "Heating, Ventilation, Air-Conditioning/Refrigeration, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604"
+        },
+        {
+            "jobType": "HVAC Mechanic & Installer",
+            "program": "Heating, Ventilation, Air-Conditioning/Refrigeration I, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5776"
+        },
+        {
+            "jobType": "HVAC Mechanic & Installer",
+            "program": "Heating, Ventilation, Air-Conditioning/Refrigeration II, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5777"
+        },
+        {
+            "jobType": "Mobile Heavy Equipment Mechanic",
+            "program": "Diesel Systems, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/transportation-logistics/5826"
+        },
+        {
+            "jobType": "Welder, Cutter, Solderer & Brazer",
+            "program": "Welding Technology, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Welding"
+        },
+        {
+            "jobType": "Construction Trades & Extraction Manager",
+            "program": "Building Construction Technology (Construction Management), A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/building-construction-technology-as"
+        },
+        {
+            "jobType": "Electrician",
+            "program": "Electricity, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/electricity-wc"
+        }
+    ],
+    "Healthcare": [
+        {
+            "jobType": "Respiratory therapist",
+            "program": "Respiratory Care, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/respiratory-care-as"
+        },
+
+        {
+            "jobType": "Dental hygienist",
+            "program": "Dental Hygiene, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/Dental-Hygiene"
+        },
+        {
+            "jobType": "Dental hygienist",
+            "program": "Dental Assisting, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/dental-assisting-wc"
+        },
+        {
+            "jobType": "Occupational therapy assistant",
+            "program": "Occupational Therapy Assistant, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/Occupational-Therapy-Assistant"
+        },
+        {
+            "jobType": "Physical therapist assistant",
+            "program": "Physical Therapist Assistant, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/physical-therapist-assistant-as"
+        },
+        {
+            "jobType": "Radiologic technologist",
+            "program": "Radiography, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/radiography-as"
+        },
+        {
+            "jobType": "Radiologic technologist",
+            "program": "Radiography, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/radiography-degree-completion-as"
+        },
+        {
+            "jobType": "Medical & clinical laboratory tech",
+            "program": "Medical Laboratory Technology, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-laboratory-technology-as"
+        },
+        {
+            "jobType": "Medical & clinical laboratory tech",
+            "program": "Medical Assisting Advanced, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-assisting-advanced"
+        },
+        {
+            "jobType": "Medical & clinical laboratory tech",
+            "program": "Medical Assisting Specialist, T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-assisting-specialist"
+        },
+        {
+            "jobType": "Medical & clinical laboratory tech",
+            "program": "Medical Assisting, W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-assisting-wc"
+        },
+        {
+            "jobType": "Cardiovascular technologist & tech",
+            "program": "Cardiovascular Technology, A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/Cardiovascular-Technology"
+        },
+        {
+            "jobType": "Nurse Assistant",
+            "program": "Certified Nursing Assistant (CNA)",
+            "link": "https://www.fscj.edu/academics/workforce-education/cwe/health/cce0731"
+        },
+        {
+            "jobType": "Nurse R.N.",
+            "program": "Nursing R.N., A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/health-human-services/Nursing-RN-Bridge-Option"
+        }
+    ],
+    "Manufacturing": [
+        {
+            "jobType": "Electrical & Electronics engineering tech",
+            "program": "Engineering Technology (Advanced Manufacturing), A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/engineering-technology-as"
+        },
+        {
+            "jobType": "Electrical & Electronics engineering tech",
+            "program": "Engineering Technology Support Specialist, T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Engineering-Technology-Support-Specialist"
+        },
+        {
+            "jobType": "Electrical & Electronics engineering tech",
+            "program": "Mechatronics Technical Certificate, T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Mechatronics"
+        },
+        {
+            "jobType": "Industrial Machinery Mechanic",
+            "program": "Pneumatics, Hydraulics and Motors for Manufacturing, T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Pneumatics-Hydraulics-and-Motors-for-Manufacturing"
+        },
+        {
+            "jobType": "CNC Machinist",
+            "program": "CNC Machinist/Fabricator, T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/cnc-machinist-tc"
+        },
+        {
+            "jobType": "Production, manufacturing, planning & expediting clerk",
+            "program": "Logistics and Transportation Specialist Technical Certificate (T.C.)",
+            "link": "https://www.fscj.edu/academics/areas-of-study/transportation-logistics/logistics-and-transportation-specialist-tc"
+        }
+    ],
+    "Public Service": [
+        {
+            "jobType": "Fire inspector & investigator",
+            "program": "Fire Science Technology A.S.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-science-technology-as"
+        },
+        {
+            "jobType": "Fire inspector & investigator",
+            "program": "Fire Officer Supervisor T.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/transportation-logistics/logistics-and-transportation-specialist-tc"
+        },
+        {
+            "jobType": "Police & sheriff patrol office",
+            "program": "Florida Law Enforcement Academy W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/public-safety-security/florida-law-enforcement-academy-wc"
+        },
+        {
+            "jobType": "Police & sheriff patrol office",
+            "program": "Crossover from Correctional Officer to Law Enforcement Officer W.C.",
+            "link": "https://www.fscj.edu/academics/areas-of-study/public-safety-security/crossover-from-correctional-officer-to-law-enforcement-officer-wc"
+        }
+    ]
+}
