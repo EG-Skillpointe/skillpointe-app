@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {AmbassadorCard, CareerCard, Filter, FilterTab, SchoolCard, Video} from "../components";
-import landingBackground from "../assets/images/landing-background.jpeg";
-import scrollDownButton from "../assets/images/icons8-scroll-down-100.png";
+import {HomePageArticleCard, CareerCard, Filter, FilterTab, SchoolCard, Video} from "../components";
+import landingBackground from "../assets/images/homepage-background.jpeg";
+import scrollDownButton from "../assets/images/scroll-down-button.png";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
 import travisVideo from '../assets/videos/Travis_Edmonds_Ambassador Video.mp4';
 import Dropdown from 'react-dropdown';
 import ambassadors from "../assets/mockData/ambassadors";
 import school from "../assets/mockData/school";
+import homepage_articles from "../assets/mockData/homepage_articles";
 import 'react-dropdown/style.css'
 import {Button} from "react-bootstrap";
 import Modal from "react-modal";
@@ -51,6 +52,8 @@ class RegularHomepage extends Component {
 			jobType: null,
 			showPopup: false
 		};
+		//creates a reference for your element to use
+		this.myDivToFocus = React.createRef()
 	}
 
 	componentDidMount() {
@@ -188,8 +191,17 @@ class RegularHomepage extends Component {
 		});
 	};
 
+	scrollDown = () => {
+		if(this.myDivToFocus.current){
+            this.myDivToFocus.current.scrollIntoView({ 
+               behavior: "smooth", 
+               block: "nearest"
+            })
+        }
+	}
+
 	render() {
-		console.log(ambassadors.ambassadors[0]);
+
 		return (
 				<div>
 					<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
@@ -200,7 +212,7 @@ class RegularHomepage extends Component {
 					<div className='home-landing' style={{zIndex:"0"}}>
 						<div className='landing-content' style={{width: '85%'}}>
 							<h1 style={{margin: '0'}}>Welcome to Skillpointe</h1>
-							<p style={{margin: "30px 0px"}}>Explore skills-based career paths. Connect with schools and employers.</p>
+							<p style={{margin: "30px 0px"}}>Skills-based professionals build things for us, care for us and make our lives better.<br/><br/>At SkillPointe, we celebrate skills-based professionals and value their contributions.</p>
 							{/*<div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
 							<Dropdown onChange={(event) => this.onUserSearchDropdownChange(event)} placeholder="I am searching for..." arrowClassName='custom-dropdown-arrow' options={options1} value={this.state.userSearch}/>
 							<Dropdown onChange={(event) => this.onJobTypeDropdownChange(event)} placeholder="Select one" arrowClassName='custom-dropdown-arrow' options={options2} value={this.state.jobType}/>
@@ -208,29 +220,35 @@ class RegularHomepage extends Component {
 								Search
 							</Button>
 						</div>*/}
-							<img className='scroll-down' src={scrollDownButton} alt='scrollDown'/>
+							<img className='scroll-down' src={scrollDownButton} onClick={this.scrollDown} alt='scrollDown'/>
 						</div>
 						<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
 					</div>
-					<FilterTab/>
-					<div>
-						<AmbassadorCard ambassador={ambassadors.ambassadors[0]}/>
-					</div>
-					<div>
-						<IndustryCard school={school.schools[0]}/>
+					<div ref={this.myDivToFocus}>
+						<FilterTab/>
+						<div>
+							<HomePageArticleCard article={homepage_articles.articles[0]}/>
+						</div>
+						<div>
+							<IndustryCard article={homepage_articles.articles[1]}/>
+						</div>
+						<div>
+							<HomePageArticleCard article={homepage_articles.articles[2]}/>
+						</div>
+						<div>
+							<IndustryCard article={homepage_articles.articles[3]}/>
+						</div>
 					</div>
 					<div className="mission-div">
 						<h3 className="mission-title">Our Mission</h3>
-						<p className="mission-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Ut vel nulla sed eros placerat aliquam mattis vitae lectus.
-							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+						<p className="mission-p"> There has never been a greater need for skills-based professionals. Whether you’re a job seeker, skills-based trainer or employer, learn how you can be a part of this powerful, innovative movement.
 						</p>
 					</div>
 					<div className="contact-div">
 						<h3 className="contact-title">Contact Us</h3>
-						<p className="contact-p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Ut vel nulla sed eros placerat aliquam mattis vitae lectus.
-							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+						<p className="contact-p" style={{textAlign: "center"}}> If you want to send us your thoughts you can always reach us at info@skillpointe.com. 
+						<br/><br/>
+						If you are interested in signing up to receive updates on our progress join our mailing list.
 						</p>
 						<Button className="contact-button">CONTACT</Button>
 					</div>

@@ -36,7 +36,7 @@ class HomePage extends Component {
         var user = JSON.parse(localStorage.getItem('user'));
 
         const homepage = (user && user != null) ? <PersonalizedHomepage/> : <RegularHomepage history={this.props.history}/>;
-        const topNavbar = (user && user != null) ? <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/> : <TopNavbarWhite history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>;
+        const topNavbar = (user && user != null) ? <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/> : <TopNavbarBlue history={this.props.history} openModal={this.openModal} closeModal={this.closeModal} absolute transparent/>;
 
         return (
             <div className='home-page'>

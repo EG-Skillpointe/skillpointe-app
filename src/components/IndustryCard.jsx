@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import landingBackground from "../assets/images/homepage-background.jpeg";
 
 export const IndustryCard = (props) => {
-  const image = require(`../assets/images/${props.school.image}`);
+  const image = require(`../assets/images/${props.article.image}`);
 
   const headerStyle = {
     fontFamily: 'Roboto, serif',
@@ -43,15 +45,15 @@ export const IndustryCard = (props) => {
   return (
       <div style={cardContainerStyle} onClick={ () =>{window.location.replace('/training/detail')}}>
         <div style={firstChild}>
-          <img style={{height:'100%', width: '100%'}} src={image} alt="Cat"/>
+          <img style={{height:'90%', width: '100%', borderRadius: '6px'}} src={image} alt="Cat"/>
         </div>
 
         <div style={lastChild}>
-          <h5 className="job-title" style={{marginBottom: '0px'}}>{props.school.name}</h5>
-          <h3 style={headerStyle}>HEADLINE</h3>
-          <p className="job-text">Some Information about the industry and different career paths</p>
+          <h5 className="job-title" style={{marginBottom: '0px'}}>{props.article.industry}</h5>
+          <h3 style={headerStyle}>{props.article.headline}</h3>
+          <p className="job-text">{props.article.subTitle}</p>
         <div>
-          <Button className='card-button' style={buttonStyle}>JOBS</Button>
+          <Button className='card-button' style={buttonStyle}>Jobs</Button>
           <Button className='card-button' style={buttonStyle}>Training</Button>
         </div>
 

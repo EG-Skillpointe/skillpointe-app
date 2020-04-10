@@ -1,0 +1,28 @@
+{
+    "articles": [
+        {
+            "headline": "The Best Jobs In Construction",
+            "subTitle": "The economic recession wasn't felt harder by any U.S. industry more than construction, where employment peaked in 2006 and plateaued in 2007, then bottomed out in 2011.",
+            "image": "article_construction1.jpg",
+            "industry": "CONSTRUCTION"
+        },
+        {
+            "headline": "The Construction Labor Shortage",
+            "subTitle": "It’s no secret that the world is rapidly urbanizing. Builders can’t keep up.",
+            "image": "article_construction1.jpg",
+            "industry": "CONSTRUCTION"
+        },
+        {
+            "headline": "Where Are All the Builders?",
+            "subTitle": "Construction costs are climbing and production is lagging, in part because there aren't enough workers to go around.",
+            "image": "article_construction2.jpg",
+            "industry": "CONSTRUCTION"
+        },
+        {
+            "headline": "Construction Sees a Surge of 44,000 Jobs in January",
+            "subTitle": "Bureau of Labor Statistics: Industry’s jobless rates for the month were mixed.",
+            "image": "article_construction2.jpg",
+            "industry": "CONSTRUCTION"
+        }
+    ]
+}

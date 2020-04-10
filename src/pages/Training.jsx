@@ -14,8 +14,8 @@ import {
 import { MobileFooter } from "../components";
 import HamburgerModal from "../components/HamburgerModal";
 import school from "../assets/mockData/school";
-import comp1 from '../assets/images/sponsor_gptc.png';
-import comp2 from '../assets/images/sponsor_tcsg.png';
+import comp1 from '../assets/images/fscj_transparent.png';
+import comp2 from '../assets/images/tulsa-welding.png';
 
 
 const sponsor1 = {

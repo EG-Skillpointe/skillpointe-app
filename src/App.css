@@ -2676,12 +2676,9 @@ label, p {
 }
 
 .scroll-down{
-  height: 70px;
-  width: 70px;
-  right: 120px;
-  top: 180px;
-  position: absolute;
-  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  top: 240px;
 }
 
 .filter-title{
@@ -2760,4 +2757,15 @@ label, p {
   font-style: normal;
   font-size: 18px;
   color: black;
+}
+.address-icon {
+  padding-right: 20px;
+}
+
+.address-box {
+  margin-bottom: 15px;
+}
+
+.carousel-button {
+  padding: 10px;
 }

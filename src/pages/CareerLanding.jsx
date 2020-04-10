@@ -60,10 +60,10 @@ class CareerLanding extends Component {
                 
                 <div className="row" style={{margin:'0', paddingBottom:'40px'}}>
                     {industries.industries.map(industry => { return <Link to={{
-                                                        pathname:'./career/welding',
-                                                        aboutProps:{
-                                                          name: industry.name
-                                                        }}}><CareerCard industry={industry}/></Link>})}
+                    pathname:'./career/welding',
+                    aboutProps:{
+                        name: industry.name
+                    }}}><CareerCard industry={industry}/></Link>})}
                 </div>
 
               <MobileFooter history={this.props.history}/>
