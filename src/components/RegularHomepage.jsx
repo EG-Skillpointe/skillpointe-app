@@ -50,7 +50,8 @@ class RegularHomepage extends Component {
 			showModal: false,
 			userSearch: null,
 			jobType: null,
-			showPopup: false
+			showPopup: false,
+			filteredArticles: homepage_articles.articles
 		};
 		//creates a reference for your element to use
 		this.myDivToFocus = React.createRef()
@@ -59,6 +60,15 @@ class RegularHomepage extends Component {
 	componentDidMount() {
 		window.scrollTo(0, 0);
 	}
+	doFilter = (cond) => {
+		let filtered = [];
+		if(cond === 'popular'){
+			filtered = homepage_articles.articles;
+		} else {
+			filtered = this.state.filteredArticles.filter(obj => obj.industry.toLowerCase()=== cond);
+		}
+		this.setState({filteredArticles: filtered})
+	};
 
 	onUserSearchDropdownChange = (event) => {
 
@@ -198,10 +208,14 @@ class RegularHomepage extends Component {
                block: "nearest"
             })
         }
-	}
+	};
+
 
 	render() {
-
+		const card = this.state.filteredArticles.map((article, index) => {
+			console.log(article);
+			return index % 2 ? (<div><IndustryCard article={article}/></div>) :  (<div><HomePageArticleCard article={article}/></div>)
+		});
 		return (
 				<div>
 					<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
@@ -225,19 +239,8 @@ class RegularHomepage extends Component {
 						<img className='landing-img' src={landingBackground} alt='landingBackground' style={{zIndex:"-30"}}/>
 					</div>
 					<div ref={this.myDivToFocus}>
-						<FilterTab/>
-						<div>
-							<HomePageArticleCard article={homepage_articles.articles[0]}/>
-						</div>
-						<div>
-							<IndustryCard article={homepage_articles.articles[1]}/>
-						</div>
-						<div>
-							<HomePageArticleCard article={homepage_articles.articles[2]}/>
-						</div>
-						<div>
-							<IndustryCard article={homepage_articles.articles[3]}/>
-						</div>
+						<FilterTab filter={this.doFilter}/>
+						{card}
 					</div>
 					<div className="mission-div">
 						<h3 className="mission-title">Our Mission</h3>

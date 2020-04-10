@@ -14,6 +14,8 @@ class FilterTab extends Component {
     this.setState({
       selected: event.target.name
     });
+    console.log(event.target.name);
+    this.props.filter(event.target.name);
   };
 
   render() {
@@ -25,7 +27,7 @@ class FilterTab extends Component {
           <h3 className= 'filter-title'> Explore By Industry</h3>
           <div className="flexbox-container">
             <button className={`nav-button ${this.state.selected == 'popular' ? 'selected' : '' }`} key={'popular'} name={'popular'} onClick={(event) => this.onHandleFilterClick(event)} >Popular</button>
-            {industries.industries.map(industry => { return <button className={`nav-button ${this.state.selected == industry.name ? 'selected' : '' }`} key={industry.name} name={industry.name} onClick={(event) => this.onHandleFilterClick(event)} >{industry.name}</button>})}
+            {industries.industries.map(industry => { return <button className={`nav-button ${this.state.selected == industry.name ? 'selected' : '' }`} key={industry.name} name={industry.name.toLowerCase()} onClick={(event) => this.onHandleFilterClick(event)} >{industry.name}</button>})}
           </div>
         </div>
     )
