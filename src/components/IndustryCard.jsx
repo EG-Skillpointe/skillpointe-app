@@ -53,8 +53,8 @@ export const IndustryCard = (props) => {
           <h3 style={headerStyle}>{props.article.headline}</h3>
           <p className="job-text">{props.article.subTitle}</p>
         <div>
-          <Button className='card-button' style={buttonStyle}>Jobs</Button>
           <Button className='card-button' style={buttonStyle}>Training</Button>
+          <Button className='card-button' style={buttonStyle}>Jobs</Button>
         </div>
 
         </div>

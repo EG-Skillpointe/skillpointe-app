@@ -41,8 +41,8 @@ export const HomePageArticleCard = (props) => {
                 <Card.Title style={{paddingLeft: '5px', marginBottom: '0'}}>{props.article.headline}</Card.Title>
                 <Card.Text style={{paddingLeft: '5px', textAlign:'left'}}>{props.article.subTitle}</Card.Text>
                 <div style={{width:'100%', display:'flex'}}>
-                  <Button className='card-button' style={buttonStyle}>Jobs</Button>
                   <Button className='card-button' style={buttonStyle}>Training</Button>
+                  <Button className='card-button' style={buttonStyle}>Jobs</Button>
                 </div>
             </div>
         </Card.Body>
