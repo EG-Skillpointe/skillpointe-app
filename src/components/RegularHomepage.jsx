@@ -247,12 +247,10 @@ class RegularHomepage extends Component {
 						</p>
 					</div>
 					<div className="contact-div">
-						<h3 className="contact-title">Contact Us</h3>
-						<p className="contact-p" style={{textAlign: "center"}}> If you want to send us your thoughts you can always reach us at info@skillpointe.com. 
-						<br/><br/>
-						If you are interested in signing up to receive updates on our progress join our mailing list.
+						<h3 className="contact-title">Tell us what you think</h3>
+						<p className="contact-p" style={{textAlign: "center"}}> We'd love to hear from you about how we can continually make the experience better!
 						</p>
-						<Button className="contact-button">CONTACT</Button>
+						<Button className="contact-button">Feedback</Button>
 					</div>
 				</div>
 		);
