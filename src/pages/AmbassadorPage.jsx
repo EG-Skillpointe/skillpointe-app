@@ -40,7 +40,7 @@ class AmbassadorPage extends Component {
 
   doFilter = (cond) => {
     let filtered = [];
-    if(cond === 'popular'){
+    if(cond === 'all'){
       filtered = ambassadors.ambassadors;
     } else {
       filtered = ambassadors.ambassadors.Filter(obj => obj.industry === cond);

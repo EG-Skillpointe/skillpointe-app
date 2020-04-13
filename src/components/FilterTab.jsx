@@ -26,7 +26,7 @@ class FilterTab extends Component {
           borderBottom: '5px solid #ddd'}}>
           <h3 className= 'filter-title'> Explore By Industry</h3>
           <div className="flexbox-container">
-            <button className={`nav-button ${this.state.selected == 'popular' ? 'selected' : '' }`} key={'popular'} name={'popular'} onClick={(event) => this.onHandleFilterClick(event)} >Popular</button>
+            <button className={`nav-button ${this.state.selected == 'all' ? 'selected' : '' }`} key={'all'} name={'all'} onClick={(event) => this.onHandleFilterClick(event)} >All</button>
             {industries.industries.map(industry => { return <button className={`nav-button ${this.state.selected == industry.name ? 'selected' : '' }`} key={industry} name={industry.name} onClick={(event) => this.onHandleFilterClick(event)} >{industry.name}</button>})}
           </div>
         </div>

@@ -62,7 +62,7 @@ class RegularHomepage extends Component {
 	}
 	doFilter = (cond) => {
 		let filtered = [];
-		if(cond === 'popular'){
+		if(cond === 'all'){
 			filtered = homepage_articles.articles;
 		} else {
 			filtered = this.state.filteredArticles.filter(obj => obj.industry.toLowerCase()=== cond);

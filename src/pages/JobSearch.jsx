@@ -50,7 +50,7 @@ class JobSearch extends Component {
 
     doFilter = (cond) => {
         let filtered = [];
-        if(cond === 'popular'){
+        if(cond === 'all'){
             filtered = job.jobs;
         } else {
             filtered = this.state.searchResult.filter(obj => obj.industry === cond);
