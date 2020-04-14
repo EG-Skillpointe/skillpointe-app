@@ -5,12 +5,12 @@
             "image": "welding.jpeg"
         },
         {
-            "name": "Communications",
-            "image": "communications.jpg"
-        },
-        {
             "name": "Healthcare",
             "image": "healthcare.jpg"
+        },
+        {
+            "name": "Communications",
+            "image": "communications.jpg"
         },
         {
             "name": "Energy",
