@@ -29,7 +29,7 @@ export  const VideoCarousel = props => {
                   // arrowLeft={leftArrow}
                   slidesPerPage={1}
                   // addArrowClickHandler
-                  autoPlay={10000}
+                  interval={false}
                   value={value}
                   onChange={handleChange}
                   stopAutoPlayOnHover={true}

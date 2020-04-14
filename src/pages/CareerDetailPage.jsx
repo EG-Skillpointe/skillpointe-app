@@ -98,13 +98,13 @@ class CareerDetailPage extends Component {
         {
           title: 'How to Get Financial Aid for Welding Programs',
           date: 'Monday Jan 20, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          description: "The economic recession wasn't felt harder by any U.S. industry more than welding.",
           link: 'asdf'
         },
         {
           title: 'Requirements for Applying to Welding Trade School',
-          date: 'Wesnesday March 3, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          date: 'Wednesday March 3, 2020',
+          description: "Welding costs are climbing and production is lagging, in part because there aren't enough workers to go around.",
           link: 'asdf'
         }
       ];

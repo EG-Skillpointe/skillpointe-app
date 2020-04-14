@@ -9,27 +9,35 @@
             "industry": "Manufacturing"
         },
         {
-            "title": "Fire Officer I",
-            "company": "City of Sandy Springs",
-            "location": "Sandy Springs, GA",
+            "title": "Mechanical Design Engineer",
+            "company": "Wayne Trail Technologies",
+            "location": "Fort Loramie, OH",
             "image": "city_of_sandy_springs.png",
             "datePosted": "5 days",
-            "industry": "Public Safety"
+            "industry": "Manufacturing"
         },
         {
-            "title": "Pediatric Nurse",
-            "company": "Children's Healthcare",
-            "location": "Atlanta, GA",
-            "image": "choa.png",
+            "title": "Machine Repair Electrician",
+            "company": "Lincoln Electric",
+            "location": " Cleveland, OH",
+            "image": "lincoln_electric.png",
             "datePosted": "2 days",
-            "industry": "Healthcare"
+            "industry": "Manufacturing"
+        },
+        {
+            "title": "Industrial Electrician",
+            "company": "Lincoln Electric",
+            "location": " Cleveland, OH",
+            "image": "lincoln_electric.png",
+            "datePosted": "2 months",
+            "industry": "Manufacturing"
         },
         {
             "title": "IT Professional",
             "company": "Experient Group",
             "location": "Chamblee, GA",
             "image": "experient_group.png",
-            "datePosted": "2 months",
+            "datePosted": "4 months",
             "industry": "Information Technology"
         }
     ]
