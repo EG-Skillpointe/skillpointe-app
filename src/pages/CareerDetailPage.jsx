@@ -84,15 +84,15 @@ class CareerDetailPage extends Component {
       const modalOpened = this.state.showModal;
       const articleList = [
         {
-          title: 'School District Receives Welding Equipment Donation',
+          title: 'Where Are All the Welders?',
           date: 'Monday Jan 20, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          description: "Welding costs are climbing and production is lagging, in part because there aren't enough workers to go around.",
           link: 'asdf'
         },
         {
-          title: 'Local Atlanta High School Offers Free Welding Classes to Students',
-          date: 'Wesnesday March 3, 2020',
-          description: 'Lorem ipsum dolor sit amet ornarne pretium plavearat ut platea, putus.',
+          title: 'The Best Jobs In Welding',
+          date: 'Wednesday March 3, 2020',
+          description: "The economic recession wasn't felt harder by any U.S. industry more than welding.",
           link: 'asdf'
         },
         {

@@ -115,18 +115,7 @@ class Training extends Component {
     };
 
     render() {
-        let healthcareCards = programs.Healthcare.map((program) => {
-            return <Card>
-                <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                    <h4>{program.jobType}</h4>
-                    <h5>{program.program}</h5>
-                    <a href={program.link}>See more on FSCJ website</a>
-                </CardBody>
-            </Card>
-        });
-
-        console.log(healthcareCards);
-
+        
         const modalOpened = this.state.showModal;
 
         return (
