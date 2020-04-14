@@ -120,7 +120,7 @@ class Training extends Component {
                 <CardBody style={{ padding: "0 10px 20px 10px"}}>
                     <h4>{program.jobType}</h4>
                     <h5>{program.program}</h5>
-                    <a href={program.link}>More info</a>
+                    <a href={program.link}>See more on FSCJ website</a>
                 </CardBody>
             </Card>
         });
@@ -180,21 +180,37 @@ class Training extends Component {
                             <Collapse isOpen={this.state.program1Collapse} style={{ width:"100%" }}>
                                 <Card>
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>HVAC Mechanic & Installer</h4>
+                                        <h4 style={{fontWeight: 700}}>HVAC Mechanic & Installer</h4>
                                         <h5>Heating, Ventilation, Air-Conditioning/Refrigeration, W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
-                                    </CardBody>
-
-                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>HVAC Mechanic & Installer</h4>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">See more on FSCJ website</a>
                                         <h5>Heating, Ventilation, Air-Conditioning/Refrigeration I, W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">See more on FSCJ website</a>
+                                        <h5>Heating, Ventilation, Air-Conditioning/Refrigeration II, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">See more on FSCJ website</a>
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>HVAC Mechanic & Installer</h4>
-                                        <h5>Heating, Ventilation, Air-Conditioning/Refrigeration II, W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/5604">More info</a>
+                                        <h4 style={{fontWeight: 700}}>Mobile Heavy Equipment Mechanic</h4>
+                                        <h5>Diesel Systems, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/transportation-logistics/5826">See more on FSCJ website</a>
+                                    </CardBody>
+                                    
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Welder, Cutter, Solderer & Brazer</h4>
+                                        <h5>Welding Technology, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Welding">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Construction Trades & Extraction Manager</h4>
+                                        <h5>Building Construction Technology (Construction Management), A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/building-construction-technology-as">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Electrician</h4>
+                                        <h5>Electricity, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/electricity-wc">See more on FSCJ website</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
@@ -203,28 +219,66 @@ class Training extends Component {
                             <Collapse isOpen={this.state.program2Collapse} style={{ width:"100%" }}>
                                 <Card>
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Respiratory therapist</h4>
+                                        <h4 style={{fontWeight: 700}}>Respiratory Therapist</h4>
                                         <h5>Respiratory Care, A.S.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/respiratory-care-as">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/respiratory-care-as">See more on FSCJ website</a>
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Dental hygienist</h4>
+                                        <h4 style={{fontWeight: 700}}>Dental Hygienist</h4>
                                         <h5>Dental Hygiene, A.S.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Dental-Hygiene">More info</a>
-                                    </CardBody>
-
-                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Dental hygienist</h4>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Dental-Hygiene">See more on FSCJ website</a>
                                         <h5>Dental Hygiene, W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/dental-assisting-wc">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/dental-assisting-wc">See more on FSCJ website</a>
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Occupational therapy assistant</h4>
+                                        <h4 style={{fontWeight: 700}}>Occupational Therapy Assistant</h4>
                                         <h5>Occupational Therapy Assistant, A.S.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Occupational-Therapy-Assistant">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Occupational-Therapy-Assistant">See more on FSCJ website</a>
                                     </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Physical Therapist Assistant</h4>
+                                        <h5>Physical Therapist Assistant, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/physical-therapist-assistant-as">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Radiologic Technologist</h4>
+                                        <h5>Radiography, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/radiography-as">See more on FSCJ website</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/radiography-degree-completion-as">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Medical & Clinical Laboratory Tech</h4>
+                                        <h5>Medical Laboratory Technology, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-laboratory-technology-as">See more on FSCJ website</a>
+                                        <h5>Medical Assisting Specialist, T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-assisting-specialist">See more on FSCJ website</a>
+                                        <h5>Medical Assisting, W.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/medical-assisting-wc">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Cardiovascular Technologist & Tech</h4>
+                                        <h5>Cardiovascular Technology, A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Cardiovascular-Technology">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Nurse Assistant</h4>
+                                        <h5>Certified Nursing Assistant (CNA)</h5>
+                                        <a href="https://www.fscj.edu/academics/workforce-education/cwe/health/cce0731">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Nurse R.N.</h4>
+                                        <h5>Nursing R.N., A.S.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/health-human-services/Nursing-RN-Bridge-Option">See more on FSCJ website</a>
+                                    </CardBody>
+
                                 </Card>
                             </Collapse>
 
@@ -232,21 +286,32 @@ class Training extends Component {
                             <Collapse isOpen={this.state.program3Collapse} style={{ width:"100%" }}>
                             <Card>
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Electrical & electronics engineering tech</h4>
+                                        <h4 style={{fontWeight: 700}}>Electrical & Electronics Engineering Tech</h4>
                                         <h5>Engineering Technology (Advanced Manufacturing), A.S.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/engineering-technology-as">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/engineering-technology-as">See more on FSCJ website</a>
+                                        <h5>Engineering Technology Support Specialist, T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Engineering-Technology-Support-Specialist">See more on FSCJ website</a>
+                                        <h5>Mechatronics Technical Certificate, T.C.</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Mechatronics">See more on FSCJ website</a>
+                                        
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Industrial machinery mechanic</h4>
+                                        <h4 style={{fontWeight: 700}}>Industrial Machinery Mechanic</h4>
                                         <h5>Pneumatics, Hydraulics and Motors for Manufacturing, T.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Pneumatics-Hydraulics-and-Motors-for-Manufacturing">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/Pneumatics-Hydraulics-and-Motors-for-Manufacturing">See more on FSCJ website</a>
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>CNC Machinist</h4>
+                                        <h4 style={{fontWeight: 700}}>CNC Machinist</h4>
                                         <h5>CNC Machinist/Fabricator, T.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/cnc-machinist-tc">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/construction-manufacturing/cnc-machinist-tc">See more on FSCJ website</a>
+                                    </CardBody>
+
+                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
+                                        <h4 style={{fontWeight: 700}}>Production, Manufacturing, Planning & Expediting Clerk</h4>
+                                        <h5>Logistics and Transportation Specialist Technical Certificate (T.C.)</h5>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/transportation-logistics/logistics-and-transportation-specialist-tc">See more on FSCJ website</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
@@ -255,27 +320,19 @@ class Training extends Component {
                             <Collapse isOpen={this.state.program4Collapse} style={{ width:"100%" }}>
                             <Card>
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Fire inspector & investigator</h4>
+                                        <h4 style={{fontWeight: 700}}>Fire Inspector & Investigator</h4>
                                         <h5>Fire Science Technology A.S.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-science-technology-as">More info</a>
-                                    </CardBody>
-
-                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Fire inspector & investigator</h4>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-science-technology-as">See more on FSCJ website</a>
                                         <h5>Fire Officer Supervisor T.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-officer-supervisor-tc">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/fire-officer-supervisor-tc">See more on FSCJ website</a>
                                     </CardBody>
 
                                     <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Police & sheriff patrol office</h4>
+                                        <h4 style={{fontWeight: 700}}>Police & Sheriff Patrol Office</h4>
                                         <h5>Florida Law Enforcement Academy W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/florida-law-enforcement-academy-wc">More info</a>
-                                    </CardBody>
-
-                                    <CardBody style={{ padding: "0 10px 20px 10px"}}>
-                                        <h4>Police & sheriff patrol office</h4>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/florida-law-enforcement-academy-wc">See more on FSCJ website</a>
                                         <h5>Crossover from Correctional Officer to Law Enforcement Officer W.C.</h5>
-                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/crossover-from-correctional-officer-to-law-enforcement-officer-wc">More info</a>
+                                        <a href="https://www.fscj.edu/academics/areas-of-study/public-safety-security/crossover-from-correctional-officer-to-law-enforcement-officer-wc">See more on FSCJ website</a>
                                     </CardBody>
                                 </Card>
                             </Collapse>
