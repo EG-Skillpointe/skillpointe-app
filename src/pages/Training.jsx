@@ -78,7 +78,9 @@ class Training extends Component {
 
                 
                 <h4 className='featured-jobs-heading'>Featured Training</h4>
-                <FeaturedTraining comp1={comp1} comp2={comp2} />
+                <div onClick={() =>{window.location.replace('/training/detail')}}>
+                    <FeaturedTraining comp1={comp1} comp2={comp2} />
+                </div>
                 
                 <div style={{marginTop:"30px", marginBottom: "30px"}}>
                     { cards }
