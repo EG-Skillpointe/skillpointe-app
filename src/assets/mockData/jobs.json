@@ -9,6 +9,14 @@
             "industry": "Manufacturing"
         },
         {
+            "title": "Industrial Electrician",
+            "company": "Lincoln Electric",
+            "location": " Cleveland, OH",
+            "image": "lincoln_electric.png",
+            "datePosted": "2 months",
+            "industry": "Manufacturing"
+        },
+        {
             "title": "Mechanical Design Engineer",
             "company": "Wayne Trail Technologies",
             "location": "Fort Loramie, OH",
@@ -22,14 +30,6 @@
             "location": " Cleveland, OH",
             "image": "lincoln_electric.png",
             "datePosted": "2 days",
-            "industry": "Manufacturing"
-        },
-        {
-            "title": "Industrial Electrician",
-            "company": "Lincoln Electric",
-            "location": " Cleveland, OH",
-            "image": "lincoln_electric.png",
-            "datePosted": "2 months",
             "industry": "Manufacturing"
         },
         {

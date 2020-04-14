@@ -12,7 +12,7 @@ export const FeaturedJobs = (props) => {
 
 				<label>2 Days Ago</label>
 
-				<h6>Welder</h6>
+				<h6>Ground Support Equipment</h6>
 
 				<label>Multiple Locations</label>
 
