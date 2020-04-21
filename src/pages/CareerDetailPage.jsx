@@ -136,7 +136,7 @@ class CareerDetailPage extends Component {
 
                 {/* <CareerPathways/> */}
 
-                <Skill/>
+                {/* <Skill/> */}
                 <div style={{marginBottom:"12px", height:"37px", display:"flex", justifyContent:"center", alignItems:"center",background: "#DADADA", borderRadius: "6px"}}>
                 <h6 style={{padding:"0", margin:"0", fontSize:"20px", lineHeight:"16px", width:"85%", color:"#2D426B"}}><b>Articles</b></h6>
                 </div>

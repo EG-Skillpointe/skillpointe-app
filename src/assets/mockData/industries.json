@@ -1,12 +1,16 @@
 {
     "industries": [
         {
-            "name": "Welding",
+            "name": "Construction",
             "image": "welding.jpeg"
         },
         {
             "name": "Healthcare",
             "image": "healthcare.jpg"
+        },
+        {
+            "name": "Manufacturing",
+            "image": "manufacturing.jpg"
         },
         {
             "name": "Communications",
@@ -15,10 +19,6 @@
         {
             "name": "Energy",
             "image": "energy.jpg"
-        },
-        {
-            "name": "Manufacturing",
-            "image": "manufacturing.jpg"
         },
         {
             "name": "Hospitality",

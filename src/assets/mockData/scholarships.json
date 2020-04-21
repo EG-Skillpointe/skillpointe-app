@@ -1,6 +1,15 @@
 {
   "scholarships": [
     {
+      "name": "Skillpointe Foundation",
+      "location": "Atlanta, GA",
+      "address": "System Main Office, 1800 Century Pl NE #400, Atlanta, GA 30345",
+      "phoneNumber": "(404) 679-1600",
+      "description": "The Technical College System of Georgia, formerly known as the Department of Technical and Adult Education, is the State of Georgia Government Agency which supervises the U.S. state of Georgia's 22 technical colleges, while also surveying the adult literacy program and economic and workforce development programs.",
+      "wesbite": "https://tcsg.edu/",
+      "image": "tcsg.png"
+    },
+    {
       "name": "Pell Grant",
       "location": "Atlanta, GA",
       "address": "System Main Office, 1800 Century Pl NE #400, Atlanta, GA 30345",
