@@ -1,0 +1,20 @@
+{
+    "industries": [
+        {
+            "name": "Construction",
+            "image": "welding.jpeg"
+        },
+        {
+            "name": "Healthcare",
+            "image": "healthcare.jpg"
+        },
+        {
+            "name": "Manufacturing",
+            "image": "manufacturing.jpg"
+        },
+        {
+            "name": "Communications",
+            "image": "communications.jpg"
+        }
+    ]
+}

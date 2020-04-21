@@ -51,3 +51,4 @@ export {default as FinanceCard} from './FinanceCard';
 export {default as FeaturedTraining} from './FeaturedTraining';
 export {default as HomePageArticleCard} from './HomePageArticleCard';
 export {default as AddressBox} from './AddressBox';
+export {default as VideoCard} from './VideoCard';

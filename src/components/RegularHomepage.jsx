@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {HomePageArticleCard, CareerCard, Filter, FilterTab, SchoolCard, Video} from "../components";
+import {HomePageArticleCard, CareerCard, Filter, FilterTab, SchoolCard, VideoCard} from "../components";
 import landingBackground from "../assets/images/homepage-background.jpeg";
 import scrollDownButton from "../assets/images/scroll-down-button.png";
 import homepageVideo from "../assets/videos/Tammy_Ronstadt_Ambassador_ALT.mp4";
@@ -15,6 +15,8 @@ import Modal from "react-modal";
 import Carousel from "react-bootstrap/Carousel";
 import {VideoCarousel} from "./VideoCarousel";
 import IndustryCard from "./IndustryCard";
+
+let cards = [];
 
 const options1 = [
 	'A Career Path', 'Training', 'Financial Aid', 'People', 'Jobs'
@@ -60,13 +62,14 @@ class RegularHomepage extends Component {
 	componentDidMount() {
 		window.scrollTo(0, 0);
 	}
+
 	doFilter = (cond) => {
 		let filtered = [];
-
-		console.log('cond', cond);
+		
 		if(cond === 'all'){
 			filtered = homepage_articles.articles;
-		} else {
+		}
+		 else {
 			filtered = homepage_articles.articles.filter(obj => obj.industry.toLowerCase() === cond);
 		}
 		this.setState({filteredArticles: filtered})
@@ -214,9 +217,14 @@ class RegularHomepage extends Component {
 
 
 	render() {
-		const card = this.state.filteredArticles.map((article, index) => {
+		cards = this.state.filteredArticles.map((article, index) => {
 			return index % 2 ? (<div><IndustryCard key ={index} article={article}/></div>) :  (<div><HomePageArticleCard key={index} article={article}/></div>)
 		});
+		
+		if (cards.length !== 2){
+			cards.push(<VideoCard/>);
+		}
+
 		return (
 				<div>
 					<Modal isOpen={this.state.showPopUp} onRequestClose={this.togglePopup} contentLabel="Delete Check" style={modalStyle} >
@@ -241,7 +249,7 @@ class RegularHomepage extends Component {
 					</div>
 					<div ref={this.myDivToFocus}>
 						<FilterTab filter={this.doFilter}/>
-						{card}
+						{cards}
 					</div>
 					<div className="mission-div">
 						<h3 className="mission-title">Our Mission</h3>

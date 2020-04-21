@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-import industries from "../assets/mockData/industries";
+import industries from "../assets/mockData/homepage_industries.json";
 
 class FilterTab extends Component {
   constructor(props) {
